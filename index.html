@@ -486,11 +486,11 @@
     </a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="https://veganbrisbaneguide.com/food" data-i18n="nav.food">Food</a>
-        <a href="https://veganbrisbaneguide.com/community" data-i18n="nav.community">Community</a>
-        <a href="https://veganbrisbaneguide.com/people" data-i18n="nav.people">People</a>
-        <a href="https://veganbrisbaneguide.com/vegankit" data-i18n="nav.kit">Vegan Kit</a>
-        <a href="https://veganbrisbaneguide.com/about" data-i18n="nav.about">About</a>
+        <a href="food.html" data-i18n="nav.food">Food</a>
+        <a href="community.html" data-i18n="nav.community">Community</a>
+        <a href="#" data-i18n="nav.people">People</a>
+        <a href="#" data-i18n="nav.kit">Vegan Kit</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
         <a href="https://instagram.com/brisbaneveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
         </a>
@@ -511,10 +511,10 @@
     <p class="hero-sub" data-i18n="hero.subtitle">Your compass to vegan living in Brisbane and surrounds</p>
     <p class="hero-desc" data-i18n="hero.description">Discover the best vegan-friendly cafés, restaurants, sanctuaries, organisations, and inspiring people shaping Brisbane's compassionate community.</p>
     <div class="hero-index">
-      <a href="https://veganbrisbaneguide.com/food" data-i18n-href="food"><span class="hero-index-num">1</span> <span data-i18n="food.label">Eat & Drink</span></a>
-      <a href="https://veganbrisbaneguide.com/community" data-i18n-href="community"><span class="hero-index-num">2</span> <span data-i18n="groups.label">Community</span></a>
-      <a href="https://veganbrisbaneguide.com/people" data-i18n-href="people"><span class="hero-index-num">3</span> <span data-i18n="people.label">People</span></a>
-      <a href="https://veganbrisbaneguide.com/vegankit" data-i18n-href="kit"><span class="hero-index-num">4</span> <span data-i18n="kit.label">Vegan Kit</span></a>
+      <a href="food.html" data-i18n-href="food"><span class="hero-index-num">1</span> <span data-i18n="food.label">Eat & Drink</span></a>
+      <a href="community.html" data-i18n-href="community"><span class="hero-index-num">2</span> <span data-i18n="groups.label">Community</span></a>
+      <a href="#" data-i18n-href="people"><span class="hero-index-num">3</span> <span data-i18n="people.label">People</span></a>
+      <a href="#" data-i18n-href="kit"><span class="hero-index-num">4</span> <span data-i18n="kit.label">Vegan Kit</span></a>
     </div>
     <div class="scroll-hint">
       <span data-i18n="hero.scroll">Explore</span>
@@ -544,7 +544,7 @@
           <span class="tag">Bistro</span>
           <span class="tag">Groceries</span>
         </div>
-        <a href="bvg-venue-the-green-edge.html" class="card-btn" data-i18n="btn.more">Learn more</a>
+        <a href="food-the-green-edge.html" class="card-btn" data-i18n="btn.more">Learn more</a>
       </div>
       <div class="card">
         <span class="card-emoji">🍜</span>
@@ -934,12 +934,12 @@ function toggleLang() {
     if (navUrls[currentLang][key]) a.href = navUrls[currentLang][key];
   });
   const indexUrls = {
-    en: { food: "/food", community: "/community", people: "/people", kit: "/vegankit" },
-    pt: { food: "/comida", community: "/comunidade", people: "/pessoas", kit: "/kitvegano" }
+    en: { food: "food.html", community: "community.html", people: "#", kit: "#" },
+    pt: { food: "food.html", community: "community.html", people: "#", kit: "#" }
   };
   document.querySelectorAll("[data-i18n-href]").forEach(a => {
     const key = a.getAttribute("data-i18n-href");
-    if (indexUrls[currentLang][key]) a.href = "https://veganbrisbaneguide.com" + indexUrls[currentLang][key];
+    if (indexUrls[currentLang][key]) a.href = indexUrls[currentLang][key];
   });
 }
 
