@@ -52,7 +52,10 @@
   .nav-logo {
     font-family: 'Fraunces', serif; font-weight: 700; font-size: 18px;
     color: var(--forest); text-decoration: none; letter-spacing: -0.3px;
+    display: flex; align-items: baseline;
   }
+  .logo-pin { align-self: center; flex-shrink: 0; margin-right: 4px; }
+  .logo-word { display: inline-flex; font-family: 'Boldonse', system-ui; font-weight: 400; font-size: 16px; }
   .nav-right { display: flex; gap: 24px; align-items: center; }
   .nav-links { display: flex; gap: 24px; align-items: center; }
   .nav-links a {
@@ -364,11 +367,15 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">BVG</a>
+    <a href="index.html" class="nav-logo">
+      <svg class="logo-pin" width="18" height="18" viewBox="0 0 24 28" fill="none">
+        <path d="M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z" fill="var(--leaf)"/>
+      </svg>
+      <span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>
+    </a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="#" class="active">Eat</a>
+        <a href="food.html" class="active">Food</a>
         <a href="community.html">Community</a>
         <a href="#">People</a>
         <a href="#">Vegan Kit</a>
