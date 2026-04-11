@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vegan Kit — Brisbane Vegan Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--forest:#1a3a2a;--moss:#2d5a3d;--sage:#7a9a7e;--leaf:#4a8c5c;--leaf-light:#6db77d;--cream:#f5f0e8;--warm:#e8dfd3;--sand:#d4c9b8;--bark:#8b7355;--terracotta:#c4714a;--gold:#d4a847;--text:#2a2a28;--text-light:#6b6b65;--teal:#3a9e8f;--teal-light:#e6f5f2}
+html,body{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%234a8c5c' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/></svg>") 4 24,auto}
+a,button,.lang-btn,.nav-links a,.hamburger,.resource-link,.challenge-link,.thinker-card,.accordion-toggle{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/></svg>") 4 24,pointer}
+body{background:var(--cream);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden}
+html{scroll-behavior:smooth}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 40px;background:rgba(245,240,232,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(42,42,40,0.06);box-shadow:0 2px 20px rgba(26,58,42,0.06)}
+.nav-logo{font-family:'Boldonse',system-ui;font-weight:400;font-size:16px;color:var(--forest);text-decoration:none;letter-spacing:-0.3px;display:flex;align-items:baseline}
+.logo-pin{align-self:center;flex-shrink:0;margin-right:4px}
+.logo-word{display:inline-flex;font-family:'Boldonse',system-ui;font-weight:400;font-size:16px}
+  .nav-right { display: flex; gap: 20px; align-items: center; }
+  .nav-center { display: flex; gap: 20px; align-items: center; }
+  .nav-center a, .nav-meta a {
+    text-decoration: none; color: var(--text-light);
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.25s;
+  }
+  .nav-center a:hover, .nav-meta a:hover { color: var(--forest); }
+  .nav-center a.active, .nav-meta a.active { color: var(--forest); font-weight: 700; }
+  .nav-meta { display: flex; gap: 14px; align-items: center; }
+.lang-btn{background:var(--forest);color:var(--cream);border:none;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:1px;transition:all 0.25s}
+.lang-btn:hover{background:var(--moss);transform:scale(1.05)}
+
+/* HERO */
+.kit-hero{width:100%;min-height:340px;position:relative;overflow:hidden;margin-top:52px;background:linear-gradient(135deg,var(--forest) 0%,var(--moss) 30%,var(--leaf) 70%,var(--leaf-light) 100%);display:flex;align-items:center;justify-content:center;padding:50px 40px}
+.kit-hero-content{text-align:center;color:var(--cream);position:relative;z-index:2;max-width:660px}
+.kit-hero-emoji{font-size:44px;margin-bottom:12px}
+.kit-hero h1{font-family:'Fraunces',serif;font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:-1.5px;margin-bottom:8px}
+.kit-hero-sub{font-family:'Boldonse',system-ui;font-size:clamp(11px,1.3vw,14px);font-weight:400;opacity:0.7;letter-spacing:0.5px;margin-bottom:12px}
+.kit-hero-desc{font-size:15px;line-height:1.7;opacity:0.85}
+
+/* CONTENT */
+.kit-content{max-width:960px;margin:0 auto;padding:36px 40px 60px}
+
+/* TOC */
+.toc{background:white;border-radius:14px;padding:24px 28px;border:1px solid rgba(42,42,40,0.06);margin-bottom:36px}
+.toc-title{font-family:'Boldonse',system-ui;font-size:12px;color:var(--forest);letter-spacing:1px;margin-bottom:14px}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.toc-list li{border-bottom:1px solid rgba(42,42,40,0.04)}
+.toc-list li:last-child{border-bottom:none}
+.toc-list a{display:flex;align-items:center;gap:10px;text-decoration:none;padding:10px 0;color:var(--text);font-size:14px;font-weight:500;transition:color 0.2s}
+.toc-list a:hover{color:var(--leaf)}
+.toc-num{font-family:'Boldonse',system-ui;font-size:10px;color:var(--sage);width:22px;text-align:right;flex-shrink:0}
+.toc-emoji{font-size:16px;flex-shrink:0}
+.toc-divider{height:1px;background:rgba(26,58,42,0.08);margin:6px 0}
+
+/* SECTION TITLE */
+.section-title{font-family:'Boldonse',system-ui;font-size:13px;color:var(--forest);letter-spacing:1px;margin-bottom:16px;display:flex;align-items:center;gap:10px;margin-top:36px;scroll-margin-top:70px}
+.section-title::after{content:'';flex:1;height:1px;background:rgba(26,58,42,0.08)}
+.section-desc{font-size:14px;color:var(--text-light);margin-bottom:16px;line-height:1.7}
+
+/* ACCORDION */
+.accordion{margin-bottom:12px;border-radius:14px;overflow:hidden;border:1px solid rgba(42,42,40,0.06);background:white;transition:box-shadow 0.3s ease;scroll-margin-top:70px;max-width:100%}
+.accordion:hover{box-shadow:0 4px 20px rgba(26,58,42,0.05)}
+.accordion-toggle{width:100%;display:flex;align-items:center;gap:14px;padding:20px 24px;background:none;border:none;text-align:left;font-family:'DM Sans',sans-serif;transition:background 0.2s}
+.accordion-toggle:hover{background:rgba(74,140,92,0.02)}
+.accordion-emoji{font-size:26px;flex-shrink:0}
+.accordion-header{flex-grow:1}
+.accordion-type{font-size:10px;font-weight:600;color:var(--terracotta);letter-spacing:0.6px;text-transform:uppercase;margin-bottom:2px}
+.accordion-title{font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--forest);line-height:1.3}
+.accordion-arrow{width:20px;height:20px;flex-shrink:0;color:var(--sage);transition:transform 0.3s ease}
+.accordion.open .accordion-arrow{transform:rotate(180deg);color:var(--forest)}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+.accordion.open .accordion-body{max-height:2000px}
+.accordion-inner{padding:0 24px 24px;border-top:1px solid rgba(42,42,40,0.04)}
+.accordion-text{font-size:14px;line-height:1.75;color:var(--text-light);padding-top:18px}
+.accordion-text p{margin-bottom:12px}
+.accordion-text p:last-child{margin-bottom:0}
+.funfact{margin-top:16px;padding:14px 16px;background:rgba(74,140,92,0.04);border:1px solid rgba(74,140,92,0.06);border-radius:10px}
+.funfact-label{font-family:'Boldonse',system-ui;font-size:10px;color:var(--leaf);letter-spacing:0.6px;margin-bottom:4px}
+.funfact-text{font-size:13px;line-height:1.6;color:var(--text-light)}
+
+/* REF BANNER */
+.ref-banner{background:rgba(26,58,42,0.04);border:1px solid rgba(26,58,42,0.06);border-radius:12px;padding:18px 22px;margin-top:24px;margin-bottom:36px;display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text);transition:all 0.3s ease}
+.ref-banner:hover{background:rgba(26,58,42,0.07);transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,58,42,0.06)}
+.ref-banner-icon{font-size:26px;flex-shrink:0}
+.ref-banner-text{flex-grow:1}
+.ref-banner-title{font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:var(--forest);margin-bottom:2px}
+.ref-banner-desc{font-size:12px;color:var(--text-light);line-height:1.5}
+.ref-banner-arrow{color:var(--sage);flex-shrink:0;transition:transform 0.25s}
+.ref-banner:hover .ref-banner-arrow{transform:translateX(4px);color:var(--forest)}
+
+/* CHALLENGES */
+.challenges-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:36px}
+.challenge-link{display:flex;align-items:center;gap:10px;text-decoration:none;padding:13px 16px;background:white;border:1px solid rgba(42,42,40,0.06);border-radius:12px;transition:all 0.3s ease}
+.challenge-link:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,58,42,0.06);border-color:rgba(74,140,92,0.15)}
+.challenge-emoji{font-size:18px;flex-shrink:0}
+.challenge-name{font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:var(--forest)}
+.challenge-arrow{margin-left:auto;color:var(--sage);transition:transform 0.25s;flex-shrink:0}
+.challenge-link:hover .challenge-arrow{transform:translateX(3px);color:var(--forest)}
+
+/* RESOURCES */
+.resources-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;margin-bottom:36px}
+.resource-link{display:flex;align-items:center;gap:12px;text-decoration:none;padding:14px 18px;background:white;border:1px solid rgba(42,42,40,0.06);border-radius:12px;transition:all 0.3s ease}
+.resource-link:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,58,42,0.08);border-color:rgba(74,140,92,0.15)}
+.resource-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.resource-icon.ethics{background:rgba(74,140,92,0.08)}
+.resource-icon.aus{background:rgba(212,168,71,0.08)}
+.resource-name{font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:var(--forest)}
+.resource-desc{font-size:11px;color:var(--sage);margin-top:1px}
+.resource-arrow,.ref-banner-arrow{flex-shrink:0}
+
+/* THINKERS */
+.thinkers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:36px}
+.thinker-card{background:white;border-radius:12px;padding:16px;border:1px solid rgba(42,42,40,0.06);transition:all 0.3s ease;text-decoration:none;color:inherit;text-align:center}
+.thinker-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(26,58,42,0.07);border-color:rgba(74,140,92,0.15)}
+.thinker-emoji{font-size:24px;margin-bottom:6px}
+.thinker-name{font-family:'Fraunces',serif;font-size:13px;font-weight:700;color:var(--forest);margin-bottom:2px}
+.thinker-field{font-size:10px;color:var(--sage);line-height:1.4}
+
+/* FOOTER */
+.footer{background:var(--forest);color:var(--cream);padding:48px 40px;text-align:center}
+.footer-animals{display:flex;justify-content:center;gap:22px;margin-bottom:24px;font-size:24px}
+.footer-tagline{font-family:'Fraunces',serif;font-size:20px;font-weight:300;font-style:italic;margin-bottom:18px;opacity:0.9}
+.footer-credit{font-size:13px;opacity:0.5;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+.footer-credit a{color:var(--cream);opacity:0.7;text-decoration:none;transition:opacity 0.25s}
+.footer-credit a:hover{opacity:1;text-decoration:underline}
+.footer-credit .sep{opacity:0.3}
+
+/* ANIM */
+.anim{opacity:0;transform:translateY(16px);transition:all 0.5s ease}
+.anim.visible{opacity:1;transform:translateY(0)}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px}
+.hamburger span{display:block;width:20px;height:2px;background:var(--forest);border-radius:2px;transition:all 0.3s ease}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(26,58,42,0.3);z-index:90;opacity:0;transition:opacity 0.3s ease}
+.nav-overlay.open{display:block;opacity:1}
+
+@media(max-width:768px){
+  .nav{padding:14px 20px}.nav-right{gap:12px}.hamburger{display:flex}
+  .nav-center, .nav-meta { display: none; }
+    .mobile-menu {
+      position: fixed; top: 0; right: -280px;
+      width: 260px; height: 100vh;
+      background: var(--cream); display: flex; flex-direction: column;
+      padding: 80px 28px 40px;
+      box-shadow: -8px 0 30px rgba(26, 58, 42, 0.1);
+      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 95; overflow-y: auto;
+    }
+    .mobile-menu.open { right: 0; }
+    .mobile-menu a {
+      text-decoration: none; color: var(--text-light);
+      font-size: 14px; font-weight: 500; letter-spacing: 0.6px;
+      text-transform: uppercase; padding: 14px 0; width: 100%;
+      border-bottom: 1px solid rgba(26, 58, 42, 0.06);
+      transition: color 0.25s; display: flex; align-items: center; gap: 8px;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--forest); }
+    .mobile-menu a.active { color: var(--forest); font-weight: 700; }
+    .mobile-menu-sep { height: 1px; background: rgba(26, 58, 42, 0.1); margin: 8px 0; }
+  .kit-hero{padding:40px 24px;min-height:280px}
+  .kit-content{padding:28px 20px 40px}
+  .accordion-toggle{padding:16px 18px;gap:10px}
+  .accordion-inner{padding:0 18px 18px}
+  .accordion-title{font-size:16px}
+  .toc{padding:18px 20px}
+  .challenges-grid{grid-template-columns:1fr}
+  .resources-grid{grid-template-columns:1fr}
+  .thinkers-grid{grid-template-columns:repeat(2,1fr)}
+  .ref-banner{flex-direction:column;text-align:center}
+  .footer{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <svg class="logo-pin" width="18" height="18" viewBox="0 0 24 28" fill="none"><path d="M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z" fill="var(--leaf)"/></svg>
+      <span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>
+    </a>
+    <div class="nav-center">
+      <a href="https://veganbrisbaneguide.com/food">Food</a>
+      <a href="https://veganbrisbaneguide.com/community">Community</a>
+      <a href="https://veganbrisbaneguide.com/people">People</a>
+      <a href="https://veganbrisbaneguide.com/vegankit" class="active">Vegan Kit</a>
+      <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-meta">
+        <a href="https://veganbrisbaneguide.com/about">About</a>
+        <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">PT</button>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="https://veganbrisbaneguide.com/food">Food</a>
+    <a href="https://veganbrisbaneguide.com/community">Community</a>
+    <a href="https://veganbrisbaneguide.com/people">People</a>
+    <a href="https://veganbrisbaneguide.com/vegankit" class="active">Vegan Kit</a>
+    <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
+    <div class="mobile-menu-sep"></div>
+    <a href="https://veganbrisbaneguide.com/about">About</a>
+    <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg> Instagram</a>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <nav class="toc anim">
+    <div class="toc-title" data-i18n="toc.title">Contents</div>
+    <ol class="toc-list">
+      <li><a href="#q1"><span class="toc-num">01</span><span class="toc-emoji">🌱</span><span data-i18n="c1.title">What is veganism?</span></a></li>
+      <li><a href="#q2"><span class="toc-num">02</span><span class="toc-emoji">🤔</span><span data-i18n="c2.title">Is it necessary to exploit animals to survive?</span></a></li>
+      <li><a href="#q3"><span class="toc-num">03</span><span class="toc-emoji">🥦</span><span data-i18n="c3.title">Are plant-based diets healthy?</span></a></li>
+      <li><a href="#q4"><span class="toc-num">04</span><span class="toc-emoji">⚖️</span><span data-i18n="c4.title">What is speciesism? Is it wrong?</span></a></li>
+      <li><a href="#q5"><span class="toc-num">05</span><span class="toc-emoji">💡</span><span data-i18n="c5.title">What is sentience?</span></a></li>
+      <li><a href="#q6"><span class="toc-num">06</span><span class="toc-emoji">🌍</span><span data-i18n="c6.title">What is anthropocentrism?</span></a></li>
+      <li><a href="#q7"><span class="toc-num">07</span><span class="toc-emoji">🔗</span><span data-i18n="c7.title">What is animal exploitation?</span></a></li>
+      <li><a href="#q8"><span class="toc-num">08</span><span class="toc-emoji">🧪</span><span data-i18n="c8.title">How to know if something is wrong?</span></a></li>
+      <li><a href="#q9"><span class="toc-num">09</span><span class="toc-emoji">🧠</span><span data-i18n="c9.title">Is veganism brainwashing?</span></a></li>
+      <li><a href="#q10"><span class="toc-num">10</span><span class="toc-emoji">⚠️</span><span data-i18n="c10.title">Common misconceptions in the movement</span></a></li>
+      <li class="toc-divider"></li>
+      <li><a href="#try"><span class="toc-num">→</span><span class="toc-emoji">🚀</span><span data-i18n="s.try">Try Going Vegan</span></a></li>
+      <li><a href="#ethics"><span class="toc-num">→</span><span class="toc-emoji">📖</span><span data-i18n="s.ethics">Animal Ethics & Research</span></a></li>
+      <li><a href="#aus"><span class="toc-num">→</span><span class="toc-emoji">🦘</span><span data-i18n="s.aus">Veganism in Australia</span></a></li>
+      <li><a href="#thinkers"><span class="toc-num">→</span><span class="toc-emoji">📚</span><span data-i18n="s.thinkers">Thinkers You Should Know</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- FUNDAMENTALS -->
+  <div class="section-title anim" data-i18n="s.fund" id="fundamentals">The Fundamentals</div>
+
+  <!-- Q1 -->
+  <div class="accordion open anim" id="q1">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🌱</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c1.type">The big one</div>
+        <div class="accordion-title" data-i18n="c1.title">What is veganism?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c1.p1">Let's get this straight: veganism is not a diet. It's not an environmental stance either. Veganism is, first and foremost, a moral position — a commitment to respecting animals and rejecting their exploitation in all forms.</p>
+      <p data-i18n="c1.p2">It covers food, clothing, entertainment, testing, and any practice that treats sentient beings as resources. A plant-based diet is one consequence of veganism, but veganism itself is the ethical framework behind it.</p>
+      <p data-i18n="c1.p3">Think of it this way: you wouldn't call feminism a "fashion choice" just because someone refuses to buy from exploitative brands. Same energy.</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c1.fun">The word "vegan" was coined in 1944 by Donald Watson in England. He took the first and last letters of "vegetarian" because veganism is "the beginning and end of vegetarian."</div></div></div></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="accordion anim" id="q2">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🤔</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c2.type">The practical question</div>
+        <div class="accordion-title" data-i18n="c2.title">Is it necessary to exploit animals to survive?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c2.p1">Short answer: no. Long answer: absolutely not.</p>
+      <p data-i18n="c2.p2">Every major dietetics organisation in the world has confirmed that well-planned plant-based diets are nutritionally adequate for all stages of life.</p>
+      <p data-i18n="c2.p3">We need to stop pretending that habit equals necessity. Our ancestors did many things we no longer need to do. That's called progress.</p>
+      <p data-i18n="c2.p4">The real question isn't "can we live without exploiting animals?" — it's "knowing that we can, why wouldn't we?"</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c2.fun">Roughly 80 billion land animals are slaughtered every year for food — more than 10 times the human population. And that doesn't count fish, measured in trillions.</div></div></div></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="accordion anim" id="q3">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🥦</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c3.type">Health & Nutrition</div>
+        <div class="accordion-title" data-i18n="c3.title">Are plant-based diets healthy?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c3.p1">Yes — and the science is clear. Well-planned plant-based diets are associated with lower risks of heart disease, type 2 diabetes, hypertension, and certain cancers.</p>
+      <p data-i18n="c3.p2">The key word is "well-planned" — just like any diet. Eating chips and soda all day isn't healthy whether you're vegan or not.</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c3.fun">B12 is produced by bacteria, not animals. Livestock are supplemented with B12 too. You're just cutting out the middleman (or middle-cow).</div></div></div></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="accordion anim" id="q4">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">⚖️</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c4.type">The uncomfortable truth</div>
+        <div class="accordion-title" data-i18n="c4.title">What is speciesism? Is it wrong?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c4.p1">Speciesism is the unjustified moral discrimination of individuals based on species membership — treating someone worse simply because they belong to a different species, regardless of their capacity to suffer.</p>
+      <p data-i18n="c4.p2">As philosopher Oscar Horta argues, just as racism and sexism are rejected because race and sex are morally irrelevant, so too is species. What matters is the capacity to be harmed — not the biological category one is born into.</p>
+      <p data-i18n="c4.p3">Speciesism isn't a fringe idea. It's the default — and that's precisely what makes it so hard to see.</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c4.fun">The term "speciesism" was coined by psychologist Richard Ryder in 1970 — before Peter Singer popularised it in "Animal Liberation" (1975). Ryder compared it to racism while campaigning against animal testing at Oxford.</div></div></div></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="accordion anim" id="q5">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">💡</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c5.type">Science & Ethics</div>
+        <div class="accordion-title" data-i18n="c5.title">What is sentience?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c5.p1">Sentience is the capacity to have subjective experiences — to feel pain, pleasure, fear, joy. It's what makes a being matter morally, regardless of species or how cute they look on Instagram.</p>
+      <p data-i18n="c5.p2">The Cambridge Declaration on Consciousness (2012) formally recognised that non-human animals possess the neurological substrates for conscious experience.</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c5.fun">Not all animals are sentient! Cnidarians (jellyfish, corals) lack centralised nervous systems and likely don't have subjective experiences. Ethics is allowed to be complicated.</div></div></div></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="accordion anim" id="q6">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🌍</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c6.type">The lens we forget we're wearing</div>
+        <div class="accordion-title" data-i18n="c6.title">What is anthropocentrism?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c6.p1">Anthropocentrism is the belief that humans are the most important entities in the universe, and that everything else is measured by its usefulness to us.</p>
+      <p data-i18n="c6.p2">It's speciesism's philosophical big brother: the worldview that places humans at the centre and everyone else at the margin. Veganism challenges this by insisting that sentient beings have inherent value, not instrumental value.</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c6.fun">Most environmental movements are still anthropocentric — they protect nature "for future generations," not for the animals who live there. Veganism asks: what about their future?</div></div></div></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="accordion anim" id="q7">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🔗</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c7.type">The system</div>
+        <div class="accordion-title" data-i18n="c7.title">What is animal exploitation?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c7.p1">Animal exploitation is the use of animals as resources for human benefit — treating sentient beings as property. It spans food, clothing, entertainment, testing, labour, and the exotic pet trade.</p>
+      <p data-i18n="c7.p2">What makes it exploitation is that it disregards the animal's own interests. The fact that it's legal, traditional, or profitable doesn't change what it is.</p>
+      <p data-i18n="c7.p3">Veganism is the practical refusal to participate in this system wherever possible and practicable.</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c7.fun">The word "livestock" literally means "live stock" — living inventory. The language itself reveals how normalised the commodification of animals is.</div></div></div></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="accordion anim" id="q8">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🧪</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c8.type">The moral toolkit</div>
+        <div class="accordion-title" data-i18n="c8.title">How to know if something is wrong?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c8.p1">Try these mental exercises:</p>
+      <p data-i18n="c8.p2"><strong>The substitution test:</strong> replace the animal with a human. If it's horrifying with a human, ask: what morally relevant difference justifies doing it to the animal?</p>
+      <p data-i18n="c8.p3"><strong>The impartiality test:</strong> imagine you don't know which species you'll be born as. Would you accept the practice if you could end up as the animal?</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c8.fun">These exercises draw on the Principle of Equal Consideration of Similar Interests (Peter Singer): if two beings have the same interest (e.g. avoiding suffering), that interest deserves equal moral weight — regardless of species.</div></div></div></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="accordion anim" id="q9">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🧠</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c9.type">The spicy one</div>
+        <div class="accordion-title" data-i18n="c9.title">Is veganism brainwashing?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c9.p1">From birth, we're taught that some animals are for petting and others are for eating — without any logical basis. That conditioning, reinforced by billion-dollar industries, is much closer to the actual definition of brainwashing.</p>
+      <p data-i18n="c9.p2">Veganism is the opposite: the moment you start questioning what you were told and making a conscious, informed choice.</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c9.fun">The term "carnism" was coined by Melanie Joy to describe the invisible belief system conditioning people to eat certain animals. It's the ideology — veganism is the opt-out.</div></div></div></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="accordion anim" id="q10">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">⚠️</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="c10.type">Self-criticism matters</div>
+        <div class="accordion-title" data-i18n="c10.title">Common misconceptions in the movement</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="c10.p1">The vegan movement isn't perfect — and pretending otherwise doesn't help anyone, least of all the animals.</p>
+      <p data-i18n="c10.p2">Mixing animal advocacy with unrelated causes can dilute the message. When every social issue becomes a vegan issue, the core argument — that animals deserve moral consideration — gets lost.</p>
+      <p data-i18n="c10.p3">Treating veganism as an identity rather than a position leads to tribalism. The goal is fewer animals suffering — not more people feeling excluded.</p>
+      <p data-i18n="c10.p4">Being vegan doesn't make someone an expert. We need to keep thinking critically, reading the research, and refining our arguments.</p>
+    </div><div class="funfact"><div class="funfact-label" data-i18n="dyk">Did you know?</div><div class="funfact-text" data-i18n="c10.fun">For an evidence-based review of what actually works in animal advocacy, check the <a href="https://www.sentienceinstitute.org/foundational-questions-summaries" target="_blank" rel="noopener" style="color:var(--leaf);font-weight:600;">Summary of Evidence for Foundational Questions in Effective Animal Advocacy</a> by Jacy Reese Anthis (Sentience Institute) — one of the most rigorous analyses available.</div></div></div></div>
+  </div>
+
+  <!-- TRY VEGAN -->
+  <div class="section-title anim" data-i18n="s.try" id="try">Try Going Vegan</div>
+  <p class="section-desc anim" data-i18n="try.desc">Not sure where to start? These free programmes offer tips, recipes, mentorship, and community support. No pressure — just good food and good vibes.</p>
+  <div class="challenges-grid anim" id="challengesGrid"></div>
+
+  <!-- ETHICS -->
+  <div class="section-title anim" data-i18n="s.ethics" id="ethics">Animal Ethics & Research</div>
+  <p class="section-desc anim" data-i18n="ethics.desc">Want to go deeper into animal ethics, wild animal suffering, and the philosophical foundations? These organisations are doing incredible work.</p>
+  <div class="resources-grid anim" id="ethicsGrid"></div>
+
+  <!-- AUSTRALIA -->
+  <div class="section-title anim" data-i18n="s.aus" id="aus">Veganism in Australia</div>
+  <p class="section-desc anim" data-i18n="aus.desc">Key organisations and resources for veganism across Australia.</p>
+  <div class="resources-grid anim" id="ausGrid"></div>
+
+  <!-- THINKERS -->
+  <div class="section-title anim" data-i18n="s.thinkers" id="thinkers">Thinkers You Should Know</div>
+  <p class="section-desc anim" data-i18n="thinkers.desc">The philosophers who built the intellectual foundations of the animal movement. Agree or disagree — you need to read them to understand the different ethical positions.</p>
+  <div class="thinkers-grid anim" id="thinkersGrid"></div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-animals"><span>🐄</span><span>🐖</span><span>🐔</span><span>🐑</span><span>🐇</span><span>🐟</span><span>🐝</span></div>
+  <div class="footer-tagline" data-i18n="footer.tagline">A better world for the animals.</div>
+  <div class="footer-credit">
+    <span>© 2026 Brisbane Vegan Guide</span><span class="sep">|</span>
+    <span data-i18n="footer.created">Created by</span>
+    <a href="https://jvlio.biblioverse.org" target="_blank" rel="noopener">Julio Cesar Prava</a>
+  </div>
+</footer>
+
+<script>
+// DATA
+const challenges=[
+  {name:"10 Weeks to Vegan",emoji:"🌿",url:"https://veganoutreach.org/10-weeks-to-vegan"},
+  {name:"30 Day Easy Vegan",emoji:"🟢",url:"https://veganeasy.org/30-day-challenge/30-day-challenge-signup"},
+  {name:"30 Day Vegan Pledge",emoji:"✅",url:"https://vegansociety.com/go-vegan/take-vegan-pledge"},
+  {name:"Abril Vegano",emoji:"🇧🇷",url:"https://sites.svb.org.br/abrilvegano"},
+  {name:"Challenge 22",emoji:"🔢",url:"https://challenge22.com"},
+  {name:"Vegan4Life",emoji:"🦘",url:"https://challengevegan4life.org.au"},
+  {name:"Vegan Challenge",emoji:"💪",url:"https://secure.peta.org.au/page/72542/data/1"},
+  {name:"Vegan Kickstart",emoji:"🚀",url:"https://pcrm.org/vegankickstart"},
+  {name:"Veganuary",emoji:"📅",url:"https://veganuary.com"},
+  {name:"Vegan Bootcamp",emoji:"🎓",url:"https://veganbootcamp.org/courses"},
+  {name:"Communication Hacks",emoji:"💬",url:"https://veganadvocacy.org/communication-hacks"}
+];
+const ethicsR=[
+  {name:"Animal Ethics",desc:{en:"Ethics beyond species boundaries",pt:"Ética além das fronteiras de espécie"},url:"https://www.animal-ethics.org",emoji:"📖"},
+  {name:"Rethink Priorities",desc:{en:"Evidence-based research",pt:"Pesquisa baseada em evidências"},url:"https://rethinkpriorities.org",emoji:"🔬"},
+  {name:"Senciência",desc:{en:"Animal sentience research (PT)",pt:"Pesquisa sobre senciência animal"},url:"https://senciencia.org",emoji:"🧠"},
+  {name:"Sentience Institute",desc:{en:"Social change for animals",pt:"Mudança social para animais"},url:"https://www.sentienceinstitute.org",emoji:"🏛️"},
+  {name:"Sentient Futures",desc:{en:"AI & sentient wellbeing",pt:"IA e bem-estar senciente"},url:"https://www.sentientfutures.ai",emoji:"🤖"},
+  {name:"Center For Reducing Suffering",desc:{en:"Focused on reducing suffering",pt:"Focado na redução do sofrimento"},url:"https://centerforreducingsuffering.org",emoji:"💜"},
+  {name:"Center on Long-Term Risk",desc:{en:"Long-term risk research",pt:"Riscos de longo prazo"},url:"https://longtermrisk.org",emoji:"🔮"},
+  {name:"Sentientism",desc:{en:"Evidence, reason & compassion for all sentient beings",pt:"Evidência, razão e compaixão por todos os seres sencientes"},url:"https://sentientism.info",emoji:"🌐"}
+];
+const ausR=[
+  {name:"Animals Australia",desc:{en:"Leading animal protection org",pt:"Principal org de proteção animal"},url:"https://animalsaustralia.org",emoji:"🦘"},
+  {name:"Australian Vegan Society",desc:{en:"Official vegan society",pt:"Sociedade vegana oficial"},url:"https://vegansociety.org.au",emoji:"🌿"},
+  {name:"Vegan On The Map",desc:{en:"Find vegan places in Australia",pt:"Encontre lugares veganos"},url:"https://australia.veganonthemap.com",emoji:"🗺️"},
+  {name:"Vegan Australia",desc:{en:"Advocacy & community",pt:"Advocacy e comunidade"},url:"https://veganaustralia.org.au",emoji:"🇦🇺"},
+  {name:"Let's Go Vegan",desc:{en:"Practical transition guide",pt:"Guia prático de transição"},url:"https://letsgovegan.com.au",emoji:"🚀"},
+  {name:"AnimalKind",desc:{en:"Cruelty-free living in Australia",pt:"Vida livre de crueldade na Austrália"},url:"https://animalkind.org.au",emoji:"💚"},
+  {name:"Vegan Society of Queensland",desc:{en:"Queensland's vegan community",pt:"Comunidade vegana de Queensland"},url:"https://www.vegansocietyqld.org",emoji:"🌴"},
+  {name:"Vegan NSW",desc:{en:"Vegan community in New South Wales",pt:"Comunidade vegana em New South Wales"},url:"http://www.vnsw.org.au",emoji:"🏙️"},
+  {name:"PETA Australia",desc:{en:"Animal rights advocacy & campaigns",pt:"Advocacy e campanhas por direitos animais"},url:"https://www.peta.org.au",emoji:"🐾"},
+  {name:"Buy Vegan",desc:{en:"Vegan products directory for Australia",pt:"Diretório de produtos veganos na Austrália"},url:"https://buyvegan.com.au",emoji:"🛒"},
+  {name:"Vegan Perth",desc:{en:"Perth's vegan community hub",pt:"Hub da comunidade vegana de Perth"},url:"https://veganperth.org.au",emoji:"🌊"},
+  {name:"Vegan Tours Australia",desc:{en:"Vegan travel experiences across Australia",pt:"Experiências de viagem vegana pela Austrália"},url:"https://www.vegantoursaustralia.com.au",emoji:"🧳"}
+];
+const thinkers=[
+  {name:"Peter Singer",field:{en:"Utilitarianism · Animal Liberation",pt:"Utilitarismo · Libertação Animal"},emoji:"📕"},
+  {name:"Oscar Horta",field:{en:"Anti-speciesism · Wild animal suffering",pt:"Antiespecismo · Sofrimento animal selvagem"},emoji:"📗"},
+  {name:"Tom Regan",field:{en:"Animal rights · Inherent value",pt:"Direitos animais · Valor inerente"},emoji:"📘"},
+  {name:"Gary L. Francione",field:{en:"Abolitionism · Moral personhood",pt:"Abolicionismo · Personalidade moral"},emoji:"📙"},
+  {name:"Martha Nussbaum",field:{en:"Capabilities approach · Justice",pt:"Abordagem das capacidades · Justiça"},emoji:"📕"},
+  {name:"Christine Korsgaard",field:{en:"Kantian ethics · Moral status",pt:"Ética kantiana · Status moral"},emoji:"📗"},
+  {name:"Sue Donaldson & Will Kymlicka",field:{en:"Zoopolis · Political theory",pt:"Zoopolis · Teoria política"},emoji:"📘"},
+  {name:"Richard D. Ryder",field:{en:"Coined 'speciesism' · Painism",pt:"Cunhou 'especismo' · Painismo"},emoji:"📙"},
+  {name:"James Rachels",field:{en:"Moral individualism",pt:"Individualismo moral"},emoji:"📕"},
+  {name:"Alasdair Cochrane",field:{en:"Political theory · Animal rights",pt:"Teoria política · Direitos animais"},emoji:"📗"},
+  {name:"Luciano Carlos Cunha",field:{en:"Ethics · Wild animal suffering",pt:"Ética · Sofrimento animal selvagem"},emoji:"📘"},
+  {name:"Stephen R. L. Clark",field:{en:"Moral philosophy · Animal status",pt:"Filosofia moral · Status animal"},emoji:"📙"},
+  {name:"Mark Rowlands",field:{en:"Animal rights · Contractarianism",pt:"Direitos animais · Contratualismo"},emoji:"📕"}
+];
+
+let currentLang='en';
+const arw=`<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+function renderAll(){
+  document.getElementById('challengesGrid').innerHTML=challenges.map(c=>`<a href="${c.url}" target="_blank" rel="noopener" class="challenge-link"><span class="challenge-emoji">${c.emoji}</span><span class="challenge-name">${c.name}</span><span class="challenge-arrow">${arw}</span></a>`).join('');
+  document.getElementById('ethicsGrid').innerHTML=ethicsR.map(r=>`<a href="${r.url}" target="_blank" rel="noopener" class="resource-link"><div class="resource-icon ethics">${r.emoji}</div><div><div class="resource-name">${r.name}</div><div class="resource-desc">${r.desc[currentLang]}</div></div><span class="resource-arrow">${arw}</span></a>`).join('');
+  document.getElementById('ausGrid').innerHTML=ausR.map(r=>`<a href="${r.url}" target="_blank" rel="noopener" class="resource-link"><div class="resource-icon aus">${r.emoji}</div><div><div class="resource-name">${r.name}</div><div class="resource-desc">${r.desc[currentLang]}</div></div><span class="resource-arrow">${arw}</span></a>`).join('');
+  document.getElementById('thinkersGrid').innerHTML=thinkers.map(t=>`<div class="thinker-card"><div class="thinker-emoji">${t.emoji}</div><div class="thinker-name">${t.name}</div><div class="thinker-field">${t.field[currentLang]}</div></div>`).join('');
+}
+
+// I18N (PT only — EN is default in HTML)
+const i18n={pt:{
+  "hero.title":"Kit Vegano","hero.sub":"Conhecimento essencial para uma vida ética",
+  "hero.desc":"Tudo o que você precisa saber sobre veganismo — sem culpa, sem sermão, só os fatos com bom humor. Spoiler: é pelos animais.",
+  "toc.title":"Índice","s.fund":"O Fundamental","dyk":"Você sabia?",
+  "c1.type":"O principal","c1.title":"O que é veganismo?",
+  "c1.p1":"Vamos deixar claro: veganismo não é dieta. Também não é postura ambientalista. É, acima de tudo, uma posição moral — um compromisso de respeitar os animais e rejeitar sua exploração.",
+  "c1.p2":"Abrange alimentação, vestuário, entretenimento, testes e qualquer prática que trate seres sencientes como recursos. Uma dieta plant-based é consequência do veganismo, mas o veganismo é o arcabouço ético.",
+  "c1.p3":"Pense assim: você não chamaria o feminismo de \"escolha de moda\" só porque alguém se recusa a comprar de marcas exploradoras. Mesma energia.",
+  "c1.fun":"A palavra \"vegan\" foi cunhada em 1944 por Donald Watson na Inglaterra. Ele pegou as primeiras e últimas letras de \"vegetarian\" porque o veganismo é \"o começo e o fim do vegetarianismo\".",
+  "c2.type":"A pergunta prática","c2.title":"É necessário explorar animais para sobreviver?",
+  "c2.p1":"Resposta curta: não. Resposta longa: absolutamente não.",
+  "c2.p2":"Todas as principais organizações de nutrição confirmaram que dietas plant-based bem planejadas são adequadas para todas as fases da vida.",
+  "c2.p3":"Precisamos parar de fingir que hábito é necessidade. Nossos ancestrais faziam coisas que não precisamos mais. Isso se chama progresso.",
+  "c2.p4":"A verdadeira pergunta não é \"podemos viver sem explorar animais?\" — é \"sabendo que podemos, por que não?\"",
+  "c2.fun":"Aproximadamente 80 bilhões de animais terrestres são abatidos por ano — mais de 10x a população humana. Sem contar os peixes, medidos em trilhões.",
+  "c3.type":"Saúde & Nutrição","c3.title":"Dietas plant-based são saudáveis?",
+  "c3.p1":"Sim — e a ciência é clara. Dietas plant-based bem planejadas estão associadas a menores riscos de doenças cardíacas, diabetes tipo 2 e certos tipos de câncer.",
+  "c3.p2":"Palavra-chave: \"bem planejadas\" — como qualquer dieta. Comer salgadinho o dia todo não é saudável, sendo vegano ou não.",
+  "c3.fun":"A B12 é produzida por bactérias, não por animais. O gado também recebe suplementação. Você só está cortando a vaca intermediária.",
+  "c4.type":"A verdade incômoda","c4.title":"O que é especismo? Isso é errado?",
+  "c4.p1":"Especismo é a discriminação moral injustificada com base na espécie — tratar alguém pior por pertencer a outra espécie, independente da capacidade de sofrer.",
+  "c4.p2":"Como argumenta Oscar Horta, assim como racismo e sexismo são rejeitados porque raça e sexo são moralmente irrelevantes, a espécie também é. O que importa é a capacidade de ser prejudicado.",
+  "c4.p3":"Especismo não é ideia marginal. É o padrão — por isso é tão difícil enxergar.",
+  "c4.fun":"O termo foi cunhado por Richard Ryder em 1970 — antes de Peter Singer popularizá-lo em \"Libertação Animal\" (1975).",
+  "c5.type":"Ciência & Ética","c5.title":"O que é senciência?",
+  "c5.p1":"Senciência é a capacidade de ter experiências subjetivas — sentir dor, prazer, medo, alegria. É o que faz um ser importar moralmente.",
+  "c5.p2":"A Declaração de Cambridge sobre a Consciência (2012) reconheceu que animais não humanos possuem os substratos neurológicos para experiência consciente.",
+  "c5.fun":"Nem todos os animais são sencientes! Cnidários (águas-vivas, corais) não possuem sistema nervoso centralizado. A ética tem permissão para ser complicada.",
+  "c6.type":"A lente que esquecemos","c6.title":"O que é antropocentrismo?",
+  "c6.p1":"Antropocentrismo é a crença de que humanos são as entidades mais importantes e que tudo o mais é medido pela utilidade para nós.",
+  "c6.p2":"É o irmão filosófico do especismo: a visão que coloca humanos no centro. O veganismo insiste que seres sencientes têm valor inerente, não instrumental.",
+  "c6.fun":"A maioria dos movimentos ambientalistas protege a natureza \"para futuras gerações\", não para os animais que vivem lá. O veganismo pergunta: e o futuro deles?",
+  "c7.type":"O sistema","c7.title":"O que é exploração animal?",
+  "c7.p1":"Exploração animal é o uso de animais como recursos — tratar seres sencientes como propriedade. Abrange alimentação, vestuário, entretenimento, testes e comércio de exóticos.",
+  "c7.p2":"O que a torna exploração é desrespeitar os interesses do animal. O fato de ser legal ou lucrativo não muda o que é.",
+  "c7.p3":"Veganismo é a recusa prática de participar desse sistema onde possível.",
+  "c7.fun":"\"Livestock\" significa literalmente \"estoque vivo\". A própria linguagem revela quão normalizada é a mercantilização dos animais.",
+  "c8.type":"Kit de ferramentas morais","c8.title":"Como saber se algo é errado?",
+  "c8.p1":"Experimente estes exercícios mentais:",
+  "c8.p2":"<strong>Teste da substituição:</strong> substitua o animal por um humano. Se é horrível com humano, pergunte: qual diferença justifica fazer com o animal?",
+  "c8.p3":"<strong>Teste da imparcialidade:</strong> imagine que não sabe em qual espécie vai nascer. Aceitaria a prática se pudesse ser o animal?",
+  "c8.fun":"Baseiam-se no Princípio da Igual Consideração de Interesses Semelhantes (Peter Singer): se dois seres têm o mesmo interesse, merece o mesmo peso moral — independente da espécie.",
+  "c9.type":"O polêmico","c9.title":"Veganismo é lavagem cerebral?",
+  "c9.p1":"Desde o nascimento somos ensinados que alguns animais são para carinho e outros para comer — sem base lógica. Esse condicionamento, reforçado por indústrias bilionárias, é mais próximo da lavagem cerebral real.",
+  "c9.p2":"Veganismo é o oposto: questionar o que lhe disseram e fazer uma escolha consciente.",
+  "c9.fun":"\"Carnismo\" foi cunhado por Melanie Joy para descrever o sistema invisível que condiciona a comer certos animais. É a ideologia — o veganismo é o opt-out.",
+  "c10.type":"Autocrítica importa","c10.title":"Equívocos comuns no movimento vegano",
+  "c10.p1":"O movimento vegano não é perfeito — e fingir que é não ajuda, muito menos os animais.",
+  "c10.p2":"Misturar defesa animal com causas não relacionadas pode diluir a mensagem. O argumento central — que animais merecem consideração moral — se perde.",
+  "c10.p3":"Tratar veganismo como identidade leva a tribalismo. O objetivo é menos sofrimento animal — não mais exclusão.",
+  "c10.p4":"Ser vegano não faz ninguém especialista. Precisamos continuar pensando criticamente.",
+  "c10.fun":"Para uma revisão baseada em evidências do que funciona em defesa animal, confira o <a href='https://www.sentienceinstitute.org/foundational-questions-summaries' target='_blank' rel='noopener' style='color:var(--leaf);font-weight:600;'>Resumo de Evidências para Questões Fundamentais em Defesa Animal Eficaz</a> de Jacy Reese Anthis (Sentience Institute) — uma das análises mais rigorosas disponíveis.",
+  "s.try":"Experimente Ser Vegano","try.desc":"Não sabe por onde começar? Esses programas gratuitos oferecem dicas, receitas, mentoria e apoio comunitário. Sem pressão — só boa comida e boas vibes.",
+  "s.ethics":"Ética Animal & Pesquisa","ethics.desc":"Quer ir mais fundo na ética animal e nas bases filosóficas? Essas organizações fazem um trabalho incrível.",
+  "s.aus":"Veganismo na Austrália","aus.desc":"Organizações e recursos essenciais para o veganismo na Austrália.",
+  "s.thinkers":"Pensadores Que Você Precisa Conhecer","thinkers.desc":"Os filósofos que construíram as bases do movimento animal moderno. Concorde ou discorde — leia-os para entender as diferentes posturas éticas.",
+  "footer.tagline":"Um mundo melhor para os animais.","footer.created":"Criado por"
+}};
+
+function toggleLang(){
+  currentLang=currentLang==='en'?'pt':'en';
+  document.getElementById('langBtn').textContent=currentLang==='en'?'PT':'EN';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(currentLang==='pt'&&i18n.pt[k]){
+      if(i18n.pt[k].includes('<'))el.innerHTML=i18n.pt[k];else el.textContent=i18n.pt[k];
+    }else if(currentLang==='en'){
+      const en=el.getAttribute('data-en');
+      if(en){if(en.includes('<'))el.innerHTML=en;else el.textContent=en;}
+    }
+  });
+  if(!window._enStored){
+    window._enStored=true;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      if(!el.getAttribute('data-en'))el.setAttribute('data-en',el.innerHTML);
+    });
+  }
+  renderAll();
+}
+window.addEventListener('load',()=>{
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    el.setAttribute('data-en',el.innerHTML);
+  });
+});
+
+// ACCORDION
+function toggleAccordion(btn){
+  const acc=btn.closest('.accordion');
+  const wasOpen=acc.classList.contains('open');
+  acc.classList.toggle('open');
+  if(!wasOpen){
+    setTimeout(()=>acc.scrollIntoView({behavior:'smooth',block:'start'}),100);
+  }
+}
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:0.05});
+document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+
+// MOBILE MENU
+function toggleMenu(){
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
+  document.getElementById('navOverlay').classList.toggle('open');
+  document.body.style.overflow=document.getElementById('mobileMenu').classList.contains('open')?'hidden':'';
+}
+document.querySelectorAll('#mobileMenu a').forEach(a=>{
+  a.addEventListener('click',()=>{if(window.innerWidth<=768)toggleMenu();});
+});
+
+renderAll();
+</script>
+</body>
+</html>
