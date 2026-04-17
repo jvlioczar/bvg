@@ -127,7 +127,7 @@
     display: flex; flex-direction: column;
     justify-content: center; align-items: center;
     text-align: center;
-    padding: 100px 40px 160px;
+    padding: 70px 40px 60px;
     position: relative; overflow: hidden;
   }
   .hero::before {
@@ -139,12 +139,21 @@
       radial-gradient(ellipse at 50% 80%, rgba(196, 113, 74, 0.04) 0%, transparent 50%);
     pointer-events: none;
   }
+  .hero-illustration {
+    width: 300px; height: 200px;
+    margin-bottom: 14px;
+    animation: fadeDown 0.8s ease 0.05s both;
+  }
+  .hero-illustration img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+  }
   .hero h1 {
     font-family: 'Fraunces', serif;
-    font-size: clamp(42px, 7vw, 88px);
+    font-size: clamp(32px, 4.5vw, 58px);
     font-weight: 700; line-height: 1.05;
     letter-spacing: -2px; color: var(--forest);
-    margin-bottom: 24px;
+    margin-bottom: 8px;
     animation: fadeDown 0.8s ease 0.15s both;
     white-space: nowrap;
   }
@@ -157,13 +166,13 @@
     font-size: clamp(12px, 1.5vw, 16px);
     font-weight: 400; font-style: normal;
     color: var(--sage);
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     animation: fadeDown 0.8s ease 0.3s both;
     letter-spacing: 0.5px;
   }
   .hero-desc {
     max-width: 620px;
-    font-size: 15px; line-height: 1.7;
+    font-size: 14px; line-height: 1.6;
     color: var(--text-light);
     animation: fadeDown 0.8s ease 0.45s both;
     text-wrap: balance;
@@ -171,8 +180,8 @@
 
   /* ── HERO INDEX ── */
   .hero-index {
-    display: flex; gap: 20px;
-    margin-top: 28px;
+    display: flex; gap: 14px;
+    margin-top: 16px;
     animation: fadeDown 0.8s ease 0.6s both;
     flex-wrap: wrap;
     justify-content: center;
@@ -180,9 +189,9 @@
   .hero-index a {
     display: inline-flex; align-items: center; gap: 6px;
     text-decoration: none;
-    font-size: 13px; font-weight: 600;
+    font-size: 12px; font-weight: 600;
     color: var(--forest);
-    padding: 8px 20px;
+    padding: 7px 16px;
     background: rgba(26, 58, 42, 0.06);
     border-radius: 24px;
     transition: all 0.25s;
@@ -194,18 +203,18 @@
   }
   .hero-index-num {
     font-family: 'Boldonse', system-ui;
-    font-size: 11px;
+    font-size: 10px;
     opacity: 0.5;
   }
   .scroll-hint {
-    position: absolute; bottom: 40px;
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    position: absolute; bottom: 24px;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
     color: var(--sage);
-    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
     animation: fadeDown 0.8s ease 0.7s both;
   }
   .scroll-line {
-    width: 1px; height: 40px;
+    width: 1px; height: 30px;
     background: linear-gradient(to bottom, var(--sage), transparent);
     animation: scrollPulse 2s ease infinite;
   }
@@ -543,10 +552,11 @@
       background: rgba(26, 58, 42, 0.1);
       margin: 8px 0;
     }
-    .hero { padding: 100px 24px 60px; }
-    .hero h1 { white-space: normal; font-size: clamp(36px, 9vw, 56px); }
-    .hero-index { gap: 10px; }
-    .hero-index a { font-size: 12px; padding: 7px 14px; }
+    .hero { padding: 65px 24px 50px; }
+    .hero h1 { white-space: normal; font-size: clamp(28px, 8vw, 42px); }
+    .hero-illustration { width: 200px; height: 133px; margin-bottom: 10px; }
+    .hero-index { gap: 8px; }
+    .hero-index a { font-size: 11px; padding: 6px 12px; }
     .section { padding: 40px 20px; }
     .section-header { flex-direction: column; align-items: flex-start; }
     .section-num { font-size: 44px; top: 30px; left: 20px; }
@@ -571,16 +581,16 @@
       <span class="logo-word">B</span><span class="logo-collapse" id="lc1">risbane</span><span class="logo-space" id="ls1"> </span><span class="logo-word">V</span><span class="logo-collapse" id="lc2">egan</span><span class="logo-space" id="ls2"> </span><span class="logo-word">G</span><span class="logo-collapse" id="lc3">uide</span>
     </a>
     <div class="nav-center" id="navCenter">
-      <a href="food.html" data-i18n="nav.food">Food</a>
-      <a href="community.html" data-i18n="nav.community">Community</a>
-      <a href="people.html" data-i18n="nav.people">People</a>
-      <a href="vegan-kit.html" data-i18n="nav.kit">Vegan Kit</a>
-      <a href="#" data-i18n="nav.map">Vegan Map</a>
-      <a href="hire-a-vegan.html" data-i18n="nav.hire">Hire a Vegan</a>
+      <a href="https://veganbrisbaneguide.com/food" data-i18n="nav.food">Food</a>
+      <a href="https://veganbrisbaneguide.com/community" data-i18n="nav.community">Community</a>
+      <a href="https://veganbrisbaneguide.com/people" data-i18n="nav.people">People</a>
+      <a href="https://veganbrisbaneguide.com/vegankit" data-i18n="nav.kit">Vegan Kit</a>
+      <a href="https://veganbrisbaneguide.com/veganmap" data-i18n="nav.map">Vegan Map</a>
+      <a href="https://veganbrisbaneguide.com/hire" data-i18n="nav.hire">Hire a Vegan</a>
     </div>
     <div class="nav-right">
       <div class="nav-meta">
-        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="https://veganbrisbaneguide.com/about" data-i18n="nav.about">About</a>
         <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
         </a>
@@ -595,14 +605,14 @@
   <!-- MOBILE OVERLAY -->
   <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="food.html">Food</a>
-    <a href="community.html">Community</a>
-    <a href="people.html">People</a>
-    <a href="vegan-kit.html">Vegan Kit</a>
-    <a href="#">Vegan Map</a>
-    <a href="hire-a-vegan.html">Hire a Vegan</a>
+    <a href="https://veganbrisbaneguide.com/food">Food</a>
+    <a href="https://veganbrisbaneguide.com/community">Community</a>
+    <a href="https://veganbrisbaneguide.com/people">People</a>
+    <a href="https://veganbrisbaneguide.com/vegankit">Vegan Kit</a>
+    <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
+    <a href="https://veganbrisbaneguide.com/hire">Hire a Vegan</a>
     <div class="mobile-menu-sep"></div>
-    <a href="about.html">About</a>
+    <a href="https://veganbrisbaneguide.com/about">About</a>
     <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
       Instagram
@@ -611,16 +621,19 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
+    <div class="hero-illustration">
+      <img src="images/bvg_illustration_home.png" alt="Brisbane Vegan Guide illustration">
+    </div>
     <h1>Brisbane <span class="accent">Vegan</span> Guide</h1>
     <p class="hero-sub" data-i18n="hero.subtitle">Your compass to vegan living in Brisbane and surrounds</p>
     <p class="hero-desc" data-i18n="hero.description">Discover the best vegan-friendly cafés, restaurants, sanctuaries, organisations, and inspiring people shaping the compassionate community of Brisbane — Meanjin.</p>
     <div class="hero-index">
-      <a href="food.html" data-i18n-href="food"><span class="hero-index-num">1</span> <span data-i18n="food.label">Eat & Drink</span></a>
-      <a href="community.html" data-i18n-href="community"><span class="hero-index-num">2</span> <span data-i18n="groups.label">Community</span></a>
-      <a href="people.html" data-i18n-href="people"><span class="hero-index-num">3</span> <span data-i18n="people.label">People</span></a>
-      <a href="vegan-kit.html" data-i18n-href="kit"><span class="hero-index-num">4</span> <span data-i18n="kit.label">Vegan Kit</span></a>
-      <a href="#" data-i18n-href="map"><span class="hero-index-num">5</span> <span data-i18n="map.label">Vegan Map</span></a>
-      <a href="hire-a-vegan.html" data-i18n-href="hire"><span class="hero-index-num">6</span> <span data-i18n="hire.label">Hire a Vegan</span></a>
+      <a href="https://veganbrisbaneguide.com/food" data-i18n-href="food"><span class="hero-index-num">1</span> <span data-i18n="food.label">Eat & Drink</span></a>
+      <a href="https://veganbrisbaneguide.com/community" data-i18n-href="community"><span class="hero-index-num">2</span> <span data-i18n="groups.label">Community</span></a>
+      <a href="https://veganbrisbaneguide.com/people" data-i18n-href="people"><span class="hero-index-num">3</span> <span data-i18n="people.label">People</span></a>
+      <a href="https://veganbrisbaneguide.com/vegankit" data-i18n-href="kit"><span class="hero-index-num">4</span> <span data-i18n="kit.label">Vegan Kit</span></a>
+      <a href="https://veganbrisbaneguide.com/veganmap" data-i18n-href="map"><span class="hero-index-num">5</span> <span data-i18n="map.label">Vegan Map</span></a>
+      <a href="https://veganbrisbaneguide.com/hire" data-i18n-href="hire"><span class="hero-index-num">6</span> <span data-i18n="hire.label">Hire a Vegan</span></a>
     </div>
     <div class="scroll-hint">
       <span data-i18n="hero.scroll">Explore</span>
@@ -636,7 +649,7 @@
         <div class="section-label" data-i18n="food.label">Eat & Drink</div>
         <div class="section-tagline" data-i18n="food.tagline">Where flavour meets compassion</div>
       </div>
-      <a href="food.html" class="section-cta" data-i18n="food.cta">Explore all venues →</a>
+      <button class="section-cta" data-i18n="food.cta">Explore all venues →</button>
     </div>
     <div class="cards-grid">
       <div class="card">
@@ -650,7 +663,7 @@
           <span class="tag">Bistro</span>
           <span class="tag">Groceries</span>
         </div>
-        <a href="the-green-edge.html" class="card-btn" data-i18n="btn.more">Learn more</a>
+        <a href="bvg-venue-the-green-edge.html" class="card-btn" data-i18n="btn.more">Learn more</a>
       </div>
       <div class="card">
         <span class="card-emoji">🍜</span>
@@ -691,7 +704,7 @@
         <div class="section-label" data-i18n="groups.label">Community</div>
         <div class="section-tagline" data-i18n="groups.tagline">Groups and organisations creating change</div>
       </div>
-      <a href="community.html" class="section-cta" data-i18n="groups.cta">See all groups →</a>
+      <button class="section-cta" data-i18n="groups.cta">See all groups →</button>
     </div>
     <div class="cards-grid">
       <div class="card">
@@ -746,7 +759,7 @@
         <div class="section-label" data-i18n="people.label">People</div>
         <div class="section-tagline" data-i18n="people.tagline">Voices leading the animal movement</div>
       </div>
-      <a href="people.html" class="section-cta" data-i18n="people.cta">Meet everyone →</a>
+      <button class="section-cta" data-i18n="people.cta">Meet everyone →</button>
     </div>
     <div class="cards-grid">
       <div class="card">
@@ -788,58 +801,6 @@
     </div>
   </section>
 
-  <div class="leaf-divider"><span>💚</span></div>
-
-  <!-- VEGAN KIT -->
-  <section class="section" id="sec-kit">
-    <div class="section-num">04</div>
-    <div class="section-header">
-      <div>
-        <div class="section-label" data-i18n="kit.label">Vegan Kit</div>
-        <div class="section-tagline" data-i18n="kit.tagline">Essential knowledge for an ethical life</div>
-      </div>
-      <a href="vegan-kit.html" class="section-cta" data-i18n="kit.cta">Explore the full kit →</a>
-    </div>
-    <div class="cards-grid">
-      <div class="card">
-        <span class="card-emoji">🌱</span>
-        <div class="card-type" data-i18n="kit.item1.type">Fundamentals</div>
-        <div class="card-name" data-i18n="kit.item1.name">What is veganism?</div>
-        <div class="card-desc" data-i18n="kit.item1.desc">Understanding veganism beyond diet — a philosophy and way of living that seeks to exclude all forms of animal exploitation and cruelty.</div>
-        <div class="card-tags">
-          <span class="tag">Ethics</span>
-          <span class="tag">Philosophy</span>
-          <span class="tag">Beginners</span>
-        </div>
-        <a href="#" class="card-btn" data-i18n="btn.more">Learn more</a>
-      </div>
-      <div class="card">
-        <span class="card-emoji">💡</span>
-        <div class="card-type" data-i18n="kit.item2.type">Science & Ethics</div>
-        <div class="card-name" data-i18n="kit.item2.name">What is sentience?</div>
-        <div class="card-desc" data-i18n="kit.item2.desc">The science behind animal sentience — how animals experience pain, emotions, and consciousness, and why it matters for how we treat them.</div>
-        <div class="card-tags">
-          <span class="tag">Sentience</span>
-          <span class="tag">Science</span>
-          <span class="tag">Animal Rights</span>
-        </div>
-        <a href="#" class="card-btn" data-i18n="btn.more">Learn more</a>
-      </div>
-      <div class="card">
-        <span class="card-emoji">🥦</span>
-        <div class="card-type" data-i18n="kit.item3.type">Health & Nutrition</div>
-        <div class="card-name" data-i18n="kit.item3.name">Are plant-based diets healthy?</div>
-        <div class="card-desc" data-i18n="kit.item3.desc">What the science says about plant-based nutrition — health benefits, essential nutrients, and how to thrive on a well-planned vegan diet.</div>
-        <div class="card-tags">
-          <span class="tag">Nutrition</span>
-          <span class="tag">Health</span>
-          <span class="tag">Science</span>
-        </div>
-        <a href="#" class="card-btn" data-i18n="btn.more">Learn more</a>
-      </div>
-    </div>
-  </section>
-
   <!-- EXPLORE -->
   <section class="explore">
     <div class="explore-header">
@@ -848,21 +809,21 @@
     </div>
     <div class="explore-grid">
 
-      <a href="vegan-kit.html" class="explore-card">
+      <a href="https://veganbrisbaneguide.com/vegankit" class="explore-card">
         <div class="explore-card-emoji">📚</div>
         <div class="explore-card-title" data-i18n="explore.kit.title">Vegan Kit</div>
         <div class="explore-card-desc" data-i18n="explore.kit.desc">Essential questions and answers for anyone who wants to understand the basics of veganism, plus references for deeper reading on animal ethics and advocacy.</div>
         <span class="explore-card-cta" data-i18n="explore.cta">Explore →</span>
       </a>
 
-      <a href="#" class="explore-card">
+      <a href="https://veganbrisbaneguide.com/veganmap" class="explore-card">
         <div class="explore-card-emoji">🗺️</div>
         <div class="explore-card-title" data-i18n="explore.map.title">Vegan Map</div>
         <div class="explore-card-desc" data-i18n="explore.map.desc">An up-to-date map of all vegan places in Brisbane and surrounds — restaurants, cafés, shops, and more, all in one place.</div>
         <span class="explore-card-cta" data-i18n="explore.cta">Explore →</span>
       </a>
 
-      <a href="hire-a-vegan.html" class="explore-card">
+      <a href="https://veganbrisbaneguide.com/hire" class="explore-card">
         <div class="explore-card-emoji">🤝</div>
         <div class="explore-card-title" data-i18n="explore.hire.title">Hire a Vegan</div>
         <div class="explore-card-desc" data-i18n="explore.hire.desc">A directory of vegans in Brisbane offering all kinds of services — support the solidarity economy by hiring them and keeping it cruelty-free. If you're vegan in Brisbane, you can list yourself too.</div>
@@ -1075,22 +1036,22 @@ function toggleLang() {
   // Switch nav URLs by language
   const navUrls = {
     en: {
-      "nav.food": "food.html",
-      "nav.community": "community.html",
-      "nav.people": "people.html",
-      "nav.kit": "vegan-kit.html",
-      "nav.map": "#",
-      "nav.hire": "hire-a-vegan.html",
-      "nav.about": "about.html"
+      "nav.food": "https://veganbrisbaneguide.com/food",
+      "nav.community": "https://veganbrisbaneguide.com/community",
+      "nav.people": "https://veganbrisbaneguide.com/people",
+      "nav.kit": "https://veganbrisbaneguide.com/vegankit",
+      "nav.map": "https://veganbrisbaneguide.com/veganmap",
+      "nav.hire": "https://veganbrisbaneguide.com/hire",
+      "nav.about": "https://veganbrisbaneguide.com/about"
     },
     pt: {
-      "nav.food": "food.html",
-      "nav.community": "community.html",
-      "nav.people": "people.html",
-      "nav.kit": "vegan-kit.html",
-      "nav.map": "#",
-      "nav.hire": "hire-a-vegan.html",
-      "nav.about": "about.html"
+      "nav.food": "https://veganbrisbaneguide.com/comida",
+      "nav.community": "https://veganbrisbaneguide.com/comunidade",
+      "nav.people": "https://veganbrisbaneguide.com/pessoas",
+      "nav.kit": "https://veganbrisbaneguide.com/kitvegano",
+      "nav.map": "https://veganbrisbaneguide.com/mapavegano",
+      "nav.hire": "https://veganbrisbaneguide.com/contrate",
+      "nav.about": "https://veganbrisbaneguide.com/sobre"
     }
   };
   document.querySelectorAll(".nav-center a[data-i18n], .nav-meta a[data-i18n]").forEach(a => {
@@ -1098,12 +1059,12 @@ function toggleLang() {
     if (navUrls[currentLang][key]) a.href = navUrls[currentLang][key];
   });
   const indexUrls = {
-    en: { food: "food.html", community: "community.html", people: "people.html", kit: "vegan-kit.html", map: "#", hire: "hire-a-vegan.html" },
-    pt: { food: "food.html", community: "community.html", people: "people.html", kit: "vegan-kit.html", map: "#", hire: "hire-a-vegan.html" }
+    en: { food: "/food", community: "/community", people: "/people", kit: "/vegankit", map: "/veganmap", hire: "/hire" },
+    pt: { food: "/comida", community: "/comunidade", people: "/pessoas", kit: "/kitvegano", map: "/mapavegano", hire: "/contrate" }
   };
   document.querySelectorAll("[data-i18n-href]").forEach(a => {
     const key = a.getAttribute("data-i18n-href");
-    if (indexUrls[currentLang][key]) a.href = indexUrls[currentLang][key];
+    if (indexUrls[currentLang][key]) a.href = "https://veganbrisbaneguide.com" + indexUrls[currentLang][key];
   });
 }
 
