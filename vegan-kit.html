@@ -15,6 +15,15 @@ a,button,.lang-btn,.nav-links a,.hamburger,.resource-link,.challenge-link,.think
 body{background:var(--cream);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden}
 html{scroll-behavior:smooth}
 
+/* PAGE HEADER */
+.page-header{max-width:1100px;margin:0 auto;padding:90px 40px 0}
+.page-num{font-family:'Fraunces',serif;font-size:64px;font-weight:700;color:rgba(45,90,61,0.06);line-height:1;margin-bottom:-10px}
+.page-title{font-family:'Fraunces',serif;font-size:clamp(32px,5vw,48px);font-weight:700;color:var(--forest);letter-spacing:-1.5px;margin-bottom:4px}
+.page-tagline{font-family:'Boldonse',system-ui;font-size:14px;font-weight:400;color:var(--sage);letter-spacing:0.5px;margin-bottom:8px}
+.page-desc{font-size:15px;line-height:1.7;color:var(--text-light);max-width:600px}
+.page-count{margin-top:10px;font-size:13px;color:var(--sage);font-weight:500}
+.page-count span{font-family:'Fraunces',serif;font-weight:700;font-size:15px;color:var(--forest)}
+
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 40px;background:rgba(245,240,232,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(42,42,40,0.06);box-shadow:0 2px 20px rgba(26,58,42,0.06)}
 .nav-logo{font-family:'Boldonse',system-ui;font-weight:400;font-size:16px;color:var(--forest);text-decoration:none;letter-spacing:-0.3px;display:flex;align-items:baseline}
@@ -33,16 +42,8 @@ html{scroll-behavior:smooth}
 .lang-btn{background:var(--forest);color:var(--cream);border:none;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:1px;transition:all 0.25s}
 .lang-btn:hover{background:var(--moss);transform:scale(1.05)}
 
-/* HERO */
-.kit-hero{width:100%;min-height:340px;position:relative;overflow:hidden;margin-top:52px;background:linear-gradient(135deg,var(--forest) 0%,var(--moss) 30%,var(--leaf) 70%,var(--leaf-light) 100%);display:flex;align-items:center;justify-content:center;padding:50px 40px}
-.kit-hero-content{text-align:center;color:var(--cream);position:relative;z-index:2;max-width:660px}
-.kit-hero-emoji{font-size:44px;margin-bottom:12px}
-.kit-hero h1{font-family:'Fraunces',serif;font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:-1.5px;margin-bottom:8px}
-.kit-hero-sub{font-family:'Boldonse',system-ui;font-size:clamp(11px,1.3vw,14px);font-weight:400;opacity:0.7;letter-spacing:0.5px;margin-bottom:12px}
-.kit-hero-desc{font-size:15px;line-height:1.7;opacity:0.85}
-
 /* CONTENT */
-.kit-content{max-width:960px;margin:0 auto;padding:36px 40px 60px}
+.kit-content{max-width:1100px;margin:16px auto 0;padding:0 40px 60px}
 
 /* TOC */
 .toc{background:white;border-radius:14px;padding:24px 28px;border:1px solid rgba(42,42,40,0.06);margin-bottom:36px}
@@ -119,13 +120,15 @@ html{scroll-behavior:smooth}
 
 /* THINKERS */
 .thinkers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-bottom:36px}
-.thinker-card{background:white;border-radius:12px;padding:16px 18px;border:1px solid rgba(42,42,40,0.06);transition:all 0.3s ease;display:flex;align-items:center;gap:12px}
+.thinker-card{background:white;border-radius:12px;padding:14px 16px;border:1px solid rgba(42,42,40,0.06);transition:all 0.3s ease;display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
 .thinker-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(26,58,42,0.07);border-color:rgba(74,140,92,0.15)}
+.thinker-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--leaf-light),var(--teal));display:flex;align-items:center;justify-content:center;color:var(--cream);font-family:'Fraunces',serif;font-size:14px;font-weight:700;flex-shrink:0;overflow:hidden;border:2px solid rgba(245,240,232,0.6);box-shadow:0 2px 8px rgba(26,58,42,0.06)}
+.thinker-avatar img{width:100%;height:100%;object-fit:cover}
 .thinker-info{flex-grow:1;min-width:0}
 .thinker-name{font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:var(--forest)}
 .thinker-field{font-size:10px;color:var(--sage);line-height:1.4;margin-top:1px}
-.thinker-link{flex-shrink:0;font-size:11px;font-weight:600;color:var(--leaf);text-decoration:none;transition:color 0.25s;white-space:nowrap}
-.thinker-link:hover{color:var(--forest)}
+.thinker-arrow{margin-left:auto;color:var(--leaf);flex-shrink:0;transition:transform 0.25s,color 0.25s;display:flex;align-items:center}
+.thinker-card:hover .thinker-arrow{transform:translateX(4px);color:var(--forest)}
 
 /* FOOTER */
 .footer{background:var(--forest);color:var(--cream);padding:48px 40px;text-align:center}
@@ -148,12 +151,12 @@ html{scroll-behavior:smooth}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
 .nav-overlay{display:none;position:fixed;inset:0;background:rgba(26,58,42,0.3);z-index:90;opacity:0;transition:opacity 0.3s ease}
 .nav-overlay.open{display:block;opacity:1}
+  .mobile-menu { display: none; }
 
 @media(max-width:768px){
   .nav{padding:14px 20px}.nav-right{gap:12px}.hamburger{display:flex}
   .nav-center, .nav-meta { display: none; }
-    .mobile-menu {
-      position: fixed; top: 0; right: -280px;
+    .mobile-menu { display: flex; position: fixed; top: 0; right: -280px;
       width: 260px; height: 100vh;
       background: var(--cream); display: flex; flex-direction: column;
       padding: 80px 28px 40px;
@@ -173,7 +176,7 @@ html{scroll-behavior:smooth}
     .mobile-menu a:hover { color: var(--forest); }
     .mobile-menu a.active { color: var(--forest); font-weight: 700; }
     .mobile-menu-sep { height: 1px; background: rgba(26, 58, 42, 0.1); margin: 8px 0; }
-  .kit-hero{padding:40px 24px;min-height:280px}
+  .page-header { padding: 80px 20px 0; }
   .kit-content{padding:28px 20px 40px}
   .accordion-toggle{padding:16px 18px;gap:10px}
   .accordion-inner{padding:0 18px 18px}
@@ -191,21 +194,21 @@ html{scroll-behavior:smooth}
 
 <!-- NAV -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">
+    <a href="/" class="nav-logo">
       <svg class="logo-pin" width="18" height="18" viewBox="0 0 24 28" fill="none"><path d="M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z" fill="var(--leaf)"/></svg>
       <span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>
     </a>
     <div class="nav-center">
-      <a href="food.html">Food</a>
-      <a href="community.html">Community</a>
-      <a href="people.html">People</a>
-      <a href="vegan-kit.html" class="active">Vegan Kit</a>
-      <a href="#">Vegan Map</a>
-      <a href="hire-a-vegan.html">Hire a Vegan</a>
+      <a href="https://veganbrisbaneguide.com/food">Food</a>
+      <a href="https://veganbrisbaneguide.com/community">Community</a>
+      <a href="https://veganbrisbaneguide.com/people">People</a>
+      <a href="https://veganbrisbaneguide.com/vegankit" class="active">Vegan Kit</a>
+      <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
+      <a href="https://veganbrisbaneguide.com/hire">Hire a Vegan</a>
     </div>
     <div class="nav-right">
       <div class="nav-meta">
-        <a href="about.html">About</a>
+        <a href="https://veganbrisbaneguide.com/about">About</a>
         <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
       </div>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -214,15 +217,23 @@ html{scroll-behavior:smooth}
   </nav>
   <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="food.html">Food</a>
-    <a href="community.html">Community</a>
-    <a href="people.html">People</a>
-    <a href="vegan-kit.html" class="active">Vegan Kit</a>
-    <a href="#">Vegan Map</a>
-    <a href="hire-a-vegan.html">Hire a Vegan</a>
+    <a href="https://veganbrisbaneguide.com/food">Food</a>
+    <a href="https://veganbrisbaneguide.com/community">Community</a>
+    <a href="https://veganbrisbaneguide.com/people">People</a>
+    <a href="https://veganbrisbaneguide.com/vegankit" class="active">Vegan Kit</a>
+    <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
+    <a href="https://veganbrisbaneguide.com/hire">Hire a Vegan</a>
     <div class="mobile-menu-sep"></div>
-    <a href="about.html">About</a>
+    <a href="https://veganbrisbaneguide.com/about">About</a>
     <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg> Instagram</a>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-num">04</div>
+    <h1 class="page-title" data-i18n="page.title">Vegan Kit</h1>
+    <p class="page-tagline" data-i18n="page.tagline">Essential knowledge for an ethical life</p>
+    <p class="page-desc" data-i18n="page.desc">Everything you need to know about veganism — no guilt trips, no lectures, just the facts served with a side of good humour. Spoiler: it's about the animals.</p>
   </div>
 
   <!-- CONTENT -->
@@ -458,59 +469,60 @@ const challenges=[
   {name:"30 Day Vegan Pledge",emoji:"✅",url:"https://vegansociety.com/go-vegan/take-vegan-pledge"},
   {name:"Abril Vegano",emoji:"🇧🇷",url:"https://sites.svb.org.br/abrilvegano"},
   {name:"Challenge 22",emoji:"🔢",url:"https://challenge22.com"},
+  {name:"Communication Hacks",emoji:"💬",url:"https://veganadvocacy.org/communication-hacks"},
   {name:"Vegan4Life",emoji:"🦘",url:"https://challengevegan4life.org.au"},
+  {name:"Vegan Bootcamp",emoji:"🎓",url:"https://veganbootcamp.org/courses"},
   {name:"Vegan Challenge",emoji:"💪",url:"https://secure.peta.org.au/page/72542/data/1"},
   {name:"Vegan Kickstart",emoji:"🚀",url:"https://pcrm.org/vegankickstart"},
-  {name:"Veganuary",emoji:"📅",url:"https://veganuary.com"},
-  {name:"Vegan Bootcamp",emoji:"🎓",url:"https://veganbootcamp.org/courses"},
-  {name:"Communication Hacks",emoji:"💬",url:"https://veganadvocacy.org/communication-hacks"}
+  {name:"Veganuary",emoji:"📅",url:"https://veganuary.com"}
 ];
 const docs=[
   {name:"Dominion",desc:{en:"A comprehensive exposé of the systematic exploitation of animals across major industries, filmed primarily in Australia using drones and hidden cameras.",pt:"Um exposé abrangente da exploração sistemática de animais nas principais indústrias, filmado principalmente na Austrália com drones e câmeras ocultas."},url:"https://www.youtube.com/watch?v=LQRAfJyEsko",emoji:"🎬",year:"2018"},
   {name:"Earthlings",desc:{en:"The pioneering documentary narrated by Joaquin Phoenix that examines humanity's dependence on animals for food, clothing, entertainment, and research.",pt:"O documentário pioneiro narrado por Joaquin Phoenix que examina a dependência humana dos animais para alimentação, vestuário, entretenimento e pesquisa."},url:"https://www.youtube.com/watch?v=8gqwpfEcBjI",emoji:"🌍",year:"2005"},
   {name:"Lucent",desc:{en:"An unflinching look inside Australia's pig farming industry, revealing the routine cruelty hidden behind closed doors.",pt:"Um olhar sem filtros dentro da indústria suinícola australiana, revelando a crueldade rotineira escondida a portas fechadas."},url:"https://www.youtube.com/watch?v=KArL5YjaL5U",emoji:"🐷",year:"2014"},
+  {name:"Nightmares of Nature",desc:{en:"A confronting exploration of the hidden suffering within Australia's wildlife and animal agriculture industries.",pt:"Uma exploração confrontante do sofrimento oculto nas indústrias de vida selvagem e agropecuária da Austrália."},url:"https://www.youtube.com/watch?v=Vped7Y8Caa8",emoji:"🦇",year:"2024"},
   {name:"Pignorant",desc:{en:"A follow-up to Lucent exploring the ongoing suffering in Australian pig farms and the systemic failures that allow it to continue.",pt:"Uma continuação de Lucent que explora o sofrimento contínuo nas fazendas de porcos australianas e as falhas sistêmicas que permitem sua continuidade."},url:"https://www.youtube.com/watch?v=VI9xxu17pM8",emoji:"🔍",year:"2022"},
-  {name:"Seaspiracy",desc:{en:"An investigation into the global fishing industry, revealing the environmental destruction and animal suffering caused by commercial fishing.",pt:"Uma investigação sobre a indústria pesqueira global, revelando a destruição ambiental e o sofrimento animal causado pela pesca comercial."},url:"https://www.youtube.com/watch?v=DfpuhKMN9Vs",emoji:"🌊",year:"2021"},
-  {name:"Nightmares of Nature",desc:{en:"A confronting exploration of the hidden suffering within Australia's wildlife and animal agriculture industries.",pt:"Uma exploração confrontante do sofrimento oculto nas indústrias de vida selvagem e agropecuária da Austrália."},url:"https://www.youtube.com/watch?v=Vped7Y8Caa8",emoji:"🦇",year:"2024"}
+  {name:"Seaspiracy",desc:{en:"An investigation into the global fishing industry, revealing the environmental destruction and animal suffering caused by commercial fishing.",pt:"Uma investigação sobre a indústria pesqueira global, revelando a destruição ambiental e o sofrimento animal causado pela pesca comercial."},url:"https://www.youtube.com/watch?v=DfpuhKMN9Vs",emoji:"🌊",year:"2021"}
 ];
 const ethicsR=[
   {name:"Animal Ethics",desc:{en:"Ethics beyond species boundaries",pt:"Ética além das fronteiras de espécie"},url:"https://www.animal-ethics.org",emoji:"📖"},
+  {name:"Center For Reducing Suffering",desc:{en:"Focused on reducing suffering",pt:"Focado na redução do sofrimento"},url:"https://centerforreducingsuffering.org",emoji:"💜"},
+  {name:"Center on Long-Term Risk",desc:{en:"Long-term risk research",pt:"Riscos de longo prazo"},url:"https://longtermrisk.org",emoji:"🔮"},
   {name:"Rethink Priorities",desc:{en:"Evidence-based research",pt:"Pesquisa baseada em evidências"},url:"https://rethinkpriorities.org",emoji:"🔬"},
   {name:"Senciência",desc:{en:"Animal sentience research (PT)",pt:"Pesquisa sobre senciência animal"},url:"https://senciencia.org",emoji:"🧠"},
   {name:"Sentience Institute",desc:{en:"Social change for animals",pt:"Mudança social para animais"},url:"https://www.sentienceinstitute.org",emoji:"🏛️"},
   {name:"Sentient Futures",desc:{en:"AI & sentient wellbeing",pt:"IA e bem-estar senciente"},url:"https://www.sentientfutures.ai",emoji:"🤖"},
-  {name:"Center For Reducing Suffering",desc:{en:"Focused on reducing suffering",pt:"Focado na redução do sofrimento"},url:"https://centerforreducingsuffering.org",emoji:"💜"},
-  {name:"Center on Long-Term Risk",desc:{en:"Long-term risk research",pt:"Riscos de longo prazo"},url:"https://longtermrisk.org",emoji:"🔮"},
   {name:"Sentientism",desc:{en:"Evidence, reason & compassion for all sentient beings",pt:"Evidência, razão e compaixão por todos os seres sencientes"},url:"https://sentientism.info",emoji:"🌐"}
 ];
 const ausR=[
+  {name:"AnimalKind",desc:{en:"Cruelty-free living in Australia",pt:"Vida livre de crueldade na Austrália"},url:"https://animalkind.org.au",emoji:"💚"},
   {name:"Animals Australia",desc:{en:"Leading animal protection org",pt:"Principal org de proteção animal"},url:"https://animalsaustralia.org",emoji:"🦘"},
   {name:"Australian Vegan Society",desc:{en:"Official vegan society",pt:"Sociedade vegana oficial"},url:"https://vegansociety.org.au",emoji:"🌿"},
-  {name:"Vegan On The Map",desc:{en:"Find vegan places in Australia",pt:"Encontre lugares veganos"},url:"https://australia.veganonthemap.com",emoji:"🗺️"},
-  {name:"Vegan Australia",desc:{en:"Advocacy & community",pt:"Advocacy e comunidade"},url:"https://veganaustralia.org.au",emoji:"🇦🇺"},
-  {name:"Let's Go Vegan",desc:{en:"Practical transition guide",pt:"Guia prático de transição"},url:"https://letsgovegan.com.au",emoji:"🚀"},
-  {name:"AnimalKind",desc:{en:"Cruelty-free living in Australia",pt:"Vida livre de crueldade na Austrália"},url:"https://animalkind.org.au",emoji:"💚"},
-  {name:"Vegan Society of Queensland",desc:{en:"Queensland's vegan community",pt:"Comunidade vegana de Queensland"},url:"https://www.vegansocietyqld.org",emoji:"🌴"},
-  {name:"Vegan NSW",desc:{en:"Vegan community in New South Wales",pt:"Comunidade vegana em New South Wales"},url:"http://www.vnsw.org.au",emoji:"🏙️"},
-  {name:"PETA Australia",desc:{en:"Animal rights advocacy & campaigns",pt:"Advocacy e campanhas por direitos animais"},url:"https://www.peta.org.au",emoji:"🐾"},
   {name:"Buy Vegan",desc:{en:"Vegan products directory for Australia",pt:"Diretório de produtos veganos na Austrália"},url:"https://buyvegan.com.au",emoji:"🛒"},
+  {name:"Let's Go Vegan",desc:{en:"Practical transition guide",pt:"Guia prático de transição"},url:"https://letsgovegan.com.au",emoji:"🚀"},
+  {name:"PETA Australia",desc:{en:"Animal rights advocacy & campaigns",pt:"Advocacy e campanhas por direitos animais"},url:"https://www.peta.org.au",emoji:"🐾"},
+  {name:"Vegan Australia",desc:{en:"Advocacy & community",pt:"Advocacy e comunidade"},url:"https://veganaustralia.org.au",emoji:"🇦🇺"},
+  {name:"Vegan NSW",desc:{en:"Vegan community in New South Wales",pt:"Comunidade vegana em New South Wales"},url:"http://www.vnsw.org.au",emoji:"🏙️"},
+  {name:"Vegan On The Map",desc:{en:"Find vegan places in Australia",pt:"Encontre lugares veganos"},url:"https://australia.veganonthemap.com",emoji:"🗺️"},
   {name:"Vegan Perth",desc:{en:"Perth's vegan community hub",pt:"Hub da comunidade vegana de Perth"},url:"https://veganperth.org.au",emoji:"🌊"},
+  {name:"Vegan Society of Queensland",desc:{en:"Queensland's vegan community",pt:"Comunidade vegana de Queensland"},url:"https://www.vegansocietyqld.org",emoji:"🌴"},
   {name:"Vegan Tours Australia",desc:{en:"Vegan travel experiences across Australia",pt:"Experiências de viagem vegana pela Austrália"},url:"https://www.vegantoursaustralia.com.au",emoji:"🧳"}
 ];
 const thinkers=[
-  {name:"Peter Singer",field:{en:"Utilitarianism · Animal Liberation",pt:"Utilitarismo · Libertação Animal"},url:"https://en.wikipedia.org/wiki/Peter_Singer"},
-  {name:"Oscar Horta",field:{en:"Anti-speciesism · Wild animal suffering",pt:"Antiespecismo · Sofrimento animal selvagem"},url:"https://en.wikipedia.org/wiki/Oscar_Horta"},
-  {name:"Tom Regan",field:{en:"Animal rights · Inherent value",pt:"Direitos animais · Valor inerente"},url:"https://en.wikipedia.org/wiki/Tom_Regan"},
-  {name:"Gary L. Francione",field:{en:"Abolitionism · Moral personhood",pt:"Abolicionismo · Personalidade moral"},url:"https://en.wikipedia.org/wiki/Gary_L._Francione"},
-  {name:"Martha Nussbaum",field:{en:"Capabilities approach · Justice",pt:"Abordagem das capacidades · Justiça"},url:"https://en.wikipedia.org/wiki/Martha_Nussbaum"},
-  {name:"Christine Korsgaard",field:{en:"Kantian ethics · Moral status",pt:"Ética kantiana · Status moral"},url:"https://en.wikipedia.org/wiki/Christine_Korsgaard"},
-  {name:"Sue Donaldson & Will Kymlicka",field:{en:"Zoopolis · Political theory",pt:"Zoopolis · Teoria política"},url:"https://en.wikipedia.org/wiki/Zoopolis"},
-  {name:"Richard D. Ryder",field:{en:"Coined 'speciesism' · Painism",pt:"Cunhou 'especismo' · Painismo"},url:"https://en.wikipedia.org/wiki/Richard_D._Ryder"},
-  {name:"James Rachels",field:{en:"Moral individualism",pt:"Individualismo moral"},url:"https://en.wikipedia.org/wiki/James_Rachels"},
-  {name:"Alasdair Cochrane",field:{en:"Political theory · Animal rights",pt:"Teoria política · Direitos animais"},url:"https://en.wikipedia.org/wiki/Alasdair_Cochrane"},
-  {name:"Luciano Carlos Cunha",field:{en:"Ethics · Wild animal suffering",pt:"Ética · Sofrimento animal selvagem"},url:"https://pt.wikipedia.org/wiki/Luciano_Carlos_Cunha"},
-  {name:"Stephen R. L. Clark",field:{en:"Moral philosophy · Animal status",pt:"Filosofia moral · Status animal"},url:"https://en.wikipedia.org/wiki/Stephen_Clark_(philosopher)"},
-  {name:"Mark Rowlands",field:{en:"Animal rights · Contractarianism",pt:"Direitos animais · Contratualismo"},url:"https://en.wikipedia.org/wiki/Mark_Rowlands"}
+  {name:"Alasdair Cochrane",initials:"AC",field:{en:"Political theory · Animal rights",pt:"Teoria política · Direitos animais"},url:"https://en.wikipedia.org/wiki/Alasdair_Cochrane"},
+  {name:"Christine Korsgaard",initials:"CK",field:{en:"Kantian ethics · Moral status",pt:"Ética kantiana · Status moral"},url:"https://en.wikipedia.org/wiki/Christine_Korsgaard"},
+  {name:"Gary L. Francione",initials:"GF",field:{en:"Abolitionism · Moral personhood",pt:"Abolicionismo · Personalidade moral"},url:"https://en.wikipedia.org/wiki/Gary_L._Francione"},
+  {name:"James Rachels",initials:"JR",field:{en:"Moral individualism",pt:"Individualismo moral"},url:"https://en.wikipedia.org/wiki/James_Rachels"},
+  {name:"Luciano Carlos Cunha",initials:"LC",field:{en:"Ethics · Wild animal suffering",pt:"Ética · Sofrimento animal selvagem"},url:"https://pt.wikipedia.org/wiki/Luciano_Carlos_Cunha"},
+  {name:"Mark Rowlands",initials:"MR",field:{en:"Animal rights · Contractarianism",pt:"Direitos animais · Contratualismo"},url:"https://en.wikipedia.org/wiki/Mark_Rowlands"},
+  {name:"Martha Nussbaum",initials:"MN",field:{en:"Capabilities approach · Justice",pt:"Abordagem das capacidades · Justiça"},url:"https://en.wikipedia.org/wiki/Martha_Nussbaum"},
+  {name:"Oscar Horta",initials:"OH",field:{en:"Anti-speciesism · Wild animal suffering",pt:"Antiespecismo · Sofrimento animal selvagem"},url:"https://en.wikipedia.org/wiki/Oscar_Horta"},
+  {name:"Peter Singer",initials:"PS",field:{en:"Utilitarianism · Animal Liberation",pt:"Utilitarismo · Libertação Animal"},url:"https://en.wikipedia.org/wiki/Peter_Singer"},
+  {name:"Richard D. Ryder",initials:"RR",field:{en:"Coined 'speciesism' · Painism",pt:"Cunhou 'especismo' · Painismo"},url:"https://en.wikipedia.org/wiki/Richard_D._Ryder"},
+  {name:"Stephen R. L. Clark",initials:"SC",field:{en:"Moral philosophy · Animal status",pt:"Filosofia moral · Status animal"},url:"https://en.wikipedia.org/wiki/Stephen_Clark_(philosopher)"},
+  {name:"Sue Donaldson & Will Kymlicka",initials:"DK",field:{en:"Zoopolis · Political theory",pt:"Zoopolis · Teoria política"},url:"https://en.wikipedia.org/wiki/Zoopolis"},
+  {name:"Tom Regan",initials:"TR",field:{en:"Animal rights · Inherent value",pt:"Direitos animais · Valor inerente"},url:"https://en.wikipedia.org/wiki/Tom_Regan"},
+  {name:"Yves Bonnardel",initials:"YB",field:{en:"Anti-speciesism · French antispeciesist movement",pt:"Antiespecismo · Movimento antiespecista francês"},url:"https://en.wikipedia.org/wiki/Yves_Bonnardel"}
 ];
 
 let currentLang='en';
@@ -518,18 +530,20 @@ const arw=`<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="
 
 function renderAll(){
   const watchLabel = currentLang === 'pt' ? 'Assistir' : 'Watch';
-  const learnLabel = currentLang === 'pt' ? 'Saiba mais' : 'Learn more';
   document.getElementById('challengesGrid').innerHTML=challenges.map(c=>`<a href="${c.url}" target="_blank" rel="noopener" class="challenge-link"><span class="challenge-emoji">${c.emoji}</span><span class="challenge-name">${c.name}</span><span class="challenge-arrow">${arw}</span></a>`).join('');
   document.getElementById('docsGrid').innerHTML=docs.map(d=>`<div class="doc-link"><div class="doc-icon">${d.emoji}</div><div class="doc-info"><div class="doc-name">${d.name}</div><div class="doc-year">${d.year}</div></div><a href="${d.url}" target="_blank" rel="noopener" class="doc-watch"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M4 2l10 6-10 6V2z"/></svg>${watchLabel}</a></div>`).join('');
   document.getElementById('ethicsGrid').innerHTML=ethicsR.map(r=>`<a href="${r.url}" target="_blank" rel="noopener" class="resource-link"><div class="resource-icon ethics">${r.emoji}</div><div><div class="resource-name">${r.name}</div><div class="resource-desc">${r.desc[currentLang]}</div></div><span class="resource-arrow">${arw}</span></a>`).join('');
   document.getElementById('ausGrid').innerHTML=ausR.map(r=>`<a href="${r.url}" target="_blank" rel="noopener" class="resource-link"><div class="resource-icon aus">${r.emoji}</div><div><div class="resource-name">${r.name}</div><div class="resource-desc">${r.desc[currentLang]}</div></div><span class="resource-arrow">${arw}</span></a>`).join('');
-  document.getElementById('thinkersGrid').innerHTML=thinkers.map(t=>`<div class="thinker-card"><div class="thinker-info"><div class="thinker-name">${t.name}</div><div class="thinker-field">${t.field[currentLang]}</div></div><a href="${t.url}" target="_blank" rel="noopener" class="thinker-link">${learnLabel} →</a></div>`).join('');
+  document.getElementById('thinkersGrid').innerHTML=thinkers.map(t=>{
+    const avatarContent = t.avatar ? `<img src="${t.avatar}" alt="${t.name}">` : t.initials;
+    return `<a href="${t.url}" target="_blank" rel="noopener" class="thinker-card"><div class="thinker-avatar">${avatarContent}</div><div class="thinker-info"><div class="thinker-name">${t.name}</div><div class="thinker-field">${t.field[currentLang]}</div></div><span class="thinker-arrow">${arw}</span></a>`;
+  }).join('');
 }
 
 // I18N (PT only — EN is default in HTML)
 const i18n={pt:{
-  "hero.title":"Kit Vegano","hero.sub":"Conhecimento essencial para uma vida ética",
-  "hero.desc":"Tudo o que você precisa saber sobre veganismo — sem culpa, sem sermão, só os fatos com bom humor. Spoiler: é pelos animais.",
+  "page.title":"Kit Vegano","page.tagline":"Conhecimento essencial para uma vida ética",
+  "page.desc":"Tudo o que você precisa saber sobre veganismo — sem culpa, sem sermão, só os fatos com bom humor. Spoiler: é pelos animais.",
   "toc.title":"Índice","s.fund":"O Fundamental","dyk":"Você sabia?",
   "c1.type":"O principal","c1.title":"O que é veganismo?",
   "c1.p1":"Vamos deixar claro: veganismo não é dieta. Também não é postura ambientalista. É, acima de tudo, uma posição moral — um compromisso de respeitar os animais e rejeitar sua exploração.",

@@ -78,12 +78,12 @@
   /* ── FULL-WIDTH HERO PHOTO ── */
   .venue-hero {
     width: 100%;
-    height: 70vh;
-    min-height: 400px;
-    max-height: 600px;
+    height: 55vh;
+    min-height: 320px;
+    max-height: 480px;
     position: relative;
     overflow: hidden;
-    margin-top: 52px;
+    margin-top: 48px;
   }
   .venue-photo {
     width: 100%; height: 100%;
@@ -102,7 +102,7 @@
     background: linear-gradient(to top, rgba(26, 58, 42, 0.55), transparent);
   }
   .hero-back {
-    position: absolute; top: 20px; left: 28px; z-index: 2;
+    position: absolute; top: 32px; left: 28px; z-index: 2;
   }
   .back-link {
     display: inline-flex; align-items: center; gap: 6px;
@@ -120,7 +120,7 @@
 
   /* ── BADGE ── */
   .badge-popular {
-    position: absolute; top: 20px; right: 28px; z-index: 2;
+    position: absolute; top: 32px; right: 28px; z-index: 2;
     display: inline-flex; align-items: center; gap: 6px;
     background: linear-gradient(135deg, #d4a847, #e8c84a);
     color: var(--forest);
@@ -135,12 +135,12 @@
   /* ── VENUE HEADER ── */
   .venue-header {
     max-width: 960px; margin: 0 auto;
-    padding: 32px 40px 0;
+    padding: 27px 40px 0;
   }
   .venue-name-row {
     display: flex; align-items: baseline;
     gap: 16px; flex-wrap: wrap;
-    margin-bottom: 16px;
+    margin-bottom: 11px;
   }
   .venue-name {
     font-family: 'Fraunces', serif;
@@ -197,7 +197,7 @@
   .wwww-section { margin-top: 40px; }
   .wwww-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
   }
   .wwww-card {
@@ -225,6 +225,8 @@
   .wwww-icon.web { background: rgba(58, 158, 143, 0.1); }
   .wwww-icon.why { background: rgba(74, 140, 92, 0.1); }
   .wwww-icon.what { background: rgba(212, 168, 71, 0.1); }
+  .wwww-icon.when { background: rgba(139, 115, 85, 0.1); }
+  .wwww-icon.words { background: rgba(45, 90, 61, 0.1); }
   .wwww-label {
     font-family: 'Boldonse', system-ui;
     font-size: 11px; color: var(--sage);
@@ -574,6 +576,7 @@
     opacity: 0; transition: opacity 0.3s ease;
   }
   .nav-overlay.open { display: block; opacity: 1; }
+  .mobile-menu { display: none; }
 
   /* ── MOBILE ── */
   @media (max-width: 900px) {
@@ -585,6 +588,7 @@
     .hamburger { display: flex; }
     .nav-center, .nav-meta { display: none; }
     .mobile-menu {
+      display: flex;
       position: fixed; top: 0; right: -280px;
       width: 260px; height: 100vh;
       background: var(--cream); display: flex; flex-direction: column;
@@ -605,8 +609,8 @@
     .mobile-menu a:hover { color: var(--forest); }
     .mobile-menu a.active { color: var(--forest); font-weight: 700; }
     .mobile-menu-sep { height: 1px; background: rgba(26, 58, 42, 0.1); margin: 8px 0; }
-    .venue-hero { height: 50vh; min-height: 280px; }
-    .venue-header { padding: 24px 20px 0; }
+    .venue-hero { height: 40vh; min-height: 240px; }
+    .venue-header { padding: 20px 20px 0; }
     .venue-content { padding: 0 20px 40px; }
     .wwww-grid { grid-template-columns: 1fr; }
     .wwww-card { min-height: auto; }
@@ -626,21 +630,21 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">
+    <a href="/" class="nav-logo">
       <svg class="logo-pin" width="18" height="18" viewBox="0 0 24 28" fill="none"><path d="M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z" fill="var(--leaf)"/></svg>
       <span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>
     </a>
     <div class="nav-center">
-      <a href="food.html" class="active">Food</a>
-      <a href="community.html">Community</a>
-      <a href="people.html">People</a>
-      <a href="vegan-kit.html">Vegan Kit</a>
-      <a href="#">Vegan Map</a>
-      <a href="hire-a-vegan.html">Hire a Vegan</a>
+      <a href="https://veganbrisbaneguide.com/food" class="active">Food</a>
+      <a href="https://veganbrisbaneguide.com/community">Community</a>
+      <a href="https://veganbrisbaneguide.com/people">People</a>
+      <a href="https://veganbrisbaneguide.com/vegankit">Vegan Kit</a>
+      <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
+      <a href="https://veganbrisbaneguide.com/hire">Hire a Vegan</a>
     </div>
     <div class="nav-right">
       <div class="nav-meta">
-        <a href="about.html">About</a>
+        <a href="https://veganbrisbaneguide.com/about">About</a>
         <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
       </div>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -649,16 +653,17 @@
   </nav>
   <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="food.html" class="active">Food</a>
-    <a href="community.html">Community</a>
-    <a href="people.html">People</a>
-    <a href="vegan-kit.html">Vegan Kit</a>
-    <a href="#">Vegan Map</a>
-    <a href="hire-a-vegan.html">Hire a Vegan</a>
+    <a href="https://veganbrisbaneguide.com/food" class="active">Food</a>
+    <a href="https://veganbrisbaneguide.com/community">Community</a>
+    <a href="https://veganbrisbaneguide.com/people">People</a>
+    <a href="https://veganbrisbaneguide.com/vegankit">Vegan Kit</a>
+    <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
+    <a href="https://veganbrisbaneguide.com/hire">Hire a Vegan</a>
     <div class="mobile-menu-sep"></div>
-    <a href="about.html">About</a>
+    <a href="https://veganbrisbaneguide.com/about">About</a>
     <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg> Instagram</a>
   </div>
+
   <!-- FULL-WIDTH HERO PHOTO -->
   <div class="venue-hero">
     <div class="venue-photo">
@@ -667,7 +672,7 @@
     <div class="venue-photo-overlay"></div>
     <!-- Back -->
     <div class="hero-back">
-      <a href="food.html" class="back-link">
+      <a href="brisbane-vegan-guide.html#sec-food" class="back-link">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span data-i18n="back">Back to Eat & Drink</span>
       </a>
@@ -704,16 +709,17 @@
 
     <!-- WWWW -->
     <div class="wwww-section anim">
-      <div class="section-title">4W</div>
+      <div class="section-title" data-i18n="wwww.title">6W</div>
       <div class="wwww-grid">
+        <!-- Row 1: short content -->
         <a href="https://www.google.com/maps/search/Shop+2B+229+Lutwyche+Road+Windsor+QLD+4030" target="_blank" rel="noopener" class="wwww-card wwww-link">
           <div class="wwww-icon where">📍</div>
-          <div class="wwww-label">Where</div>
+          <div class="wwww-label" data-i18n="wwww.where">Where</div>
           <div class="wwww-value">Shop 2B,<br>229 Lutwyche Road,<br>Windsor, QLD 4030</div>
         </a>
         <div class="wwww-card">
           <div class="wwww-icon web">🌐</div>
-          <div class="wwww-label">Web</div>
+          <div class="wwww-label" data-i18n="wwww.web">Web</div>
           <div class="web-links">
             <a href="#" class="web-link">Site</a>
             <a href="#" class="web-link">Facebook</a>
@@ -723,13 +729,24 @@
         </div>
         <div class="wwww-card">
           <div class="wwww-icon why">💚</div>
-          <div class="wwww-label">Why</div>
-          <div class="wwww-value">A whole vegan world in this place (food plus groceries)</div>
+          <div class="wwww-label" data-i18n="wwww.why">Why</div>
+          <div class="wwww-value" data-i18n="wwww.why.value">A whole vegan world in this place (food plus groceries).</div>
         </div>
+        <!-- Row 2: longer content -->
         <div class="wwww-card">
           <div class="wwww-icon what">🍴</div>
           <div class="wwww-label" data-i18n="wwww.what">What to order</div>
-          <div class="wwww-value">FC Chicken, Tropical Juice and an Ice Cream</div>
+          <div class="wwww-value" data-i18n="wwww.what.value">VFC Chicken, Homemade Sausage, Tropical Juice and an Ice Cream.</div>
+        </div>
+        <div class="wwww-card">
+          <div class="wwww-icon when">📅</div>
+          <div class="wwww-label" data-i18n="wwww.when">When</div>
+          <div class="wwww-value" data-i18n="wwww.when.value">Founded in 2008 by Amanda Benham and Tammy Maree. Originally established in Enoggera, moved to Windsor in 2013. Currently owned by Cale Drouin and Laken McGarvey. Previous owners include Niv and Deepa Galaiya, and Glenn and Sue Cooper.</div>
+        </div>
+        <div class="wwww-card">
+          <div class="wwww-icon words">💬</div>
+          <div class="wwww-label" data-i18n="wwww.words">Words from the owner</div>
+          <div class="wwww-value" data-i18n="wwww.words.value">"The owner of this venue will leave a personal message here soon — stay tuned!"</div>
         </div>
       </div>
     </div>
@@ -796,7 +813,7 @@
     <div class="suggestions-section anim">
       <div class="suggestions-header">
         <div class="section-title" style="margin-bottom:0;flex:1;" data-i18n="suggestions.title">You might also like</div>
-        <a href="food.html" class="section-cta" data-i18n="food.cta">Explore all venues →</a>
+        <a href="brisbane-vegan-guide.html#sec-food" class="section-cta" data-i18n="food.cta">Explore all venues →</a>
       </div>
       <div class="cards-grid">
         <div class="card">
@@ -986,7 +1003,17 @@ const i18n = {
     "back": "Voltar para Comer & Beber",
     "badge.popular": "Mais Popular",
     "desc": "O The Green Edge é um destino vegano único em Brisbane, combinando bistrô, café, delicatessen, suqueria, sorveteria e mercearia. Oferece uma experiência totalmente plant-based—de refeições casuais e café especial a sucos frescos, sobremesas e uma ampla variedade de produtos veganos—sendo o lugar ideal para comer e fazer compras em um só lugar.",
+    "wwww.title": "6W",
+    "wwww.where": "Onde",
+    "wwww.web": "Web",
+    "wwww.when": "Quando",
+    "wwww.when.value": "Fundado em 2008 por Amanda Benham e Tammy Maree. Originalmente estabelecido em Enoggera, mudou para Windsor em 2013. Atualmente tem como donos Cale Drouin e Laken McGarvey. Donos anteriores incluem Niv e Deepa Galaiya, e Glenn e Sue Cooper.",
+    "wwww.why": "Por quê",
+    "wwww.why.value": "Um mundo vegano completo em um só lugar (comida e mercearia).",
     "wwww.what": "O que pedir",
+    "wwww.what.value": "VFC Chicken, Sausage Caseira, Tropical Juice e um Sorvete.",
+    "wwww.words": "Palavras do(a) dono(a)",
+    "wwww.words.value": "\"O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!\"",
     "opinion.title": "Opinião Pública",
     "update.last": "Última atualização:",
     "update.next": "Próxima atualização:",

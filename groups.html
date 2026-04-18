@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eat & Drink — Brisbane Vegan Guide</title>
+<title>Groups — Brisbane Vegan Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -26,8 +26,6 @@
     --text-light: #6b6b65;
     --teal: #3a9e8f;
     --teal-light: #e6f5f2;
-    --star: #e8b730;
-    --star-empty: #d4cfc4;
   }
 
   html, body {
@@ -52,7 +50,7 @@
   .nav-logo{font-family:'Boldonse',system-ui;font-weight:400;font-size:16px;
     color: var(--forest); text-decoration: none; letter-spacing: -0.3px;
   }
-  .nav-right { display: flex; gap: 20px; align-items: center; }
+    .nav-right { display: flex; gap: 20px; align-items: center; }
   .nav-center { display: flex; gap: 20px; align-items: center; }
   .nav-center a, .nav-meta a {
     text-decoration: none; color: var(--text-light);
@@ -62,7 +60,7 @@
   .nav-center a:hover, .nav-meta a:hover { color: var(--forest); }
   .nav-center a.active, .nav-meta a.active { color: var(--forest); font-weight: 700; }
   .nav-meta { display: flex; gap: 14px; align-items: center; }
-  .lang-btn {
+.lang-btn {
     background: var(--forest); color: var(--cream);
     border: none; padding: 6px 14px; border-radius: 20px;
     font-size: 12px; font-weight: 600; letter-spacing: 1px; transition: all 0.25s;
@@ -129,32 +127,21 @@
     white-space: nowrap;
   }
   .filter-btn:hover {
-    border-color: var(--forest);
-    color: var(--forest);
+    border-color: var(--forest); color: var(--forest);
   }
   .filter-btn.active {
-    background: var(--forest);
-    color: var(--cream);
+    background: var(--forest); color: var(--cream);
     border-color: var(--forest);
   }
-  .filter-btn.vegan-filter {
-    border-color: rgba(74, 140, 92, 0.3);
-    color: var(--leaf);
-  }
-  .filter-btn.vegan-filter.active {
-    background: var(--leaf);
-    color: white;
-    border-color: var(--leaf);
-  }
 
-  /* ── RESULTS COUNT ── */
+  /* ── RESULTS ── */
   .results-info {
     max-width: 1100px; margin: 20px auto 0;
     padding: 0 40px;
     font-size: 12px; color: var(--sage);
   }
 
-  /* ── CARDS GRID ── */
+  /* ── CARDS ── */
   .cards-section {
     max-width: 1100px; margin: 16px auto 0;
     padding: 0 40px 60px;
@@ -164,8 +151,6 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 18px;
   }
-
-  /* ── CARD ── */
   .card {
     background: white; border-radius: 14px;
     padding: 22px;
@@ -191,22 +176,22 @@
     border-color: rgba(74, 140, 92, 0.15);
   }
   .card:hover::before { transform: scaleX(1); }
-  .card.hidden { display: none; }
 
   .card-top {
     display: flex; align-items: flex-start; justify-content: space-between;
     margin-bottom: 6px;
   }
   .card-emoji { font-size: 26px; }
-  .card-rating {
-    display: flex; align-items: center; gap: 6px;
+  .card-category-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.4px; text-transform: uppercase;
   }
-  .card-stars { display: inline-flex; gap: 2px; }
-  .card-stars .star-icon { width: 14px; height: 14px; }
-  .card-rating-num {
-    font-family: 'Fraunces', serif;
-    font-size: 14px; font-weight: 700; color: var(--forest);
-  }
+  .badge-activism { background: rgba(196, 113, 74, 0.1); color: var(--terracotta); }
+  .badge-guide { background: rgba(58, 158, 143, 0.1); color: var(--teal); }
+  .badge-meeting { background: rgba(212, 168, 71, 0.1); color: var(--bark); }
+  .badge-sanctuary { background: rgba(139, 115, 85, 0.1); color: var(--bark); }
 
   .card-type {
     font-size: 10px; font-weight: 600;
@@ -227,7 +212,7 @@
     color: var(--text-light); margin-bottom: 12px;
     flex-grow: 1;
   }
-  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
   .tag {
     padding: 3px 10px;
     background: rgba(74, 140, 92, 0.08);
@@ -235,19 +220,9 @@
     font-size: 10px; font-weight: 600;
     border-radius: 20px; letter-spacing: 0.3px;
   }
-  .card-bottom {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-top: auto;
-  }
-  .card-votes {
-    font-size: 12px; color: var(--text-light);
-  }
-  .card-votes span {
-    font-family: 'Fraunces', serif;
-    font-weight: 700; font-size: 13px; color: var(--text);
-  }
   .card-btn {
     display: inline-flex; align-items: center; justify-content: center;
+    align-self: flex-start;
     padding: 6px 18px;
     background: var(--forest); color: var(--cream);
     border: 1.5px solid var(--forest);
@@ -264,8 +239,7 @@
 
   /* ── NO RESULTS ── */
   .no-results {
-    text-align: center; padding: 60px 20px;
-    color: var(--sage);
+    text-align: center; padding: 60px 20px; color: var(--sage);
   }
   .no-results-emoji { font-size: 48px; margin-bottom: 12px; }
   .no-results-text {
@@ -301,7 +275,6 @@
   .footer-credit a:hover { opacity: 1; text-decoration: underline; }
   .footer-credit .sep { opacity: 0.3; }
 
-  /* ── ANIMATIONS ── */
   @keyframes cardIn {
     from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
@@ -315,8 +288,7 @@
   }
   .hamburger span {
     display: block; width: 20px; height: 2px;
-    background: var(--forest); border-radius: 2px;
-    transition: all 0.3s ease;
+    background: var(--forest); border-radius: 2px; transition: all 0.3s ease;
   }
   .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -329,7 +301,6 @@
   .nav-overlay.open { display: block; opacity: 1; }
   .mobile-menu { display: none; }
 
-  /* ── MOBILE ── */
   @media (max-width: 768px) {
     .nav { padding: 14px 20px; }
     .nav-right { gap: 12px; }
@@ -374,8 +345,8 @@
       <span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>
     </a>
     <div class="nav-center">
-      <a href="https://veganbrisbaneguide.com/food" class="active">Food</a>
-      <a href="https://veganbrisbaneguide.com/community">Community</a>
+      <a href="https://veganbrisbaneguide.com/food">Food</a>
+      <a href="https://veganbrisbaneguide.com/community" class="active">Community</a>
       <a href="https://veganbrisbaneguide.com/people">People</a>
       <a href="https://veganbrisbaneguide.com/vegankit">Vegan Kit</a>
       <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
@@ -392,8 +363,8 @@
   </nav>
   <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="https://veganbrisbaneguide.com/food" class="active">Food</a>
-    <a href="https://veganbrisbaneguide.com/community">Community</a>
+    <a href="https://veganbrisbaneguide.com/food">Food</a>
+    <a href="https://veganbrisbaneguide.com/community" class="active">Community</a>
     <a href="https://veganbrisbaneguide.com/people">People</a>
     <a href="https://veganbrisbaneguide.com/vegankit">Vegan Kit</a>
     <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
@@ -402,23 +373,23 @@
     <a href="https://veganbrisbaneguide.com/about">About</a>
     <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg> Instagram</a>
   </div>
-
-  <!-- PAGE HEADER -->
+  <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
   <div class="page-header">
-    <div class="page-num">01</div>
-    <h1 class="page-title" data-i18n="page.title">Eat & Drink</h1>
-    <p class="page-tagline" data-i18n="page.tagline">Where flavour meets compassion</p>
-    <p class="page-desc" data-i18n="page.desc">Every café, bistro, and restaurant in Brisbane where you can enjoy plant-based meals — from fully vegan spots to places with excellent vegan options.</p>
-    <div class="page-count"><span id="venueCount">17</span> <span data-i18n="page.venues">venues</span></div>
+    <div class="page-num">02</div>
+    <h1 class="page-title" data-i18n="page.title">Community</h1>
+    <p class="page-tagline" data-i18n="page.tagline">Groups and organisations creating change</p>
+    <p class="page-desc" data-i18n="page.desc">Groups, sanctuaries, communities, and organisations in Brisbane working towards a kinder, more compassionate world for animals and people.</p>
+    <div class="page-count"><span id="groupCount">13</span> <span data-i18n="page.groups">groups</span></div>
   </div>
 
   <!-- FILTERS -->
   <div class="filters-bar">
     <span class="filters-label" data-i18n="filters.label">Sort & Filter</span>
-    <button class="filter-btn active" data-sort="alpha" onclick="setSort('alpha')" data-i18n="filter.alpha">A → Z</button>
-    <button class="filter-btn" data-sort="rating" onclick="setSort('rating')" data-i18n="filter.rating">Best rated</button>
-    <button class="filter-btn" data-sort="popular" onclick="setSort('popular')" data-i18n="filter.popular">Most popular</button>
-    <button class="filter-btn vegan-filter" data-filter="vegan" onclick="toggleVegan()" data-i18n="filter.vegan">🌿 100% Vegan</button>
+    <button class="filter-btn active" data-filter="all" onclick="setFilter('all')" data-i18n="filter.all">A → Z</button>
+    <button class="filter-btn" data-filter="Activism" onclick="setFilter('Activism')">✊ Activism</button>
+    <button class="filter-btn" data-filter="Guide" onclick="setFilter('Guide')">📖 Guide</button>
+    <button class="filter-btn" data-filter="Meeting" onclick="setFilter('Meeting')">🤝 Meeting</button>
+    <button class="filter-btn" data-filter="Sanctuary" onclick="setFilter('Sanctuary')">🐾 Sanctuary</button>
   </div>
 
   <!-- RESULTS -->
@@ -429,7 +400,7 @@
     <div class="cards-grid" id="cardsGrid"></div>
     <div class="no-results" id="noResults" style="display:none;">
       <div class="no-results-emoji">🌱</div>
-      <div class="no-results-text" data-i18n="no.title">No venues found</div>
+      <div class="no-results-text" data-i18n="no.title">No groups found</div>
       <div class="no-results-sub" data-i18n="no.sub">Try adjusting your filters</div>
     </div>
   </div>
@@ -449,288 +420,200 @@
   </footer>
 
 <script>
-// ── VENUE DATA ──
-const venues = [
+// ── GROUP DATA ──
+const groups = [
   {
-    name: "Vegan Restaurant",
-    type: { en: "Vegan Restaurant", pt: "Restaurante Vegano" },
-    emoji: "🌱",
-    location: "Fortitude Valley",
+    name: "Action for Animals Community",
+    category: "Activism",
+    type: { en: "Activism · Community", pt: "Ativismo · Comunidade" },
+    emoji: "✊",
+    location: "Brisbane, QLD",
     desc: {
-      en: "A Brisbane staple for plant-based dining — generous plates, creative specials, and a warm atmosphere that keeps regulars coming back.",
-      pt: "Referência em Brisbane para culinária plant-based — pratos generosos, especiais criativos e um ambiente acolhedor que fideliza clientes."
+      en: "Grassroots animal rights community organising peaceful protests, outreach events, and awareness campaigns across Brisbane.",
+      pt: "Comunidade de base pelos direitos animais organizando protestos pacíficos, eventos de divulgação e campanhas de conscientização em Brisbane."
     },
-    tags: ["100% Vegan", "Restaurant", "Lunch", "Dinner"],
-    rating: 4.75, votes: 2323, vegan: true,
+    tags: ["Activism", "Animal Rights", "Community", "Outreach"],
     url: "#"
   },
   {
-    name: "Dicki's",
-    type: { en: "Vegan Fast Food", pt: "Fast Food Vegano" },
-    emoji: "🍔",
-    location: "West End",
+    name: "Brisbane Animal Save",
+    category: "Activism",
+    type: { en: "Activism · Vigils", pt: "Ativismo · Vigílias" },
+    emoji: "🕯️",
+    location: "Brisbane, QLD",
     desc: {
-      en: "Comfort food classics reimagined — loaded burgers, crispy fried 'chicken', and indulgent shakes in a vibrant corner spot.",
-      pt: "Clássicos de comfort food reinventados — hambúrgueres carregados, 'frango' frito crocante e milkshakes indulgentes em um espaço vibrante."
+      en: "Part of The Save Movement — bearing witness at slaughterhouses, hosting vigils, and raising awareness through peaceful direct action.",
+      pt: "Parte do The Save Movement — testemunhando em abatedouros, realizando vigílias e conscientizando por meio de ação direta pacífica."
     },
-    tags: ["100% Vegan", "Burgers", "Comfort Food"],
-    rating: 4.68, votes: 2225, vegan: true,
+    tags: ["Activism", "Vigils", "Save Movement", "Direct Action"],
     url: "#"
   },
   {
-    name: "Yavanna",
-    type: { en: "Fine Dining", pt: "Alta Gastronomia" },
-    emoji: "🍷",
-    location: "Woolloongabba",
-    desc: {
-      en: "Fine-dining plant-based experience with seasonal tasting menus, natural wines, and impeccable service.",
-      pt: "Experiência gastronômica vegana com menus-degustação sazonais, vinhos naturais e serviço impecável."
-    },
-    tags: ["100% Vegan", "Fine Dining", "Dinner"],
-    rating: 4.66, votes: 3029, vegan: true,
-    url: "#"
-  },
-  {
-    name: "The Green Edge",
-    type: { en: "Bistro · Café · Deli", pt: "Bistrô · Café · Deli" },
+    name: "Brisbane Vegan Guide",
+    category: "Guide",
+    type: { en: "Guide · Directory", pt: "Guia · Diretório" },
     emoji: "🌿",
-    location: "Windsor",
+    location: "Brisbane, QLD",
     desc: {
-      en: "An all-in-one vegan destination — bistrô, café, deli, juice bar, ice cream shop, and grocery store under one roof.",
-      pt: "Um destino vegano completo — bistrô, café, deli, suqueria, sorveteria e mercearia em um só lugar."
+      en: "A comprehensive bilingual guide to vegan living in Brisbane and surrounds — restaurants, groups, people, and resources all in one place.",
+      pt: "Um guia bilíngue completo para a vida vegana em Brisbane e região — restaurantes, grupos, pessoas e recursos em um só lugar."
     },
-    tags: ["100% Vegan", "Bistro", "Café", "Deli", "Groceries"],
-    rating: 4.64, votes: 3458, vegan: true,
-    url: "bvg-venue-the-green-edge.html"
-  },
-  {
-    name: "U-Tong",
-    type: { en: "Thai Vegan", pt: "Tailandês Vegano" },
-    emoji: "🍜",
-    location: "South Brisbane",
-    desc: {
-      en: "Authentic Thai vegan flavours — curries, stir-fries, and soups bursting with fresh herbs, spice, and plant-based proteins.",
-      pt: "Sabores tailandeses veganos autênticos — curries, salteados e sopas com ervas frescas, especiarias e proteínas vegetais."
-    },
-    tags: ["100% Vegan", "Thai", "Lunch", "Dinner"],
-    rating: 4.62, votes: 2256, vegan: true,
+    tags: ["Guide", "Directory", "Bilingual", "Resource"],
     url: "#"
   },
   {
-    name: "El Planta",
-    type: { en: "Mexican Restaurant", pt: "Restaurante Mexicano" },
-    emoji: "🌮",
-    location: "Fortitude Valley",
+    name: "Brisbane Vegan Expo",
+    category: "Meeting",
+    type: { en: "Event · Expo", pt: "Evento · Expo" },
+    emoji: "🎪",
+    location: "Brisbane, QLD",
     desc: {
-      en: "Plant-based Mexican street food — tacos, burritos, nachos, and margaritas in a colourful, lively setting.",
-      pt: "Comida de rua mexicana plant-based — tacos, burritos, nachos e margaritas em um ambiente colorido e animado."
+      en: "Annual vegan expo showcasing plant-based food vendors, ethical brands, speakers, cooking demos, and community stalls.",
+      pt: "Expo vegana anual com vendedores de comida plant-based, marcas éticas, palestrantes, demos de culinária e barracas comunitárias."
     },
-    tags: ["100% Vegan", "Mexican", "Street Food"],
-    rating: 4.58, votes: 1370, vegan: true,
+    tags: ["Meeting", "Expo", "Annual Event", "Food"],
     url: "#"
   },
   {
-    name: "Vega Cafe",
-    type: { en: "Café & Bistro", pt: "Café & Bistrô" },
-    emoji: "☕",
-    location: "Paddington",
+    name: "Brisbane Vegan Markets",
+    category: "Meeting",
+    type: { en: "Market · Community", pt: "Feira · Comunidade" },
+    emoji: "🛒",
+    location: "Brisbane, QLD",
     desc: {
-      en: "Cosy neighbourhood café serving wholesome plant-based breakfasts, specialty coffee, and freshly baked treats.",
-      pt: "Café acolhedor de bairro com cafés-da-manhã plant-based, café especial e doces assados frescos."
+      en: "Regular vegan markets bringing together local vendors, food trucks, artisans, and community groups in a family-friendly atmosphere.",
+      pt: "Feiras veganas regulares reunindo vendedores locais, food trucks, artesãos e grupos comunitários em um ambiente familiar."
     },
-    tags: ["100% Vegan", "Café", "Brunch"],
-    rating: 4.57, votes: 668, vegan: true,
+    tags: ["Meeting", "Market", "Food", "Community"],
     url: "#"
   },
   {
-    name: "Veganyumm",
-    type: { en: "Vegan Restaurant", pt: "Restaurante Vegano" },
-    emoji: "🥗",
-    location: "Annerley",
+    name: "Brisbane Vegan Run Club",
+    category: "Meeting",
+    type: { en: "Sports · Community", pt: "Esportes · Comunidade" },
+    emoji: "🏃",
+    location: "Brisbane, QLD",
     desc: {
-      en: "Hearty vegan meals with global influences — bowls, wraps, and curries with generous portions and bold flavours.",
-      pt: "Refeições veganas fartas com influências globais — bowls, wraps e curries com porções generosas e sabores marcantes."
+      en: "A social running group for vegans and vegan-curious — weekly runs across Brisbane followed by plant-based brunch or coffee.",
+      pt: "Grupo social de corrida para veganos e curiosos — corridas semanais por Brisbane seguidas de brunch ou café plant-based."
     },
-    tags: ["100% Vegan", "Bowls", "Lunch", "Dinner"],
-    rating: 4.55, votes: 1488, vegan: true,
+    tags: ["Meeting", "Sports", "Running", "Social"],
     url: "#"
   },
   {
-    name: "GrassFed",
-    type: { en: "Café & Bistro", pt: "Café & Bistrô" },
-    emoji: "🌾",
-    location: "South Brisbane",
+    name: "Farm Animal Rescue",
+    category: "Sanctuary",
+    type: { en: "Sanctuary · Rescue", pt: "Santuário · Resgate" },
+    emoji: "🐄",
+    location: "Dayboro, QLD",
     desc: {
-      en: "Wholesome bowls, creative burgers, and specialty coffee in a cosy riverside setting with outdoor seating.",
-      pt: "Bowls nutritivos, hambúrgueres criativos e café especial em um ambiente acolhedor à beira-rio."
+      en: "Sanctuary for rescued farm animals — offering sanctuary tours, volunteering, sponsorship programs, and educational experiences.",
+      pt: "Santuário para animais de fazenda resgatados — oferecendo tours, voluntariado, programas de apadrinhamento e experiências educacionais."
     },
-    tags: ["100% Vegan", "Brunch", "Lunch", "Coffee"],
-    rating: 4.52, votes: 1076, vegan: true,
+    tags: ["Sanctuary", "Rescue", "Tours", "Volunteering"],
     url: "#"
   },
   {
-    name: "Loving Hut",
-    type: { en: "Asian Vegan", pt: "Asiático Vegano" },
-    emoji: "💛",
-    location: "Greenslopes",
+    name: "I Travel For Vegan Food",
+    category: "Guide",
+    type: { en: "Guide · Travel", pt: "Guia · Viagem" },
+    emoji: "✈️",
+    location: "Global (Brisbane-based)",
     desc: {
-      en: "Part of a global vegan chain — affordable Asian-inspired dishes, mock meats, and noodle soups in a relaxed space.",
-      pt: "Parte de uma rede vegana global — pratos asiáticos acessíveis, carnes vegetais e sopas de macarrão em um espaço descontraído."
+      en: "Global vegan travel guide by a Brisbane local — restaurant reviews, city guides, and travel tips for plant-based adventurers worldwide.",
+      pt: "Guia global de viagem vegana por um local de Brisbane — avaliações de restaurantes, guias de cidades e dicas para aventureiros plant-based."
     },
-    tags: ["100% Vegan", "Asian", "Budget-Friendly"],
-    rating: 4.47, votes: 1865, vegan: true,
+    tags: ["Guide", "Travel", "Reviews", "Global"],
     url: "#"
   },
   {
-    name: "Vege Rama",
-    type: { en: "Indian Vegan", pt: "Indiano Vegano" },
-    emoji: "🍛",
-    location: "Multiple Locations",
+    name: "Lone Pine Koala Sanctuary",
+    category: "Sanctuary",
+    type: { en: "Wildlife Sanctuary", pt: "Santuário de Vida Selvagem" },
+    emoji: "🐨",
+    location: "Fig Tree Pocket, QLD",
     desc: {
-      en: "Indian vegan fast-casual — dosas, curries, thalis, and samosas at great prices with bold authentic flavours.",
-      pt: "Fast-casual indiano vegano — dosas, curries, thalis e samosas a bons preços com sabores autênticos marcantes."
+      en: "World's first and largest koala sanctuary — home to over 100 koalas plus native Australian wildlife, with conservation and education programs.",
+      pt: "Primeiro e maior santuário de coalas do mundo — lar de mais de 100 coalas e fauna australiana, com programas de conservação e educação."
     },
-    tags: ["100% Vegan", "Indian", "Budget-Friendly"],
-    rating: 4.44, votes: 1659, vegan: true,
+    tags: ["Sanctuary", "Wildlife", "Conservation", "Education"],
     url: "#"
   },
   {
-    name: "You Came Again",
-    type: { en: "Vegan Café & Brunch", pt: "Café & Brunch Vegano" },
-    emoji: "🥞",
-    location: "West End",
+    name: "UQ Vegan Society",
+    category: "Meeting",
+    type: { en: "University Society", pt: "Sociedade Universitária" },
+    emoji: "🎓",
+    location: "University of Queensland",
     desc: {
-      en: "Creative vegan brunch destination — fluffy pancakes, loaded toasts, vibrant smoothie bowls, and specialty coffee.",
-      pt: "Destino criativo de brunch vegano — panquecas fofas, torradas carregadas, smoothie bowls vibrantes e café especial."
+      en: "Student-run vegan society at UQ — hosting potlucks, movie nights, guest speakers, and campus outreach to promote plant-based living.",
+      pt: "Sociedade vegana estudantil na UQ — organizando potlucks, sessões de cinema, palestrantes convidados e divulgação no campus."
     },
-    tags: ["100% Vegan", "Brunch", "Café"],
-    rating: 4.26, votes: 1175, vegan: true,
+    tags: ["Meeting", "University", "Students", "Outreach"],
     url: "#"
   },
   {
-    name: "Piante Pizza",
-    type: { en: "Pizzeria", pt: "Pizzaria" },
-    emoji: "🍕",
-    location: "Newstead",
+    name: "Vegan Action Brisbane",
+    category: "Activism",
+    type: { en: "Activism · Advocacy", pt: "Ativismo · Advocacy" },
+    emoji: "🌍",
+    location: "Brisbane, QLD",
     desc: {
-      en: "Artisan plant-based pizzas with house-made cashew mozzarella, sourdough crust, and creative seasonal toppings.",
-      pt: "Pizzas artesanais plant-based com muçarela de castanha, massa de fermentação natural e coberturas sazonais criativas."
+      en: "Advancing veganism in Brisbane through policy advocacy, corporate engagement, public education, and grassroots campaigning.",
+      pt: "Avançando o veganismo em Brisbane por meio de advocacy, engajamento corporativo, educação pública e campanhas de base."
     },
-    tags: ["100% Vegan", "Pizza", "Dinner"],
-    rating: 3.25, votes: 47, vegan: true,
+    tags: ["Activism", "Advocacy", "Education", "Policy"],
     url: "#"
   },
   {
-    name: "The Plant Bakery",
-    type: { en: "Bakery & Café", pt: "Padaria & Café" },
-    emoji: "🥐",
-    location: "Coorparoo",
+    name: "Vegan Board Games",
+    category: "Meeting",
+    type: { en: "Social · Games", pt: "Social · Jogos" },
+    emoji: "🎲",
+    location: "Brisbane, QLD",
     desc: {
-      en: "Artisan vegan bakery — sourdough breads, croissants, cinnamon rolls, and celebration cakes baked fresh daily.",
-      pt: "Padaria vegana artesanal — pães de fermentação natural, croissants, rolos de canela e bolos festivos assados frescos diariamente."
+      en: "Monthly social meetup for vegans who love board games — a relaxed space to play, eat plant-based snacks, and make new friends.",
+      pt: "Encontro social mensal para veganos que amam jogos de tabuleiro — um espaço descontraído para jogar, comer snacks veganos e fazer novas amizades."
     },
-    tags: ["100% Vegan", "Bakery", "Pastries"],
-    rating: 4.38, votes: 342, vegan: true,
+    tags: ["Meeting", "Social", "Games", "Monthly"],
     url: "#"
   },
   {
-    name: "Pippa's Pantry",
-    type: { en: "Vegan Café & Deli", pt: "Café & Deli Vegano" },
-    emoji: "🥪",
-    location: "Ashgrove",
+    name: "Cranky's Farm",
+    category: "Sanctuary",
+    type: { en: "Animal Sanctuary", pt: "Santuário Animal" },
+    emoji: "🐐",
+    location: "Mount Cotton, QLD",
     desc: {
-      en: "Charming vegan neighbourhood café with sandwiches, salads, house-made dips, and a curated selection of pantry goods.",
-      pt: "Café vegano charmoso de bairro com sanduíches, saladas, pastas caseiras e uma seleção curada de produtos de despensa."
+      en: "A loving sanctuary for rescued farm animals — goats, sheep, pigs, cows, and chickens living out their lives in peace with regular open days.",
+      pt: "Um santuário amoroso para animais de fazenda resgatados — cabras, ovelhas, porcos, vacas e galinhas vivendo em paz, com dias abertos regulares."
     },
-    tags: ["100% Vegan", "Café", "Deli", "Lunch"],
-    rating: 4.21, votes: 189, vegan: true,
-    url: "#"
-  },
-  {
-    name: "Neon Ramen",
-    type: { en: "Vegan Ramen Bar", pt: "Ramen Bar Vegano" },
-    emoji: "🍜",
-    location: "Brisbane CBD",
-    desc: {
-      en: "Modern vegan ramen bar — rich miso, spicy tantanmen, and seasonal specials with house-made noodles and bold broths.",
-      pt: "Ramen bar vegano moderno — missô rico, tantanmen picante e especiais sazonais com macarrão caseiro e caldos marcantes."
-    },
-    tags: ["100% Vegan", "Ramen", "Japanese", "Dinner"],
-    rating: 4.43, votes: 576, vegan: true,
-    url: "#"
-  },
-  {
-    name: "Netherworld",
-    type: { en: "Bar & Arcade", pt: "Bar & Arcade" },
-    emoji: "🕹️",
-    location: "Fortitude Valley",
-    desc: {
-      en: "Retro arcade bar with excellent vegan options — loaded fries, burgers, and wings alongside craft beers and pinball machines.",
-      pt: "Bar arcade retrô com ótimas opções veganas — batatas carregadas, hambúrgueres e wings com cervejas artesanais e fliperamas."
-    },
-    tags: ["Vegan Options", "Bar", "Burgers", "Arcade"],
-    rating: 4.35, votes: 2891, vegan: false,
+    tags: ["Sanctuary", "Rescue", "Open Days", "Volunteering"],
     url: "#"
   }
 ];
 
 // ── STATE ──
-let currentSort = 'alpha';
-let veganOnly = false;
+let currentFilter = 'all';
 let currentLang = 'en';
-
-// ── STAR RENDERER ──
-function createStar(type) {
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("viewBox", "0 0 24 24");
-  svg.setAttribute("class", "star-icon");
-  const d = "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z";
-  if (type === 'full') {
-    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    p.setAttribute("d", d); p.setAttribute("fill", "var(--star)"); svg.appendChild(p);
-  } else if (type === 'half') {
-    const id = "h" + Math.random().toString(36).substr(2,5);
-    svg.innerHTML = `<defs><clipPath id="${id}"><rect x="0" y="0" width="12" height="24"/></clipPath></defs>
-      <path d="${d}" fill="var(--star-empty)"/>
-      <path d="${d}" fill="var(--star)" clip-path="url(#${id})"/>`;
-  } else {
-    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    p.setAttribute("d", d); p.setAttribute("fill", "var(--star-empty)"); svg.appendChild(p);
-  }
-  return svg;
-}
-
-function starsHTML(rating) {
-  const full = Math.floor(rating);
-  const hasHalf = (rating % 1) >= 0.25 && (rating % 1) < 0.75;
-  const extra = (rating % 1) >= 0.75 ? 1 : 0;
-  const id = "h" + Math.random().toString(36).substr(2,5);
-  const d = "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z";
-  let html = '';
-  const fullStar = `<svg viewBox="0 0 24 24" class="star-icon"><path d="${d}" fill="var(--star)"/></svg>`;
-  const emptyStar = `<svg viewBox="0 0 24 24" class="star-icon"><path d="${d}" fill="var(--star-empty)"/></svg>`;
-  const halfStar = `<svg viewBox="0 0 24 24" class="star-icon"><defs><clipPath id="${id}"><rect x="0" y="0" width="12" height="24"/></clipPath></defs><path d="${d}" fill="var(--star-empty)"/><path d="${d}" fill="var(--star)" clip-path="url(#${id})"/></svg>`;
-  for (let i = 0; i < full + extra; i++) html += fullStar;
-  if (hasHalf) html += halfStar;
-  const rem = 5 - (full + extra) - (hasHalf ? 1 : 0);
-  for (let i = 0; i < rem; i++) html += emptyStar;
-  return html;
-}
 
 // ── TAG TRANSLATIONS ──
 const tagMap = {
-  "100% Vegan": "100% Vegano", "Bistro": "Bistrô", "Groceries": "Mercearia",
-  "Thai": "Tailandês", "Dinner": "Jantar", "Café": "Café", "Deli": "Deli",
-  "Brunch": "Brunch", "Lunch": "Almoço", "Coffee": "Café",
-  "Burgers": "Hambúrgueres", "Comfort Food": "Comfort Food",
-  "Fine Dining": "Alta Gastronomia", "Vegan Options": "Opções Veganas",
-  "Budget-Friendly": "Econômico", "Asian": "Asiático", "Bowls": "Bowls",
-  "Mexican": "Mexicano", "Street Food": "Comida de Rua",
-  "Pizza": "Pizza", "Bakery": "Padaria", "Pastries": "Confeitaria",
-  "Indian": "Indiano", "Ramen": "Ramen", "Japanese": "Japonês",
-  "Bar": "Bar", "Arcade": "Arcade", "Restaurant": "Restaurante",
-  "Gluten-Free": "Sem Glúten", "Ice Cream": "Sorvete",
-  "Running": "Corrida", "Sports": "Esportes"
+  "Activism": "Ativismo", "Animal Rights": "Direitos Animais",
+  "Community": "Comunidade", "Outreach": "Divulgação",
+  "Vigils": "Vigílias", "Save Movement": "Save Movement",
+  "Direct Action": "Ação Direta", "Guide": "Guia",
+  "Directory": "Diretório", "Bilingual": "Bilíngue",
+  "Resource": "Recurso", "Travel": "Viagem", "Reviews": "Avaliações",
+  "Global": "Global", "Meeting": "Encontro", "Expo": "Expo",
+  "Annual Event": "Evento Anual", "Food": "Comida",
+  "Market": "Feira", "Sports": "Esportes", "Running": "Corrida",
+  "Social": "Social", "Monthly": "Mensal", "Games": "Jogos",
+  "University": "Universidade", "Students": "Estudantes",
+  "Sanctuary": "Santuário", "Rescue": "Resgate", "Tours": "Tours",
+  "Volunteering": "Voluntariado", "Open Days": "Dias Abertos",
+  "Wildlife": "Vida Selvagem", "Conservation": "Conservação",
+  "Education": "Educação", "Advocacy": "Advocacy"
 };
 
 function translateTag(tag, lang) {
@@ -740,15 +623,13 @@ function translateTag(tag, lang) {
 
 // ── RENDER ──
 function renderCards() {
-  let list = [...venues];
+  let list = [...groups];
 
-  // Filter
-  if (veganOnly) list = list.filter(v => v.vegan);
+  if (currentFilter !== 'all') {
+    list = list.filter(g => g.category === currentFilter);
+  }
 
-  // Sort
-  if (currentSort === 'alpha') list.sort((a, b) => a.name.localeCompare(b.name));
-  else if (currentSort === 'rating') list.sort((a, b) => b.rating - a.rating || b.votes - a.votes);
-  else if (currentSort === 'popular') list.sort((a, b) => b.votes - a.votes);
+  list.sort((a, b) => a.name.localeCompare(b.name));
 
   const grid = document.getElementById('cardsGrid');
   const noRes = document.getElementById('noResults');
@@ -762,77 +643,71 @@ function renderCards() {
   }
   noRes.style.display = 'none';
 
-  const votesWord = currentLang === 'pt' ? 'votos' : 'votes';
-  const venuesWord = currentLang === 'pt' ? 'locais' : 'venues';
+  const groupsWord = currentLang === 'pt' ? 'grupos' : 'groups';
   const showingWord = currentLang === 'pt' ? 'Exibindo' : 'Showing';
-  info.textContent = `${showingWord} ${list.length} ${venuesWord}`;
-  document.getElementById('venueCount').textContent = list.length;
+  info.textContent = `${showingWord} ${list.length} ${groupsWord}`;
+  document.getElementById('groupCount').textContent = list.length;
 
-  grid.innerHTML = list.map((v, i) => `
+  const badgeMap = {
+    Activism: 'badge-activism',
+    Guide: 'badge-guide',
+    Meeting: 'badge-meeting',
+    Sanctuary: 'badge-sanctuary'
+  };
+
+  const categoryLabel = {
+    en: { Activism: 'Activism', Guide: 'Guide', Meeting: 'Meeting', Sanctuary: 'Sanctuary' },
+    pt: { Activism: 'Ativismo', Guide: 'Guia', Meeting: 'Encontro', Sanctuary: 'Santuário' }
+  };
+
+  const btnLabel = currentLang === 'pt' ? 'Saiba mais' : 'Learn more';
+
+  grid.innerHTML = list.map((g, i) => `
     <div class="card" style="animation-delay:${i * 0.04}s">
       <div class="card-top">
-        <span class="card-emoji">${v.emoji}</span>
-        <div class="card-rating">
-          <div class="card-stars">${starsHTML(v.rating)}</div>
-          <span class="card-rating-num">${v.rating}</span>
-        </div>
+        <span class="card-emoji">${g.emoji}</span>
+        <span class="card-category-badge ${badgeMap[g.category]}">${categoryLabel[currentLang][g.category]}</span>
       </div>
-      <div class="card-type">${v.type[currentLang]}</div>
-      <div class="card-name">${v.name}</div>
-      <div class="card-location">📍 ${v.location}</div>
-      <div class="card-desc">${v.desc[currentLang]}</div>
-      <div class="card-tags">${v.tags.map(t => `<span class="tag">${translateTag(t, currentLang)}</span>`).join('')}</div>
-      <div class="card-bottom">
-        <div class="card-votes"><span>${v.votes.toLocaleString()}</span> ${votesWord}</div>
-        <a href="${v.url}" class="card-btn">${currentLang === 'pt' ? 'Saiba mais' : 'Learn more'}</a>
-      </div>
+      <div class="card-type">${g.type[currentLang]}</div>
+      <div class="card-name">${g.name}</div>
+      <div class="card-location">📍 ${g.location}</div>
+      <div class="card-desc">${g.desc[currentLang]}</div>
+      <div class="card-tags">${g.tags.map(t => `<span class="tag">${translateTag(t, currentLang)}</span>`).join('')}</div>
+      <a href="${g.url}" target="_blank" rel="noopener" class="card-btn">${btnLabel}</a>
     </div>
   `).join('');
 }
 
-// ── SORT ──
-function setSort(type) {
-  currentSort = type;
-  document.querySelectorAll('.filter-btn[data-sort]').forEach(b => b.classList.remove('active'));
-  document.querySelector(`.filter-btn[data-sort="${type}"]`).classList.add('active');
-  renderCards();
-}
-
-// ── VEGAN FILTER ──
-function toggleVegan() {
-  veganOnly = !veganOnly;
-  document.querySelector('.vegan-filter').classList.toggle('active', veganOnly);
+// ── FILTER ──
+function setFilter(type) {
+  currentFilter = type;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.filter-btn[data-filter="${type}"]`).classList.add('active');
   renderCards();
 }
 
 // ── I18N ──
 const i18n = {
   en: {
-    "page.title": "Eat & Drink",
-    "page.tagline": "Where flavour meets compassion",
-    "page.desc": "Every café, bistro, and restaurant in Brisbane where you can enjoy plant-based meals — from fully vegan spots to places with excellent vegan options.",
-    "page.venues": "venues",
+    "page.title": "Community",
+    "page.tagline": "Groups and organisations creating change",
+    "page.desc": "Groups, sanctuaries, communities, and organisations in Brisbane working towards a kinder, more compassionate world for animals and people.",
+    "page.groups": "groups",
     "filters.label": "Sort & Filter",
-    "filter.alpha": "A → Z",
-    "filter.rating": "Best rated",
-    "filter.popular": "Most popular",
-    "filter.vegan": "🌿 100% Vegan",
-    "no.title": "No venues found",
+    "filter.all": "A → Z",
+    "no.title": "No groups found",
     "no.sub": "Try adjusting your filters",
     "footer.tagline": "A better world for the animals.",
     "footer.created": "Created by"
   },
   pt: {
-    "page.title": "Comer & Beber",
-    "page.tagline": "Onde o sabor encontra a compaixão",
-    "page.desc": "Todos os cafés, bistrôs e restaurantes em Brisbane onde você pode saborear refeições plant-based — de locais 100% veganos a lugares com ótimas opções veganas.",
-    "page.venues": "locais",
+    "page.title": "Comunidade",
+    "page.tagline": "Grupos e organizações criando mudança",
+    "page.desc": "Grupos, santuários, comunidades e organizações em Brisbane trabalhando por um mundo mais gentil e compassivo para animais e pessoas.",
+    "page.groups": "grupos",
     "filters.label": "Ordenar & Filtrar",
-    "filter.alpha": "A → Z",
-    "filter.rating": "Melhor nota",
-    "filter.popular": "Mais popular",
-    "filter.vegan": "🌿 100% Vegano",
-    "no.title": "Nenhum local encontrado",
+    "filter.all": "A → Z",
+    "no.title": "Nenhum grupo encontrado",
     "no.sub": "Tente ajustar os filtros",
     "footer.tagline": "Um mundo melhor para os animais.",
     "footer.created": "Criado por"
