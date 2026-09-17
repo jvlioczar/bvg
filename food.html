@@ -16,7 +16,7 @@
   }
 
   a, .tag, .card, .card-btn, .filter-btn {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(-45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='1'/></g></svg>") 26 26, pointer;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847'/></g></svg>") 6 26, pointer;
   }
 
   /* ── PAGE HEADER ── */
@@ -142,12 +142,27 @@
   }
   .card:hover::before { transform: scaleX(1); }
   .card.hidden { display: none; }
+  .card-closed-badge {
+    position: absolute; top: 14px; right: 14px; z-index: 2;
+    background: var(--terracotta); color: white;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    padding: 4px 11px; border-radius: 20px;
+  }
 
   .card-top {
     display: flex; align-items: flex-start; justify-content: space-between;
     margin-bottom: 6px;
   }
-  .card-emoji { font-size: 26px; }
+  .card-logo {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid rgba(42, 42, 40, 0.08);
+    background: white;
+  }
+  .card-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .card-rating {
     display: flex; align-items: center; gap: 6px;
   }
@@ -254,7 +269,7 @@
     <h1 class="page-title" data-i18n="page.title">Eat & Drink</h1>
     <p class="page-tagline" data-i18n="page.tagline">Where flavour meets compassion</p>
     <p class="page-desc" data-i18n="page.desc">Every café, bistro, and restaurant in Brisbane where you can enjoy plant-based meals — from fully vegan spots to places with excellent vegan options.</p>
-    <div class="page-count"><span id="venueCount">17</span> <span data-i18n="page.venues">venues</span></div>
+    <div class="page-count"><span id="venueCount">26</span> <span data-i18n="page.venues">venues</span></div>
   </div>
 
   <!-- FILTERS -->
@@ -289,239 +304,365 @@ const venues = [
   {
     slug: "vegan-restaurant",
     name: "Vegan Restaurant",
-    type: { en: "Vegan Restaurant", pt: "Restaurante Vegano" },
-    emoji: "🌱",
-    location: "Fortitude Valley",
+    type: { en: "Vegan Chinese", pt: "Chinês Vegano" },
+    logo: "images/logo_vegan_restaurant.jpg",
+    location: "West End",
     desc: {
-      en: "A Brisbane staple for plant-based dining — generous plates, creative specials, and a warm atmosphere that keeps regulars coming back.",
-      pt: "Referência em Brisbane para culinária plant-based — pratos generosos, especiais criativos e um ambiente acolhedor que fideliza clientes."
+      en: "Vegan takes on Chinese takeaway classics — honey 'chicken', BBQ buns, sweet & sour 'pork', and combination fried rice, for dine-in or takeaway.",
+      pt: "Versões veganas de clássicos chineses — 'frango' ao mel, pães BBQ, 'porco' agridoce e arroz combinado, para comer no local ou levar."
     },
-    tags: ["100% Vegan", "Restaurant", "Lunch", "Dinner"],
-    rating: 4.75, votes: 2323, vegan: true,
+    tags: ["100% Vegan", "Chinese", "Takeaway"],
+    rating: 4.75, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "dickis",
     name: "Dicki's",
-    type: { en: "Vegan Fast Food", pt: "Fast Food Vegano" },
-    emoji: "🍔",
-    location: "West End",
+    type: { en: "Vegan Café", pt: "Café Vegano" },
+    logo: "images/logo_dickis_new_farm.jpg",
+    location: "New Farm",
     desc: {
-      en: "Comfort food classics reimagined — loaded burgers, crispy fried 'chicken', and indulgent shakes in a vibrant corner spot.",
-      pt: "Clássicos de comfort food reinventados — hambúrgueres carregados, 'frango' frito crocante e milkshakes indulgentes em um espaço vibrante."
+      en: "Specialty-coffee café with all-day breakfast and lunch, smoothies, and custom cakes — a relaxed, dog-friendly spot with balcony seating.",
+      pt: "Café de café especial com café da manhã e almoço o dia todo, smoothies e bolos personalizados — um espaço descontraído e pet-friendly com varanda."
     },
-    tags: ["100% Vegan", "Burgers", "Comfort Food"],
-    rating: 4.68, votes: 2225, vegan: true,
+    tags: ["100% Vegan", "Café", "Brunch"],
+    rating: 4.68, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "yavanna",
     name: "Yavanna",
-    type: { en: "Fine Dining", pt: "Alta Gastronomia" },
-    emoji: "🍷",
-    location: "Woolloongabba",
+    type: { en: "Plant-Based Restaurant & Bar", pt: "Restaurante & Bar Plant-Based" },
+    logo: "images/logo_yavanna.jpg",
+    location: "Paddington",
     desc: {
-      en: "Fine-dining plant-based experience with seasonal tasting menus, natural wines, and impeccable service.",
-      pt: "Experiência gastronômica vegana com menus-degustação sazonais, vinhos naturais e serviço impecável."
+      en: "Relaxed plant-based restaurant and bar serving BBQ 'ribs', flame-grilled 'chicken', burgers, and burritos, alongside craft beer and wine.",
+      pt: "Restaurante e bar plant-based descontraído com 'costelinha' BBQ, 'frango' grelhado, hambúrgueres e burritos, além de cervejas artesanais e vinhos."
     },
-    tags: ["100% Vegan", "Fine Dining", "Dinner"],
-    rating: 4.66, votes: 3029, vegan: true,
+    tags: ["100% Vegan", "Bar", "Dinner"],
+    rating: 4.66, votes: 0, vegan: true, closed: true,
     url: "#"
   },
   {
     slug: "the-green-edge",
     name: "The Green Edge",
     type: { en: "Bistro · Café · Deli", pt: "Bistrô · Café · Deli" },
-    emoji: "🌿",
+    logo: "images/logo_the_green_edge.jpg",
     location: "Windsor",
     desc: {
       en: "An all-in-one vegan destination — bistrô, café, deli, juice bar, ice cream shop, and grocery store under one roof.",
       pt: "Um destino vegano completo — bistrô, café, deli, suqueria, sorveteria e mercearia em um só lugar."
     },
     tags: ["100% Vegan", "Bistro", "Café", "Deli", "Groceries"],
-    rating: 4.64, votes: 3458, vegan: true,
+    rating: 4.64, votes: 0, vegan: true,
     url: "the-green-edge.html"
   },
   {
     slug: "u-tong",
     name: "U-Tong",
     type: { en: "Thai Vegan", pt: "Tailandês Vegano" },
-    emoji: "🍜",
-    location: "South Brisbane",
+    logo: "images/logo_u_tong_thai.jpg",
+    location: "Clayfield",
     desc: {
       en: "Authentic Thai vegan flavours — curries, stir-fries, and soups bursting with fresh herbs, spice, and plant-based proteins.",
       pt: "Sabores tailandeses veganos autênticos — curries, salteados e sopas com ervas frescas, especiarias e proteínas vegetais."
     },
     tags: ["100% Vegan", "Thai", "Lunch", "Dinner"],
-    rating: 4.62, votes: 2256, vegan: true,
+    rating: 4.62, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "el-planta",
     name: "El Planta",
     type: { en: "Mexican Restaurant", pt: "Restaurante Mexicano" },
-    emoji: "🌮",
-    location: "Fortitude Valley",
+    logo: "images/logo_el_planta.jpg",
+    location: "South Brisbane",
     desc: {
       en: "Plant-based Mexican street food — tacos, burritos, nachos, and margaritas in a colourful, lively setting.",
       pt: "Comida de rua mexicana plant-based — tacos, burritos, nachos e margaritas em um ambiente colorido e animado."
     },
     tags: ["100% Vegan", "Mexican", "Street Food"],
-    rating: 4.58, votes: 1370, vegan: true,
+    rating: 4.58, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "vega-cafe",
     name: "Vega Cafe",
-    type: { en: "Café & Bistro", pt: "Café & Bistrô" },
-    emoji: "☕",
-    location: "Paddington",
+    type: { en: "Vegan Café · Thai Kitchen", pt: "Café Vegano · Cozinha Tailandesa" },
+    logo: "images/logo_vega_cafe.jpg",
+    location: "Spring Hill",
     desc: {
-      en: "Cosy neighbourhood café serving wholesome plant-based breakfasts, specialty coffee, and freshly baked treats.",
-      pt: "Café acolhedor de bairro com cafés-da-manhã plant-based, café especial e doces assados frescos."
+      en: "Vegan café by day, Thai-inspired kitchen by night — brunch classics alongside curries, noodle dishes, and 'tofish' & chips.",
+      pt: "Café vegano de dia, cozinha de inspiração tailandesa à noite — clássicos de brunch ao lado de curries, pratos de macarrão e 'tofish' & chips."
     },
-    tags: ["Vegan-Friendly", "Café", "Brunch"],
-    rating: 4.57, votes: 668, vegan: false,
+    tags: ["Vegan-Friendly", "Café", "Thai"],
+    rating: 4.57, votes: 0, vegan: false,
     url: "#"
   },
   {
     slug: "veganyumm",
     name: "Veganyumm",
-    type: { en: "Vegan Restaurant", pt: "Restaurante Vegano" },
-    emoji: "🥗",
-    location: "Annerley",
+    type: { en: "Vegan Bakery", pt: "Padaria Vegana" },
+    logo: "images/logo_veganyumm.jpg",
+    location: "Everton Park",
     desc: {
-      en: "Hearty vegan meals with global influences — bowls, wraps, and curries with generous portions and bold flavours.",
-      pt: "Refeições veganas fartas com influências globais — bowls, wraps e curries com porções generosas e sabores marcantes."
+      en: "Brisbane's first fully vegan bakery — custom celebration cakes, cupcakes, brownies, cookies, and sausage rolls, with gluten-free options.",
+      pt: "A primeira padaria totalmente vegana de Brisbane — bolos personalizados, cupcakes, brownies, cookies e sausage rolls, com opções sem glúten."
     },
-    tags: ["100% Vegan", "Bowls", "Lunch", "Dinner"],
-    rating: 4.55, votes: 1488, vegan: true,
+    tags: ["100% Vegan", "Bakery", "Cakes"],
+    rating: 4.55, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "grassfed",
     name: "GrassFed",
-    type: { en: "Café & Bistro", pt: "Café & Bistrô" },
-    emoji: "🌾",
-    location: "South Brisbane",
+    type: { en: "Vegan Burger Trailer", pt: "Trailer de Hambúrguer Vegano" },
+    logo: "images/logo_grassfed.jpg",
+    location: "Pop-Up · SEQ Markets",
     desc: {
-      en: "Wholesome bowls, creative burgers, and specialty coffee in a cosy riverside setting with outdoor seating.",
-      pt: "Bowls nutritivos, hambúrgueres criativos e café especial em um ambiente acolhedor à beira-rio."
+      en: "A mobile food trailer serving vegan burgers and loaded fries at Brisbane, Gold Coast, and Sunshine Coast markets and events, plus catering.",
+      pt: "Um trailer de comida que serve hambúrgueres veganos e fritas recheadas em feiras e eventos de Brisbane, Gold Coast e Sunshine Coast, além de catering."
     },
-    tags: ["100% Vegan", "Brunch", "Lunch", "Coffee"],
-    rating: 4.52, votes: 1076, vegan: true,
+    tags: ["100% Vegan", "Food Truck", "Burgers"],
+    rating: 4.52, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "loving-hut",
     name: "Loving Hut",
-    type: { en: "Asian Vegan", pt: "Asiático Vegano" },
-    emoji: "💛",
-    location: "Greenslopes",
+    type: { en: "Vegan Fusion", pt: "Fusão Vegana" },
+    logo: "images/logo_loving_hut.jpg",
+    location: "Mount Gravatt",
     desc: {
-      en: "Part of a global vegan chain — affordable Asian-inspired dishes, mock meats, and noodle soups in a relaxed space.",
-      pt: "Parte de uma rede vegana global — pratos asiáticos acessíveis, carnes vegetais e sopas de macarrão em um espaço descontraído."
+      en: "Part of a global vegan chain blending Western, Chinese, and Indian dishes — laksa, fried rice, and spaghetti bolognese, dine-in or takeaway.",
+      pt: "Parte de uma rede vegana global que mistura pratos ocidentais, chineses e indianos — laksa, arroz frito e espaguete à bolonhesa, para comer no local ou levar."
     },
-    tags: ["100% Vegan", "Asian", "Budget-Friendly"],
-    rating: 4.47, votes: 1865, vegan: true,
+    tags: ["100% Vegan", "Fusion", "Budget-Friendly"],
+    rating: 4.47, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "vegerama",
     name: "Vege Rama",
-    type: { en: "Indian Vegan", pt: "Indiano Vegano" },
-    emoji: "🍛",
+    type: { en: "Vegetarian Buffet", pt: "Buffet Vegetariano" },
+    logo: "images/logo_vegerama.jpg",
     location: "Multiple Locations",
     desc: {
-      en: "Indian vegan fast-casual — dosas, curries, thalis, and samosas at great prices with bold authentic flavours.",
-      pt: "Fast-casual indiano vegano — dosas, curries, thalis e samosas a bons preços com sabores autênticos marcantes."
+      en: "Buffet-style vegetarian and vegan eatery spanning several cuisines — curries, bakes, salads, and desserts, from masala dosa to lasagne.",
+      pt: "Restaurante buffet vegetariano e vegano com influências de várias cozinhas — curries, assados, saladas e sobremesas, do masala dosa à lasanha."
     },
-    tags: ["100% Vegan", "Indian", "Budget-Friendly"],
-    rating: 4.44, votes: 1659, vegan: true,
+    tags: ["100% Vegan", "Buffet", "Multi-Cuisine"],
+    rating: 4.44, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "you-came-again",
     name: "You Came Again",
-    type: { en: "Vegan Café & Brunch", pt: "Café & Brunch Vegano" },
-    emoji: "🥞",
+    type: { en: "Vegan Tapas Bar", pt: "Bar de Tapas Vegano" },
+    logo: "images/logo_you_came_again.jpg",
     location: "West End",
     desc: {
-      en: "Creative vegan brunch destination — fluffy pancakes, loaded toasts, vibrant smoothie bowls, and specialty coffee.",
-      pt: "Destino criativo de brunch vegano — panquecas fofas, torradas carregadas, smoothie bowls vibrantes e café especial."
+      en: "Brisbane's first vegan tapas bar — small plates like cheese platters and patatas bravas, paired with cocktails and wine, mostly an evening spot.",
+      pt: "O primeiro bar de tapas vegano de Brisbane — porções pequenas como tábuas de queijo e patatas bravas, com coquetéis e vinhos, principalmente à noite."
     },
-    tags: ["100% Vegan", "Brunch", "Café"],
-    rating: 4.26, votes: 1175, vegan: true,
+    tags: ["100% Vegan", "Tapas", "Bar"],
+    rating: 4.26, votes: 0, vegan: true, closed: true,
     url: "#"
   },
   {
     slug: "piante-pizza",
     name: "Piante Pizza",
-    type: { en: "Pizzeria", pt: "Pizzaria" },
-    emoji: "🍕",
-    location: "Newstead",
+    type: { en: "Mobile Vegan Pizza", pt: "Pizza Vegana Itinerante" },
+    logo: "images/logo_piante.jpg",
+    location: "Pop-Up · SEQ Markets",
     desc: {
-      en: "Artisan plant-based pizzas with house-made cashew mozzarella, sourdough crust, and creative seasonal toppings.",
-      pt: "Pizzas artesanais plant-based com muçarela de castanha, massa de fermentação natural e coberturas sazonais criativas."
+      en: "100% plant-based Neapolitan pizza made fresh at markets and pop-ups across Brisbane, the Gold Coast, and the Sunshine Coast.",
+      pt: "Pizza napolitana 100% plant-based, feita na hora em feiras e eventos itinerantes em Brisbane, Gold Coast e Sunshine Coast."
     },
-    tags: ["100% Vegan", "Pizza", "Dinner"],
-    rating: 3.25, votes: 47, vegan: true,
+    tags: ["100% Vegan", "Pizza", "Food Truck"],
+    rating: 3.25, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "the-plant-bakery",
     name: "The Plant Bakery",
-    type: { en: "Bakery & Café", pt: "Padaria & Café" },
-    emoji: "🥐",
-    location: "Coorparoo",
+    type: { en: "Wholesale Vegan Bakery", pt: "Padaria Vegana Atacado" },
+    logo: "images/logo_the_plant_bakery.jpg",
+    location: "Wholesale · QLD",
     desc: {
-      en: "Artisan vegan bakery — sourdough breads, croissants, cinnamon rolls, and celebration cakes baked fresh daily.",
-      pt: "Padaria vegana artesanal — pães de fermentação natural, croissants, rolos de canela e bolos festivos assados frescos diariamente."
+      en: "A wholesale vegan and gluten-free dessert producer supplying cafés, restaurants, and grocers across Queensland — no public storefront.",
+      pt: "Produtora vegana e sem glúten de sobremesas por atacado, que abastece cafés, restaurantes e mercados em Queensland — sem loja física ao público."
     },
-    tags: ["100% Vegan", "Bakery", "Pastries"],
-    rating: 4.38, votes: 342, vegan: true,
+    tags: ["100% Vegan", "Wholesale", "Gluten-Free"],
+    rating: 4.38, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "pippas-pantry",
     name: "Pippa's Pantry",
-    type: { en: "Vegan Café & Deli", pt: "Café & Deli Vegano" },
-    emoji: "🥪",
-    location: "Ashgrove",
+    type: { en: "Vegan Cake Shop", pt: "Loja de Bolos Vegana" },
+    logo: "images/logo_pippas_pantry.jpg",
+    location: "Camp Hill",
     desc: {
-      en: "Charming vegan neighbourhood café with sandwiches, salads, house-made dips, and a curated selection of pantry goods.",
-      pt: "Café vegano charmoso de bairro com sanduíches, saladas, pastas caseiras e uma seleção curada de produtos de despensa."
+      en: "A vegan cake, cupcake, and cookie shop specialising in custom celebration cakes — open limited hours, Friday and Saturday mornings.",
+      pt: "Loja vegana de bolos, cupcakes e cookies especializada em bolos personalizados para celebrações — funciona em horário limitado, sextas e sábados pela manhã."
     },
-    tags: ["100% Vegan", "Café", "Deli", "Lunch"],
-    rating: 4.21, votes: 189, vegan: true,
+    tags: ["100% Vegan", "Cakes", "Bakery"],
+    rating: 4.21, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "neon-ramen",
     name: "Neon Ramen",
     type: { en: "Vegan Ramen Bar", pt: "Ramen Bar Vegano" },
-    emoji: "🍜",
-    location: "Brisbane CBD",
+    logo: "images/logo_neon_ramen.jpg",
+    location: "Everton Park",
     desc: {
       en: "Modern vegan ramen bar — rich miso, spicy tantanmen, and seasonal specials with house-made noodles and bold broths.",
       pt: "Ramen bar vegano moderno — missô rico, tantanmen picante e especiais sazonais com macarrão caseiro e caldos marcantes."
     },
     tags: ["100% Vegan", "Ramen", "Japanese", "Dinner"],
-    rating: 4.43, votes: 576, vegan: true,
+    rating: 4.43, votes: 0, vegan: true,
     url: "#"
   },
   {
     slug: "netherworld",
     name: "Netherworld",
     type: { en: "Bar & Arcade", pt: "Bar & Arcade" },
-    emoji: "🕹️",
+    logo: "images/logo_netherworld.jpg",
     location: "Fortitude Valley",
     desc: {
       en: "Retro arcade bar with excellent vegan options — loaded fries, burgers, and wings alongside craft beers and pinball machines.",
       pt: "Bar arcade retrô com ótimas opções veganas — batatas carregadas, hambúrgueres e wings com cervejas artesanais e fliperamas."
     },
     tags: ["Vegan Options", "Bar", "Burgers", "Arcade"],
-    rating: 4.35, votes: 2891, vegan: false,
+    rating: 4.35, votes: 0, vegan: false,
+    url: "#"
+  },
+  {
+    slug: "archie-ampm",
+    name: "Archie AM:PM",
+    type: { en: "Plant-Based Bistro-Café", pt: "Bistrô-Café Plant-Based" },
+    logo: "images/logo_archie_am_pm.jpg",
+    location: "Carseldine",
+    desc: {
+      en: "A social-enterprise bistro-café that employs people with disability — plant-based bagels, pizzas, burgers, and doughnuts, with creative coffee and drinks.",
+      pt: "Um bistrô-café de empreendimento social que emprega pessoas com deficiência — bagels, pizzas, hambúrgueres e donuts plant-based, com café e bebidas criativas."
+    },
+    tags: ["100% Vegan", "Bistro", "Café"],
+    rating: 4.7, votes: 0, vegan: true,
+    url: "#"
+  },
+  {
+    slug: "cardamom-pod-brickworks",
+    name: "Cardamom Pod Brickworks",
+    type: { en: "Vegan Café", pt: "Café Vegano" },
+    logo: "images/logo_cardamom_pod_brickworks.jpg",
+    location: "Gold Coast",
+    desc: {
+      en: "A fully plant-based café with an Indian-inspired menu — açaí and smoothie bowls, vegan pancakes, curries, and fresh juices.",
+      pt: "Um café totalmente plant-based com cardápio de inspiração indiana — açaí e smoothie bowls, panquecas veganas, curries e sucos frescos."
+    },
+    tags: ["100% Vegan", "Café", "Indian"],
+    rating: 4.6, votes: 0, vegan: true,
+    url: "#"
+  },
+  {
+    slug: "charlies-raw-squeeze",
+    name: "Charlie's Raw Squeeze",
+    type: { en: "Vegan Juice Bar", pt: "Suco Bar Vegano" },
+    logo: "images/logo_charlies_raw_squeeze.jpg",
+    location: "Multiple Locations",
+    desc: {
+      en: "A Brisbane juice bar chain serving fresh juices, smoothies, açaí and 'nice cream' bowls, toasties, and wraps, all fully plant-based.",
+      pt: "Uma rede de sucos em Brisbane com sucos frescos, smoothies, açaí e 'nice cream' bowls, toasties e wraps, tudo totalmente plant-based."
+    },
+    tags: ["100% Vegan", "Juice Bar", "Café"],
+    rating: 4.5, votes: 0, vegan: true,
+    url: "#"
+  },
+  {
+    slug: "doko-demo-v",
+    name: "Doko Demo V",
+    type: { en: "Vegan Asian Restaurant", pt: "Restaurante Asiático Vegano" },
+    logo: "images/logo_doko_demo_v.jpg",
+    location: "Gold Coast",
+    desc: {
+      en: "A fully vegan restaurant blending Southeast Asian dishes like pad thai and okonomiyaki with Western favourites like burgers and pizza.",
+      pt: "Um restaurante totalmente vegano que mistura pratos do sudeste asiático, como pad thai e okonomiyaki, com favoritos ocidentais como hambúrgueres e pizza."
+    },
+    tags: ["100% Vegan", "Asian", "Dinner"],
+    rating: 4.8, votes: 0, vegan: true,
+    url: "#"
+  },
+  {
+    slug: "greenhouse-canteen",
+    name: "Greenhouse Canteen",
+    type: { en: "Plant-Based Restaurant & Bar", pt: "Restaurante & Bar Plant-Based" },
+    logo: "images/logo_greenhouse_canteen.jpg",
+    location: "Gold Coast",
+    desc: {
+      en: "A plant-focused restaurant and bar serving whole-food dishes — mushroom burgers, cauliflower wings, and arancini — alongside cocktails.",
+      pt: "Um restaurante e bar com foco em pratos plant-based — hambúrgueres de cogumelo, asinhas de couve-flor e arancini — além de coquetéis."
+    },
+    tags: ["Vegan-Friendly", "Bar", "Dinner"],
+    rating: 4.4, votes: 0, vegan: false,
+    url: "#"
+  },
+  {
+    slug: "izakaya-midori",
+    name: "Izakaya Midori",
+    type: { en: "Vegan Japanese", pt: "Japonês Vegano" },
+    logo: "images/logo_izakaya_midori.jpg",
+    location: "Gold Coast",
+    desc: {
+      en: "The Gold Coast's first fully plant-based Japanese restaurant — an izakaya-style menu of sushi, ramen, gyoza, and rice dishes.",
+      pt: "O primeiro restaurante japonês totalmente plant-based da Gold Coast — cardápio estilo izakaya com sushi, ramen, gyoza e pratos de arroz."
+    },
+    tags: ["100% Vegan", "Japanese", "Dinner"],
+    rating: 4.8, votes: 0, vegan: true,
+    url: "#"
+  },
+  {
+    slug: "made-with-love-bakery",
+    name: "Made With Love Bakery",
+    type: { en: "Vegan Bakery", pt: "Padaria Vegana" },
+    logo: "images/logo_made_with_love.jpg",
+    location: "Gold Coast",
+    desc: {
+      en: "A 100% vegan bakery making everything from scratch — cinnamon scrolls, croissants, doughnuts, savoury pies, and quiches.",
+      pt: "Uma padaria 100% vegana que faz tudo do zero — rolinhos de canela, croissants, donuts, tortas salgadas e quiches."
+    },
+    tags: ["100% Vegan", "Bakery", "Pastries"],
+    rating: 4.6, votes: 0, vegan: true,
+    url: "#"
+  },
+  {
+    slug: "tea-master",
+    name: "Tea Master",
+    type: { en: "Taiwanese Vegetarian", pt: "Vegetariano Taiwanês" },
+    logo: "images/logo_tea_master.jpg",
+    location: "Fortitude Valley",
+    desc: {
+      en: "One of Brisbane's original vegetarian restaurants, serving Taiwanese-style bento boxes, stir-fries, noodles, hot pots, and bubble tea.",
+      pt: "Um dos restaurantes vegetarianos mais antigos de Brisbane, com marmitas, refogados, macarrão, hot pots e bubble tea ao estilo taiwanês."
+    },
+    tags: ["Vegan-Friendly", "Asian", "Dinner"],
+    rating: 4.3, votes: 0, vegan: false,
+    url: "#"
+  },
+  {
+    slug: "sweet-and-green",
+    name: "Sweet & Green",
+    type: { en: "French Vegan Patisserie", pt: "Confeitaria Francesa Vegana" },
+    logo: "images/logo_sweet_and_green.jpg",
+    location: "South Brisbane",
+    desc: {
+      en: "A French vegan patisserie known for its croissants, pastries, cookies, and savoury focaccia and pizza slices.",
+      pt: "Uma confeitaria francesa vegana conhecida por croissants, doces, cookies e fatias salgadas de focaccia e pizza."
+    },
+    tags: ["100% Vegan", "Bakery", "Pastries"],
+    rating: 4.6, votes: 0, vegan: true, closed: true,
     url: "#"
   }
 ];
@@ -583,7 +724,11 @@ const tagMap = {
   "Bar": "Bar", "Arcade": "Arcade", "Restaurant": "Restaurante",
   "Gluten-Free": "Sem Glúten", "Ice Cream": "Sorvete",
   "Running": "Corrida", "Sports": "Esportes",
-  "Vegan-Friendly": "Amigável a Veganos"
+  "Vegan-Friendly": "Amigável a Veganos",
+  "Chinese": "Chinês", "Takeaway": "Para Levar", "Cakes": "Bolos",
+  "Food Truck": "Food Truck", "Fusion": "Fusão", "Buffet": "Buffet",
+  "Multi-Cuisine": "Multi-Cozinha", "Tapas": "Tapas", "Wholesale": "Atacado",
+  "Juice Bar": "Bar de Sucos"
 };
 
 function translateTag(tag, lang) {
@@ -623,8 +768,9 @@ function renderCards() {
 
   grid.innerHTML = list.map((v, i) => `
     <div class="card" style="animation-delay:${i * 0.04}s">
+      ${v.closed ? `<div class="card-closed-badge">${currentLang === 'pt' ? 'Encerrado' : 'Closed'}</div>` : ''}
       <div class="card-top">
-        <span class="card-emoji">${v.emoji}</span>
+        <div class="card-logo"><img src="${v.logo}" alt="${v.name} logo" loading="lazy"></div>
         <div class="card-rating">
           <div class="card-stars">${starsHTML(v.rating)}</div>
           <span class="card-rating-num">${v.rating}</span>

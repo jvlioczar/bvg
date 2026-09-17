@@ -11,7 +11,7 @@
 <script src="partials.js"></script>
 <style>
   .card, .section-cta, .card-btn {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(-45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='1'/></g></svg>") 26 26, pointer;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847'/></g></svg>") 6 26, pointer;
   }
 
   .page {
@@ -206,7 +206,15 @@
     display: flex; align-items: flex-start; justify-content: space-between;
     margin-bottom: 10px;
   }
-  .card-emoji { font-size: 26px; }
+  .card-logo {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid rgba(42, 42, 40, 0.08);
+    background: white;
+  }
+  .card-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .card-rating { display: flex; align-items: center; gap: 6px; }
   .card-stars { display: inline-flex; gap: 2px; }
   .card-stars .star-icon { width: 14px; height: 14px; }
@@ -419,7 +427,7 @@
     <div class="cards-grid">
       <div class="card" data-venue-slug="the-green-edge">
         <div class="card-top">
-          <span class="card-emoji">🌿</span>
+          <div class="card-logo"><img src="images/logo_the_green_edge.jpg" alt="The Green Edge logo"></div>
           <div class="card-rating"><div class="card-stars"></div><span class="card-rating-num"></span></div>
         </div>
         <div class="card-type" data-i18n="food.item1.type">Bistro · Café · Deli</div>
@@ -435,12 +443,12 @@
       </div>
       <div class="card" data-venue-slug="u-tong">
         <div class="card-top">
-          <span class="card-emoji">🍜</span>
+          <div class="card-logo"><img src="images/logo_u_tong_thai.jpg" alt="U-Tong logo"></div>
           <div class="card-rating"><div class="card-stars"></div><span class="card-rating-num"></span></div>
         </div>
         <div class="card-type" data-i18n="food.item2.type">Thai Vegan</div>
         <div class="card-name">U-Tong</div>
-        <div class="card-location">📍 South Brisbane</div>
+        <div class="card-location">📍 Clayfield</div>
         <div class="card-desc" data-i18n="food.item2.desc">Authentic Thai vegan flavours — curries, stir-fries, and soups bursting with fresh herbs, spice, and plant-based proteins.</div>
         <div class="card-tags">
           <span class="tag">100% Vegan</span>
@@ -451,17 +459,17 @@
       </div>
       <div class="card" data-venue-slug="pippas-pantry">
         <div class="card-top">
-          <span class="card-emoji">🥪</span>
+          <div class="card-logo"><img src="images/logo_pippas_pantry.jpg" alt="Pippa's Pantry logo"></div>
           <div class="card-rating"><div class="card-stars"></div><span class="card-rating-num"></span></div>
         </div>
-        <div class="card-type" data-i18n="food.item3.type">Vegan Café & Deli</div>
+        <div class="card-type" data-i18n="food.item3.type">Vegan Cake Shop</div>
         <div class="card-name">Pippa's Pantry</div>
-        <div class="card-location">📍 Ashgrove</div>
-        <div class="card-desc" data-i18n="food.item3.desc">Charming vegan neighbourhood café with sandwiches, salads, house-made dips, and a curated selection of pantry goods.</div>
+        <div class="card-location">📍 Camp Hill</div>
+        <div class="card-desc" data-i18n="food.item3.desc">A vegan cake, cupcake, and cookie shop specialising in custom celebration cakes — open limited hours, Friday and Saturday mornings.</div>
         <div class="card-tags">
           <span class="tag">100% Vegan</span>
-          <span class="tag">Café</span>
-          <span class="tag">Deli</span>
+          <span class="tag">Cakes</span>
+          <span class="tag">Bakery</span>
         </div>
         <a href="#" class="card-btn" data-i18n="btn.more">Learn more</a>
       </div>
@@ -628,8 +636,8 @@ const i18n = {
     "food.item1.desc": "An all-in-one vegan destination — bistro, café, deli, juice bar, ice cream shop, and grocery store under one roof.",
     "food.item2.type": "Thai Vegan",
     "food.item2.desc": "Authentic Thai vegan flavours — curries, stir-fries, and soups bursting with fresh herbs, spice, and plant-based proteins.",
-    "food.item3.type": "Vegan Café & Deli",
-    "food.item3.desc": "Charming vegan neighbourhood café with sandwiches, salads, house-made dips, and a curated selection of pantry goods.",
+    "food.item3.type": "Vegan Cake Shop",
+    "food.item3.desc": "A vegan cake, cupcake, and cookie shop specialising in custom celebration cakes — open limited hours, Friday and Saturday mornings.",
     "groups.label": "Community",
     "groups.tagline": "Groups and organisations creating change",
     "groups.cta": "See all groups →",
@@ -688,8 +696,8 @@ const i18n = {
     "food.item1.desc": "Um destino vegano completo — bistrô, café, deli, suqueria, sorveteria e mercearia em um só lugar.",
     "food.item2.type": "Tailandês Vegano",
     "food.item2.desc": "Sabores tailandeses veganos autênticos — curries, salteados e sopas com ervas frescas, especiarias e proteínas vegetais.",
-    "food.item3.type": "Café & Deli Vegano",
-    "food.item3.desc": "Café vegano charmoso de bairro com sanduíches, saladas, pastas caseiras e uma seleção curada de produtos de despensa.",
+    "food.item3.type": "Loja de Bolos Vegana",
+    "food.item3.desc": "Loja vegana de bolos, cupcakes e cookies especializada em bolos personalizados para celebrações — funciona em horário limitado, sextas e sábados pela manhã.",
     "groups.label": "Comunidade",
     "groups.tagline": "Grupos e organizações criando mudança",
     "groups.cta": "Ver todos os grupos →",
