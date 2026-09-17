@@ -734,21 +734,36 @@
   },
   {
     "slug": "vegerama",
-    "name": "VegeRama",
+    "name": "Vege Rama",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
-    "web": { "site": "https://vegerama.com.au", "instagram": "https://instagram.com/vegerama_brisbane", "facebook": "https://facebook.com/VegeRama", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "tags": ["100% Vegan", "Buffet", "Multi-Cuisine", "Indian", "Gluten-Free", "Lunch"],
+    "desc": {
+      "en": "Vege Rama is a 100% vegan eatery on Adelaide Street in Brisbane's CBD, open for lunch on weekdays. Since opening as a fully vegan store in 2012, it has built its menu around family recipes reinterpreted as rotating Indian-inspired specialties, gourmet salads, warm bakes, plant-based burgers and dosas — plus a full dessert case of raw tarts, cheesecakes and cold-pressed juice.",
+      "pt": "O Vege Rama é um estabelecimento 100% vegano na Adelaide Street, no centro de Brisbane, aberto para almoço nos dias de semana. Desde que se tornou uma loja totalmente vegana em 2012, monta seu cardápio a partir de receitas de família reinterpretadas em especialidades de inspiração indiana em rodízio, saladas gourmet, assados quentes, hambúrgueres plant-based e dosas — além de uma vitrine completa de tortas cruas, cheesecakes e suco prensado a frio."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DAXtuxdPd7M/embed/",
+    "web": { "site": "https://vegerama.com.au", "instagram": "https://instagram.com/vegerama", "facebook": "https://facebook.com/VegeRama", "tiktok": "" },
+    "address": "241 Adelaide Street, Brisbane, QLD 4000",
+    "maps_url": "https://www.google.com/maps/search/241+Adelaide+Street+Brisbane+QLD+4000",
+    "why": {
+      "en": "A 100% vegan lunch counter in the CBD, open weekdays 8am–6pm, with a different menu rotation every day.",
+      "pt": "Um balcão 100% vegano no centro, aberto de segunda a sexta das 8h às 18h, com um cardápio diferente a cada dia."
+    },
+    "what_to_order": {
+      "en": "Masala Dosa, a Moroccan Lentil or Satay burger, Sambar Dahl and a raw tart for dessert.",
+      "pt": "Masala Dosa, um hambúrguer Moroccan Lentil ou Satay, Sambar Dahl e uma torta crua de sobremesa."
+    },
+    "when": {
+      "en": "Founded by Ruchi, who opened the first Vege Rama on Queen Street in 2009. The Adelaide Street store opened as a fully vegan outlet in November 2012 and is now the only location still open — the Myer Centre, West End and Carindale stores have since closed.",
+      "pt": "Fundado por Ruchi, que abriu o primeiro Vege Rama na Queen Street em 2009. A loja da Adelaide Street abriu como unidade totalmente vegana em novembro de 2012 e hoje é a única ainda em funcionamento — as lojas do Myer Centre, West End e Carindale já fecharam."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/zeNMbErvXURXdxxwR" },
