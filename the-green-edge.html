@@ -15,7 +15,7 @@
     --star-empty: #d4cfc4;
   }
 
-  a, .tag, .back-link, .web-link, .explore-venues {
+  a, .back-link, .web-link, .explore-venues {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847'/></g></svg>") 6 26, pointer;
   }
 
@@ -536,7 +536,7 @@
     <div class="venue-photo-overlay"></div>
     <!-- Back -->
     <div class="hero-back">
-      <a href="brisbane-vegan-guide.html#sec-food" class="back-link">
+      <a href="https://brisbaneveganguide.com/food.html" class="back-link">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span data-i18n="back">Back to Eat & Drink</span>
       </a>
@@ -700,7 +700,7 @@
     </div>
 
     <!-- EXPLORE ALL VENUES -->
-    <a href="https://veganbrisbaneguide.com/food" class="explore-venues anim">
+    <a href="https://brisbaneveganguide.com/food.html" class="explore-venues anim">
       <div class="explore-venues-left">
         <div class="explore-venues-emoji">🌿</div>
         <div>
@@ -783,7 +783,6 @@ const platformMeta = {
   tripadvisor: { name: "Tripadvisor",      icon: "🦉" },
   yelp:        { name: "Yelp",             icon: "⭐" },
   opentable:   { name: "OpenTable",        icon: "🍽️" },
-  bvg:         { name: "BVG Rating",       icon: "📍" },
   wanderlog:   { name: "Wanderlog",        icon: "🗺️" }
 };
 
@@ -811,6 +810,7 @@ function loadVenueData() {
       var linkOnly = [];
 
       Object.keys(reviews).forEach(function(key) {
+        if (key === 'bvg') return;
         var r = reviews[key];
         if (r.link_only) {
           linkOnly.push({ key: key, votes: r.votes, rating: r.rating, scale: r.scale, url: r.url, link_only: true });

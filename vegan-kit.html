@@ -153,7 +153,7 @@ body{overflow-x:hidden}
       <li><a href="#try"><span class="toc-num">02</span><span class="toc-emoji">🚀</span><span data-i18n="s.try">Try Going Vegan</span></a></li>
       <li><a href="#docs"><span class="toc-num">03</span><span class="toc-emoji">🎬</span><span data-i18n="s.docs">Documentaries</span></a></li>
       <li><a href="#thinkers"><span class="toc-num">04</span><span class="toc-emoji">📚</span><span data-i18n="s.thinkers">Thinkers You Should Know</span></a></li>
-      <li><a href="#ethics"><span class="toc-num">05</span><span class="toc-emoji">📖</span><span data-i18n="s.ethics">Animal Ethics & Research</span></a></li>
+      <li><a href="#ethics"><span class="toc-num">05</span><span class="toc-emoji">📖</span><span data-i18n="s.ethics">Animal Ethics &amp; Research</span></a></li>
       <li><a href="#aus"><span class="toc-num">06</span><span class="toc-emoji">🦘</span><span data-i18n="s.aus">Veganism in Australia</span></a></li>
     </ol>
   </nav>
@@ -345,8 +345,8 @@ body{overflow-x:hidden}
   <div class="thinkers-grid anim" id="thinkersGrid"></div>
 
   <!-- ETHICS -->
-  <div class="section-title anim" data-i18n="s.ethics" id="ethics">Animal Ethics & Research</div>
-  <p class="section-desc anim" data-i18n="ethics.desc">Want to go deeper into animal ethics, wild animal suffering, and the philosophical foundations? These organisations are doing incredible work.</p>
+  <div class="section-title anim" data-i18n="s.ethics" id="ethics">Animal Ethics &amp; Research</div>
+  <p class="section-desc anim" data-i18n="ethics.desc">Want to go deeper into animal ethics and the philosophical foundations? These organisations are doing incredible work.</p>
   <div class="resources-grid anim" id="ethicsGrid"></div>
 
   <!-- AUSTRALIA -->
@@ -377,19 +377,21 @@ const challenges=[
   {name:"Veganuary",emoji:"📅",url:"https://veganuary.com"}
 ];
 const docs=[
+  {name:"AI & Animals",desc:{en:"A documentary by Animal Ethics on how artificial intelligence will shape the lives of billions of animals, and why advocates must act to prevent harm before it happens.",pt:"Um documentário da Animal Ethics sobre como a inteligência artificial vai moldar a vida de bilhões de animais, e por que ativistas precisam agir para prevenir o sofrimento antes que ele aconteça."},url:"https://www.youtube.com/watch?v=7pFge0CTXRo",emoji:"🤖",year:"2026"},
   {name:"Dominion",desc:{en:"A comprehensive exposé of the systematic exploitation of animals across major industries, filmed primarily in Australia using drones and hidden cameras.",pt:"Um exposé abrangente da exploração sistemática de animais nas principais indústrias, filmado principalmente na Austrália com drones e câmeras ocultas."},url:"https://www.youtube.com/watch?v=LQRAfJyEsko",emoji:"🎬",year:"2018"},
   {name:"Earthlings",desc:{en:"The pioneering documentary narrated by Joaquin Phoenix that examines humanity's dependence on animals for food, clothing, entertainment, and research.",pt:"O documentário pioneiro narrado por Joaquin Phoenix que examina a dependência humana dos animais para alimentação, vestuário, entretenimento e pesquisa."},url:"https://www.youtube.com/watch?v=8gqwpfEcBjI",emoji:"🌍",year:"2005"},
   {name:"Lucent",desc:{en:"An unflinching look inside Australia's pig farming industry, revealing the routine cruelty hidden behind closed doors.",pt:"Um olhar sem filtros dentro da indústria suinícola australiana, revelando a crueldade rotineira escondida a portas fechadas."},url:"https://www.youtube.com/watch?v=KArL5YjaL5U",emoji:"🐷",year:"2014"},
   {name:"Nightmares of Nature",desc:{en:"A confronting exploration of the hidden suffering within Australia's wildlife and animal agriculture industries.",pt:"Uma exploração confrontante do sofrimento oculto nas indústrias de vida selvagem e agropecuária da Austrália."},url:"https://www.youtube.com/watch?v=Vped7Y8Caa8",emoji:"🦇",year:"2024"},
   {name:"Pignorant",desc:{en:"A follow-up to Lucent exploring the ongoing suffering in Australian pig farms and the systemic failures that allow it to continue.",pt:"Uma continuação de Lucent que explora o sofrimento contínuo nas fazendas de porcos australianas e as falhas sistêmicas que permitem sua continuidade."},url:"https://www.youtube.com/watch?v=VI9xxu17pM8",emoji:"🔍",year:"2022"},
-  {name:"Seaspiracy",desc:{en:"An investigation into the global fishing industry, revealing the environmental destruction and animal suffering caused by commercial fishing.",pt:"Uma investigação sobre a indústria pesqueira global, revelando a destruição ambiental e o sofrimento animal causado pela pesca comercial."},url:"https://www.youtube.com/watch?v=DfpuhKMN9Vs",emoji:"🌊",year:"2021"}
+  {name:"Seantience",desc:{en:"A short documentary produced by Animal Ethics exploring the scientific evidence for sentience in fish and aquatic invertebrates, and why these animals deserve moral consideration.",pt:"Um curta-documentário da Animal Ethics que explora as evidências científicas da senciência em peixes e invertebrados aquáticos, e por que esses animais merecem consideração moral."},url:"https://www.youtube.com/watch?v=DfpuhKMN9Vs",emoji:"🐟",year:"2025"},
+  {name:"Seaspiracy",desc:{en:"An investigation into the global fishing industry, revealing the environmental destruction and animal suffering caused by commercial fishing.",pt:"Uma investigação sobre a indústria pesqueira global, revelando a destruição ambiental e o sofrimento animal causado pela pesca comercial."},url:"https://www.youtube.com/watch?v=1Q5CXN7soQg",emoji:"🌊",year:"2021"}
 ];
 const ethicsR=[
   {name:"Animal Ethics",desc:{en:"Ethics beyond species boundaries",pt:"Ética além das fronteiras de espécie"},url:"https://www.animal-ethics.org",emoji:"📖"},
   {name:"Center For Reducing Suffering",desc:{en:"Focused on reducing suffering",pt:"Focado na redução do sofrimento"},url:"https://centerforreducingsuffering.org",emoji:"💜"},
   {name:"Center on Long-Term Risk",desc:{en:"Long-term risk research",pt:"Riscos de longo prazo"},url:"https://longtermrisk.org",emoji:"🔮"},
   {name:"Rethink Priorities",desc:{en:"Evidence-based research",pt:"Pesquisa baseada em evidências"},url:"https://rethinkpriorities.org",emoji:"🔬"},
-  {name:"Senciência",desc:{en:"Animal sentience research (PT)",pt:"Pesquisa sobre senciência animal"},url:"https://senciencia.org",emoji:"🧠"},
+  {name:"Senciência e Ética",desc:{en:"Animal sentience research (PT)",pt:"Pesquisa sobre senciência animal"},url:"https://senciencia.org",emoji:"🧠"},
   {name:"Sentience Institute",desc:{en:"Social change for animals",pt:"Mudança social para animais"},url:"https://www.sentienceinstitute.org",emoji:"🏛️"},
   {name:"Sentient Futures",desc:{en:"AI & sentient wellbeing",pt:"IA e bem-estar senciente"},url:"https://www.sentientfutures.ai",emoji:"🤖"},
   {name:"Sentientism",desc:{en:"Evidence, reason & compassion for all sentient beings",pt:"Evidência, razão e compaixão por todos os seres sencientes"},url:"https://sentientism.info",emoji:"🌐"}
@@ -446,7 +448,7 @@ const i18n={pt:{
   "page.desc":"Tudo o que você precisa saber sobre veganismo — sem culpa, sem sermão, só os fatos com bom humor. Spoiler: é pelos animais.",
   "toc.title":"Índice","s.fund":"O Fundamental","dyk":"Você sabia?",
   "c1.type":"O principal","c1.title":"O que é veganismo?",
-  "c1.p1":"Vamos deixar claro: veganismo não é dieta. Também não é postura ambientalista. É, acima de tudo, uma posição moral — um compromisso de respeitar os animais e rejeitar sua exploração.",
+  "c1.p1":"Vamos deixar claro: veganismo não é dieta. Também não é postura ambientalista. É, acima de tudo, uma posição moral — um compromisso de respeitar os animais e rejeitar sua exploração, porque isso os prejudica.",
   "c1.p2":"Abrange alimentação, vestuário, entretenimento, testes e qualquer prática que trate seres sencientes como recursos. Uma dieta plant-based é consequência do veganismo, mas o veganismo é o arcabouço ético.",
   "c1.p3":"Pense assim: você não chamaria o feminismo de \"escolha de moda\" só porque alguém se recusa a comprar de marcas exploradoras. Mesma energia.",
   "c1.fun":"A palavra \"vegan\" foi cunhada em 1944 por Donald Watson na Inglaterra. Ele pegou as primeiras e últimas letras de \"vegetarian\" porque o veganismo é \"o começo e o fim do vegetarianismo\".",

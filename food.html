@@ -15,7 +15,7 @@
     --star-empty: #d4cfc4;
   }
 
-  a, .tag, .card, .card-btn, .filter-btn {
+  a, .card-btn, .filter-btn {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847'/></g></svg>") 6 26, pointer;
   }
 
@@ -143,11 +143,12 @@
   .card:hover::before { transform: scaleX(1); }
   .card.hidden { display: none; }
   .card-closed-badge {
-    position: absolute; top: 14px; right: 14px; z-index: 2;
+    align-self: flex-start;
     background: var(--terracotta); color: white;
     font-size: 10px; font-weight: 700;
     letter-spacing: 0.5px; text-transform: uppercase;
     padding: 4px 11px; border-radius: 20px;
+    margin-bottom: 8px;
   }
 
   .card-top {
@@ -563,8 +564,8 @@ const venues = [
       en: "A fully plant-based café with an Indian-inspired menu — açaí and smoothie bowls, vegan pancakes, curries, and fresh juices.",
       pt: "Um café totalmente plant-based com cardápio de inspiração indiana — açaí e smoothie bowls, panquecas veganas, curries e sucos frescos."
     },
-    tags: ["100% Vegan", "Café", "Indian"],
-    rating: 4.6, votes: 0, vegan: true,
+    tags: ["Vegan-Friendly", "Café", "Indian"],
+    rating: 4.6, votes: 0, vegan: false,
     url: "#"
   },
   {
@@ -577,8 +578,8 @@ const venues = [
       en: "A Brisbane juice bar chain serving fresh juices, smoothies, açaí and 'nice cream' bowls, toasties, and wraps, all fully plant-based.",
       pt: "Uma rede de sucos em Brisbane com sucos frescos, smoothies, açaí e 'nice cream' bowls, toasties e wraps, tudo totalmente plant-based."
     },
-    tags: ["100% Vegan", "Juice Bar", "Café"],
-    rating: 4.5, votes: 0, vegan: true,
+    tags: ["Vegan-Friendly", "Juice Bar", "Café"],
+    rating: 4.5, votes: 0, vegan: false,
     url: "#"
   },
   {
@@ -661,8 +662,8 @@ const venues = [
       en: "A French vegan patisserie known for its croissants, pastries, cookies, and savoury focaccia and pizza slices.",
       pt: "Uma confeitaria francesa vegana conhecida por croissants, doces, cookies e fatias salgadas de focaccia e pizza."
     },
-    tags: ["100% Vegan", "Bakery", "Pastries"],
-    rating: 4.6, votes: 0, vegan: true, closed: true,
+    tags: ["Vegan-Friendly", "Bakery", "Pastries"],
+    rating: 4.6, votes: 0, vegan: false, closed: true,
     url: "#"
   }
 ];
@@ -768,7 +769,6 @@ function renderCards() {
 
   grid.innerHTML = list.map((v, i) => `
     <div class="card" style="animation-delay:${i * 0.04}s">
-      ${v.closed ? `<div class="card-closed-badge">${currentLang === 'pt' ? 'Encerrado' : 'Closed'}</div>` : ''}
       <div class="card-top">
         <div class="card-logo"><img src="${v.logo}" alt="${v.name} logo" loading="lazy"></div>
         <div class="card-rating">
@@ -776,6 +776,7 @@ function renderCards() {
           <span class="card-rating-num">${v.rating}</span>
         </div>
       </div>
+      ${v.closed ? `<div class="card-closed-badge">${currentLang === 'pt' ? 'Encerrado' : 'Closed'}</div>` : ''}
       <div class="card-type">${v.type[currentLang]}</div>
       <div class="card-name">${v.name}</div>
       <div class="card-location">📍 ${v.location}</div>

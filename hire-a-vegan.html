@@ -157,7 +157,7 @@ body{overflow-x:hidden}
           <th data-i18n="th.name">Name</th>
           <th data-i18n="th.service">Service</th>
           <th data-i18n="th.social">Social</th>
-          <th data-i18n="th.email">Email</th>
+          <th data-i18n="th.contact">Contact</th>
         </tr>
       </thead>
       <tbody id="tableBody"></tbody>
@@ -174,9 +174,9 @@ body{overflow-x:hidden}
 <script>
 // ── DATA ──
 const professionals = [
-  { name: "Julio Cesar Prava", service: "Graphic Design · Web Design · Video Editing", category: "Design", social: "https://instagram.com/jvlio.biblioverse", socialLabel: "@jvlio.biblioverse", email: "julio@veganbrisbaneguide.com" },
-  { name: "Mandy Pentland", service: "Hospitality · Event Planning · Consulting", category: "Hospitality", social: "#", socialLabel: "@mandy", email: "mandy@veganbrisbaneguide.com" },
-  { name: "Your Name Here", service: "Your service goes here", category: "Other", social: "#", socialLabel: "Send us a DM!", email: "—" }
+  { name: "Julio Cesar Prava", service: "Graphic Design · Web Design · Video Editing", category: "Design", social: "https://instagram.com/jvlio.biblioverse", socialLabel: "@jvlio.biblioverse" },
+  { name: "Mandy Pentland", service: "Hospitality · Event Planning · Consulting", category: "Hospitality", social: "#", socialLabel: "@mandy" },
+  { name: "Your Name Here", service: "Your service goes here", category: "Other", social: "#", socialLabel: "Send us a DM!" }
 ];
 
 // Extract unique categories
@@ -198,6 +198,7 @@ function filterTable() {
   const showingLabel = currentLang === 'pt' ? 'Exibindo' : 'Showing';
   const ofLabel = currentLang === 'pt' ? 'de' : 'of';
   const profLabel = currentLang === 'pt' ? 'profissionais' : 'professionals';
+  const contactLabel = currentLang === 'pt' ? 'Mensagem no Instagram' : 'DM on Instagram';
 
   const filtered = professionals.filter(p => {
     const matchQ = !q || p.name.toLowerCase().includes(q) || p.service.toLowerCase().includes(q) || p.category.toLowerCase().includes(q);
@@ -215,7 +216,7 @@ function filterTable() {
         <td class="td-name">${p.name}</td>
         <td class="td-service">${p.service}</td>
         <td><a href="${p.social}" target="_blank" rel="noopener" class="table-link">${p.socialLabel}</a></td>
-        <td class="td-email">${p.email === '—' ? '—' : `<a href="mailto:${p.email}">${p.email}</a>`}</td>
+        <td class="td-email"><a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener">${contactLabel}</a></td>
       </tr>
     `).join('');
   }
@@ -246,7 +247,7 @@ const i18n = { pt: {
   "th.name": "Nome",
   "th.service": "Serviço",
   "th.social": "Rede Social",
-  "th.email": "Email",
+  "th.contact": "Contato",
   "footer.tagline": "Um mundo melhor para os animais.",
   "footer.created": "Criado por"
 }};
