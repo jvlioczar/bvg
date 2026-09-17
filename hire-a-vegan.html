@@ -7,27 +7,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="partials.js"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--forest:#1a3a2a;--moss:#2d5a3d;--sage:#7a9a7e;--leaf:#4a8c5c;--leaf-light:#6db77d;--cream:#f5f0e8;--warm:#e8dfd3;--sand:#d4c9b8;--bark:#8b7355;--terracotta:#c4714a;--gold:#d4a847;--text:#2a2a28;--text-light:#6b6b65;--teal:#3a9e8f;--teal-light:#e6f5f2}
-html,body{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%234a8c5c' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/></svg>") 4 24,auto}
-a,button,.lang-btn,.nav-center a,.nav-meta a,.hamburger,.contact-btn,.table-link{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/></svg>") 4 24,pointer}
-body{background:var(--cream);font-family:'DM Sans',sans-serif;color:var(--text);overflow-x:hidden}
-html{scroll-behavior:smooth}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:14px 40px;background:rgba(245,240,232,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(42,42,40,0.06);box-shadow:0 2px 20px rgba(26,58,42,0.06)}
-.nav-logo{font-family:'Boldonse',system-ui;font-weight:400;font-size:16px;color:var(--forest);text-decoration:none;display:flex;align-items:baseline}
-.logo-pin{align-self:center;flex-shrink:0;margin-right:5px}
-.logo-word{display:inline-flex;font-family:'Boldonse',system-ui;font-weight:400;font-size:16px}
-.nav-right{display:flex;gap:20px;align-items:center}
-.nav-center{display:flex;gap:20px;align-items:center}
-.nav-center a,.nav-meta a{text-decoration:none;color:var(--text-light);font-size:12px;font-weight:500;letter-spacing:0.8px;text-transform:uppercase;transition:color 0.25s}
-.nav-center a:hover,.nav-meta a:hover{color:var(--forest)}
-.nav-center a.active,.nav-meta a.active{color:var(--forest);font-weight:700}
-.nav-meta{display:flex;gap:14px;align-items:center}
-.lang-btn{background:var(--forest);color:var(--cream);border:none;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:1px;transition:all 0.25s}
-.lang-btn:hover{background:var(--moss);transform:scale(1.05)}
+a,.contact-btn,.table-link{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/></svg>") 4 24,pointer}
+body{overflow-x:hidden}
 
 /* PAGE HEADER */
 .page-header{max-width:1100px;margin:0 auto;padding:90px 40px 0}
@@ -91,39 +75,11 @@ html{scroll-behavior:smooth}
 .td-email a:hover{color:var(--forest)}
 .no-results-row td{text-align:center;padding:40px 18px;color:var(--sage);font-style:italic}
 
-/* FOOTER */
-.footer{background:var(--forest);color:var(--cream);padding:48px 40px;text-align:center}
-.footer-animals{display:flex;justify-content:center;gap:22px;margin-bottom:24px;font-size:24px}
-.footer-tagline{font-family:'Fraunces',serif;font-size:20px;font-weight:300;font-style:italic;margin-bottom:18px;opacity:0.9}
-.footer-credit{font-size:13px;opacity:0.5;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
-.footer-credit a{color:var(--cream);opacity:0.7;text-decoration:none;transition:opacity 0.25s}
-.footer-credit a:hover{opacity:1;text-decoration:underline}
-.footer-credit .sep{opacity:0.3}
-
 /* ANIM */
 .anim{opacity:0;transform:translateY(16px);transition:all 0.5s ease}
 .anim.visible{opacity:1;transform:translateY(0)}
 
-/* HAMBURGER */
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:6px}
-.hamburger span{display:block;width:20px;height:2px;background:var(--forest);border-radius:2px;transition:all 0.3s ease}
-.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-.nav-overlay{display:none;position:fixed;inset:0;background:rgba(26,58,42,0.3);z-index:90;opacity:0;transition:opacity 0.3s ease}
-.nav-overlay.open{display:block;opacity:1}
-  .mobile-menu { display: none; }
-
 @media(max-width:768px){
-  .nav{padding:14px 20px}.nav-right{gap:12px}.hamburger{display:flex}
-  .nav-center,.nav-meta{display:none}
-  .mobile-menu{ display: flex; position:fixed;top:0;right:-280px;width:260px;height:100vh;background:var(--cream);display:flex;flex-direction:column;padding:80px 28px 40px;box-shadow:-8px 0 30px rgba(26,58,42,0.1);transition:right 0.35s cubic-bezier(0.4,0,0.2,1);z-index:95;overflow-y:auto}
-  .mobile-menu.open{right:0}
-  .mobile-menu a{text-decoration:none;color:var(--text-light);font-size:14px;font-weight:500;letter-spacing:0.6px;text-transform:uppercase;padding:14px 0;width:100%;border-bottom:1px solid rgba(26,58,42,0.06);transition:color 0.25s;display:flex;align-items:center;gap:8px}
-  .mobile-menu a:last-child{border-bottom:none}
-  .mobile-menu a:hover{color:var(--forest)}
-  .mobile-menu a.active{color:var(--forest);font-weight:700}
-  .mobile-menu-sep{height:1px;background:rgba(26,58,42,0.1);margin:8px 0}
   .page-header{padding:80px 20px 0}
   .hire-content{padding:16px 20px 40px}
   .table-controls{flex-direction:column}
@@ -134,47 +90,14 @@ html{scroll-behavior:smooth}
   .table-wrap{overflow-x:auto}
   .data-table{min-width:600px}
   .join-box{padding:22px 18px}
-  .footer{padding:32px 24px}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <svg class="logo-pin" width="18" height="18" viewBox="0 0 24 28" fill="none"><path d="M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z" fill="var(--leaf)"/></svg>
-    <span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>
-  </a>
-  <div class="nav-center">
-    <a href="food.html">Food</a>
-    <a href="community.html">Community</a>
-    <a href="people.html">People</a>
-    <a href="vegan-kit.html">Vegan Kit</a>
-    <a href="vegan-map.html">Vegan Map</a>
-    <a href="hire-a-vegan.html" class="active">Hire a Vegan</a>
-  </div>
-  <div class="nav-right">
-    <div class="nav-meta">
-      <a href="about.html">About</a>
-      <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-    </div>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()">PT</button>
-  </div>
-</nav>
-<div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="food.html">Food</a>
-  <a href="community.html">Community</a>
-  <a href="people.html">People</a>
-  <a href="vegan-kit.html">Vegan Kit</a>
-  <a href="vegan-map.html">Vegan Map</a>
-  <a href="hire-a-vegan.html" class="active">Hire a Vegan</a>
-  <div class="mobile-menu-sep"></div>
-  <a href="about.html">About</a>
-  <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg> Instagram</a>
-</div>
+<!-- NAV (shared header, see partials.js) -->
+<div id="site-header"></div>
+<script>document.getElementById('site-header').outerHTML = renderSiteHeader('hire-a-vegan.html');</script>
 
 <!-- PAGE HEADER -->
 <div class="page-header">
@@ -244,15 +167,9 @@ html{scroll-behavior:smooth}
 </div>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-animals"><span>🐄</span><span>🐖</span><span>🐔</span><span>🐑</span><span>🐇</span><span>🐟</span><span>🐝</span></div>
-  <div class="footer-tagline" data-i18n="footer.tagline">A better world for the animals.</div>
-  <div class="footer-credit">
-    <span>© 2026 Brisbane Vegan Guide</span><span class="sep">|</span>
-    <span data-i18n="footer.created">Created by</span>
-    <a href="https://jvlio.biblioverse.org" target="_blank" rel="noopener">Julio Cesar Prava</a>
-  </div>
-</footer>
+<!-- FOOTER (shared, see partials.js) -->
+<div id="site-footer"></div>
+<script>document.getElementById('site-footer').outerHTML = renderSiteFooter();</script>
 
 <script>
 // ── DATA ──
@@ -367,16 +284,6 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.anim').forEach(el => obs.observe(el));
 
 // ── MOBILE MENU ──
-function toggleMenu() {
-  document.getElementById('hamburger').classList.toggle('open');
-  document.getElementById('mobileMenu').classList.toggle('open');
-  document.getElementById('navOverlay').classList.toggle('open');
-  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
-}
-document.querySelectorAll('#mobileMenu a').forEach(a => {
-  a.addEventListener('click', () => { if (window.innerWidth <= 768) toggleMenu(); });
-});
-
 // ── INIT ──
 renderFilter();
 filterTable();

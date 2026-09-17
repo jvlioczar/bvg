@@ -7,73 +7,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<script src="partials.js"></script>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
   :root {
-    --forest: #1a3a2a;
-    --moss: #2d5a3d;
-    --sage: #7a9a7e;
-    --leaf: #4a8c5c;
-    --leaf-light: #6db77d;
-    --cream: #f5f0e8;
-    --warm: #e8dfd3;
-    --sand: #d4c9b8;
-    --bark: #8b7355;
-    --terracotta: #c4714a;
-    --gold: #d4a847;
-    --text: #2a2a28;
-    --text-light: #6b6b65;
-    --teal: #3a9e8f;
-    --teal-light: #e6f5f2;
     --star: #e8b730;
     --star-empty: #d4cfc4;
   }
 
-  html, body {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%234a8c5c' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/><path d='M10 22 C12 18 14 16 18 12' fill='none' stroke='%231a3a2a' stroke-width='0.3' opacity='0.5'/><path d='M8 20 C10 18 11 16 14 14' fill='none' stroke='%231a3a2a' stroke-width='0.3' opacity='0.5'/></svg>") 4 24, auto;
-  }
-  a, button, .tag, .back-link, .web-link, .explore-venues {
+  a, .tag, .back-link, .web-link, .explore-venues {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/></svg>") 4 24, pointer;
   }
-
-  body {
-    background: var(--cream);
-    font-family: 'DM Sans', sans-serif;
-    color: var(--text);
-  }
-
-  /* ── NAV ── */
-  .nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 14px 40px;
-    background: rgba(245, 240, 232, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(42, 42, 40, 0.06);
-    box-shadow: 0 2px 20px rgba(26, 58, 42, 0.06);
-  }
-  .nav-logo{font-family:'Boldonse',system-ui;font-weight:400;font-size:16px;
-    color: var(--forest);
-    text-decoration: none; letter-spacing: -0.3px;
-  }
-    .nav-right { display: flex; gap: 20px; align-items: center; }
-  .nav-center { display: flex; gap: 20px; align-items: center; }
-  .nav-center a, .nav-meta a {
-    text-decoration: none; color: var(--text-light);
-    font-size: 12px; font-weight: 500;
-    letter-spacing: 0.8px; text-transform: uppercase; transition: color 0.25s;
-  }
-  .nav-center a:hover, .nav-meta a:hover { color: var(--forest); }
-  .nav-center a.active, .nav-meta a.active { color: var(--forest); font-weight: 700; }
-  .nav-meta { display: flex; gap: 14px; align-items: center; }
-.lang-btn {
-    background: var(--forest); color: var(--cream);
-    border: none; padding: 6px 14px; border-radius: 20px;
-    font-size: 12px; font-weight: 600;
-    letter-spacing: 1px; transition: all 0.25s;
-  }
-  .lang-btn:hover { background: var(--moss); transform: scale(1.05); }
 
   /* ── FULL-WIDTH HERO PHOTO ── */
   .venue-hero {
@@ -506,33 +450,6 @@
   }
   .explore-venues:hover .explore-venues-cta { gap: 12px; }
 
-  /* ── FOOTER ── */
-  .footer {
-    background: var(--forest); color: var(--cream);
-    padding: 48px 40px; text-align: center;
-  }
-  .footer-animals {
-    display: flex; justify-content: center; gap: 22px;
-    margin-bottom: 24px;
-    font-size: 24px;
-  }
-  .footer-tagline {
-    font-family: 'Fraunces', serif;
-    font-size: 20px; font-weight: 300; font-style: italic;
-    margin-bottom: 18px; opacity: 0.9;
-  }
-  .footer-credit {
-    font-size: 13px; opacity: 0.5;
-    display: flex; align-items: center;
-    justify-content: center; gap: 6px; flex-wrap: wrap;
-  }
-  .footer-credit a {
-    color: var(--cream); opacity: 0.7;
-    text-decoration: none; transition: opacity 0.25s;
-  }
-  .footer-credit a:hover { opacity: 1; text-decoration: underline; }
-  .footer-credit .sep { opacity: 0.3; }
-
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -541,64 +458,16 @@
   .anim { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
   .anim.visible { opacity: 1; transform: translateY(0); }
 
-  html { scroll-behavior: smooth; }
-
-  /* ── HAMBURGER ── */
-  .hamburger {
-    display: none; flex-direction: column; gap: 5px;
-    background: none; border: none; padding: 6px;
-  }
-  .hamburger span {
-    display: block; width: 20px; height: 2px;
-    background: var(--forest); border-radius: 2px; transition: all 0.3s ease;
-  }
-  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-  .nav-overlay {
-    display: none; position: fixed; inset: 0;
-    background: rgba(26, 58, 42, 0.3); z-index: 90;
-    opacity: 0; transition: opacity 0.3s ease;
-  }
-  .nav-overlay.open { display: block; opacity: 1; }
-  .mobile-menu { display: none; }
-
   /* ── MOBILE ── */
   @media (max-width: 900px) {
     .wwww-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
-    .nav { padding: 14px 20px; }
-    .nav-right { gap: 12px; }
-    .hamburger { display: flex; }
-    .nav-center, .nav-meta { display: none; }
-    .mobile-menu {
-      display: flex;
-      position: fixed; top: 0; right: -280px;
-      width: 260px; height: 100vh;
-      background: var(--cream); display: flex; flex-direction: column;
-      padding: 80px 28px 40px;
-      box-shadow: -8px 0 30px rgba(26, 58, 42, 0.1);
-      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 95; overflow-y: auto;
-    }
-    .mobile-menu.open { right: 0; }
-    .mobile-menu a {
-      text-decoration: none; color: var(--text-light);
-      font-size: 14px; font-weight: 500; letter-spacing: 0.6px;
-      text-transform: uppercase; padding: 14px 0; width: 100%;
-      border-bottom: 1px solid rgba(26, 58, 42, 0.06);
-      transition: color 0.25s; display: flex; align-items: center; gap: 8px;
-    }
-    .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu a:hover { color: var(--forest); }
-    .mobile-menu a.active { color: var(--forest); font-weight: 700; }
-    .mobile-menu-sep { height: 1px; background: rgba(26, 58, 42, 0.1); margin: 8px 0; }
     .venue-hero { height: 40vh; min-height: 240px; }
     .venue-header { padding: 20px 20px 0; }
     .venue-intro { grid-template-columns: 1fr; }
     .venue-intro-text { grid-column: span 1; }
-    .venue-intro-media { max-width: 360px; }
+    .venue-intro-media { max-width: 280px; }
     .venue-content { padding: 0 20px 40px; }
     .wwww-grid { grid-template-columns: 1fr; }
     .wwww-card { min-height: auto; }
@@ -613,47 +482,14 @@
     .explore-venues { flex-direction: column; text-align: center; padding: 24px 20px; gap: 16px; }
     .explore-venues-left { flex-direction: column; }
     .explore-venues-title { font-size: 17px; }
-    .footer { padding: 32px 24px; }
   }
 </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="/" class="nav-logo">
-      <svg class="logo-pin" width="18" height="18" viewBox="0 0 24 28" fill="none"><path d="M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z" fill="var(--leaf)"/></svg>
-      <span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>
-    </a>
-    <div class="nav-center">
-      <a href="https://veganbrisbaneguide.com/food" class="active">Food</a>
-      <a href="https://veganbrisbaneguide.com/community">Community</a>
-      <a href="https://veganbrisbaneguide.com/people">People</a>
-      <a href="https://veganbrisbaneguide.com/vegankit">Vegan Kit</a>
-      <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
-      <a href="https://veganbrisbaneguide.com/hire">Hire a Vegan</a>
-    </div>
-    <div class="nav-right">
-      <div class="nav-meta">
-        <a href="https://veganbrisbaneguide.com/about">About</a>
-        <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
-      </div>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
-      <button class="lang-btn" id="langBtn" onclick="toggleLang()">PT</button>
-    </div>
-  </nav>
-  <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="https://veganbrisbaneguide.com/food" class="active">Food</a>
-    <a href="https://veganbrisbaneguide.com/community">Community</a>
-    <a href="https://veganbrisbaneguide.com/people">People</a>
-    <a href="https://veganbrisbaneguide.com/vegankit">Vegan Kit</a>
-    <a href="https://veganbrisbaneguide.com/veganmap">Vegan Map</a>
-    <a href="https://veganbrisbaneguide.com/hire">Hire a Vegan</a>
-    <div class="mobile-menu-sep"></div>
-    <a href="https://veganbrisbaneguide.com/about">About</a>
-    <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg> Instagram</a>
-  </div>
+  <!-- NAV (shared header, see partials.js) -->
+  <div id="site-header"></div>
+  <script>document.getElementById('site-header').outerHTML = renderSiteHeader('food.html');</script>
 
   <!-- ============================================================
        VENUE PAGE TEMPLATE — Fields to replace per venue:
@@ -880,19 +716,9 @@
 
   </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-animals">
-      <span>🐄</span><span>🐖</span><span>🐔</span><span>🐑</span><span>🐇</span><span>🐟</span><span>🐝</span>
-    </div>
-    <div class="footer-tagline" data-i18n="footer.tagline">A better world for the animals.</div>
-    <div class="footer-credit">
-      <span>© 2026 Brisbane Vegan Guide</span>
-      <span class="sep">|</span>
-      <span data-i18n="footer.created">Created by</span>
-      <a href="https://jvlio.biblioverse.org" target="_blank" rel="noopener">Julio Cesar Prava</a>
-    </div>
-  </footer>
+  <!-- FOOTER (shared, see partials.js) -->
+  <div id="site-footer"></div>
+  <script>document.getElementById('site-footer').outerHTML = renderSiteFooter();</script>
 
 <script>
 // ── STAR RENDERER ──
@@ -945,37 +771,157 @@ renderStars(document.getElementById('mainStars'), 4.5);
 renderStars(document.getElementById('finalStars'), 4.5);
 
 // ── OPINIONS ──
-const opinions = [
-  { name: "Google Reviews",   icon: "🔍", r: 5,   votes: 312, url: "https://www.google.com/maps/place/The+Green+Edge" },
-  { name: "Facebook Reviews", icon: "📘", r: 4,   votes: 87,  url: "https://www.facebook.com/thegreenedge" },
-  { name: "HappyCow",         icon: "🐄", r: 5,   votes: 156, url: "https://www.happycow.net/reviews/the-green-edge-brisbane" },
-  { name: "Uber Eats",        icon: "🟢", r: 4,   votes: 245, url: "https://www.ubereats.com/store/the-green-edge" },
-  { name: "DoorDash",         icon: "🔴", r: 5,   votes: 198, url: "https://www.doordash.com/store/the-green-edge" },
-  { name: "Tripadvisor",      icon: "🦉", r: 4,   votes: 64,  url: "https://www.tripadvisor.com/Restaurant_Review-The_Green_Edge" },
-  { name: "Yelp",             icon: "⭐", r: 5,   votes: 42,  url: "https://www.yelp.com/biz/the-green-edge-brisbane" },
-  { name: "OpenTable",        icon: "🍽️", r: 4,  votes: 31,  url: "https://www.opentable.com/the-green-edge" },
-  { name: "Wanderlog",        icon: "🗺️", r: 5,  votes: 78,  url: "https://wanderlog.com/place/the-green-edge" }
-];
+// ── LOAD DATA FROM bvg_data.json ──
+const VENUE_SLUG = "the-green-edge"; // ← Change per venue page
 
-const ol = document.getElementById('opinionList');
-opinions.forEach(o => {
-  const row = document.createElement('div');
-  row.className = 'opinion-row';
-  row.innerHTML = `
-    <a href="${o.url}" target="_blank" rel="noopener" class="opinion-platform opinion-link">
-      <div class="platform-icon">${o.icon}</div>
-      <span class="platform-name">${o.name}</span>
-      <svg class="link-arrow" width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <div class="opinion-stars"></div>
-    <div class="opinion-votes"><span>${o.votes.toLocaleString()}</span> <em class="votes-label">votes</em></div>`;
-  ol.appendChild(row);
-  renderStars(row.querySelector('.opinion-stars'), o.r);
-});
+const platformMeta = {
+  google:      { name: "Google Reviews",   icon: "🔍" },
+  facebook:    { name: "Facebook",         icon: "📘" },
+  happycow:    { name: "HappyCow",         icon: "🐄" },
+  uber_eats:   { name: "Uber Eats",        icon: "🟢" },
+  doordash:    { name: "DoorDash",         icon: "🔴" },
+  tripadvisor: { name: "Tripadvisor",      icon: "🦉" },
+  yelp:        { name: "Yelp",             icon: "⭐" },
+  opentable:   { name: "OpenTable",        icon: "🍽️" },
+  bvg:         { name: "BVG Rating",       icon: "📍" },
+  wanderlog:   { name: "Wanderlog",        icon: "🗺️" }
+};
 
-// ── TOTAL VOTES ──
-const totalVotes = opinions.reduce((sum, o) => sum + o.votes, 0);
-document.getElementById('totalVotes').textContent = totalVotes.toLocaleString() + ' votes';
+function toFiveStars(rating, scale) {
+  if (scale === 5) return rating;
+  if (scale === 10) return rating / 2;
+  if (scale === 100) return rating / 20;
+  return rating;
+}
+
+let totalVotes = 0;
+
+function loadVenueData() {
+  fetch("bvg_data.json")
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var venue = data.find(function(v) { return v.slug === VENUE_SLUG; });
+      if (!venue) return;
+
+      var ol = document.getElementById('opinionList');
+      var reviews = venue.reviews;
+
+      // ── Separate platforms ──
+      var withVotes = [];
+      var linkOnly = [];
+
+      Object.keys(reviews).forEach(function(key) {
+        var r = reviews[key];
+        if (r.link_only) {
+          linkOnly.push({ key: key, votes: r.votes, rating: r.rating, scale: r.scale, url: r.url, link_only: true });
+        } else if (r.votes !== null && r.rating !== null) {
+          withVotes.push({ key: key, votes: r.votes, rating: r.rating, scale: r.scale, url: r.url });
+        }
+      });
+
+      // ── Calculate totals dynamically ──
+      var platformCount = withVotes.length;
+      var totalVotesCalc = 0;
+      withVotes.forEach(function(r) { totalVotesCalc += r.votes; });
+
+      // ── Render platforms with votes ──
+      withVotes.forEach(function(r) {
+        var meta = platformMeta[r.key] || { name: r.key, icon: "📊" };
+        var normalized = toFiveStars(r.rating, r.scale);
+        var starRating = Math.round(normalized);
+        var row = document.createElement('div');
+        row.className = 'opinion-row';
+
+        var platformHtml = r.url
+          ? '<a href="' + r.url + '" target="_blank" rel="noopener" class="opinion-platform opinion-link">' +
+              '<div class="platform-icon">' + meta.icon + '</div>' +
+              '<span class="platform-name">' + meta.name + '</span>' +
+              '<svg class="link-arrow" width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+            '</a>'
+          : '<div class="opinion-platform">' +
+              '<div class="platform-icon">' + meta.icon + '</div>' +
+              '<span class="platform-name">' + meta.name + '</span>' +
+            '</div>';
+
+        row.innerHTML = platformHtml +
+          '<div class="opinion-stars"></div>' +
+          '<div class="opinion-votes"><span>' + r.votes.toLocaleString() + '</span> <em class="votes-label">votes</em></div>';
+        ol.appendChild(row);
+        renderStars(row.querySelector('.opinion-stars'), starRating);
+      });
+
+      // ── Render link-only (Wanderlog etc.) ──
+      linkOnly.forEach(function(r) {
+        if (!r.url) return;
+        var meta = platformMeta[r.key] || { name: r.key, icon: "📊" };
+        var row = document.createElement('div');
+        row.className = 'opinion-row opinion-row-link-only';
+        row.innerHTML =
+          '<a href="' + r.url + '" target="_blank" rel="noopener" class="opinion-platform opinion-link">' +
+            '<div class="platform-icon">' + meta.icon + '</div>' +
+            '<span class="platform-name">' + meta.name + '</span>' +
+            '<svg class="link-arrow" width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '</a>' +
+          '<div class="opinion-stars" style="opacity:0.35;font-size:11px;color:var(--sage)">link only</div>' +
+          '<div class="opinion-votes" style="opacity:0.35">—</div>';
+        ol.appendChild(row);
+      });
+
+      // ── Final rating from JSON ──
+      var finalRating = venue.final_rating;
+
+      // ── Update total votes display ──
+      document.getElementById('totalVotes').textContent = totalVotesCalc.toLocaleString() + ' votes';
+
+      // ── Update final rating number (bottom block) ──
+      var finalNum = document.querySelector('.final-rating-number');
+      if (finalNum) finalNum.textContent = finalRating.toFixed(1);
+
+      // ── Update final rating stars (bottom block) ──
+      var finalStars = document.querySelector('.final-rating-left .stars');
+      if (finalStars) { finalStars.innerHTML = ''; renderStars(finalStars, Math.round(finalRating)); }
+
+      // ── Update rating in header (top of page) ──
+      var ratingNum = document.querySelector('.venue-rating-number');
+      if (ratingNum) ratingNum.textContent = finalRating.toFixed(1);
+      var mainStars = document.getElementById('mainStars');
+      if (mainStars) { mainStars.innerHTML = ''; renderStars(mainStars, Math.round(finalRating)); }
+
+      // ── Update "Based on X platforms · Y votes" ──
+      var basedEl = document.querySelector('[data-i18n="final.based"]');
+      if (basedEl) {
+        i18n.en["final.based"] = "Based on " + platformCount + " platforms · " + totalVotesCalc.toLocaleString() + " votes";
+        i18n.pt["final.based"] = "Baseado em " + platformCount + " plataformas · " + totalVotesCalc.toLocaleString() + " votos";
+        basedEl.textContent = currentLang === "pt" ? i18n.pt["final.based"] : i18n.en["final.based"];
+        basedEl.setAttribute('data-en', i18n.en["final.based"]);
+      }
+
+      // ── Update tags ──
+      if (venue.tags && venue.tags.length > 0) {
+        var tagsEl = document.querySelector('.venue-tags');
+        if (tagsEl) {
+          tagsEl.innerHTML = venue.tags.map(function(t) {
+            return '<span class="tag">' + t + '</span>';
+          }).join('');
+        }
+      }
+
+      // ── Update badge ──
+      var badgeEl = document.querySelector('.badge-popular span');
+      if (badgeEl && venue.badge) {
+        badgeEl.textContent = venue.badge;
+      }
+
+      // ── Update dates ──
+      var lastEl = document.getElementById('lastUpdate');
+      if (lastEl && venue.last_updated) lastEl.textContent = venue.last_updated;
+      var nextEl = document.getElementById('nextUpdate');
+      if (nextEl && venue.next_update) nextEl.textContent = venue.next_update;
+    })
+    .catch(function(err) {
+      console.warn("bvg_data.json not loaded — this is normal when opening locally. Deploy to GitHub Pages for full functionality.", err);
+    });
+}
 
 // ── METHODOLOGY TOGGLE ──
 function toggleMethodology() {
@@ -1068,16 +1014,8 @@ function toggleLang() {
     totalVotes.toLocaleString() + (currentLang === "pt" ? " votos" : " votes");
 }
 
-// ── MOBILE MENU ──
-function toggleMenu() {
-  document.getElementById('hamburger').classList.toggle('open');
-  document.getElementById('mobileMenu').classList.toggle('open');
-  document.getElementById('navOverlay').classList.toggle('open');
-  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
-}
-document.querySelectorAll('#mobileMenu a').forEach(a => {
-  a.addEventListener('click', () => { if (window.innerWidth <= 768) toggleMenu(); });
-});
+// ── LOAD VENUE DATA (must run after i18n is defined) ──
+loadVenueData();
 </script>
 </body>
 </html>
