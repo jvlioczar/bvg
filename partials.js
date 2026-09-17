@@ -13,6 +13,9 @@ const SITE_NAV_LINKS = [
 
 const SITE_INSTAGRAM_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>';
 
+// Public (no auth needed) CounterAPI "up" endpoint — safe to call directly from the browser.
+const SITE_VISIT_COUNTER_URL = 'https://api.counterapi.dev/v2/jvlioczars-team-5564/first-counter-5564/up';
+
 function renderSiteHeader(activeHref) {
   const aboutActive = activeHref === 'about.html' ? ' class="active"' : '';
   const navLink = (l) => `<a href="${l.href}"${l.href === activeHref ? ' class="active"' : ''}>${l.label}</a>`;
@@ -46,6 +49,7 @@ function renderSiteHeader(activeHref) {
 }
 
 function renderSiteFooter() {
+  setTimeout(initSiteVisitCounter, 0);
   return `<footer class="footer">
     <div class="footer-animals">
       <span>🐄</span><span>🐖</span><span>🐔</span><span>🐑</span><span>🐇</span><span>🐟</span><span>🐝</span>
@@ -54,9 +58,32 @@ function renderSiteFooter() {
     <div class="footer-credit">
       <span>© 2026 Brisbane Vegan Guide</span>
       <span class="sep">|</span>
+      <span id="footerVisits" style="display:none;">🐾 <span id="siteVisitCount">···</span> visits</span>
+      <span class="sep" id="footerVisitsSep" style="display:none;">|</span>
       <span><span data-i18n="footer.created">Created by</span> <a href="https://www.instagram.com/sencientista" target="_blank" rel="noopener">Julio Cesar Prava</a></span>
     </div>
   </footer>`;
+}
+
+function initSiteVisitCounter() {
+  const wrap = document.getElementById('footerVisits');
+  const sep = document.getElementById('footerVisitsSep');
+  const countEl = document.getElementById('siteVisitCount');
+  if (!wrap || !countEl) return;
+
+  fetch(SITE_VISIT_COUNTER_URL)
+    .then((res) => res.json())
+    .then((json) => {
+      const count = json && json.data && json.data.up_count;
+      if (typeof count !== 'number') throw new Error('Unexpected response');
+      countEl.textContent = count.toLocaleString('en-US');
+      wrap.style.display = '';
+      sep.style.display = '';
+    })
+    .catch(() => {
+      wrap.style.display = 'none';
+      sep.style.display = 'none';
+    });
 }
 
 function toggleMenu() {
