@@ -11,7 +11,7 @@
 <script src="partials.js"></script>
 <style>
   .card, .section-cta, .card-btn {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/></svg>") 4 24, pointer;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(-45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='1'/></g></svg>") 26 26, pointer;
   }
 
   .page {
@@ -202,7 +202,18 @@
   }
   .card:hover::before { transform: scaleX(1); }
 
-  .card-emoji { font-size: 26px; margin-bottom: 10px; display: block; }
+  .card-top {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .card-emoji { font-size: 26px; }
+  .card-rating { display: flex; align-items: center; gap: 6px; }
+  .card-stars { display: inline-flex; gap: 2px; }
+  .card-stars .star-icon { width: 14px; height: 14px; }
+  .card-rating-num {
+    font-family: 'Fraunces', serif;
+    font-size: 14px; font-weight: 700; color: var(--forest);
+  }
   .card-name {
     font-family: 'Fraunces', serif;
     font-size: 17px; font-weight: 700;
@@ -406,8 +417,11 @@
       <a href="food.html" class="section-cta" data-i18n="food.cta">Explore all venues →</a>
     </div>
     <div class="cards-grid">
-      <div class="card">
-        <span class="card-emoji">🌿</span>
+      <div class="card" data-venue-slug="the-green-edge">
+        <div class="card-top">
+          <span class="card-emoji">🌿</span>
+          <div class="card-rating"><div class="card-stars"></div><span class="card-rating-num"></span></div>
+        </div>
         <div class="card-type" data-i18n="food.item1.type">Bistro · Café · Deli</div>
         <div class="card-name">The Green Edge</div>
         <div class="card-location">📍 Windsor</div>
@@ -419,8 +433,11 @@
         </div>
         <a href="the-green-edge.html" class="card-btn" data-i18n="btn.more">Learn more</a>
       </div>
-      <div class="card">
-        <span class="card-emoji">🍜</span>
+      <div class="card" data-venue-slug="u-tong">
+        <div class="card-top">
+          <span class="card-emoji">🍜</span>
+          <div class="card-rating"><div class="card-stars"></div><span class="card-rating-num"></span></div>
+        </div>
         <div class="card-type" data-i18n="food.item2.type">Thai Vegan</div>
         <div class="card-name">U-Tong</div>
         <div class="card-location">📍 South Brisbane</div>
@@ -432,8 +449,11 @@
         </div>
         <a href="#" class="card-btn" data-i18n="btn.more">Learn more</a>
       </div>
-      <div class="card">
-        <span class="card-emoji">🥪</span>
+      <div class="card" data-venue-slug="pippas-pantry">
+        <div class="card-top">
+          <span class="card-emoji">🥪</span>
+          <div class="card-rating"><div class="card-stars"></div><span class="card-rating-num"></span></div>
+        </div>
         <div class="card-type" data-i18n="food.item3.type">Vegan Café & Deli</div>
         <div class="card-name">Pippa's Pantry</div>
         <div class="card-location">📍 Ashgrove</div>
@@ -793,6 +813,42 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 document.querySelectorAll(".section").forEach(sec => observer.observe(sec));
+
+// ── FOOD CARD RATINGS FROM bvg_data.json ──
+function starsHTML(rating) {
+  const full = Math.floor(rating);
+  const hasHalf = (rating % 1) >= 0.25 && (rating % 1) < 0.75;
+  const extra = (rating % 1) >= 0.75 ? 1 : 0;
+  const id = "h" + Math.random().toString(36).substr(2, 5);
+  const d = "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z";
+  const fullStar = `<svg viewBox="0 0 24 24" class="star-icon"><path d="${d}" fill="var(--star)"/></svg>`;
+  const emptyStar = `<svg viewBox="0 0 24 24" class="star-icon"><path d="${d}" fill="var(--star-empty)"/></svg>`;
+  const halfStar = `<svg viewBox="0 0 24 24" class="star-icon"><defs><clipPath id="${id}"><rect x="0" y="0" width="12" height="24"/></clipPath></defs><path d="${d}" fill="var(--star-empty)"/><path d="${d}" fill="var(--star)" clip-path="url(#${id})"/></svg>`;
+  let html = '';
+  for (let i = 0; i < full + extra; i++) html += fullStar;
+  if (hasHalf) html += halfStar;
+  const rem = 5 - (full + extra) - (hasHalf ? 1 : 0);
+  for (let i = 0; i < rem; i++) html += emptyStar;
+  return html;
+}
+
+fetch('bvg_data.json')
+  .then(res => res.json())
+  .then(data => {
+    const bySlug = {};
+    data.forEach(v => { bySlug[v.slug] = v; });
+    document.querySelectorAll('.card[data-venue-slug]').forEach(card => {
+      const venue = bySlug[card.dataset.venueSlug];
+      if (!venue || typeof venue.final_rating !== 'number' || venue.final_rating <= 0) return;
+      const starsEl = card.querySelector('.card-stars');
+      const numEl = card.querySelector('.card-rating-num');
+      if (starsEl) starsEl.innerHTML = starsHTML(venue.final_rating);
+      if (numEl) numEl.textContent = venue.final_rating.toFixed(1);
+    });
+  })
+  .catch(err => {
+    console.warn('bvg_data.json not loaded — food card ratings hidden. Deploy to GitHub Pages for live data.', err);
+  });
 </script>
 </body>
 </html>

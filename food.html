@@ -16,7 +16,7 @@
   }
 
   a, .tag, .card, .card-btn, .filter-btn {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'><path d='M6 26 C6 26 4 18 10 12 C16 6 24 4 26 2 C26 2 24 10 18 16 C12 22 6 26 6 26Z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='0.8'/><path d='M6 26 C10 20 16 14 26 2' fill='none' stroke='%231a3a2a' stroke-width='0.6'/></svg>") 4 24, pointer;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(-45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847' stroke='%231a3a2a' stroke-width='1'/></g></svg>") 26 26, pointer;
   }
 
   /* ── PAGE HEADER ── */
@@ -287,6 +287,7 @@
 // ── VENUE DATA ──
 const venues = [
   {
+    slug: "vegan-restaurant",
     name: "Vegan Restaurant",
     type: { en: "Vegan Restaurant", pt: "Restaurante Vegano" },
     emoji: "🌱",
@@ -300,6 +301,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "dickis",
     name: "Dicki's",
     type: { en: "Vegan Fast Food", pt: "Fast Food Vegano" },
     emoji: "🍔",
@@ -313,6 +315,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "yavanna",
     name: "Yavanna",
     type: { en: "Fine Dining", pt: "Alta Gastronomia" },
     emoji: "🍷",
@@ -326,6 +329,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "the-green-edge",
     name: "The Green Edge",
     type: { en: "Bistro · Café · Deli", pt: "Bistrô · Café · Deli" },
     emoji: "🌿",
@@ -339,6 +343,7 @@ const venues = [
     url: "the-green-edge.html"
   },
   {
+    slug: "u-tong",
     name: "U-Tong",
     type: { en: "Thai Vegan", pt: "Tailandês Vegano" },
     emoji: "🍜",
@@ -352,6 +357,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "el-planta",
     name: "El Planta",
     type: { en: "Mexican Restaurant", pt: "Restaurante Mexicano" },
     emoji: "🌮",
@@ -365,6 +371,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "vega-cafe",
     name: "Vega Cafe",
     type: { en: "Café & Bistro", pt: "Café & Bistrô" },
     emoji: "☕",
@@ -373,11 +380,12 @@ const venues = [
       en: "Cosy neighbourhood café serving wholesome plant-based breakfasts, specialty coffee, and freshly baked treats.",
       pt: "Café acolhedor de bairro com cafés-da-manhã plant-based, café especial e doces assados frescos."
     },
-    tags: ["100% Vegan", "Café", "Brunch"],
-    rating: 4.57, votes: 668, vegan: true,
+    tags: ["Vegan-Friendly", "Café", "Brunch"],
+    rating: 4.57, votes: 668, vegan: false,
     url: "#"
   },
   {
+    slug: "veganyumm",
     name: "Veganyumm",
     type: { en: "Vegan Restaurant", pt: "Restaurante Vegano" },
     emoji: "🥗",
@@ -391,6 +399,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "grassfed",
     name: "GrassFed",
     type: { en: "Café & Bistro", pt: "Café & Bistrô" },
     emoji: "🌾",
@@ -404,6 +413,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "loving-hut",
     name: "Loving Hut",
     type: { en: "Asian Vegan", pt: "Asiático Vegano" },
     emoji: "💛",
@@ -417,6 +427,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "vegerama",
     name: "Vege Rama",
     type: { en: "Indian Vegan", pt: "Indiano Vegano" },
     emoji: "🍛",
@@ -430,6 +441,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "you-came-again",
     name: "You Came Again",
     type: { en: "Vegan Café & Brunch", pt: "Café & Brunch Vegano" },
     emoji: "🥞",
@@ -443,6 +455,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "piante-pizza",
     name: "Piante Pizza",
     type: { en: "Pizzeria", pt: "Pizzaria" },
     emoji: "🍕",
@@ -456,6 +469,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "the-plant-bakery",
     name: "The Plant Bakery",
     type: { en: "Bakery & Café", pt: "Padaria & Café" },
     emoji: "🥐",
@@ -469,6 +483,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "pippas-pantry",
     name: "Pippa's Pantry",
     type: { en: "Vegan Café & Deli", pt: "Café & Deli Vegano" },
     emoji: "🥪",
@@ -482,6 +497,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "neon-ramen",
     name: "Neon Ramen",
     type: { en: "Vegan Ramen Bar", pt: "Ramen Bar Vegano" },
     emoji: "🍜",
@@ -495,6 +511,7 @@ const venues = [
     url: "#"
   },
   {
+    slug: "netherworld",
     name: "Netherworld",
     type: { en: "Bar & Arcade", pt: "Bar & Arcade" },
     emoji: "🕹️",
@@ -565,7 +582,8 @@ const tagMap = {
   "Indian": "Indiano", "Ramen": "Ramen", "Japanese": "Japonês",
   "Bar": "Bar", "Arcade": "Arcade", "Restaurant": "Restaurante",
   "Gluten-Free": "Sem Glúten", "Ice Cream": "Sorvete",
-  "Running": "Corrida", "Sports": "Esportes"
+  "Running": "Corrida", "Sports": "Esportes",
+  "Vegan-Friendly": "Amigável a Veganos"
 };
 
 function translateTag(tag, lang) {
@@ -684,8 +702,28 @@ function toggleLang() {
   renderCards();
 }
 
+// ── LOAD RATINGS FROM bvg_data.json ──
+function applyRatingsFromJSON() {
+  fetch('bvg_data.json')
+    .then(res => res.json())
+    .then(data => {
+      const bySlug = {};
+      data.forEach(v => { bySlug[v.slug] = v; });
+      venues.forEach(v => {
+        const match = v.slug && bySlug[v.slug];
+        if (match && typeof match.final_rating === 'number' && match.final_rating > 0) {
+          v.rating = match.final_rating;
+        }
+      });
+    })
+    .catch(err => {
+      console.warn('bvg_data.json not loaded — using built-in ratings. Deploy to GitHub Pages for live data.', err);
+    })
+    .finally(renderCards);
+}
+
 // ── INIT ──
-renderCards();
+applyRatingsFromJSON();
 
 </script>
 </body>

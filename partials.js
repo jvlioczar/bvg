@@ -22,10 +22,27 @@ function renderSiteHeader(activeHref) {
   const centerLinks = SITE_NAV_LINKS.map(navLink).join('\n      ');
   const mobileLinks = SITE_NAV_LINKS.map(navLink).join('\n    ');
 
+  let isFirstVisit = false;
+  try {
+    isFirstVisit = !localStorage.getItem('bvgVisited');
+    localStorage.setItem('bvgVisited', '1');
+  } catch (e) { /* localStorage unavailable (private mode, etc.) — just skip the animation */ }
+
+  const logoInner = isFirstVisit
+    ? `<span class="logo-word">B</span><span class="logo-collapse">risbane</span><span class="logo-space"> </span><span class="logo-word">V</span><span class="logo-collapse">egan</span><span class="logo-space"> </span><span class="logo-word">G</span><span class="logo-collapse">uide</span>`
+    : `<span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>`;
+
+  if (isFirstVisit) {
+    setTimeout(() => {
+      document.querySelectorAll('.logo-collapse').forEach((el) => el.classList.add('collapsed'));
+      document.querySelectorAll('.logo-space').forEach((el) => el.classList.add('collapsed'));
+    }, 2400);
+  }
+
   return `<nav class="nav" id="navbar">
     <a href="index.html" class="nav-logo">
       <svg class="logo-pin" width="18" height="18" viewBox="0 0 24 28" fill="none"><path d="M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z" fill="var(--leaf)"/></svg>
-      <span class="logo-word">B</span><span class="logo-word">V</span><span class="logo-word">G</span>
+      ${logoInner}
     </a>
     <div class="nav-center">
       ${centerLinks}
