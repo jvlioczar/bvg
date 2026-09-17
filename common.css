@@ -117,6 +117,29 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
   background: var(--forest); color: var(--cream);
   padding: 48px 40px; text-align: center;
 }
+.footer-nav {
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+  margin-bottom: 28px;
+}
+.footer-nav a {
+  display: inline-flex; align-items: center; gap: 6px;
+  text-decoration: none;
+  font-size: 12px; font-weight: 600;
+  color: var(--cream);
+  padding: 7px 16px;
+  background: rgba(245, 240, 232, 0.08);
+  border-radius: 24px;
+  transition: all 0.25s;
+}
+.footer-nav a:hover {
+  background: var(--cream); color: var(--forest);
+  transform: translateY(-1px);
+}
+.footer-nav-num {
+  font-family: 'Boldonse', system-ui;
+  font-size: 10px;
+  opacity: 0.6;
+}
 .footer-animals {
   display: flex; justify-content: center; gap: 22px;
   margin-bottom: 24px; font-size: 24px;
@@ -137,6 +160,22 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
 }
 .footer-credit a:hover { opacity: 1; text-decoration: underline; }
 .footer-credit .sep { opacity: 0.3; }
+
+/* ── BACK TO TOP ── */
+.back-to-top {
+  position: fixed; right: 24px; bottom: 24px; z-index: 80;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--forest); color: var(--cream);
+  border: none;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(26, 58, 42, 0.25);
+  opacity: 0; visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: var(--moss); transform: translateY(-3px); }
 
 /* ── MOBILE ── */
 @media (max-width: 768px) {
@@ -166,4 +205,7 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
   .mobile-menu a.active { color: var(--forest); font-weight: 700; }
   .mobile-menu-sep { height: 1px; background: rgba(26, 58, 42, 0.1); margin: 8px 0; }
   .footer { padding: 32px 24px; }
+  .footer-nav { gap: 8px; margin-bottom: 22px; }
+  .footer-nav a { font-size: 11px; padding: 6px 12px; }
+  .back-to-top { right: 16px; bottom: 16px; width: 40px; height: 40px; }
 }

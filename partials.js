@@ -13,6 +13,16 @@ const SITE_NAV_LINKS = [
 
 const SITE_INSTAGRAM_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>';
 
+// Same 6 pages as the hero index on the home page, same numbering/labels.
+const SITE_FOOTER_NAV = [
+  { href: 'food.html', label: 'Eat & Drink' },
+  { href: 'community.html', label: 'Community' },
+  { href: 'people.html', label: 'People' },
+  { href: 'vegan-kit.html', label: 'Vegan Kit' },
+  { href: 'vegan-map.html', label: 'Vegan Map' },
+  { href: 'hire-a-vegan.html', label: 'Hire a Vegan' },
+];
+
 // Public (no auth needed) CounterAPI "up" endpoint — safe to call directly from the browser.
 const SITE_VISIT_COUNTER_URL = 'https://api.counterapi.dev/v2/jvlioczars-team-5564/first-counter-5564/up';
 
@@ -67,7 +77,14 @@ function renderSiteHeader(activeHref) {
 
 function renderSiteFooter() {
   setTimeout(initSiteVisitCounter, 0);
+  const navLinks = SITE_FOOTER_NAV.map((l, i) =>
+    `<a href="${l.href}"><span class="footer-nav-num">${i + 1}</span> ${l.label}</a>`
+  ).join('\n      ');
+
   return `<footer class="footer">
+    <div class="footer-nav">
+      ${navLinks}
+    </div>
     <div class="footer-animals">
       <span>🐄</span><span>🐖</span><span>🐔</span><span>🐑</span><span>🐇</span><span>🐟</span><span>🐝</span>
     </div>
@@ -119,3 +136,19 @@ window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
   if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
+
+// ── BACK TO TOP ──
+function initBackToTop() {
+  if (document.getElementById('backToTop')) return;
+  const btn = document.createElement('button');
+  btn.id = 'backToTop';
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 12.5V3.5M3.5 8L8 3.5 12.5 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  document.body.appendChild(btn);
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 500);
+  });
+}
+document.addEventListener('DOMContentLoaded', initBackToTop);
