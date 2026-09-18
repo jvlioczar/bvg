@@ -64,7 +64,7 @@ function renderSiteHeader(activeHref) {
       <div class="nav-meta">
         <a href="contribute.html"${contributeActive}>Contribute</a>
         <a href="about.html"${aboutActive}>About</a>
-        <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;">${SITE_INSTAGRAM_SVG}</a>
+        <a href="https://instagram.com/brisbaneveg" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;">${SITE_INSTAGRAM_SVG}</a>
       </div>
       <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">PT</button>
@@ -76,7 +76,7 @@ function renderSiteHeader(activeHref) {
     <div class="mobile-menu-sep"></div>
     <a href="contribute.html"${contributeActive}>Contribute</a>
     <a href="about.html"${aboutActive}>About</a>
-    <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener">${SITE_INSTAGRAM_SVG} Instagram</a>
+    <a href="https://instagram.com/brisbaneveg" target="_blank" rel="noopener">${SITE_INSTAGRAM_SVG} Instagram</a>
   </div>`;
 }
 
@@ -91,7 +91,7 @@ function renderSiteFooter() {
       ${navLinks}
     </div>
     <div class="footer-animals">
-      <span>🐄</span><span>🐖</span><span>🐔</span><span>🐑</span><span>🐇</span><span>🐟</span><span>🐝</span>
+      <span>🐄</span><span>🐖</span><span>🐔</span><span>🐑</span><span>🐇</span><span>🐟</span><span>🐝</span><span>🦐</span>
     </div>
     <div class="footer-tagline" data-i18n="footer.tagline">A better world for the animals.</div>
     <div class="footer-credit">

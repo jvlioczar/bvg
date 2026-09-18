@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Groups — Brisbane Vegan Guide</title>
+<meta name="description" content="Vegan community groups, activism collectives, and animal sanctuaries in Brisbane and surrounds - find your people and get involved.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brisbane Vegan Guide">
+<meta property="og:title" content="Groups — Brisbane Vegan Guide">
+<meta property="og:description" content="Vegan community groups, activism collectives, and animal sanctuaries in Brisbane and surrounds - find your people and get involved.">
+<meta property="og:url" content="https://brisbaneveganguide.com/community.html">
+<meta property="og:image" content="https://brisbaneveganguide.com/icon-bvg.svg">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Groups — Brisbane Vegan Guide">
+<meta name="twitter:description" content="Vegan community groups, activism collectives, and animal sanctuaries in Brisbane and surrounds - find your people and get involved.">
+<meta name="twitter:image" content="https://brisbaneveganguide.com/icon-bvg.svg">
+<link rel="canonical" href="https://brisbaneveganguide.com/community.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -11,7 +24,7 @@
 <link rel="icon" type="image/svg+xml" href="icon-bvg.svg">
 <script src="partials.js"></script>
 <style>
-  a, .card-btn, .filter-btn {
+  a, .social-btn, .filter-btn {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847'/></g></svg>") 6 26, pointer;
   }
 
@@ -130,12 +143,12 @@
     margin-bottom: 6px;
   }
   .card-avatar {
-    width: 48px; height: 48px; border-radius: 50%;
+    width: 64px; height: 64px; border-radius: 50%;
     background: linear-gradient(135deg, var(--leaf-light), var(--teal));
     display: flex; align-items: center; justify-content: center;
     color: var(--cream);
     font-family: 'Fraunces', serif;
-    font-size: 16px; font-weight: 700;
+    font-size: 24px; font-weight: 700;
     overflow: hidden; flex-shrink: 0;
     border: 2px solid rgba(245, 240, 232, 0.6);
     box-shadow: 0 2px 8px rgba(26, 58, 42, 0.08);
@@ -179,22 +192,23 @@
     font-size: 10px; font-weight: 600;
     border-radius: 20px; letter-spacing: 0.3px;
   }
-  .card-btn {
-    display: inline-flex; align-items: center; justify-content: center;
+  .card-socials {
+    display: flex; align-items: center; gap: 8px;
     align-self: flex-start;
-    padding: 6px 18px;
-    background: var(--forest); color: var(--cream);
-    border: 1.5px solid var(--forest);
-    border-radius: 24px;
-    font-size: 12px; font-weight: 600;
-    text-decoration: none; letter-spacing: 0.3px;
-    transition: all 0.3s ease;
   }
-  .card-btn:hover {
-    background: rgba(26, 58, 42, 0.08); color: var(--forest);
-    transform: translateY(-1px);
+  .social-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px;
+    background: rgba(26, 58, 42, 0.06); color: var(--forest);
+    border-radius: 50%;
+    transition: all 0.25s ease;
+  }
+  .social-btn:hover {
+    background: var(--forest); color: var(--cream);
+    transform: translateY(-2px);
     box-shadow: 0 4px 14px rgba(26, 58, 42, 0.15);
   }
+  .social-btn svg { width: 16px; height: 16px; }
 
   /* ── NO RESULTS ── */
   .no-results {
@@ -274,7 +288,7 @@ const groups = [
       pt: "Comunidade de base pelos direitos animais organizando protestos pacíficos, eventos de divulgação e campanhas de conscientização em Brisbane."
     },
     tags: ["Activism", "Animal Rights", "Community", "Outreach"],
-    url: "https://a4acommunity.org"
+    social: { site: "https://a4acommunity.org", instagram: "https://www.instagram.com/A4ACommunity/", facebook: "https://www.facebook.com/A4ACommunity" }
   },
   {
     name: "Brisbane Animal Save",
@@ -287,7 +301,7 @@ const groups = [
       pt: "Parte do The Save Movement — testemunhando em abatedouros, realizando vigílias e conscientizando por meio de ação direta pacífica."
     },
     tags: ["Activism", "Vigils", "Save Movement", "Direct Action"],
-    url: "https://animalkind.org.au/campaigns/join-brisbane-animal-save"
+    social: { site: "https://animalkind.org.au/campaigns/join-brisbane-animal-save", instagram: "https://www.instagram.com/brisbaneanimalsave", facebook: "https://www.facebook.com/brisbaneanimalsave" }
   },
   {
     name: "Brisbane Outdoor Vegan Adventurers",
@@ -300,7 +314,7 @@ const groups = [
       pt: "Uma comunidade no Facebook para veganos que adoram atividades ao ar livre juntos — trilhas, caminhadas e encontros ao ar livre por Brisbane e região."
     },
     tags: ["Outdoors", "Hiking", "Social", "Community"],
-    url: "https://www.facebook.com/groups/996272104387814"
+    social: { facebook: "https://www.facebook.com/groups/996272104387814" }
   },
   {
     name: "Brisbane Veg Share Houses",
@@ -313,7 +327,7 @@ const groups = [
       pt: "Um grupo no Facebook que conecta vegetarianos e veganos em Brisbane em busca de casas compartilhadas ou colegas de casa que compartilhem os mesmos valores."
     },
     tags: ["Housing", "Share House", "Community"],
-    url: "https://www.facebook.com/groups/311901178996928"
+    social: { facebook: "https://www.facebook.com/groups/311901178996928" }
   },
   {
     name: "Brisbane Vegan Expo",
@@ -326,7 +340,7 @@ const groups = [
       pt: "Expo vegana anual com vendedores de comida plant-based, marcas éticas, palestrantes, demos de culinária e barracas comunitárias."
     },
     tags: ["Meeting", "Expo", "Annual Event", "Food"],
-    url: "https://www.instagram.com/brisbaneveganexpo"
+    social: { instagram: "https://www.instagram.com/brisbaneveganexpo" }
   },
   {
     name: "Brisbane Vegan Guide",
@@ -339,7 +353,7 @@ const groups = [
       pt: "Um guia bilíngue completo para a vida vegana em Brisbane e região — restaurantes, grupos, pessoas e recursos em um só lugar."
     },
     tags: ["Guide", "Directory", "Bilingual", "Resource"],
-    url: "https://brisbaneveganguide.com"
+    social: { site: "https://brisbaneveganguide.com", instagram: "https://instagram.com/brisbaneveg" }
   },
   {
     name: "Brisbane Vegan Markets",
@@ -352,7 +366,7 @@ const groups = [
       pt: "Feiras veganas regulares reunindo vendedores locais, food trucks, artesãos e grupos comunitários em um ambiente familiar."
     },
     tags: ["Meeting", "Market", "Food", "Community"],
-    url: "https://www.qldveganmarkets.com.au/vegan-markets/brisbane-vegan-markets"
+    social: { site: "https://www.qldveganmarkets.com.au/vegan-markets/brisbane-vegan-markets", instagram: "https://www.instagram.com/brisbaneveganmarkets", facebook: "https://www.facebook.com/brisbaneveganmarkets" }
   },
   {
     name: "Brisbane Vegan Meetup",
@@ -365,7 +379,7 @@ const groups = [
       pt: "Um grupo de encontros veganos de longa data em Brisbane — organizando jantares regulares, potlucks e eventos sociais para veganos se conectarem através da comida."
     },
     tags: ["Meetup", "Social", "Food", "Community"],
-    url: "https://www.instagram.com/brisveganmeetup"
+    social: { instagram: "https://www.instagram.com/brisveganmeetup", facebook: "https://www.facebook.com/brisveganmeetup", meetup: "https://www.meetup.com/brisveganmeetup" }
   },
   {
     name: "Brisbane Vegan Run Club",
@@ -378,7 +392,7 @@ const groups = [
       pt: "Grupo social de corrida para veganos e curiosos — corridas semanais por Brisbane seguidas de brunch ou café plant-based."
     },
     tags: ["Meeting", "Sports", "Running", "Social"],
-    url: "https://www.instagram.com/brisbaneveganrunclub"
+    social: { instagram: "https://www.instagram.com/brisbaneveganrunclub", facebook: "https://www.facebook.com/groups/595204892883235" }
   },
   {
     name: "Brisbane Vegans",
@@ -391,7 +405,7 @@ const groups = [
       pt: "Uma comunidade geral no Facebook para veganos de Brisbane se conectarem, trocarem dicas e tirarem dúvidas."
     },
     tags: ["Community", "Facebook Group", "Social"],
-    url: "https://www.facebook.com/groups/406090929485523"
+    social: { facebook: "https://www.facebook.com/groups/406090929485523" }
   },
   {
     name: "Brisbane Vegans Unite",
@@ -404,7 +418,7 @@ const groups = [
       pt: "Outra comunidade ativa no Facebook que reúne veganos de Brisbane para compartilhar recomendações, eventos e apoio mútuo."
     },
     tags: ["Community", "Facebook Group", "Social"],
-    url: "https://www.facebook.com/groups/448844741870566"
+    social: { facebook: "https://www.facebook.com/groups/448844741870566" }
   },
   {
     name: "Cranky's Farm",
@@ -417,7 +431,7 @@ const groups = [
       pt: "Um santuário amoroso para animais de fazenda resgatados — cabras, ovelhas, porcos, vacas e galinhas vivendo em paz, com dias abertos regulares."
     },
     tags: ["Sanctuary", "Rescue", "Open Days", "Volunteering"],
-    url: "https://crankysfarm.org.au"
+    social: { site: "https://crankysfarm.org.au", instagram: "https://www.instagram.com/crankysfarm", facebook: "https://www.facebook.com/crankysfarm" }
   },
   {
     name: "Farm Animal Rescue",
@@ -430,7 +444,7 @@ const groups = [
       pt: "Santuário para animais de fazenda resgatados — oferecendo tours, voluntariado, programas de apadrinhamento e experiências educacionais."
     },
     tags: ["Sanctuary", "Rescue", "Tours", "Volunteering"],
-    url: "https://www.farmanimalrescue.org.au"
+    social: { site: "https://www.farmanimalrescue.org.au", instagram: "https://www.instagram.com/farmanimalrescue", facebook: "https://www.facebook.com/fardayboro" }
   },
   {
     name: "I Travel For Vegan Food",
@@ -443,7 +457,7 @@ const groups = [
       pt: "Guia global de viagem vegana por um local de Brisbane — avaliações de restaurantes, guias de cidades e dicas para aventureiros plant-based."
     },
     tags: ["Guide", "Travel", "Reviews", "Global"],
-    url: "https://www.itravelforveganfood.com"
+    social: { site: "https://www.itravelforveganfood.com", instagram: "https://www.instagram.com/itravelforveganfood", facebook: "https://www.facebook.com/itravelforveganfood" }
   },
   {
     name: "UQ Vegan Society",
@@ -456,7 +470,7 @@ const groups = [
       pt: "Sociedade vegana estudantil na UQ — organizando potlucks, sessões de cinema, palestrantes convidados e divulgação no campus."
     },
     tags: ["Meeting", "University", "Students", "Outreach"],
-    url: "https://uqvegsociety.wixsite.com/uqvegsociety"
+    social: { site: "https://uqvegsociety.wixsite.com/uqvegsociety", instagram: "https://www.instagram.com/uqvegansociety", facebook: "https://www.facebook.com/uqvegansociety" }
   },
   {
     name: "Vegan Action Brisbane",
@@ -469,7 +483,7 @@ const groups = [
       pt: "Avançando o veganismo em Brisbane por meio de advocacy, engajamento corporativo, educação pública e campanhas de base."
     },
     tags: ["Activism", "Advocacy", "Education", "Policy"],
-    url: "https://www.instagram.com/veganaction_brisbane"
+    social: { instagram: "https://www.instagram.com/veganaction_brisbane", facebook: "https://www.facebook.com/veganactionbrisbane" }
   },
   {
     name: "Vegan Board Games",
@@ -482,7 +496,7 @@ const groups = [
       pt: "Encontro social mensal para veganos que amam jogos de tabuleiro — um espaço descontraído para jogar, comer snacks veganos e fazer novas amizades."
     },
     tags: ["Meeting", "Social", "Games", "Monthly"],
-    url: "https://www.facebook.com/BrisbaneVeganBoardGames"
+    social: { facebook: "https://www.facebook.com/BrisbaneVeganBoardGames", meetup: "https://www.meetup.com/brisveganmeetup" }
   },
   {
     name: "Vegan Singles Brisbane and Surrounds",
@@ -495,7 +509,7 @@ const groups = [
       pt: "Um grupo no Facebook para veganos solteiros em Brisbane e arredores que querem se conhecer, se conectar e talvez encontrar um parceiro ou parceira também vegano(a)."
     },
     tags: ["Dating", "Singles", "Social", "Community"],
-    url: "https://www.facebook.com/groups/1617569968532941"
+    social: { facebook: "https://www.facebook.com/groups/1617569968532941" }
   }
 ];
 
@@ -529,6 +543,23 @@ const tagMap = {
 function translateTag(tag, lang) {
   if (lang === 'pt' && tagMap[tag]) return tagMap[tag];
   return tag;
+}
+
+// ── SOCIAL ICONS ──
+const socialIconSvg = {
+  site: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V7a1 1 0 0 1 1-1h3z"/></svg>',
+  meetup: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>'
+};
+const socialLabels = { site: 'Website', instagram: 'Instagram', facebook: 'Facebook', meetup: 'Meetup' };
+
+function renderSocialBtns(g) {
+  const order = ['site', 'instagram', 'facebook', 'meetup'];
+  return order
+    .filter(k => g.social && g.social[k])
+    .map(k => `<a href="${g.social[k]}" target="_blank" rel="noopener" class="social-btn" title="${socialLabels[k]}" aria-label="${socialLabels[k]}">${socialIconSvg[k]}</a>`)
+    .join('');
 }
 
 // ── RENDER ──
@@ -570,8 +601,6 @@ function renderCards() {
     pt: { Activism: 'Ativismo', Guide: 'Guia', Meeting: 'Encontro', Sanctuary: 'Santuário' }
   };
 
-  const btnLabel = currentLang === 'pt' ? 'Saiba mais' : 'Learn more';
-
   grid.innerHTML = list.map((g, i) => `
     <div class="card" style="animation-delay:${i * 0.04}s">
       <div class="card-top">
@@ -583,7 +612,7 @@ function renderCards() {
       <div class="card-location">📍 ${g.location}</div>
       <div class="card-desc">${g.desc[currentLang]}</div>
       <div class="card-tags">${g.tags.map(t => `<span class="tag">${translateTag(t, currentLang)}</span>`).join('')}</div>
-      <a href="${g.url}" target="_blank" rel="noopener" class="card-btn">${btnLabel}</a>
+      <div class="card-socials">${renderSocialBtns(g)}</div>
     </div>
   `).join('');
 }

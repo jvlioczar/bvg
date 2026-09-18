@@ -4,6 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vegan Finder — Brisbane Vegan Guide</title>
+<meta name="description" content="Over 50 filterable questions and answers to help you find exactly what you are craving in Brisbane - by cuisine, price, diet, or who you are eating with.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brisbane Vegan Guide">
+<meta property="og:title" content="Vegan Finder — Brisbane Vegan Guide">
+<meta property="og:description" content="Over 50 filterable questions and answers to help you find exactly what you are craving in Brisbane - by cuisine, price, diet, or who you are eating with.">
+<meta property="og:url" content="https://brisbaneveganguide.com/vegan-finder.html">
+<meta property="og:image" content="https://brisbaneveganguide.com/icon-bvg.svg">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vegan Finder — Brisbane Vegan Guide">
+<meta name="twitter:description" content="Over 50 filterable questions and answers to help you find exactly what you are craving in Brisbane - by cuisine, price, diet, or who you are eating with.">
+<meta name="twitter:image" content="https://brisbaneveganguide.com/icon-bvg.svg">
+<link rel="canonical" href="https://brisbaneveganguide.com/vegan-finder.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -93,7 +106,7 @@ body{overflow-x:hidden}
     <div class="page-num">06</div>
     <h1 class="page-title" data-i18n="page.title">Vegan Finder</h1>
     <p class="page-tagline" data-i18n="page.tagline">Your shortcut to eating vegan and socializing in Brisbane</p>
-    <p class="page-desc" data-i18n="page.desc">Craving something specific, planning a date, or feeding a whole group? Pick a filter below to jump straight to the answer — or just scroll through everything we know about finding great vegan food around Brisbane.</p>
+    <p class="page-desc" data-i18n="page.desc">Craving something specific, planning a date, or feeding a whole group? Pick a filter below to jump straight to the answer — or scroll through more than 50 questions covering everything we know about finding great vegan food and community around Brisbane.</p>
   </div>
 
   <!-- CONTENT -->
@@ -104,25 +117,35 @@ body{overflow-x:hidden}
     <div class="finder-filters-label" data-i18n="filters.label">I'm looking for...</div>
 
     <div class="filter-group">
-      <div class="filter-group-label" data-i18n="fg.meal">Meal &amp; cuisine</div>
+      <div class="filter-group-label" data-i18n="fg.mealtime">Meal time</div>
       <div class="filter-chips">
         <div class="filter-chip" data-tag="breakfast" onclick="applyFilter('breakfast')">🍳 <span data-i18n="chip.breakfast">Breakfast</span></div>
         <div class="filter-chip" data-tag="brunch" onclick="applyFilter('brunch')">🥞 <span data-i18n="chip.brunch">Brunch</span></div>
+        <div class="filter-chip" data-tag="lunch" onclick="applyFilter('lunch')">🥗 <span data-i18n="chip.lunch">Lunch</span></div>
+        <div class="filter-chip" data-tag="afternoontea" onclick="applyFilter('afternoontea')">🫖 <span data-i18n="chip.afternoontea">Afternoon Tea</span></div>
+        <div class="filter-chip" data-tag="dinner" onclick="applyFilter('dinner')">🍽️ <span data-i18n="chip.dinner">Dinner</span></div>
+        <div class="filter-chip" data-tag="supper" onclick="applyFilter('supper')">🌙 <span data-i18n="chip.supper">Supper</span></div>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-group-label" data-i18n="fg.cuisine">Cuisine &amp; venue type</div>
+      <div class="filter-chips">
+        <div class="filter-chip" data-tag="cafe" onclick="applyFilter('cafe')">☕ <span data-i18n="chip.cafe">Café</span></div>
+        <div class="filter-chip" data-tag="beverage" onclick="applyFilter('beverage')">🧃 <span data-i18n="chip.beverage">Beverage</span></div>
+        <div class="filter-chip" data-tag="bakery" onclick="applyFilter('bakery')">🍰 <span data-i18n="chip.bakery">Bakery</span></div>
         <div class="filter-chip" data-tag="burgers" onclick="applyFilter('burgers')">🍔 <span data-i18n="chip.burgers">Burgers</span></div>
         <div class="filter-chip" data-tag="pizza" onclick="applyFilter('pizza')">🍕 <span data-i18n="chip.pizza">Pizza</span></div>
         <div class="filter-chip" data-tag="asian" onclick="applyFilter('asian')">🍜 <span data-i18n="chip.asian">Asian</span></div>
         <div class="filter-chip" data-tag="mexican" onclick="applyFilter('mexican')">🌮 <span data-i18n="chip.mexican">Mexican</span></div>
-        <div class="filter-chip" data-tag="dessert" onclick="applyFilter('dessert')">🍰 <span data-i18n="chip.dessert">Dessert</span></div>
-        <div class="filter-chip" data-tag="cafe" onclick="applyFilter('cafe')">☕ <span data-i18n="chip.cafe">Café</span></div>
-        <div class="filter-chip" data-tag="dinner" onclick="applyFilter('dinner')">🍽️ <span data-i18n="chip.dinner">Dinner</span></div>
-        <div class="filter-chip" data-tag="groceries" onclick="applyFilter('groceries')">🛒 <span data-i18n="chip.groceries">Groceries</span></div>
+        <div class="filter-chip" data-tag="middleeastern" onclick="applyFilter('middleeastern')">🧆 <span data-i18n="chip.middleeastern">Middle Eastern</span></div>
       </div>
     </div>
 
     <div class="filter-group">
       <div class="filter-group-label" data-i18n="fg.dietary">Dietary</div>
       <div class="filter-chips">
-        <div class="filter-chip" data-tag="vegan100" onclick="applyFilter('vegan100')"><span data-i18n="chip.vegan100">100% Vegan</span></div>
+        <div class="filter-chip" data-tag="vegan" onclick="applyFilter('vegan')"><span data-i18n="chip.vegan">Vegan</span></div>
         <div class="filter-chip" data-tag="veganfriendly" onclick="applyFilter('veganfriendly')"><span data-i18n="chip.veganfriendly">Vegan-friendly</span></div>
         <div class="filter-chip" data-tag="glutenfree" onclick="applyFilter('glutenfree')"><span data-i18n="chip.glutenfree">Gluten-free</span></div>
       </div>
@@ -132,6 +155,7 @@ body{overflow-x:hidden}
       <div class="filter-group-label" data-i18n="fg.price">Price</div>
       <div class="filter-chips">
         <div class="filter-chip" data-tag="cheap" onclick="applyFilter('cheap')"><span data-i18n="chip.cheap">Cheap</span></div>
+        <div class="filter-chip" data-tag="affordable" onclick="applyFilter('affordable')"><span data-i18n="chip.affordable">Affordable</span></div>
         <div class="filter-chip" data-tag="fancy" onclick="applyFilter('fancy')"><span data-i18n="chip.fancy">Fancy</span></div>
       </div>
     </div>
@@ -139,6 +163,7 @@ body{overflow-x:hidden}
     <div class="filter-group">
       <div class="filter-group-label" data-i18n="fg.service">Service</div>
       <div class="filter-chips">
+        <div class="filter-chip" data-tag="local" onclick="applyFilter('local')"><span data-i18n="chip.local">Local</span></div>
         <div class="filter-chip" data-tag="takeaway" onclick="applyFilter('takeaway')"><span data-i18n="chip.takeaway">Takeaway</span></div>
         <div class="filter-chip" data-tag="delivery" onclick="applyFilter('delivery')"><span data-i18n="chip.delivery">Delivery</span></div>
       </div>
@@ -147,26 +172,31 @@ body{overflow-x:hidden}
     <div class="filter-group">
       <div class="filter-group-label" data-i18n="fg.who">Who's it for</div>
       <div class="filter-chips">
-        <div class="filter-chip" data-tag="vegansonly" onclick="applyFilter('vegansonly')">🌱 <span data-i18n="chip.vegansonly">Vegans only</span></div>
-        <div class="filter-chip" data-tag="mixed" onclick="applyFilter('mixed')">👫 <span data-i18n="chip.mixed">Vegans + non-vegans</span></div>
-        <div class="filter-chip" data-tag="family" onclick="applyFilter('family')">👨‍👩‍👧 <span data-i18n="chip.family">Family</span></div>
-        <div class="filter-chip" data-tag="date" onclick="applyFilter('date')">❤️ <span data-i18n="chip.date">Date</span></div>
-        <div class="filter-chip" data-tag="group" onclick="applyFilter('group')">👥 <span data-i18n="chip.group">Group</span></div>
+        <div class="filter-chip" data-tag="onlyvegans" onclick="applyFilter('onlyvegans')">🌱 <span data-i18n="chip.onlyvegans">Only vegans</span></div>
+        <div class="filter-chip" data-tag="mixed" onclick="applyFilter('mixed')">👫 <span data-i18n="chip.mixed">Vegans + Non-vegans</span></div>
+        <div class="filter-chip" data-tag="allfamily" onclick="applyFilter('allfamily')">👨‍👩‍👧 <span data-i18n="chip.allfamily">All family</span></div>
+        <div class="filter-chip" data-tag="biggroups" onclick="applyFilter('biggroups')">👥 <span data-i18n="chip.biggroups">Big groups</span></div>
+        <div class="filter-chip" data-tag="children" onclick="applyFilter('children')">🧒 <span data-i18n="chip.children">Children</span></div>
+        <div class="filter-chip" data-tag="pets" onclick="applyFilter('pets')">🐶 <span data-i18n="chip.pets">Pets</span></div>
       </div>
     </div>
 
     <div class="filter-group">
-      <div class="filter-group-label" data-i18n="fg.community">Community &amp; connection</div>
+      <div class="filter-group-label" data-i18n="fg.purpose">Purpose</div>
       <div class="filter-chips">
-        <div class="filter-chip" data-tag="meetvegans" onclick="applyFilter('meetvegans')">🤝 <span data-i18n="chip.meetvegans">Meet vegans</span></div>
+        <div class="filter-chip" data-tag="makefriends" onclick="applyFilter('makefriends')">🤝 <span data-i18n="chip.makefriends">Make friends</span></div>
         <div class="filter-chip" data-tag="dating" onclick="applyFilter('dating')">💕 <span data-i18n="chip.dating">Dating</span></div>
+        <div class="filter-chip" data-tag="birthday" onclick="applyFilter('birthday')">🎂 <span data-i18n="chip.birthday">Birthday</span></div>
+        <div class="filter-chip" data-tag="business" onclick="applyFilter('business')">💼 <span data-i18n="chip.business">Business</span></div>
         <div class="filter-chip" data-tag="activism" onclick="applyFilter('activism')">✊ <span data-i18n="chip.activism">Activism</span></div>
-        <div class="filter-chip" data-tag="sanctuaries" onclick="applyFilter('sanctuaries')">🐾 <span data-i18n="chip.sanctuaries">Visit animals</span></div>
+        <div class="filter-chip" data-tag="sports" onclick="applyFilter('sports')">🏃 <span data-i18n="chip.sports">Sports</span></div>
+        <div class="filter-chip" data-tag="reading" onclick="applyFilter('reading')">📖 <span data-i18n="chip.reading">Reading</span></div>
+        <div class="filter-chip" data-tag="visitanimals" onclick="applyFilter('visitanimals')">🐾 <span data-i18n="chip.visitanimals">Visit animals</span></div>
       </div>
     </div>
 
     <div class="filter-status">
-      <div class="filter-count" id="filterCount"><span id="filterCountNum">41</span> <span data-i18n="filters.questions">questions</span></div>
+      <div class="filter-count" id="filterCount"><span id="filterCountNum">52</span> <span data-i18n="filters.questions">questions</span></div>
       <button class="filter-clear" id="filterClear" onclick="clearFilter()" data-i18n="filters.clear">Show all questions</button>
     </div>
   </div>
@@ -185,13 +215,13 @@ body{overflow-x:hidden}
       <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
-      <p data-i18n="q1.p1">Head to our <a href="food.html">Eat &amp; Drink directory</a> — it's the full, growing list of vegan and vegan-friendly venues we've personally researched across Brisbane and the Gold Coast, each with real ratings, tags, and menu highlights.</p>
+      <p data-i18n="q1.p1">Head to our <a href="food.html">Eat &amp; Drink directory</a> — it's the full, growing list of vegan and vegan-friendly venues we've personally researched across Brisbane and surrounds, each with real ratings, tags, and menu highlights.</p>
       <p data-i18n="q1.p2">Not sure where to start? Use the filters below — they'll narrow this whole FAQ down to whatever you're actually craving.</p>
     </div></div></div>
   </div>
 
   <!-- Q2 -->
-  <div class="accordion anim" id="q2" data-tags="general,vegan100,veganfriendly">
+  <div class="accordion anim" id="q2" data-tags="general,vegan,veganfriendly">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">🏷️</span>
       <div class="accordion-header">
@@ -239,7 +269,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q5 -->
-  <div class="accordion anim" id="q5" data-tags="groceries,general">
+  <div class="accordion anim" id="q5" data-tags="general">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">🛒</span>
       <div class="accordion-header">
@@ -265,7 +295,7 @@ body{overflow-x:hidden}
       <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
-      <p data-i18n="q6.p1">This guide is Brisbane (and Gold Coast) focused, but if you're travelling further afield, <a href="https://www.itravelforveganfood.com/destinations/brisbane" target="_blank" rel="noopener">I Travel For Vegan Food</a> is a solid resource covering vegan-friendly spots across Australia and worldwide.</p>
+      <p data-i18n="q6.p1">This guide is Brisbane and surrounds focused, but if you're travelling further afield, <a href="https://www.itravelforveganfood.com/destinations/brisbane" target="_blank" rel="noopener">I Travel For Vegan Food</a> is a solid resource covering vegan-friendly spots across Australia and worldwide.</p>
     </div></div></div>
   </div>
 
@@ -408,7 +438,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q16 -->
-  <div class="accordion anim" id="q16" data-tags="dessert">
+  <div class="accordion anim" id="q16" data-tags="bakery">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">🍰</span>
       <div class="accordion-header">
@@ -453,7 +483,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q19 -->
-  <div class="accordion anim" id="q19" data-tags="vegan100">
+  <div class="accordion anim" id="q19" data-tags="vegan">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">💯</span>
       <div class="accordion-header">
@@ -500,7 +530,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q22 -->
-  <div class="accordion anim" id="q22" data-tags="cheap">
+  <div class="accordion anim" id="q22" data-tags="cheap,affordable">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">💸</span>
       <div class="accordion-header">
@@ -515,7 +545,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q23 -->
-  <div class="accordion anim" id="q23" data-tags="fancy,date,group">
+  <div class="accordion anim" id="q23" data-tags="fancy,dating,biggroups,birthday">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">✨</span>
       <div class="accordion-header">
@@ -560,7 +590,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q26 -->
-  <div class="accordion anim" id="q26" data-tags="vegansonly">
+  <div class="accordion anim" id="q26" data-tags="onlyvegans">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">🌱</span>
       <div class="accordion-header">
@@ -590,7 +620,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q28 -->
-  <div class="accordion anim" id="q28" data-tags="family">
+  <div class="accordion anim" id="q28" data-tags="allfamily">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">👨‍👩‍👧</span>
       <div class="accordion-header">
@@ -605,7 +635,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q29 -->
-  <div class="accordion anim" id="q29" data-tags="date">
+  <div class="accordion anim" id="q29" data-tags="dating">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">❤️</span>
       <div class="accordion-header">
@@ -620,7 +650,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q30 -->
-  <div class="accordion anim" id="q30" data-tags="group">
+  <div class="accordion anim" id="q30" data-tags="biggroups">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">👥</span>
       <div class="accordion-header">
@@ -665,7 +695,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q33 -->
-  <div class="accordion anim" id="q33" data-tags="meetvegans,general">
+  <div class="accordion anim" id="q33" data-tags="makefriends,general">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">🤝</span>
       <div class="accordion-header">
@@ -712,7 +742,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q36 -->
-  <div class="accordion anim" id="q36" data-tags="sanctuaries">
+  <div class="accordion anim" id="q36" data-tags="visitanimals">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">🐾</span>
       <div class="accordion-header">
@@ -727,7 +757,7 @@ body{overflow-x:hidden}
   </div>
 
   <!-- Q37 -->
-  <div class="accordion anim" id="q37" data-tags="date">
+  <div class="accordion anim" id="q37" data-tags="dating">
     <button class="accordion-toggle" onclick="toggleAccordion(this)">
       <span class="accordion-emoji">💌</span>
       <div class="accordion-header">
@@ -805,6 +835,171 @@ body{overflow-x:hidden}
     </div></div></div>
   </div>
 
+  <!-- Q42 -->
+  <div class="accordion anim" id="q42" data-tags="lunch">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🥗</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q42.type">Midday break</div>
+        <div class="accordion-title" data-i18n="q42.title">Where can I get a quick vegan lunch in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q42.p1">Vegan Restaurant, U-Tong, Loving Hut, Vege Rama, Neon Ramen, Izakaya Midori, Greenhouse Canteen, and Tea Master all serve lunch, ranging from quick takeaway bowls to a proper sit-down break.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q43 -->
+  <div class="accordion anim" id="q43" data-tags="afternoontea">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🫖</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q43.type">Mid-afternoon treat</div>
+        <div class="accordion-title" data-i18n="q43.title">Is there a vegan afternoon tea in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q43.p1">No venue in our directory runs a formal afternoon tea service yet, but you can easily put one together yourself — grab pastries from Veganyumm, Made With Love Bakery, or Sweet &amp; Green, then find a coffee spot like Dicki's or The Green Edge for a relaxed 3pm treat.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q44 -->
+  <div class="accordion anim" id="q44" data-tags="supper">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🌙</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q44.type">Late-night cravings</div>
+        <div class="accordion-title" data-i18n="q44.title">Where can I get vegan food late at night in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q44.p1">Late-night vegan options are the hardest to pin down — most of our cafés and restaurants wind down by evening. Netherworld's retro arcade bar tends to run latest as a bar-and-games venue. For anything else, check the specific venue's closing hours before heading out, since these shift regularly.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q45 -->
+  <div class="accordion anim" id="q45" data-tags="beverage">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🧃</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q45.type">Just here to drink</div>
+        <div class="accordion-title" data-i18n="q45.title">Where can I get good vegan coffee, juice, or drinks in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q45.p1">Charlie's Raw Squeeze covers juices, smoothies, and açaí across its Brisbane locations. For specialty coffee, Dicki's, The Green Edge, and Archie AM:PM are all fully vegan cafés. For something stronger, see our answer on vegan wine, beer, and cocktails.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q46 -->
+  <div class="accordion anim" id="q46" data-tags="middleeastern">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🧆</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q46.type">Cuisine gap</div>
+        <div class="accordion-title" data-i18n="q46.title">Is there vegan Middle Eastern food in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q46.p1">We don't yet have a dedicated Middle Eastern venue in our directory — it's a gap we'd like to fill. In the meantime, keep an eye on mixed-menu cafés for falafel, hummus, and other naturally vegan dishes, and let us know if you find a spot worth adding.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q47 -->
+  <div class="accordion anim" id="q47" data-tags="local">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🍴</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q47.type">Pull up a chair</div>
+        <div class="accordion-title" data-i18n="q47.title">Which vegan venues are best for dining in rather than takeaway?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q47.p1">Most of our sit-down spots are built for dining in — Dicki's, The Green Edge, U-Tong, El Planta, Vege Rama, Neon Ramen, and Izakaya Midori all have proper seating and table service rather than being grab-and-go focused.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q48 -->
+  <div class="accordion anim" id="q48" data-tags="children">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🧒</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q48.type">Little ones welcome</div>
+        <div class="accordion-title" data-i18n="q48.title">Which vegan venues are especially good for young children?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q48.p1">Vege Rama's buffet is ideal since kids can point at whatever looks good. Loving Hut and Vegan Restaurant serve familiar, mild comfort-food flavours (fried rice, noodles, "chicken") that go down easy, and Dicki's casual café setting is relaxed enough for a wriggly toddler.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q49 -->
+  <div class="accordion anim" id="q49" data-tags="pets">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🐶</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q49.type">Bring the dog</div>
+        <div class="accordion-title" data-i18n="q49.title">Are there pet-friendly vegan venues in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q49.p1">Dicki's in New Farm is explicitly dog-friendly, with balcony seating that's easy to bring a pet along to. For other venues, it's always worth checking with the café directly, since outdoor seating policies vary and change.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q50 -->
+  <div class="accordion anim" id="q50" data-tags="business">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">💼</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q50.type">Take the meeting here</div>
+        <div class="accordion-title" data-i18n="q50.title">Is there a good vegan spot for a business meeting or coffee catch-up?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q50.p1">Dicki's, The Green Edge, Archie AM:PM, Vega Cafe, and Cardamom Pod all have the specialty-coffee-and-relaxed-seating combination that works well for a low-key business catch-up or a laptop-and-coffee session.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q51 -->
+  <div class="accordion anim" id="q51" data-tags="sports">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🏃</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q51.type">Get moving</div>
+        <div class="accordion-title" data-i18n="q51.title">Any vegan-friendly spots to watch sports or refuel after exercise in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q51.p1">Netherworld's arcade bar is a fun, casual spot with vegan burgers and craft beer if you're after a pub setting. If you'd rather do the exercise yourself, Brisbane Vegan Run Club (see our Community page) organises weekly runs around Brisbane that usually wrap up with coffee or brunch.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q52 -->
+  <div class="accordion anim" id="q52" data-tags="reading">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">📖</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q52.type">Quiet corner</div>
+        <div class="accordion-title" data-i18n="q52.title">Is there a good vegan café to relax and read a book in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q52.p1">The Green Edge's bistro-café-deli setup and Dicki's relaxed balcony are both easy places to slow down with a coffee and a book. Vega Cafe's laid-back Spring Hill spot is another good option if you want a quieter corner.</p>
+    </div></div></div>
+  </div>
+
   <!-- NO RESULTS -->
   <div class="no-results" id="noResults" data-i18n="noresults">No questions match that filter yet — try another one, or clear the filter to see everything.</div>
 
@@ -846,25 +1041,24 @@ function clearFilter(){
 // I18N (PT only — EN is default in HTML)
 const i18n={pt:{
   "page.title":"Vegan Finder","page.tagline":"Seu atalho para comer vegano e socializar em Brisbane",
-  "page.desc":"Com vontade de algo específico, planejando um encontro ou alimentando um grupo? Escolha um filtro abaixo para ir direto à resposta — ou role a página para ver tudo o que sabemos sobre onde comer bem vegano em Brisbane.",
+  "page.desc":"Com vontade de algo específico, planejando um encontro ou alimentando um grupo? Escolha um filtro abaixo para ir direto à resposta — ou role por mais de 50 perguntas com tudo o que sabemos sobre onde comer bem vegano e viver a comunidade vegana em Brisbane.",
   "filters.label":"Estou procurando...","filters.questions":"perguntas","filters.clear":"Mostrar todas as perguntas",
-  "fg.meal":"Refeição & culinária","fg.dietary":"Dieta","fg.price":"Preço","fg.service":"Serviço","fg.who":"Para quem é","fg.community":"Comunidade & conexão",
-  "chip.breakfast":"Café da manhã","chip.brunch":"Brunch","chip.burgers":"Hambúrgueres","chip.pizza":"Pizza","chip.asian":"Asiática","chip.mexican":"Mexicana","chip.dessert":"Sobremesa","chip.cafe":"Café","chip.dinner":"Jantar","chip.groceries":"Mercado",
-  "chip.vegan100":"100% Vegano","chip.veganfriendly":"Vegano-amigável","chip.glutenfree":"Sem glúten",
-  "chip.cheap":"Barato","chip.fancy":"Sofisticado",
-  "chip.takeaway":"Para levar","chip.delivery":"Delivery",
-  "chip.vegansonly":"Só veganos","chip.mixed":"Veganos + não-veganos","chip.family":"Família","chip.date":"Encontro","chip.group":"Grupo",
-  "chip.meetvegans":"Conhecer veganos","chip.dating":"Namoro","chip.activism":"Ativismo","chip.sanctuaries":"Visitar animais",
+  "fg.mealtime":"Horário da refeição","fg.cuisine":"Culinária & tipo de local","fg.dietary":"Dieta","fg.price":"Preço","fg.service":"Serviço","fg.who":"Para quem é","fg.purpose":"Propósito",
+  "chip.breakfast":"Café da manhã","chip.brunch":"Brunch","chip.lunch":"Almoço","chip.afternoontea":"Chá da tarde","chip.dinner":"Jantar","chip.supper":"Ceia",
+  "chip.cafe":"Café","chip.beverage":"Bebida","chip.bakery":"Padaria","chip.burgers":"Hambúrgueres","chip.pizza":"Pizza","chip.asian":"Asiática","chip.mexican":"Mexicana","chip.middleeastern":"Do Oriente Médio",
+  "chip.vegan":"Vegano","chip.veganfriendly":"Vegano-amigável","chip.glutenfree":"Sem glúten",
+  "chip.cheap":"Barato","chip.affordable":"Acessível","chip.fancy":"Sofisticado",
+  "chip.local":"No local","chip.takeaway":"Para levar","chip.delivery":"Delivery",
+  "chip.onlyvegans":"Só veganos","chip.mixed":"Veganos + não-veganos","chip.allfamily":"Toda a família","chip.biggroups":"Grupos grandes","chip.children":"Crianças","chip.pets":"Pets",
+  "chip.makefriends":"Fazer amigos","chip.dating":"Namoro","chip.birthday":"Aniversário","chip.business":"Negócios","chip.activism":"Ativismo","chip.sports":"Esportes","chip.reading":"Leitura","chip.visitanimals":"Visitar animais",
   "s.questions":"Perguntas & Respostas",
   "noresults":"Nenhuma pergunta corresponde a esse filtro ainda — tente outro, ou limpe o filtro para ver tudo.",
   "q1.type":"Comece aqui","q1.title":"Onde encontro os melhores restaurantes veganos de Brisbane?",
-  "q1.p1":"Vá até o <a href=\"food.html\">diretório Eat &amp; Drink</a> — é a lista completa e crescente de locais veganos e vegano-amigáveis que pesquisamos pessoalmente em Brisbane e na Gold Coast, cada um com avaliações reais, tags e destaques do cardápio.",
+  "q1.p1":"Vá até o <a href=\"food.html\">diretório Eat &amp; Drink</a> — é a lista completa e crescente de locais veganos e vegano-amigáveis que pesquisamos pessoalmente em Brisbane e região, cada um com avaliações reais, tags e destaques do cardápio.",
   "q1.p2":"Não sabe por onde começar? Use os filtros abaixo — eles reduzem todo esse FAQ ao que você está realmente com vontade de comer.",
   "q2.type":"Conheça os selos","q2.title":"Qual a diferença entre \"100% Vegano\" e \"Vegano-amigável\"?",
   "q2.p1":"<strong>100% Vegano</strong> significa que o cardápio inteiro é plant-based — peça qualquer coisa, sem perguntas necessárias. É o caso do Vegan Restaurant, Dicki's, The Green Edge, U-Tong, El Planta, Veganyumm, Vege Rama, Archie AM:PM, Doko Demo V e Izakaya Midori.",
-  "q2.p2"
-
-:"<strong>Vegano-amigável</strong> significa que o local também serve comida não vegana, mas tem pratos veganos claramente marcados no cardápio — como Vega Cafe, Cardamom Pod, Charlie's Raw Squeeze, Tea Master, Sweet &amp; Green ou Netherworld.",
+  "q2.p2":"<strong>Vegano-amigável</strong> significa que o local também serve comida não vegana, mas tem pratos veganos claramente marcados no cardápio — como Vega Cafe, Cardamom Pod, Charlie's Raw Squeeze, Tea Master, Sweet &amp; Green ou Netherworld.",
   "q3.type":"O panorama geral","q3.title":"Brisbane é uma cidade vegano-amigável?",
   "q3.p1":"Sim, e continua crescendo. Brisbane tem restaurantes, cafés, padarias, food trucks e barracas de feira veganos espalhados por bairros como West End, New Farm, Fortitude Valley e Everton Park, com um polo igualmente forte na Gold Coast.",
   "q3.p2":"Ainda não é do tamanho de Melbourne, mas é fácil comer bem sendo vegano aqui todos os dias da semana.",
@@ -875,7 +1069,7 @@ const i18n={pt:{
   "q5.p1":"O <a href=\"the-green-edge.html\">The Green Edge</a>, em Windsor, é o destaque — uma mercearia vegana completa ao lado do seu bistrô, café e deli, tudo sob o mesmo teto.",
   "q5.p2":"Além disso, os grandes supermercados de Brisbane já têm boas linhas plant-based — basta checar o selo vegano ou \"suitable for vegans\" no rótulo.",
   "q6.type":"Além de Brisbane","q6.title":"Onde encontro comida vegana fora de Brisbane?",
-  "q6.p1":"Este guia é focado em Brisbane (e Gold Coast), mas se você for viajar mais longe, o <a href=\"https://www.itravelforveganfood.com/destinations/brisbane\" target=\"_blank\" rel=\"noopener\">I Travel For Vegan Food</a> é um recurso sólido cobrindo lugares vegano-amigáveis pela Austrália e pelo mundo.",
+  "q6.p1":"Este guia é focado em Brisbane e região, mas se você for viajar mais longe, o <a href=\"https://www.itravelforveganfood.com/destinations/brisbane\" target=\"_blank\" rel=\"noopener\">I Travel For Vegan Food</a> é um recurso sólido cobrindo lugares vegano-amigáveis pela Austrália e pelo mundo.",
   "q7.type":"Na estrada","q7.title":"Existem food trucks ou barracas de feira veganas em Brisbane?",
   "q7.p1":"Sim — <a href=\"grassfed.html\">GrassFed</a> (hambúrgueres e fritas recheadas) e <a href=\"piante-pizza.html\">Piante Pizza</a> (pizza napolitana) são trailers móveis que passam por feiras e eventos em Brisbane, Gold Coast e Sunshine Coast. O <a href=\"sweet-and-green.html\">Sweet &amp; Green</a> é uma confeitaria francesa vegana que faz o mesmo circuito de feiras e pop-ups.",
   "q7.p2":"Como eles se movem bastante, confira a página de cada um para redes sociais e agenda atualizada antes de sair de casa.",
@@ -953,10 +1147,32 @@ const i18n={pt:{
   "q39.p1":"Se oferecer para levar um prato é a forma mais fácil de garantir que tenha algo que você realmente possa comer — e muitas vezes a melhor forma de apresentar comida vegana para as pessoas sem sermão. Uma caixinha de doces do Veganyumm ou do Pippa's Pantry, ou um prato para levar do Vegan Restaurant ou do Loving Hut reaquecido em casa, ambos viajam bem e costumam conquistar as pessoas.",
   "q39.p2":"Avisar o anfitrião com antecedência também ajuda — a maioria fica feliz em se adaptar quando sabe, e isso tira a pressão de resolver tudo na hora.",
   "q40.type":"Abasteça","q40.title":"Onde encontro refeições veganas ricas em proteína em Brisbane?",
-  "q40.p1":"Tofu, tempeh e leguminosas aparecem em todo lugar — os curries e salteados tailandeses do U-Tong, os pratos de ramen e arroz com tofu do Neon Ramen e do Izakaya Midori, e o buffet do Vege Rama facilitam abastecer de proteína vegetal. Os hambúrgueres do GrassFed e do Doko Demo V também são feitos com hambúrgueres ricos em proteína.",
+  "q40.p1":"Tofu, tempeh e leguminosas aparecem em todo lugar — os curries e salteados tailandeses do U-Tong, os pratos de ramen e arroz com tofu do Neon Ramen e do Izakaya Midori, e o buffet do Vege Rama facilitam abastecer de proteína vegetal. Os hambúrgueres do GrassFed e do Doko Demo V também são ricos em proteína.",
   "q40.p2":"Se você busca algo pós-treino, as corridas semanais do Brisbane Vegan Run Club geralmente terminam com café ou brunch — vale a pena participar se fitness e comunidade importam para você.",
   "q41.type":"Atento a alergias","q41.title":"Existem opções veganas sem nozes em Brisbane?",
   "q41.p1":"A Piante Pizza é explicitamente livre de nozes além de vegana. Além disso, sempre entre em contato diretamente com o local se você tiver alergia severa a nozes — cozinhas plant-based costumam usar nozes para queijos, cremes e substitutos de proteína, então a contaminação cruzada é um risco real mesmo quando um prato parece livre de nozes no cardápio.",
+  "q42.type":"Pausa do meio-dia","q42.title":"Onde consigo um almoço vegano rápido em Brisbane?",
+  "q42.p1":"Vegan Restaurant, U-Tong, Loving Hut, Vege Rama, Neon Ramen, Izakaya Midori, Greenhouse Canteen e Tea Master servem almoço, de bowls rápidos para levar a uma pausa completa sentado à mesa.",
+  "q43.type":"Doce da tarde","q43.title":"Existe chá da tarde vegano em Brisbane?",
+  "q43.p1":"Nenhum local do nosso diretório tem um serviço formal de chá da tarde ainda, mas você pode montar o seu — pegue doces no Veganyumm, Made With Love Bakery ou Sweet &amp; Green, e depois um café no Dicki's ou no The Green Edge para um momento relaxado às 15h.",
+  "q44.type":"Vontade de madrugada","q44.title":"Onde encontro comida vegana tarde da noite em Brisbane?",
+  "q44.p1":"Opções veganas tarde da noite são as mais difíceis de garantir — a maioria dos nossos cafés e restaurantes encerra no início da noite. O bar arcade retrô do Netherworld costuma ser o que fica aberto até mais tarde. Para o resto, confira o horário de fechamento do local específico antes de sair, já que isso muda com frequência.",
+  "q45.type":"Só para beber","q45.title":"Onde encontro bom café, suco ou bebidas veganas em Brisbane?",
+  "q45.p1":"O Charlie's Raw Squeeze cobre sucos, smoothies e açaí em suas unidades em Brisbane. Para café especial, Dicki's, The Green Edge e Archie AM:PM são cafés totalmente veganos. Para algo mais forte, veja nossa resposta sobre vinho, cerveja e coquetéis veganos.",
+  "q46.type":"Lacuna na culinária","q46.title":"Existe comida vegana do Oriente Médio em Brisbane?",
+  "q46.p1":"Ainda não temos um local dedicado à culinária do Oriente Médio no nosso diretório — é uma lacuna que gostaríamos de preencher. Enquanto isso, fique de olho em cafés de cardápio misto para falafel, hummus e outros pratos naturalmente veganos, e nos avise se encontrar um lugar que valha a pena adicionar.",
+  "q47.type":"Sente à mesa","q47.title":"Quais locais veganos são melhores para comer no local em vez de levar?",
+  "q47.p1":"A maioria dos nossos locais de mesa é pensada para comer no local — Dicki's, The Green Edge, U-Tong, El Planta, Vege Rama, Neon Ramen e Izakaya Midori têm mesas de verdade e atendimento à mesa, em vez de serem focados em pegar-e-ir.",
+  "q48.type":"Pequenos bem-vindos","q48.title":"Quais locais veganos são especialmente bons para crianças pequenas?",
+  "q48.p1":"O buffet do Vege Rama é ideal, já que as crianças podem apontar para o que parece gostoso. Loving Hut e Vegan Restaurant servem sabores suaves e familiares de comfort food (arroz frito, macarrão, \"frango\") que agradam fácil, e o ambiente casual do Dicki's é tranquilo o bastante para uma criança inquieta.",
+  "q49.type":"Traga o cachorro","q49.title":"Existem locais veganos pet-friendly em Brisbane?",
+  "q49.p1":"O Dicki's, em New Farm, é explicitamente pet-friendly, com varanda fácil de levar um pet junto. Para outros locais, sempre vale confirmar diretamente com o café, já que as políticas de área externa variam e mudam.",
+  "q50.type":"Feche negócio aqui","q50.title":"Existe um bom local vegano para reunião de trabalho ou um café rápido?",
+  "q50.p1":"Dicki's, The Green Edge, Archie AM:PM, Vega Cafe e Cardamom Pod têm a combinação de café especial e ambiente tranquilo que funciona bem para uma reunião de trabalho discreta ou uma sessão de notebook com café.",
+  "q51.type":"Bora se mexer","q51.title":"Algum local vegano bom para assistir esporte ou repor energia após exercício em Brisbane?",
+  "q51.p1":"O bar arcade do Netherworld é um lugar divertido e casual com hambúrgueres veganos e cerveja artesanal, se você quer clima de pub. Se prefere se exercitar você mesmo, o Brisbane Vegan Run Club (veja nossa página Community) organiza corridas semanais por Brisbane que geralmente terminam com café ou brunch.",
+  "q52.type":"Cantinho tranquilo","q52.title":"Existe um bom café vegano para relaxar e ler um livro em Brisbane?",
+  "q52.p1":"O formato bistrô-café-deli do The Green Edge e a varanda relaxada do Dicki's são ótimos lugares para desacelerar com um café e um livro. O cantinho tranquilo do Vega Cafe, em Spring Hill, é outra boa opção.",
   "footer.tagline":"Um mundo melhor para os animais.","footer.created":"Criado por"
 }};
 
