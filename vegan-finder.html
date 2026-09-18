@@ -92,7 +92,7 @@ body{overflow-x:hidden}
   <div class="page-header">
     <div class="page-num">06</div>
     <h1 class="page-title" data-i18n="page.title">Vegan Finder</h1>
-    <p class="page-tagline" data-i18n="page.tagline">Your shortcut to eating vegan in Brisbane</p>
+    <p class="page-tagline" data-i18n="page.tagline">Your shortcut to eating vegan and socializing in Brisbane</p>
     <p class="page-desc" data-i18n="page.desc">Craving something specific, planning a date, or feeding a whole group? Pick a filter below to jump straight to the answer — or just scroll through everything we know about finding great vegan food around Brisbane.</p>
   </div>
 
@@ -155,8 +155,18 @@ body{overflow-x:hidden}
       </div>
     </div>
 
+    <div class="filter-group">
+      <div class="filter-group-label" data-i18n="fg.community">Community &amp; connection</div>
+      <div class="filter-chips">
+        <div class="filter-chip" data-tag="meetvegans" onclick="applyFilter('meetvegans')">🤝 <span data-i18n="chip.meetvegans">Meet vegans</span></div>
+        <div class="filter-chip" data-tag="dating" onclick="applyFilter('dating')">💕 <span data-i18n="chip.dating">Dating</span></div>
+        <div class="filter-chip" data-tag="activism" onclick="applyFilter('activism')">✊ <span data-i18n="chip.activism">Activism</span></div>
+        <div class="filter-chip" data-tag="sanctuaries" onclick="applyFilter('sanctuaries')">🐾 <span data-i18n="chip.sanctuaries">Visit animals</span></div>
+      </div>
+    </div>
+
     <div class="filter-status">
-      <div class="filter-count" id="filterCount"><span id="filterCountNum">32</span> <span data-i18n="filters.questions">questions</span></div>
+      <div class="filter-count" id="filterCount"><span id="filterCountNum">41</span> <span data-i18n="filters.questions">questions</span></div>
       <button class="filter-clear" id="filterClear" onclick="clearFilter()" data-i18n="filters.clear">Show all questions</button>
     </div>
   </div>
@@ -654,6 +664,147 @@ body{overflow-x:hidden}
     </div></div></div>
   </div>
 
+  <!-- Q33 -->
+  <div class="accordion anim" id="q33" data-tags="meetvegans,general">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🤝</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q33.type">Find your people</div>
+        <div class="accordion-title" data-i18n="q33.title">Where can I meet new vegans in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q33.p1">Head to our <a href="community.html">Community page</a> and filter by "Meeting" — it lists active groups like Brisbane Vegan Meetup, Brisbane Vegans, Brisbane Vegans Unite, and Brisbane Outdoor Vegan Adventurers, all built around getting vegans together in real life.</p>
+      <p data-i18n="q33.p2">UQ Vegan Society is great if you're a student, Vegan Board Games is a relaxed monthly meetup, and Brisbane Vegan Run Club combines exercise with a post-run coffee.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q34 -->
+  <div class="accordion anim" id="q34" data-tags="dating">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">💕</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q34.type">Love, vegan-style</div>
+        <div class="accordion-title" data-i18n="q34.title">Where can I date or find a vegan partner in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q34.p1">Start with <a href="https://www.facebook.com/groups/1617569968532941" target="_blank" rel="noopener">Vegan Singles Brisbane and Surrounds</a> on Facebook — a group specifically for vegans in Brisbane looking to meet someone, also listed on our <a href="community.html">Community page</a>. <a href="https://www.veggly.net" target="_blank" rel="noopener">Veggly</a> is a dedicated vegan and vegetarian dating app worth trying too.</p>
+      <p data-i18n="q34.p2">On mainstream apps like Hinge, Bumble, or Tinder, search bios and prompts for "vegan" or check their interest tags/filters before matching — it saves you from a first date (or a first kiss) that tastes like meat.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q35 -->
+  <div class="accordion anim" id="q35" data-tags="activism">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">✊</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q35.type">Raise your voice</div>
+        <div class="accordion-title" data-i18n="q35.title">Where can I get involved in animal activism in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q35.p1">Action for Animals Community, Brisbane Animal Save, and Vegan Action Brisbane are all active in Brisbane, organising vigils, outreach events, and advocacy campaigns. Filter by "Activism" on our <a href="community.html">Community page</a> to find their socials and get involved.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q36 -->
+  <div class="accordion anim" id="q36" data-tags="sanctuaries">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🐾</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q36.type">Meet the residents</div>
+        <div class="accordion-title" data-i18n="q36.title">Where can I visit rescued animals in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q36.p1">Cranky's Farm in Mount Cotton and Farm Animal Rescue in Dayboro are both sanctuaries for rescued farm animals, with regular open days and volunteering opportunities. Filter by "Sanctuary" on our <a href="community.html">Community page</a> for details and how to visit.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q37 -->
+  <div class="accordion anim" id="q37" data-tags="date">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">💌</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q37.type">Round two</div>
+        <div class="accordion-title" data-i18n="q37.title">What's a good vegan restaurant for a second date in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q37.p1">Now that the ice is broken, it's worth stepping it up a notch. On the Gold Coast, Izakaya Midori and Greenhouse Canteen both have a proper sit-down restaurant feel for a longer dinner. In Brisbane, Neon Ramen's modern bar-restaurant setting or U-Tong's Thai menu are great for round two.</p>
+      <p data-i18n="q37.p2">If the first date was tacos and margaritas at El Planta, mix it up completely the second time — a different cuisine keeps things interesting.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q38 -->
+  <div class="accordion anim" id="q38" data-tags="general">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🍷</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q38.type">Cheers</div>
+        <div class="accordion-title" data-i18n="q38.title">Is alcohol vegan? Where can I find vegan wine, beer, and cocktails in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q38.p1">Most beer and spirits are naturally vegan, but some wines are clarified ("fined") using animal products like gelatine or egg whites, so not every wine is automatically vegan-friendly — look for a "vegan" or "unfiltered" label, or ask.</p>
+      <p data-i18n="q38.p2">For a drink out, El Planta's margaritas, the cocktail menus at Greenhouse Canteen and Izakaya Midori on the Gold Coast, and Netherworld's craft beer selection are all solid, vegan-friendly options.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q39 -->
+  <div class="accordion anim" id="q39" data-tags="general">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🍲</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q39.type">Navigating non-vegan spaces</div>
+        <div class="accordion-title" data-i18n="q39.title">How do I navigate non-vegan family gatherings or potlucks in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q39.p1">Offering to bring a dish is the easiest way to guarantee there's something you can actually eat — and often the best way to introduce people to vegan food without a lecture. A box of treats from Veganyumm or Pippa's Pantry, or takeaway from Vegan Restaurant or Loving Hut reheated at home, both travel well and tend to win people over.</p>
+      <p data-i18n="q39.p2">Giving the host a heads-up ahead of time also helps — most are happy to accommodate once they know, and it takes the pressure off figuring it out on the day.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q40 -->
+  <div class="accordion anim" id="q40" data-tags="general">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">💪</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q40.type">Fuel up</div>
+        <div class="accordion-title" data-i18n="q40.title">Where can I find protein-packed vegan meals in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q40.p1">Tofu, tempeh, and legumes show up across the board — U-Tong's Thai curries and stir-fries, Neon Ramen and Izakaya Midori's tofu-based ramen and rice dishes, and Vege Rama's buffet all make it easy to load up on plant protein. GrassFed's and Doko Demo V's burgers are also built around protein-rich patties.</p>
+      <p data-i18n="q40.p2">If you're after something post-workout, Brisbane Vegan Run Club's weekly runs usually wrap up with coffee or brunch — worth joining if fitness and community both matter to you.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q41 -->
+  <div class="accordion anim" id="q41" data-tags="general">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🥜</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q41.type">Allergy-aware</div>
+        <div class="accordion-title" data-i18n="q41.title">Are there nut-free vegan options in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q41.p1">Piante Pizza is explicitly nut-free as well as vegan. Beyond that, always contact the venue directly if you have a severe nut allergy — plant-based kitchens often use nuts for cheese, cream, and protein substitutes, so cross-contamination is a real risk even when a dish looks nut-free on the menu.</p>
+    </div></div></div>
+  </div>
+
   <!-- NO RESULTS -->
   <div class="no-results" id="noResults" data-i18n="noresults">No questions match that filter yet — try another one, or clear the filter to see everything.</div>
 
@@ -694,15 +845,16 @@ function clearFilter(){
 
 // I18N (PT only — EN is default in HTML)
 const i18n={pt:{
-  "page.title":"Vegan Finder","page.tagline":"Seu atalho para comer vegano em Brisbane",
+  "page.title":"Vegan Finder","page.tagline":"Seu atalho para comer vegano e socializar em Brisbane",
   "page.desc":"Com vontade de algo específico, planejando um encontro ou alimentando um grupo? Escolha um filtro abaixo para ir direto à resposta — ou role a página para ver tudo o que sabemos sobre onde comer bem vegano em Brisbane.",
   "filters.label":"Estou procurando...","filters.questions":"perguntas","filters.clear":"Mostrar todas as perguntas",
-  "fg.meal":"Refeição & culinária","fg.dietary":"Dieta","fg.price":"Preço","fg.service":"Serviço","fg.who":"Para quem é",
+  "fg.meal":"Refeição & culinária","fg.dietary":"Dieta","fg.price":"Preço","fg.service":"Serviço","fg.who":"Para quem é","fg.community":"Comunidade & conexão",
   "chip.breakfast":"Café da manhã","chip.brunch":"Brunch","chip.burgers":"Hambúrgueres","chip.pizza":"Pizza","chip.asian":"Asiática","chip.mexican":"Mexicana","chip.dessert":"Sobremesa","chip.cafe":"Café","chip.dinner":"Jantar","chip.groceries":"Mercado",
   "chip.vegan100":"100% Vegano","chip.veganfriendly":"Vegano-amigável","chip.glutenfree":"Sem glúten",
   "chip.cheap":"Barato","chip.fancy":"Sofisticado",
   "chip.takeaway":"Para levar","chip.delivery":"Delivery",
   "chip.vegansonly":"Só veganos","chip.mixed":"Veganos + não-veganos","chip.family":"Família","chip.date":"Encontro","chip.group":"Grupo",
+  "chip.meetvegans":"Conhecer veganos","chip.dating":"Namoro","chip.activism":"Ativismo","chip.sanctuaries":"Visitar animais",
   "s.questions":"Perguntas & Respostas",
   "noresults":"Nenhuma pergunta corresponde a esse filtro ainda — tente outro, ou limpe o filtro para ver tudo.",
   "q1.type":"Comece aqui","q1.title":"Onde encontro os melhores restaurantes veganos de Brisbane?",
@@ -781,6 +933,30 @@ const i18n={pt:{
   "q31.p1":"West End, New Farm, Fortitude Valley e Everton Park têm, cada um, vários locais no nosso diretório. Se você não se importa de dirigir um pouco mais, a Gold Coast também virou um polo de verdade, com vários restaurantes totalmente veganos abrindo por lá recentemente.",
   "q32.type":"Guia para iniciantes","q32.title":"Onde levar alguém que nunca experimentou comida vegana?",
   "q32.p1":"Vá a um lugar onde a comida é familiar primeiro, vegana depois. Os clássicos chineses do Vegan Restaurant, o brunch o dia todo do Dicki's ou as fritas recheadas e hambúrgueres do Netherworld chegam como \"comida realmente boa\", não como um sermão sobre veganismo — que é exatamente o ponto.",
+  "q33.type":"Encontre sua turma","q33.title":"Onde conhecer novos veganos em Brisbane?",
+  "q33.p1":"Vá até nossa <a href=\"community.html\">página Community</a> e filtre por \"Meeting\" — lá estão grupos ativos como Brisbane Vegan Meetup, Brisbane Vegans, Brisbane Vegans Unite e Brisbane Outdoor Vegan Adventurers, todos criados para reunir veganos pessoalmente.",
+  "q33.p2":"O UQ Vegan Society é ótimo se você é estudante, o Vegan Board Games é um encontro mensal descontraído, e o Brisbane Vegan Run Club combina exercício com um café depois da corrida.",
+  "q34.type":"Amor, do jeito vegano","q34.title":"Onde posso paquerar ou encontrar um parceiro(a) vegano(a) em Brisbane?",
+  "q34.p1":"Comece pelo <a href=\"https://www.facebook.com/groups/1617569968532941\" target=\"_blank\" rel=\"noopener\">Vegan Singles Brisbane and Surrounds</a> no Facebook — um grupo específico para veganos de Brisbane que querem conhecer alguém, também listado na nossa <a href=\"community.html\">página Community</a>. O <a href=\"https://www.veggly.net\" target=\"_blank\" rel=\"noopener\">Veggly</a> é um app de namoro dedicado a veganos e vegetarianos que também vale a pena experimentar.",
+  "q34.p2":"Em apps mais convencionais como Hinge, Bumble ou Tinder, procure por \"vegano\" na bio ou nas respostas do perfil, ou confira as tags de interesse/filtros antes de dar match — assim você evita um primeiro encontro (ou um primeiro beijo) com gostinho de carne.",
+  "q35.type":"Levante sua voz","q35.title":"Onde posso fazer ativismo em Brisbane?",
+  "q35.p1":"Action for Animals Community, Brisbane Animal Save e Vegan Action Brisbane estão todos ativos em Brisbane, organizando vigílias, eventos de divulgação e campanhas de advocacy. Filtre por \"Activism\" na nossa <a href=\"community.html\">página Community</a> para encontrar as redes sociais deles e se envolver.",
+  "q36.type":"Conheça os moradores","q36.title":"Onde posso visitar animais resgatados em Brisbane?",
+  "q36.p1":"O Cranky's Farm, em Mount Cotton, e o Farm Animal Rescue, em Dayboro, são santuários para animais de fazenda resgatados, com dias abertos regulares e oportunidades de voluntariado. Filtre por \"Sanctuary\" na nossa <a href=\"community.html\">página Community</a> para detalhes e como visitar.",
+  "q37.type":"Segundo round","q37.title":"Qual um bom restaurante vegano para um segundo encontro em Brisbane?",
+  "q37.p1":"Agora que o gelo já quebrou, vale caprichar mais. Na Gold Coast, Izakaya Midori e Greenhouse Canteen têm clima de restaurante de verdade para um jantar mais longo. Em Brisbane, o ambiente moderno de bar-restaurante do Neon Ramen ou o cardápio tailandês do U-Tong são ótimos para o segundo encontro.",
+  "q37.p2":"Se o primeiro encontro foi tacos e margaritas no El Planta, troque completamente de estilo na segunda vez — uma culinária diferente mantém as coisas interessantes.",
+  "q38.type":"Saúde!","q38.title":"Bebida alcoólica é vegana? Onde encontro vinho, cerveja e coquetéis veganos em Brisbane?",
+  "q38.p1":"A maioria das cervejas e destilados é naturalmente vegana, mas alguns vinhos são clarificados (\"fined\") usando produtos animais como gelatina ou clara de ovo, então nem todo vinho é automaticamente vegano — procure pelo rótulo \"vegan\" ou \"unfiltered\", ou pergunte.",
+  "q38.p2":"Para beber fora, as margaritas do El Planta, os cardápios de coquetéis do Greenhouse Canteen e do Izakaya Midori na Gold Coast, e a seleção de cervejas artesanais do Netherworld são todas ótimas opções vegano-amigáveis.",
+  "q39.type":"Navegando espaços não-veganos","q39.title":"Como lidar com reuniões de família ou potlucks não-veganos em Brisbane?",
+  "q39.p1":"Se oferecer para levar um prato é a forma mais fácil de garantir que tenha algo que você realmente possa comer — e muitas vezes a melhor forma de apresentar comida vegana para as pessoas sem sermão. Uma caixinha de doces do Veganyumm ou do Pippa's Pantry, ou um prato para levar do Vegan Restaurant ou do Loving Hut reaquecido em casa, ambos viajam bem e costumam conquistar as pessoas.",
+  "q39.p2":"Avisar o anfitrião com antecedência também ajuda — a maioria fica feliz em se adaptar quando sabe, e isso tira a pressão de resolver tudo na hora.",
+  "q40.type":"Abasteça","q40.title":"Onde encontro refeições veganas ricas em proteína em Brisbane?",
+  "q40.p1":"Tofu, tempeh e leguminosas aparecem em todo lugar — os curries e salteados tailandeses do U-Tong, os pratos de ramen e arroz com tofu do Neon Ramen e do Izakaya Midori, e o buffet do Vege Rama facilitam abastecer de proteína vegetal. Os hambúrgueres do GrassFed e do Doko Demo V também são feitos com hambúrgueres ricos em proteína.",
+  "q40.p2":"Se você busca algo pós-treino, as corridas semanais do Brisbane Vegan Run Club geralmente terminam com café ou brunch — vale a pena participar se fitness e comunidade importam para você.",
+  "q41.type":"Atento a alergias","q41.title":"Existem opções veganas sem nozes em Brisbane?",
+  "q41.p1":"A Piante Pizza é explicitamente livre de nozes além de vegana. Além disso, sempre entre em contato diretamente com o local se você tiver alergia severa a nozes — cozinhas plant-based costumam usar nozes para queijos, cremes e substitutos de proteína, então a contaminação cruzada é um risco real mesmo quando um prato parece livre de nozes no cardápio.",
   "footer.tagline":"Um mundo melhor para os animais.","footer.created":"Criado por"
 }};
 

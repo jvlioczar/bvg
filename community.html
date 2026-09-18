@@ -232,7 +232,7 @@
     <h1 class="page-title" data-i18n="page.title">Community</h1>
     <p class="page-tagline" data-i18n="page.tagline">Groups and organisations creating change</p>
     <p class="page-desc" data-i18n="page.desc">Groups, sanctuaries, communities, and organisations in Brisbane working towards a kinder, more compassionate world for animals and people.</p>
-    <div class="page-count"><span id="groupCount">17</span> <span data-i18n="page.groups">groups</span></div>
+    <div class="page-count"><span id="groupCount">18</span> <span data-i18n="page.groups">groups</span></div>
   </div>
 
   <!-- FILTERS -->
@@ -483,6 +483,19 @@ const groups = [
     },
     tags: ["Meeting", "Social", "Games", "Monthly"],
     url: "https://www.facebook.com/BrisbaneVeganBoardGames"
+  },
+  {
+    name: "Vegan Singles Brisbane and Surrounds",
+    category: "Meeting",
+    type: { en: "Social · Dating", pt: "Social · Relacionamentos" },
+    initials: "VS",
+    location: "Brisbane, QLD",
+    desc: {
+      en: "A Facebook group for vegan singles in Brisbane and surrounding areas looking to meet, connect, and maybe find a fellow plant-based partner.",
+      pt: "Um grupo no Facebook para veganos solteiros em Brisbane e arredores que querem se conhecer, se conectar e talvez encontrar um parceiro ou parceira também vegano(a)."
+    },
+    tags: ["Dating", "Singles", "Social", "Community"],
+    url: "https://www.facebook.com/groups/1617569968532941"
   }
 ];
 
@@ -509,7 +522,8 @@ const tagMap = {
   "Education": "Educação", "Advocacy": "Advocacy",
   "Outdoors": "Ar Livre", "Hiking": "Trilhas",
   "Housing": "Moradia", "Share House": "Casa Compartilhada",
-  "Meetup": "Encontros", "Facebook Group": "Grupo no Facebook"
+  "Meetup": "Encontros", "Facebook Group": "Grupo no Facebook",
+  "Dating": "Namoro", "Singles": "Solteiros"
 };
 
 function translateTag(tag, lang) {
