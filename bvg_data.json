@@ -1,21 +1,36 @@
 [
   {
-    "slug": "archie-ampm",
+    "slug": "archie-am-pm",
     "name": "Archie AM:PM",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Bistro", "Café", "Burgers", "Desserts", "Coffee"],
+    "desc": {
+      "en": "Archie AM:PM is a 100% vegan bistro-café in Carseldine, run by Meliora Support Services as a supported-employment workplace that pays disabled workers full award wages. Open Wednesday to Sunday under executive chef Kya Knights, it serves globally-inspired plant-based dishes — from smash burgers and loaded yiros to house-baked desserts and creative coffee.",
+      "pt": "O Archie AM:PM é um bistrô-café 100% vegano em Carseldine, administrado pela Meliora Support Services como um espaço de emprego apoiado que paga salário integral a trabalhadores com deficiência. Aberto de quarta a domingo sob o comando da chef executiva Kya Knights, serve pratos plant-based com influências de várias partes do mundo — de hambúrgueres smash a yiros recheados, além de sobremesas caseiras e cafés criativos."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DdZ6HsaTQZC/embed/",
     "web": { "site": "https://meliora.org.au/pages/archie-cafe", "instagram": "https://instagram.com/archieampm", "facebook": "https://www.facebook.com/archieampm/", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "Shop 23, 735 Beams Rd, Carseldine, QLD 4034",
+    "maps_url": "https://www.google.com/maps/search/Shop+23+735+Beams+Rd+Carseldine+QLD+4034",
+    "why": {
+      "en": "A social-enterprise café that pays disabled workers full award wages, serving bold, globally-inspired plant-based food Wednesday to Sunday.",
+      "pt": "Um café de empreendimento social que paga salário integral a trabalhadores com deficiência, servindo comida plant-based e criativa de quarta a domingo."
+    },
+    "what_to_order": {
+      "en": "Korean Fried 'Chicken' Burger, Cheesy Smash Burger, Gado Gado and a Peanut Brownie for dessert.",
+      "pt": "Korean Fried 'Chicken' Burger, Cheesy Smash Burger, Gado Gado e um Peanut Brownie de sobremesa."
+    },
+    "when": {
+      "en": "Run by Meliora Support Services, a Brisbane social enterprise operating since 2019 that provides supported employment in hospitality. Archie's kitchen is led by executive chef Kya Knights.",
+      "pt": "Administrado pela Meliora Support Services, um empreendimento social de Brisbane em atividade desde 2019 que oferece emprego apoiado na hotelaria. A cozinha do Archie é liderada pela chef executiva Kya Knights."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/HJ9NSKR1VR4noSZED" },
@@ -31,22 +46,37 @@
     }
   },
   {
-    "slug": "cardamom-pod-brickworks",
+    "slug": "cardamom-pod",
     "name": "Cardamom Pod Brickworks",
     "vegan": "Friendly",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["Vegan-Friendly", "Café", "Indian", "Brunch", "Gluten-Free", "Coffee"],
+    "desc": {
+      "en": "Cardamom Pod Brickworks is a plant-forward café at The Brickworks in Southport, Gold Coast, open for breakfast and brunch 8am–3pm every day. Its Indian-inspired menu spans loaded açaí bowls, specialty pancakes and French toast, curries and bowls, alongside gourmet coffee and cold-pressed juices — almost every dish is vegan or gluten-free, with a cow's-milk option for coffee.",
+      "pt": "O Cardamom Pod Brickworks é um café plant-forward no The Brickworks, em Southport, Gold Coast, aberto para café da manhã e brunch das 8h às 15h todos os dias. Seu cardápio de inspiração indiana traz açaí bowls recheados, panquecas e rabanadas especiais, curries e bowls, além de café gourmet e sucos prensados a frio — quase todos os pratos são veganos ou sem glúten, com opção de leite de vaca no café."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DZ7J0_OyeYx/embed/",
     "web": { "site": "https://cardamompodbrickworks.com", "instagram": "https://instagram.com/cardamompodbrickworks", "facebook": "https://facebook.com/p/Cardamom-Pod-Brickworks-Ferry-Rd-Southport-100063559841571", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "3/3 Brolga Avenue, Southport, QLD 4215",
+    "maps_url": "https://www.google.com/maps/search/3+3+Brolga+Avenue+Southport+QLD+4215",
+    "why": {
+      "en": "A colourful, mostly-vegan brunch spot at The Brickworks, blending Indian-inspired flavours with açaí bowls, coffee and fresh juices.",
+      "pt": "Um brunch colorido e majoritariamente vegano no The Brickworks, misturando sabores de inspiração indiana com açaí bowls, café e sucos frescos."
+    },
+    "what_to_order": {
+      "en": "Pod Special Açaí, the Bollywood Burger, Pumpkin Pie Pancakes and a Pistachio Latte.",
+      "pt": "Pod Special Açaí, o Bollywood Burger, Pumpkin Pie Pancakes e um Pistachio Latte."
+    },
+    "when": {
+      "en": "Open at The Brickworks in Southport since 2016, serving an Indian-inspired, plant-based menu of açaí bowls, brunch plates and specialty coffee.",
+      "pt": "Funcionando no The Brickworks, em Southport, desde 2016, com um cardápio de inspiração indiana e plant-based de açaí bowls, pratos de brunch e café especial."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/YjyoMV7DHF0P0G6Vy" },
@@ -66,18 +96,33 @@
     "name": "Charlie's Raw Squeeze",
     "vegan": "Friendly",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["Vegan-Friendly", "Juice Bar", "Café", "Burgers", "Brunch", "Coffee"],
+    "desc": {
+      "en": "Charlie's Raw Squeeze is a Brisbane juice-bar chain with four locations — Greenslopes, Clayfield, Clontarf and Wynnum — open daily from 7am. The Greenslopes store serves açaí bowls, fresh juices and smoothies alongside smashed avo toast, falafel wraps and burgers, plus moofins and coffee for an easy, everyday menu.",
+      "pt": "O Charlie's Raw Squeeze é uma rede de sucos de Brisbane com quatro unidades — Greenslopes, Clayfield, Clontarf e Wynnum — abertas todos os dias a partir das 7h. A loja de Greenslopes serve açaí bowls, sucos frescos e smoothies, além de torradas com abacate, wraps de falafel e hambúrgueres, moofins e café, num cardápio simples para o dia a dia."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DcVsaQiSBNm/embed/",
     "web": { "site": "https://www.rawsqueeze.com.au", "instagram": "https://www.instagram.com/rawsqueeze", "facebook": "https://www.facebook.com/rawsqueeze/", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "51 Old Cleveland Road, Greenslopes, QLD 4120",
+    "maps_url": "https://www.google.com/maps/search/51+Old+Cleveland+Road+Greenslopes+QLD+4120",
+    "why": {
+      "en": "A laid-back juice bar chain serving açaí bowls, fresh juices and smoothies alongside easy breakfast and lunch bites, open daily from 7am.",
+      "pt": "Uma rede de sucos descontraída, com açaí bowls, sucos frescos e smoothies, além de opções fáceis de café da manhã e almoço, aberta todos os dias a partir das 7h."
+    },
+    "what_to_order": {
+      "en": "Peanut Butter Açaí Bowl, a Falafel Wrap, Smashed Avo Toast and a fresh juice.",
+      "pt": "Peanut Butter Açaí Bowl, um Falafel Wrap, torrada com abacate (Smashed Avo Toast) e um suco fresco."
+    },
+    "when": {
+      "en": "Grown from its Brisbane roots into a small local chain, Charlie's Raw Squeeze now runs stores in Greenslopes, Clayfield, Clontarf and Wynnum, with franchise opportunities open to new operators.",
+      "pt": "Crescendo a partir de suas raízes em Brisbane, o Charlie's Raw Squeeze hoje tem lojas em Greenslopes, Clayfield, Clontarf e Wynnum, com oportunidades de franquia abertas a novos operadores."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/Wly8ESqBqygdR3e4C" },
@@ -97,18 +142,33 @@
     "name": "Dicki's",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Café", "Brunch", "Burgers", "Desserts", "Coffee"],
+    "desc": {
+      "en": "Dicki's is a 100% vegan café on Brunswick Street in New Farm, open 7am–2pm for specialty coffee, all-day breakfast and lunch. Its comfort-food menu leans on mock-meat classics — Breaky Burritos, 'Duck' Toasties, satay wraps and smash burgers — alongside custom cakes, smoothies and a relaxed, dog-friendly balcony.",
+      "pt": "O Dicki's é um café 100% vegano na Brunswick Street, em New Farm, aberto das 7h às 14h para café especial, café da manhã e almoço o dia todo. Seu cardápio de comfort food aposta em clássicos à base de \"carnes\" vegetais — Breaky Burrito, \"Duck\" Toastie, wraps de satay e smash burgers — além de bolos personalizados, smoothies e uma varanda descontraída e pet-friendly."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DdVEIRoTxh9/embed/",
     "web": { "site": "https://dickis.com.au", "instagram": "https://instagram.com/dickis.newfarm", "facebook": "https://facebook.com/dickis.newfarm", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "893 Brunswick Street, New Farm, QLD 4005",
+    "maps_url": "https://www.google.com/maps/search/893+Brunswick+Street+New+Farm+QLD+4005",
+    "why": {
+      "en": "A dog-friendly neighbourhood café serving 100% vegan comfort food and specialty coffee from 7am to 2pm.",
+      "pt": "Um café de bairro pet-friendly, com comfort food 100% vegana e café especial das 7h às 14h."
+    },
+    "what_to_order": {
+      "en": "The Breaky Burrito, a \"Duck\" Toastie, Dicki's Classic Burger and an Almond Croissant.",
+      "pt": "O Breaky Burrito, um \"Duck\" Toastie, o Dicki's Classic Burger e um Almond Croissant."
+    },
+    "when": {
+      "en": "A New Farm neighbourhood favourite known for its fully vegan spin on café classics and mock-meat comfort food, with a relaxed, dog-friendly balcony on Brunswick Street.",
+      "pt": "Um point queridinho de New Farm, conhecido por sua versão totalmente vegana dos clássicos de café e comfort food à base de \"carnes\" vegetais, com uma varanda descontraída e pet-friendly na Brunswick Street."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/7YkFhCEvYm1bv1WYW" },
@@ -128,18 +188,33 @@
     "name": "Doko Demo V",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Asian", "Dinner", "Burgers", "Pizza", "Coffee"],
+    "desc": {
+      "en": "Doko Demo V is a fully vegan restaurant and bar in Burleigh Waters, Gold Coast, serving an expansive all-day menu that spans breakfast, Asian classics like pad thai and laksa, burgers, pizza, pasta and mains — plus a full vegan coffee bar and a licensed cocktail list, swapping in plant-based versions of Western comfort-food favourites too.",
+      "pt": "O Doko Demo V é um restaurante e bar totalmente vegano em Burleigh Waters, Gold Coast, com um cardápio amplo o dia todo que vai de café da manhã a clássicos asiáticos como pad thai e laksa, hambúrgueres, pizza, massas e pratos principais — além de um bar de café 100% vegano e uma carta de coquetéis com licença para álcool, incluindo versões plant-based de clássicos ocidentais também."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DCniiysT0fn/embed/",
     "web": { "site": "https://doko-demo-v.yumbojumbo.com.au", "instagram": "https://instagram.com/dokodemov", "facebook": "https://facebook.com/DokoDemoV", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "2/2 Sunlight Drive, Burleigh Waters, QLD 4220",
+    "maps_url": "https://www.google.com/maps/search/2+2+Sunlight+Drive+Burleigh+Waters+QLD+4220",
+    "why": {
+      "en": "A fully vegan restaurant and bar with an unusually huge menu — Asian dishes, burgers, pizza and pasta all in one place, plus cocktails and vegan coffee.",
+      "pt": "Um restaurante e bar totalmente vegano com um cardápio enorme — pratos asiáticos, hambúrgueres, pizza e massas em um só lugar, além de coquetéis e café vegano."
+    },
+    "what_to_order": {
+      "en": "Cooked Pad Thai, a Mushroom Burger, the Peking Duck Pizza and the signature Pot Plant Ice Cream.",
+      "pt": "Cooked Pad Thai, um Mushroom Burger, a Peking Duck Pizza e a sobremesa-assinatura Pot Plant Ice Cream."
+    },
+    "when": {
+      "en": "A fully vegan restaurant and bar in Burleigh Waters with one of the Gold Coast's largest all-vegan menus — spanning breakfast to late-night cocktails, seven days a week.",
+      "pt": "Um restaurante e bar totalmente vegano em Burleigh Waters com um dos maiores cardápios 100% veganos da Gold Coast — do café da manhã a coquetéis à noite, todos os dias da semana."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/O2xU8BUETV0GUvkVA" },
@@ -159,18 +234,33 @@
     "name": "El Planta",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Mexican", "Street Food", "Dinner", "Bar", "Gluten-Free"],
+    "desc": {
+      "en": "El Planta is a family-run, 100% plant-based Mexican restaurant on Hope Street, just off Fish Lane in South Brisbane. Everything is made from scratch, including hand-pressed tortillas cooked to order, on a share-style menu that changes with the seasons — paired with Brisbane's margaritas, natural wines and tequila. Open Tuesday to Saturday evenings only.",
+      "pt": "O El Planta é um restaurante mexicano 100% plant-based e administrado pela própria família, na Hope Street, saindo da Fish Lane, em South Brisbane. Tudo é feito do zero, incluindo tortillas prensadas à mão e preparadas na hora, num cardápio para compartilhar que muda com as estações — acompanhado de margaritas, vinhos naturais e tequila. Aberto apenas à noite, de terça a sábado."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/CsaZWu8sose/embed/",
     "web": { "site": "https://elplanta.com", "instagram": "https://instagram.com/elplantamexican", "facebook": "https://facebook.com/elplantamexican", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "58 Hope Street, South Brisbane, QLD 4101",
+    "maps_url": "https://www.google.com/maps/search/58+Hope+Street+South+Brisbane+QLD+4101",
+    "why": {
+      "en": "A family-run, 100% vegan Mexican restaurant built around hand-pressed tortillas, a share-style seasonal menu, and some of Brisbane's best margaritas.",
+      "pt": "Um restaurante mexicano 100% vegano e familiar, construído em torno de tortillas prensadas à mão, um cardápio sazonal para compartilhar e algumas das melhores margaritas de Brisbane."
+    },
+    "what_to_order": {
+      "en": "Hand-pressed tacos, the Corn & Brussels Sprouts side, a margarita to share, and the Taco Tuesday specials.",
+      "pt": "Tacos prensados à mão, o acompanhamento Corn & Brussels Sprouts, uma margarita para compartilhar e os especiais da Taco Tuesday."
+    },
+    "when": {
+      "en": "Family-run for over seven years, El Planta has built a loyal following in South Brisbane for its scratch-made, share-style Mexican menu — a short walk from QPAC and South Bank.",
+      "pt": "Administrado pela mesma família há mais de sete anos, o El Planta conquistou um público fiel em South Brisbane com seu cardápio mexicano feito do zero, para compartilhar — a poucos minutos a pé do QPAC e do South Bank."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/1a6lPnMnnlLP0kzOE" },
@@ -190,18 +280,33 @@
     "name": "GrassFed",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Food Truck", "Burgers", "Street Food", "Comfort Food", "Takeaway"],
+    "desc": {
+      "en": "GrassFed is a 100% vegan food trailer serving burgers and its signature loaded fries at markets and events across South East Queensland, including the Queensland Vegan Markets in Brisbane, Gold Coast and Sunshine Coast. After closing its original bricks-and-mortar restaurant, the team now brings the same burger menu on the road — and is available for private catering at parties, weddings and corporate events.",
+      "pt": "O GrassFed é um trailer de comida 100% vegano que serve hambúrgueres e sua fritas recheadas (loaded fries) de assinatura em feiras e eventos por todo o Sudeste de Queensland, incluindo as Queensland Vegan Markets em Brisbane, Gold Coast e Sunshine Coast. Depois de fechar seu restaurante físico original, a equipe agora leva o mesmo cardápio de hambúrgueres pelas estradas — e está disponível para catering privado em festas, casamentos e eventos corporativos."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DIQiBdKxSlZ/embed/",
     "web": { "site": "https://grassfedvegan.com.au", "instagram": "https://instagram.com/grassfedplantbased", "facebook": "https://facebook.com/Grassfedplantbased", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "Pop-up trailer — QLD Vegan Markets (Brisbane, Gold Coast, Sunshine Coast)",
+    "maps_url": "https://instagram.com/grassfedplantbased",
+    "why": {
+      "en": "A mobile vegan burger trailer serving loaded fries and up to six burger options at Queensland Vegan Markets across Brisbane, Gold Coast and Sunshine Coast.",
+      "pt": "Um trailer móvel de hambúrgueres veganos, com fritas recheadas e até seis opções de hambúrguer, presente nas Queensland Vegan Markets de Brisbane, Gold Coast e Sunshine Coast."
+    },
+    "what_to_order": {
+      "en": "A vegan burger from the rotating menu, paired with the signature Loaded Fries.",
+      "pt": "Um hambúrguer vegano do cardápio rotativo, acompanhado das Loaded Fries de assinatura."
+    },
+    "when": {
+      "en": "Originally a bricks-and-mortar restaurant, GrassFed closed its physical location and now operates as a food trailer, serving the same burger menu at SEQ markets and private events.",
+      "pt": "Antes um restaurante com endereço fixo, o GrassFed fechou o local físico e hoje funciona como um trailer de comida, servindo o mesmo cardápio de hambúrgueres em feiras do Sudeste de Queensland e em eventos privados."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/TuOUDTQCE3DxEOVGV" },
@@ -218,21 +323,36 @@
   },
   {
     "slug": "greenhouse-canteen",
-    "name": "Greenhouse Canteen",
+    "name": "Greenhouse Canteen & Bar",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Bar", "Dinner", "Lunch", "Gluten-Free", "Comfort Food"],
+    "desc": {
+      "en": "Greenhouse Canteen & Bar is a 100% vegan restaurant and bar set in Tallebudgera Valley on the Gold Coast, part of the Greenhouse the Bathhouse wellness complex. Its plant-based whole-food menu spans mushroom burgers, cauliflower wings and arancini alongside a full bar of cocktails and wine, served across a relaxed indoor dining room and garden patio for lunch and dinner.",
+      "pt": "O Greenhouse Canteen & Bar é um restaurante e bar 100% vegano em Tallebudgera Valley, na Gold Coast, parte do complexo de bem-estar Greenhouse the Bathhouse. Seu cardápio plant-based e whole-food traz hambúrgueres de cogumelo, asinhas de couve-flor e arancini, além de um bar completo de coquetéis e vinhos, servidos entre uma sala interna aconchegante e um deque com jardim, para almoço e jantar."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DZwUM6txjv9/embed/",
     "web": { "site": "https://greenhousecanteen.com", "instagram": "https://instagram.com/greenhouse_canteen", "facebook": "https://facebook.com/greenhousecanteentandbar", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "268 Tallebudgera Creek Road, Tallebudgera Valley, QLD 4228",
+    "maps_url": "https://www.google.com/maps/search/268+Tallebudgera+Creek+Road+Tallebudgera+Valley+QLD+4228",
+    "why": {
+      "en": "A 100% vegan restaurant and bar tucked into a garden setting in Tallebudgera Valley, paired with a full cocktail and wine list.",
+      "pt": "Um restaurante e bar 100% vegano em meio a um jardim em Tallebudgera Valley, com uma carta completa de coquetéis e vinhos."
+    },
+    "what_to_order": {
+      "en": "The Vietnamese pancake, a mushroom burger, cauliflower wings and the cheesecake for dessert.",
+      "pt": "A panqueca vietnamita (Vietnamese pancake), um hambúrguer de cogumelo, asinhas de couve-flor e o cheesecake de sobremesa."
+    },
+    "when": {
+      "en": "Part of the Greenhouse the Bathhouse wellness complex in Tallebudgera Valley, pairing its 100% vegan kitchen with on-site soak sessions and massages for a full day out.",
+      "pt": "Parte do complexo de bem-estar Greenhouse the Bathhouse em Tallebudgera Valley, combinando sua cozinha 100% vegana com sessões de banho e massagens no local para um dia completo."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/WHaxQJBvdrsMCXG5R" },
@@ -252,18 +372,33 @@
     "name": "Izakaya Midori",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Japanese", "Dinner", "Lunch", "Gluten-Free", "Bar"],
+    "desc": {
+      "en": "Izakaya Midori is the Gold Coast's only 100% plant-based Japanese restaurant, tucked into a suburban corner shop in Reedy Creek. Its izakaya-style menu spans sushi, ramen, gyoza and rice dishes built around plant-based takes on classic Japanese flavours, served in a calm, minimalist dining room with undercover outdoor seating — plus a full bar, including its signature Midori Illusion cocktail.",
+      "pt": "O Izakaya Midori é o único restaurante japonês 100% plant-based da Gold Coast, instalado numa esquina de bairro em Reedy Creek. Seu cardápio estilo izakaya traz sushi, ramen, gyoza e pratos de arroz, construídos em torno de versões plant-based de sabores clássicos japoneses, servidos numa sala minimalista e tranquila, com área externa coberta — além de um bar completo, incluindo o coquetel-assinatura Midori Illusion."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DCagIZpz265/embed/",
     "web": { "site": "https://izakayamidori.com.au", "instagram": "https://instagram.com/izakaya_midori", "facebook": "https://facebook.com/people/Izakaya-Midori/100063837811559", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "Shop 7/50 Woodland Drive, Reedy Creek, QLD 4227",
+    "maps_url": "https://www.google.com/maps/search/Shop+7+50+Woodland+Drive+Reedy+Creek+QLD+4227",
+    "why": {
+      "en": "Gold Coast's only 100% plant-based Japanese restaurant, built around izakaya-style small plates and a calm, minimalist dining room.",
+      "pt": "O único restaurante japonês 100% plant-based da Gold Coast, construído em torno de petiscos estilo izakaya e uma sala minimalista e tranquila."
+    },
+    "what_to_order": {
+      "en": "The Nigiri Omakase, Gyozaholic dumplings, Aka Ramen and a Midori Illusion cocktail.",
+      "pt": "O Nigiri Omakase, os dumplings Gyozaholic, o Aka Ramen e um coquetel Midori Illusion."
+    },
+    "when": {
+      "en": "Winner of OpenTable's Diners' Choice Award and rated 5 stars on Eat Safe Gold Coast, Izakaya Midori has built a loyal following as the Gold Coast's only fully plant-based Japanese kitchen.",
+      "pt": "Vencedor do Diners' Choice Award do OpenTable e avaliado com 5 estrelas no Eat Safe Gold Coast, o Izakaya Midori construiu um público fiel como a única cozinha japonesa totalmente plant-based da Gold Coast."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/rZN3xquKjsbDKxnMK" },
@@ -283,18 +418,33 @@
     "name": "Loving Hut",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Fusion", "Budget-Friendly", "Chinese", "Takeaway", "Lunch"],
+    "desc": {
+      "en": "Loving Hut is a 100% vegan restaurant in Mount Gravatt, part of a global plant-based chain built on kindness and compassion for all beings. The menu fuses Western and Eastern cuisine — think laksa, fried rice and spaghetti bolognese — served dine-in or takeaway, with catering and frozen vegan foods also available.",
+      "pt": "O Loving Hut é um restaurante 100% vegano em Mount Gravatt, parte de uma rede global plant-based construída sobre bondade e compaixão por todos os seres. O cardápio mistura cozinha ocidental e oriental — laksa, arroz frito e espaguete à bolonhesa — servidos para comer no local ou levar, com catering e comidas veganas congeladas também disponíveis."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/CzNe2EiRzwF/embed/",
     "web": { "site": "https://lovinghutbrisbane.com.au", "instagram": "https://instagram.com/lovinghutbrisbane", "facebook": "https://facebook.com/loving.hut.brisbane", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "2/1420 Logan Road, Mount Gravatt, QLD 4122",
+    "maps_url": "https://www.google.com/maps/search/2+1420+Logan+Road+Mount+Gravatt+QLD+4122",
+    "why": {
+      "en": "An affordable, 100% vegan restaurant blending Western and Asian comfort food, part of a global chain built on kindness to people, animals and the planet.",
+      "pt": "Um restaurante 100% vegano e acessível, misturando comfort food ocidental e asiática, parte de uma rede global construída sobre bondade com pessoas, animais e o planeta."
+    },
+    "what_to_order": {
+      "en": "The Laksa, Seven Seas Delight, a Loving Wrap, and the vegan spaghetti bolognese.",
+      "pt": "O Laksa, o Seven Seas Delight, um Loving Wrap e o espaguete à bolonhesa vegano."
+    },
+    "when": {
+      "en": "Open six days a week in Mount Gravatt, Loving Hut also caters events, functions and large gatherings, and stocks a range of frozen vegan foods to take home.",
+      "pt": "Aberto seis dias por semana em Mount Gravatt, o Loving Hut também atende eventos, festas e grandes grupos, além de vender uma variedade de comidas veganas congeladas para levar para casa."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/H8bfNi50VjVp1nAOf" },
@@ -314,18 +464,33 @@
     "name": "Made With Love Bakery",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Bakery", "Pastries", "Gluten-Free", "Desserts", "Wholesale"],
+    "desc": {
+      "en": "Made With Love Bakery is a 100% vegan, family-owned bakery in Southport, Gold Coast, opened in 2023. Everything is baked fresh on site — croissants, cinnamon scrolls, savoury pies, doughnuts and cakes — with a dedicated gluten-free range, plus wholesale and catering for other businesses and events.",
+      "pt": "O Made With Love Bakery é uma padaria 100% vegana e familiar em Southport, Gold Coast, aberta em 2023. Tudo é assado na hora, no local — croissants, rolinhos de canela, tortas salgadas, donuts e bolos — com uma linha dedicada sem glúten, além de atacado e catering para outros negócios e eventos."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DMbnXNTzhrE/embed/",
     "web": { "site": "https://madewithlovebakery.com.au", "instagram": "https://instagram.com/madewithlovebakerygc", "facebook": "https://facebook.com/madewithlovebakeryGC", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "19 Alicia Street, Southport, QLD 4215",
+    "maps_url": "https://www.google.com/maps/search/19+Alicia+Street+Southport+QLD+4215",
+    "why": {
+      "en": "A family-owned, 100% vegan bakery making everything fresh on site, from savoury pies to croissants and cakes, with gluten-free options too.",
+      "pt": "Uma padaria 100% vegana e familiar, que faz tudo fresco no local, de tortas salgadas a croissants e bolos, com opções sem glúten também."
+    },
+    "what_to_order": {
+      "en": "A 'Ham' and Cheese Croissant, the Curry Pie, a Biscoff Cinnamon Scroll and a Raw Snickers Bar.",
+      "pt": "Um croissant de 'presunto' e queijo, a Curry Pie, um rolinho de canela Biscoff e uma Raw Snickers Bar."
+    },
+    "when": {
+      "en": "Opened in 2023, this family-run bakery has built a loyal following stretching from the Northern Rivers of NSW to the Sunshine Coast, and now supplies other businesses through wholesale.",
+      "pt": "Aberta em 2023, essa padaria familiar construiu um público fiel que vai do Northern Rivers, em NSW, até a Sunshine Coast, e hoje também abastece outros negócios por atacado."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/KBl1r6dcqhN5ZdIRK" },
@@ -334,7 +499,7 @@
       "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/made-with-love-bakery-southport/eVtmxXsGW-2QqKYlddR4fQ" },
       "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/products/made-with-love-cake/ugp_fc9e5420-37ca-41c5-b111-98ab32f6bfbd" },
       "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/made-with-love-bakery-spokane" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/10864371/made-with-love-bakery", "link_only": true }
@@ -345,18 +510,33 @@
     "name": "Neon Ramen",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Ramen", "Japanese", "Dinner", "Lunch", "Bar"],
+    "desc": {
+      "en": "Neon Ramen is a 100% vegan ramen restaurant and bar in Everton Park, set inside a neon-lit, anime and cyberpunk-inspired space with cherry-blossom ceilings and gaming booths. Its plant-based menu spans rich miso and spicy tantanmen ramen with house-made noodles, \"make-your-own\" bowls, and thick shakes, served alongside a full bar.",
+      "pt": "O Neon Ramen é um restaurante e bar de ramen 100% vegano em Everton Park, num espaço com luzes neon e inspiração anime/cyberpunk, teto com cerejeiras e mesas de jogos. Seu cardápio plant-based traz ramen de missô rico e tantanmen picante com macarrão caseiro, bowls \"monte o seu\" e milk-shakes, além de um bar completo."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/C1BbE61xU1P/embed/",
     "web": { "site": "https://neonramen.com.au", "instagram": "https://instagram.com/neonramen_restaurantandbar", "facebook": "https://facebook.com/neonramenrestaurant", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "471 South Pine Road, Everton Park, QLD 4053",
+    "maps_url": "https://www.google.com/maps/search/471+South+Pine+Road+Everton+Park+QLD+4053",
+    "why": {
+      "en": "A 100% vegan ramen bar with an anime and cyberpunk-themed dining room, gaming booths, and generous, bold-flavoured bowls.",
+      "pt": "Um bar de ramen 100% vegano com decoração temática de anime e cyberpunk, mesas de jogos e tigelas generosas e cheias de sabor."
+    },
+    "what_to_order": {
+      "en": "A bowl of tantanmen ramen, the miso ramen, a \"make-your-own\" bowl, and a thick shake.",
+      "pt": "Uma tigela de tantanmen, o ramen de missô, um bowl \"monte o seu\" e um milk-shake."
+    },
+    "when": {
+      "en": "Tucked upstairs from a vegan bakery in Everton Park, Neon Ramen has built a loyal following across Brisbane's northern suburbs for its anime-inspired décor and generous, fully vegan ramen bowls.",
+      "pt": "Instalado em cima de uma padaria vegana em Everton Park, o Neon Ramen construiu um público fiel na zona norte de Brisbane com sua decoração inspirada em anime e tigelas de ramen generosas e totalmente veganas."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/BsfsvJrw2YU2jAtDs" },
@@ -376,18 +556,33 @@
     "name": "Netherworld",
     "vegan": "Friendly",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["Vegan Options", "Bar", "Burgers", "Arcade", "Comfort Food", "Dinner"],
+    "desc": {
+      "en": "Netherworld is a retro-horror-themed arcade bar and diner in Fortitude Valley, packed with 15 pinball machines, 25 arcade cabinets and classic consoles. The diner menu of loaded fries, burgers and wings includes solid vegan options, paired with 24 taps of local beer and cider — plus regular trivia nights, live bands and an attached karaoke venue, Lost Souls.",
+      "pt": "O Netherworld é um bar arcade e diner com temática retrô de terror em Fortitude Valley, cheio de 15 máquinas de pinball, 25 fliperamas e consoles clássicos. O cardápio do diner, com batatas carregadas, hambúrgueres e wings, tem boas opções veganas, acompanhadas de 24 torneiras de cerveja e cidra locais — além de noites de trivia, bandas ao vivo e uma casa de karaokê anexa, a Lost Souls."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/B0KD7NPgO7u/embed/",
     "web": { "site": "https://netherworldarcade.com", "instagram": "https://instagram.com/netherworldarcade", "facebook": "https://facebook.com/netherworldarcade", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "186 Brunswick Street, Fortitude Valley, QLD 4006",
+    "maps_url": "https://www.google.com/maps/search/186+Brunswick+Street+Fortitude+Valley+QLD+4006",
+    "why": {
+      "en": "A retro arcade bar with pinball, classic cabinets and 24 taps of craft beer, serving vegan-friendly burgers, loaded fries and wings.",
+      "pt": "Um bar arcade retrô com pinball, fliperamas clássicos e 24 torneiras de cerveja artesanal, servindo hambúrgueres, batatas carregadas e wings com boas opções veganas."
+    },
+    "what_to_order": {
+      "en": "Loaded fries, a vegan burger and wings, paired with a beer from the 24-tap lineup.",
+      "pt": "Batatas carregadas, um hambúrguer vegano e wings, acompanhados de uma cerveja das 24 torneiras."
+    },
+    "when": {
+      "en": "Open Tuesday to Sunday, Netherworld hosts regular trivia nights, live bands and trash-movie double features, with an attached karaoke bar, Lost Souls, next door.",
+      "pt": "Aberto de terça a domingo, o Netherworld promove noites de trivia, bandas ao vivo e sessões de filmes trash, com uma casa de karaokê anexa, a Lost Souls, logo ao lado."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/mmvml8vV6mr0XqPJ8" },
@@ -407,18 +602,33 @@
     "name": "Piante Pizza",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Pizza", "Food Truck", "Street Food", "Takeaway", "Nut-Free"],
+    "desc": {
+      "en": "Piante Pizza is a 100% plant-based Neapolitan pizza pop-up, run by a Naples-trained pizza chef and found at the Brisbane and Gold Coast Vegan Markets. Every base is hand-stretched and proofed for 24–48 hours before a 90-second blast at 450°C, topped with quality Italian tomatoes, local Queensland produce and nut-free vegan cheese — plus mobile catering for private events.",
+      "pt": "O Piante Pizza é um pop-up de pizza napolitana 100% plant-based, comandado por um pizzaiolo treinado em Nápoles, presente nas Vegan Markets de Brisbane e Gold Coast. Cada massa é esticada à mão e fermentada por 24 a 48 horas antes de assar por 90 segundos a 450°C, coberta com tomates italianos de qualidade, produtos locais de Queensland e queijo vegano sem nozes — além de catering móvel para eventos privados."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DEPUfTPPndc/embed/",
     "web": { "site": "https://piantepizza.com.au", "instagram": "https://instagram.com/piantepizza", "facebook": "https://facebook.com/piantepizza", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "Pop-up — Brisbane & Gold Coast Vegan Markets",
+    "maps_url": "https://piantepizza.com.au",
+    "why": {
+      "en": "Naples-style vegan pizza, hand-stretched and long-proofed, made fresh at markets and events across South East Queensland.",
+      "pt": "Pizza vegana estilo napolitano, esticada à mão e com longa fermentação, feita na hora em feiras e eventos pelo Sudeste de Queensland."
+    },
+    "what_to_order": {
+      "en": "The Margherita, the Marinara, Magic Mushy, or The Queen.",
+      "pt": "A Margherita, a Marinara, a Magic Mushy ou a The Queen."
+    },
+    "when": {
+      "en": "Trained in traditional Neapolitan technique in Naples, Piante's chef now brings vegan pizza to the Brisbane and Gold Coast Vegan Markets, plus private and corporate catering across South East Queensland.",
+      "pt": "Treinado na técnica napolitana tradicional em Nápoles, o pizzaiolo do Piante hoje leva pizza vegana às Vegan Markets de Brisbane e Gold Coast, além de catering para eventos privados e corporativos no Sudeste de Queensland."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/IStQxDRVitNYwIRNr" },
@@ -438,18 +648,33 @@
     "name": "Pippa's Pantry",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Cakes", "Bakery", "Desserts", "Pastries", "Takeaway"],
+    "desc": {
+      "en": "Pippa's Pantry is a 100% vegan cake, cupcake and cookie shop in Camp Hill, run by baker Pippa Blatch since 2017. Every cake, cupcake and treat is baked fresh daily — dairy, egg and gelatine-free — with custom celebration cakes made to order, available for pickup or delivery from the shop's pink storefront on Fridays and Saturday mornings.",
+      "pt": "O Pippa's Pantry é uma loja de bolos, cupcakes e cookies 100% vegana em Camp Hill, comandada pela confeiteira Pippa Blatch desde 2017. Todo bolo, cupcake e docinho é assado fresco todos os dias — sem laticínios, ovos ou gelatina — com bolos personalizados para celebrações feitos sob encomenda, disponíveis para retirada ou entrega na lojinha rosa, às sextas e sábados de manhã."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/Dc0FevVy_Vn/embed/",
     "web": { "site": "https://pippaspantryonline.com", "instagram": "https://instagram.com/pippas.pantry", "facebook": "https://facebook.com/pippaspantry1", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "565 Old Cleveland Road, Camp Hill, QLD 4152",
+    "maps_url": "https://www.google.com/maps/search/565+Old+Cleveland+Road+Camp+Hill+QLD+4152",
+    "why": {
+      "en": "A 100% vegan cake shop specialising in custom celebration cakes, baked fresh daily by a vegan baker of over 12 years.",
+      "pt": "Uma loja de bolos 100% vegana especializada em bolos personalizados para celebrações, feitos frescos todos os dias por uma confeiteira vegana há mais de 12 anos."
+    },
+    "what_to_order": {
+      "en": "A custom celebration cake, cupcakes, and a box of fresh cookies from the weekend bakery counter.",
+      "pt": "Um bolo personalizado de celebração, cupcakes e uma caixa de cookies fresquinhos do balcão de fim de semana."
+    },
+    "when": {
+      "en": "Pippa Blatch started baking at the end of 2017 and went full-time within months, building Pippa's Pantry into a dedicated vegan cake shop in Camp Hill, open for pickup and custom orders Fridays and Saturdays.",
+      "pt": "Pippa Blatch começou a confeitar no fim de 2017 e se tornou empreendedora em tempo integral poucos meses depois, transformando o Pippa's Pantry numa loja de bolos vegana dedicada em Camp Hill, aberta para retirada e encomendas personalizadas às sextas e sábados."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/gd0K5iWDcXQ0o0xPI" },
@@ -520,18 +745,33 @@
     "name": "The Plant Bakery",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Wholesale", "Gluten-Free", "Desserts", "Bakery", "Pastries"],
+    "desc": {
+      "en": "The Plant Bakery is a Brisbane-based wholesale producer of vegan and gluten-free desserts, supplying cafés, restaurants and grocers across Australia under two ranges, Plant Baked and Sweet Nectar. Built on more than a decade of recipe development, it has no public storefront — its treats are sold only through stockists, including Brisbane's own Dicki's in New Farm.",
+      "pt": "O The Plant Bakery é um produtor vegano e sem glúten de sobremesas por atacado, sediado em Brisbane, que abastece cafés, restaurantes e mercados por toda a Austrália sob duas marcas, Plant Baked e Sweet Nectar. Construído com mais de uma década de desenvolvimento de receitas, não tem loja física ao público — seus produtos são vendidos apenas através de revendedores, incluindo o próprio Dicki's, aqui de Brisbane, em New Farm."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/CcZdInSgRo_/embed/",
     "web": { "site": "https://theplantbakery.com.au", "instagram": "https://instagram.com/plantbaked", "facebook": "https://facebook.com/PlantBakedAus", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "Wholesale only — no public storefront",
+    "maps_url": "https://plantbaked.com.au/where-to-buy/",
+    "why": {
+      "en": "A wholesale vegan and gluten-free dessert maker with over a decade of recipe development, supplying cafés and restaurants rather than selling direct to the public.",
+      "pt": "Um produtor de sobremesas veganas e sem glúten por atacado, com mais de uma década de desenvolvimento de receitas, que abastece cafés e restaurantes em vez de vender direto ao público."
+    },
+    "what_to_order": {
+      "en": "Look out for Plant Baked treats on the dessert counter at stockists like Dicki's in New Farm — biscuit-base slices, creamy layered desserts and caramel treats.",
+      "pt": "Procure pelos docinhos da Plant Baked no balcão de sobremesas de revendedores como o Dicki's, em New Farm — fatias com base de biscoito, sobremesas em camadas cremosas e doces de caramelo."
+    },
+    "when": {
+      "en": "Built over more than a decade of recipe testing, The Plant Bakery now supplies its Plant Baked and Sweet Nectar ranges to cafés and restaurants across Australia — including fellow Brisbane favourite Dicki's.",
+      "pt": "Construído com mais de uma década de testes de receitas, o The Plant Bakery hoje abastece suas linhas Plant Baked e Sweet Nectar para cafés e restaurantes por toda a Austrália — incluindo o queridinho de Brisbane, o Dicki's."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/p5KVAQdNoEXdyzBXB" },
@@ -551,18 +791,33 @@
     "name": "Tea Master",
     "vegan": "Friendly",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["Vegan-Friendly", "Asian", "Dinner", "Chinese", "Lunch", "Gluten-Free"],
+    "desc": {
+      "en": "Tea Master is one of Brisbane's original vegetarian restaurants, in Fortitude Valley. Its extensive Taiwanese and Chinese-style menu spans bento meal sets, stir-fries, noodle soups and hot pots, built almost entirely around mock meats — from veggie roast duck to veggie chicken — alongside handmade dumplings, vegan jerky and bubble tea.",
+      "pt": "O Tea Master é um dos restaurantes vegetarianos mais antigos de Brisbane, em Fortitude Valley. Seu extenso cardápio ao estilo taiwanês e chinês traz marmitas (bento), refogados, sopas de macarrão e hot pots, construídos quase inteiramente com substitutos de carne — de pato assado vegetariano a frango vegetariano — além de dumplings feitos à mão, jerky vegano e bubble tea."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/C_UnYDIxuxo/embed/",
     "web": { "site": "", "instagram": "https://instagram.com/tea_master_vegetarian_cafe", "facebook": "https://www.facebook.com/TeaMasterVegetarianCafeRestaurant/", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "115 Wickham Street, Shop 8, Fortitude Valley, QLD 4006",
+    "maps_url": "https://www.google.com/maps/search/115+Wickham+Street+Shop+8+Fortitude+Valley+QLD+4006",
+    "why": {
+      "en": "One of Brisbane's longest-running vegetarian restaurants, with an enormous Taiwanese and Chinese-style menu built around mock meats.",
+      "pt": "Um dos restaurantes vegetarianos mais antigos e duradouros de Brisbane, com um cardápio enorme ao estilo taiwanês e chinês, construído em torno de substitutos de carne."
+    },
+    "what_to_order": {
+      "en": "The Vegetarian Roasted Duck Noodle, a Laksa Noodle Soup, Handmade Dumplings and a bubble tea.",
+      "pt": "O Vegetarian Roasted Duck Noodle, uma Laksa Noodle Soup, dumplings feitos à mão e um bubble tea."
+    },
+    "when": {
+      "en": "Long established as one of Brisbane's original vegetarian restaurants, Tea Master has built a loyal following in Fortitude Valley for its huge mock-meat menu and bubble tea.",
+      "pt": "Estabelecido há muito tempo como um dos restaurantes vegetarianos originais de Brisbane, o Tea Master construiu um público fiel em Fortitude Valley com seu enorme cardápio de substitutos de carne e bubble tea."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/RDOMMXHh4NjcLRj6U" },
@@ -581,19 +836,34 @@
     "slug": "sweet-and-green",
     "name": "Sweet & Green",
     "vegan": "Friendly",
-    "badge": "Closed",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Bakery", "Pastries", "Desserts", "Street Food", "Takeaway"],
+    "desc": {
+      "en": "Sweet & Green is a plant-based patisserie specialising in French-style pastries, known for its croissants, cookies and savoury focaccia and pizza slices. After closing its South Brisbane storefront, it now operates as a market stall, found at the New Farm Market on Saturdays and the Nundah Market on Sundays.",
+      "pt": "O Sweet & Green é uma confeitaria plant-based especializada em doces ao estilo francês, conhecida por croissants, cookies e fatias salgadas de focaccia e pizza. Depois de fechar sua loja física em South Brisbane, hoje funciona como uma barraca itinerante, presente na New Farm Market aos sábados e na Nundah Market aos domingos."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DWrzRwOk-Yt/embed/",
     "web": { "site": "https://www.sweetandgreen.com.au", "instagram": "https://www.instagram.com/sweetandgreenpatisserie", "facebook": "https://www.facebook.com/sweetandgreenpatisserie/", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "Market stall — New Farm Market (Sat), Nundah Market (Sun)",
+    "maps_url": "https://www.instagram.com/sweetandgreenpatisserie/",
+    "why": {
+      "en": "A plant-based French-style patisserie known for its croissants and pastries, now found at Brisbane's weekend markets rather than a fixed storefront.",
+      "pt": "Uma confeitaria plant-based ao estilo francês, conhecida por croissants e doces, hoje presente nas feiras de fim de semana de Brisbane em vez de uma loja fixa."
+    },
+    "what_to_order": {
+      "en": "A croissant, a box of cookies, and a slice of savoury focaccia or pizza.",
+      "pt": "Um croissant, uma caixa de cookies e uma fatia de focaccia ou pizza salgada."
+    },
+    "when": {
+      "en": "After closing its South Brisbane shopfront, Sweet & Green now sells its pastries itinerantly at the New Farm Market on Saturdays and the Nundah Market on Sundays.",
+      "pt": "Depois de fechar sua loja física em South Brisbane, o Sweet & Green hoje vende seus doces de forma itinerante na New Farm Market aos sábados e na Nundah Market aos domingos."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/Wl7IvT41hKe6LdIMc" },
@@ -613,18 +883,33 @@
     "name": "U-Tong",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Thai", "Lunch", "Dinner", "Asian", "Comfort Food"],
+    "desc": {
+      "en": "U-Tong is a 100% vegan Thai restaurant in Clayfield, serving an extensive menu of curries, stir-fries, fried rice and noodles built around mock meats and seafood — think Crispy Mock Honey Chicken, Popcorn Mock Chicken and duck-style buns — alongside classics like Pad See Ew and Pad Thai.",
+      "pt": "O U-Tong é um restaurante tailandês 100% vegano em Clayfield, com um cardápio extenso de curries, salteados, arroz frito e macarrão construídos em torno de substitutos de carne e frutos do mar — como o Crispy Mock Honey Chicken, o Popcorn Mock Chicken e buns estilo pato — além de clássicos como Pad See Ew e Pad Thai."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/CeXWlEJIjcg/embed/",
     "web": { "site": "https://utongthairestaurant.com.au", "instagram": "https://instagram.com/utong.thaivegan", "facebook": "https://facebook.com/UTongThaiVegan", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "708 Sandgate Road, Clayfield, QLD 4011",
+    "maps_url": "https://www.google.com/maps/search/708+Sandgate+Road+Clayfield+QLD+4011",
+    "why": {
+      "en": "A 100% vegan Thai restaurant known for its huge range of mock-meat dishes, from crispy honey \"chicken\" to duck-style buns.",
+      "pt": "Um restaurante tailandês 100% vegano conhecido por sua enorme variedade de pratos com substitutos de carne, do \"frango\" crocante ao mel a buns estilo pato."
+    },
+    "what_to_order": {
+      "en": "The Crispy Mock Honey Chicken, Pad See Ew, Popcorn Mock Chicken, and a serve of Duck Buns.",
+      "pt": "O Crispy Mock Honey Chicken, o Pad See Ew, o Popcorn Mock Chicken e uma porção de Duck Buns."
+    },
+    "when": {
+      "en": "Open most days for lunch and dinner (closed Tuesdays), U-Tong has built a loyal following in Clayfield for its huge range of mock-meat Thai dishes.",
+      "pt": "Aberto na maioria dos dias para almoço e jantar (fechado às terças), o U-Tong construiu um público fiel em Clayfield com sua enorme variedade de pratos tailandeses à base de substitutos de carne."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/f3C6nfmMpQ7d4dbWQ" },
@@ -644,18 +929,33 @@
     "name": "Vega Cafe",
     "vegan": "Friendly",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["Vegan-Friendly", "Café", "Thai", "Brunch", "Gluten-Free", "Dinner"],
+    "desc": {
+      "en": "Vega Cafe is a plant-based café in Spring Hill serving Thai-inspired comfort food with a creative twist — think loaded rice noodles, stuffed murtabah and vegan omelettes — plus desserts and coffee, with dairy milk available on request. Open daily for breakfast and lunch, and Wednesday to Friday for dinner.",
+      "pt": "O Vega Cafe é um café plant-based em Spring Hill com comida reconfortante de inspiração tailandesa e um toque criativo — pense em macarrão de arroz recheado, murtabah recheado e omeletes veganas — além de sobremesas e café, com opção de leite de vaca sob pedido. Aberto todos os dias para café da manhã e almoço, e de quarta a sexta para jantar."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DcBilf1OUcQ/embed/",
     "web": { "site": "https://vegacafe.com.au", "instagram": "https://instagram.com/vega_cafe_", "facebook": "https://facebook.com/vegacafebrisbane", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "1/448 Boundary Street, Spring Hill, QLD 4000",
+    "maps_url": "https://www.google.com/maps/search/1+448+Boundary+Street+Spring+Hill+QLD+4000",
+    "why": {
+      "en": "A plant-based café in Spring Hill blending Thai flavours with creative brunch and dinner dishes, with plenty of gluten-free options too.",
+      "pt": "Um café plant-based em Spring Hill que mistura sabores tailandeses com pratos criativos de brunch e jantar, com bastante opções sem glúten também."
+    },
+    "what_to_order": {
+      "en": "The First-Kiss rice noodles, a Croffle Stack, Murtabah, and the Vega Wonder for dessert.",
+      "pt": "O macarrão First-Kiss, um Croffle Stack, o Murtabah e o Vega Wonder de sobremesa."
+    },
+    "when": {
+      "en": "Open every day for breakfast and lunch, and Wednesday to Friday for dinner, Vega Cafe also hosts monthly board game nights and weekday lunch specials for its Spring Hill regulars.",
+      "pt": "Aberto todos os dias para café da manhã e almoço, e de quarta a sexta para jantar, o Vega Cafe também promove noites mensais de jogos de tabuleiro e especiais de almoço durante a semana para os frequentadores de Spring Hill."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/j90mdVQvOhR2j8Fbh" },
@@ -675,18 +975,33 @@
     "name": "Vegan Restaurant",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
-    "web": { "site": "https://veganrestaurant-online.com.au", "instagram": "https://instagram.com/westendveganhouse", "facebook": "https://facebook.com/westendveganrestaurant", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "tags": ["100% Vegan", "Chinese", "Takeaway", "Dinner", "Lunch", "Comfort Food"],
+    "desc": {
+      "en": "Vegan Restaurant is a 100% vegan Chinese takeaway in West End, serving mock-meat classics like honey 'chicken', sweet & sour 'pork' and stuffed BBQ buns alongside combination fried rice. Open Wednesday to Sunday for lunch and dinner, with online ordering for pickup.",
+      "pt": "O Vegan Restaurant é um restaurante chinês 100% vegano para levar, em West End, com clássicos à base de substitutos de carne como \"frango\" ao mel, \"porco\" agridoce e pães BBQ recheados, além de arroz combinado. Aberto de quarta a domingo para almoço e jantar, com pedidos online para retirada."
+    },
+    "instagram_reel": "https://www.instagram.com/p/DGAawlNREGL/embed/",
+    "web": { "site": "https://veganrestaurant-online.com.au", "instagram": "https://www.instagram.com/veganrestaurantwestend/", "facebook": "https://facebook.com/westendveganrestaurant", "tiktok": "" },
+    "address": "209 Boundary Street, West End, QLD 4101",
+    "maps_url": "https://www.google.com/maps/search/209+Boundary+Street+West+End+QLD+4101",
+    "why": {
+      "en": "A 100% vegan Chinese takeaway in West End serving mock-meat comfort food classics, from honey \"chicken\" to sweet & sour \"pork\".",
+      "pt": "Um restaurante chinês 100% vegano para levar, em West End, com clássicos de comfort food à base de substitutos de carne, do \"frango\" ao mel ao \"porco\" agridoce."
+    },
+    "what_to_order": {
+      "en": "The V. Honey Chicken, Combination Fried Rice, Stuffed BBQ Buns and V. Sweet & Sour Pork.",
+      "pt": "O V. Honey Chicken, o Combination Fried Rice, os Stuffed BBQ Buns e o V. Sweet & Sour Pork."
+    },
+    "when": {
+      "en": "Open Wednesday to Sunday (closed Mondays and Tuesdays), Vegan Restaurant serves West End's vegan Chinese-food cravings with online ordering for pickup.",
+      "pt": "Aberto de quarta a domingo (fechado às segundas e terças), o Vegan Restaurant atende a vontade de comida chinesa vegana em West End, com pedidos online para retirada."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/9dXC3pyUhWwputC2P" },
@@ -706,18 +1021,33 @@
     "name": "Veganyumm",
     "vegan": "Yes",
     "badge": "",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
-    "web": { "site": "https://veganyummbakehouse.com.au", "instagram": "https://instagram.com/veganyumm", "facebook": "https://facebook.com/@Veganyumm", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "tags": ["100% Vegan", "Bakery", "Cakes", "Desserts", "Gluten-Free", "Takeaway"],
+    "desc": {
+      "en": "Veganyumm is Brisbane's first and only 100% vegan bakery, a family-run bakehouse in Everton Park using their own family recipes. The menu spans custom celebration and wedding cakes, cupcakes, brownies, cookies, pies and sausage rolls, with gluten-free, dairy-free and allergy-friendly options — order online for pickup or delivery.",
+      "pt": "O Veganyumm é a primeira e única padaria 100% vegana de Brisbane, uma padaria familiar em Everton Park que usa receitas da própria família. O cardápio traz bolos personalizados para celebrações e casamentos, cupcakes, brownies, cookies, tortas salgadas e sausage rolls, com opções sem glúten, sem laticínios e amigáveis a alergias — peça online para retirada ou entrega."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DFFHCQgRKub/embed/",
+    "web": { "site": "https://veganyummbakehouse.com.au", "instagram": "https://instagram.com/veganyumm", "facebook": "https://facebook.com/Veganyumm", "tiktok": "" },
+    "address": "Shop 3, 487 South Pine Road, Everton Park, QLD 4053",
+    "maps_url": "https://www.google.com/maps/search/Shop+3+487+South+Pine+Road+Everton+Park+QLD+4053",
+    "why": {
+      "en": "Brisbane's first and only 100% vegan bakery, family-run and known for custom cakes and gluten-free treats.",
+      "pt": "A primeira e única padaria 100% vegana de Brisbane, familiar e conhecida por bolos personalizados e opções sem glúten."
+    },
+    "what_to_order": {
+      "en": "A custom celebration cake, the Cherry Ripe brownie, a sausage roll, and a box of cookies.",
+      "pt": "Um bolo personalizado de celebração, o brownie Cherry Ripe, um sausage roll e uma caixa de cookies."
+    },
+    "when": {
+      "en": "Open seven days a week from 8am to 9pm, Veganyumm has built a loyal following in Everton Park for its family-recipe cakes and gluten-free treats.",
+      "pt": "Aberto sete dias por semana das 8h às 21h, o Veganyumm construiu um público fiel em Everton Park com seus bolos de receita de família e opções sem glúten."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/CWyubQXGfXKBKchw2" },
@@ -783,22 +1113,37 @@
     "name": "Yavanna",
     "vegan": "Yes",
     "badge": "Closed",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
-    "web": { "site": "https://yavanna.com.au", "instagram": "https://instagram.com/yavannavbrisbane", "facebook": "https://facebook.com/Grassfedplantbased", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "tags": ["100% Vegan", "Bar", "Dinner", "Burgers", "Comfort Food", "Takeaway"],
+    "desc": {
+      "en": "Yavanna was a 100% plant-based restaurant and bar in Paddington, known for BBQ-style \"ribs\", flame-grilled \"chicken\", burgers and burritos, alongside craft beer and wine. The venue has since closed.",
+      "pt": "O Yavanna foi um restaurante e bar 100% plant-based em Paddington, conhecido por \"costelinha\" estilo BBQ, \"frango\" grelhado na chama, hambúrgueres e burritos, além de cervejas artesanais e vinhos. O local encerrou as atividades."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/C5jyjyaSflx/embed/",
+    "web": { "site": "https://yavanna.com.au", "instagram": "https://instagram.com/yavannavbrisbane", "facebook": "", "tiktok": "" },
+    "address": "9/2 Latrobe Terrace, Paddington, QLD 4064",
+    "maps_url": "https://www.google.com/maps/search/9+2+Latrobe+Terrace+Paddington+QLD+4064",
+    "why": {
+      "en": "A much-loved 100% plant-based restaurant and bar in Paddington — now closed, but remembered for its BBQ-style comfort food.",
+      "pt": "Um restaurante e bar 100% plant-based muito querido em Paddington — hoje encerrado, mas lembrado por sua comfort food estilo BBQ."
+    },
+    "what_to_order": {
+      "en": "When it was open, regulars loved the BBQ \"ribs\", a flame-grilled \"chicken\" burger, and a burrito, paired with a craft beer.",
+      "pt": "Quando estava aberto, os frequentadores adoravam a \"costelinha\" BBQ, o hambúrguer de \"frango\" grelhado e um burrito, com uma cerveja artesanal."
+    },
+    "when": {
+      "en": "Yavanna operated in Paddington as one of Brisbane's plant-based dining destinations before permanently closing its doors.",
+      "pt": "O Yavanna funcionou em Paddington como um dos destinos plant-based de Brisbane, até encerrar suas atividades de forma permanente."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/if8xkmAm9xvi7qmOR" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/Grassfedplantbased/reviews" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "" },
       "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/yavanna-paddington-123682" },
       "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/yavanna/6orC-XGdTPmmyCcpWlG6wA" },
       "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/yavanna-paddington-950085/28504553/" },
@@ -814,18 +1159,33 @@
     "name": "You Came Again",
     "vegan": "Yes",
     "badge": "Closed",
-    "tags": [],
-    "desc": { "en": "", "pt": "" },
-    "instagram_reel": "",
+    "tags": ["100% Vegan", "Tapas", "Bar", "Dinner", "Comfort Food", "Brunch"],
+    "desc": {
+      "en": "You Came Again was Brisbane's first vegan tapas bar, in West End, known for small plates like cheese platters and patatas bravas, paired with cocktails and wine. The venue has since permanently closed.",
+      "pt": "O You Came Again foi o primeiro bar de tapas vegano de Brisbane, em West End, conhecido por porções pequenas como tábuas de queijo e patatas bravas, com coquetéis e vinhos. O local encerrou as atividades de forma permanente."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/COuRxOIAzvu/embed/",
     "web": { "site": "https://youcameagain.com.au", "instagram": "https://instagram.com/youcameagain", "facebook": "https://facebook.com/youcameagain", "tiktok": "" },
-    "address": "",
-    "maps_url": "",
-    "why": { "en": "", "pt": "" },
-    "what_to_order": { "en": "", "pt": "" },
-    "when": { "en": "", "pt": "" },
-    "words_from_owner": { "en": "", "pt": "" },
-    "last_updated": "",
-    "next_update": "",
+    "address": "245 Boundary Street, South Brisbane (West End), QLD 4101",
+    "maps_url": "https://www.google.com/maps/search/245+Boundary+Street+South+Brisbane+QLD+4101",
+    "why": {
+      "en": "Brisbane's first vegan tapas bar, in West End — now permanently closed, but remembered for its cheese platters and patatas bravas.",
+      "pt": "O primeiro bar de tapas vegano de Brisbane, em West End — hoje encerrado de forma permanente, mas lembrado por suas tábuas de queijo e patatas bravas."
+    },
+    "what_to_order": {
+      "en": "When it was open, regulars loved the cheese platter, patatas bravas, and a glass of wine or a cocktail.",
+      "pt": "Quando estava aberto, os frequentadores adoravam a tábua de queijo, as patatas bravas e uma taça de vinho ou coquetel."
+    },
+    "when": {
+      "en": "You Came Again operated in West End as Brisbane's first vegan tapas bar before permanently closing its doors.",
+      "pt": "O You Came Again funcionou em West End como o primeiro bar de tapas vegano de Brisbane, até encerrar suas atividades de forma permanente."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "18/09/2026",
+    "next_update": "18/09/2027",
     "final_rating": 5,
     "reviews": {
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/7J5KjziukuuSgHdnh" },

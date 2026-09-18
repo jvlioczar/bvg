@@ -8,18 +8,20 @@ const SITE_NAV_LINKS = [
   { href: 'people.html', label: 'People' },
   { href: 'vegan-kit.html', label: 'Vegan Kit' },
   { href: 'vegan-map.html', label: 'Vegan Map' },
+  { href: 'vegan-finder.html', label: 'Vegan Finder' },
   { href: 'hire-a-vegan.html', label: 'Hire a Vegan' },
 ];
 
 const SITE_INSTAGRAM_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>';
 
-// Same 6 pages as the hero index on the home page, same numbering/labels.
+// Same pages as the hero index on the home page, same numbering/labels.
 const SITE_FOOTER_NAV = [
   { href: 'food.html', label: 'Eat & Drink' },
   { href: 'community.html', label: 'Community' },
   { href: 'people.html', label: 'People' },
   { href: 'vegan-kit.html', label: 'Vegan Kit' },
   { href: 'vegan-map.html', label: 'Vegan Map' },
+  { href: 'vegan-finder.html', label: 'Vegan Finder' },
   { href: 'hire-a-vegan.html', label: 'Hire a Vegan' },
 ];
 
@@ -28,6 +30,7 @@ const SITE_VISIT_COUNTER_URL = 'https://api.counterapi.dev/v2/jvlioczars-team-55
 
 function renderSiteHeader(activeHref) {
   const aboutActive = activeHref === 'about.html' ? ' class="active"' : '';
+  const contributeActive = activeHref === 'contribute.html' ? ' class="active"' : '';
   const navLink = (l) => `<a href="${l.href}"${l.href === activeHref ? ' class="active"' : ''}>${l.label}</a>`;
   const centerLinks = SITE_NAV_LINKS.map(navLink).join('\n      ');
   const mobileLinks = SITE_NAV_LINKS.map(navLink).join('\n    ');
@@ -51,7 +54,7 @@ function renderSiteHeader(activeHref) {
 
   return `<nav class="nav" id="navbar">
     <a href="index.html" class="nav-logo">
-      <svg class="logo-pin" width="18" height="18" viewBox="0 0 24 28" fill="none"><path d="M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z" fill="var(--leaf)"/></svg>
+      <img class="logo-pin" src="icon-bvg.svg" width="18" height="18" alt="BVG">
       ${logoInner}
     </a>
     <div class="nav-center">
@@ -59,6 +62,7 @@ function renderSiteHeader(activeHref) {
     </div>
     <div class="nav-right">
       <div class="nav-meta">
+        <a href="contribute.html"${contributeActive}>Contribute</a>
         <a href="about.html"${aboutActive}>About</a>
         <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;">${SITE_INSTAGRAM_SVG}</a>
       </div>
@@ -70,6 +74,7 @@ function renderSiteHeader(activeHref) {
   <div class="mobile-menu" id="mobileMenu">
     ${mobileLinks}
     <div class="mobile-menu-sep"></div>
+    <a href="contribute.html"${contributeActive}>Contribute</a>
     <a href="about.html"${aboutActive}>About</a>
     <a href="https://instagram.com/brisbveganguide" target="_blank" rel="noopener">${SITE_INSTAGRAM_SVG} Instagram</a>
   </div>`;

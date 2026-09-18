@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="common.css">
+<link rel="icon" type="image/svg+xml" href="icon-bvg.svg">
 <script src="partials.js"></script>
 <style>
   a, .card-btn, .filter-btn {
@@ -128,7 +129,18 @@
     display: flex; align-items: flex-start; justify-content: space-between;
     margin-bottom: 6px;
   }
-  .card-emoji { font-size: 26px; }
+  .card-avatar {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--leaf-light), var(--teal));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cream);
+    font-family: 'Fraunces', serif;
+    font-size: 16px; font-weight: 700;
+    overflow: hidden; flex-shrink: 0;
+    border: 2px solid rgba(245, 240, 232, 0.6);
+    box-shadow: 0 2px 8px rgba(26, 58, 42, 0.08);
+  }
+  .card-avatar img { width: 100%; height: 100%; object-fit: cover; }
   .card-category-badge {
     padding: 3px 10px;
     border-radius: 20px;
@@ -188,7 +200,6 @@
   .no-results {
     text-align: center; padding: 60px 20px; color: var(--sage);
   }
-  .no-results-emoji { font-size: 48px; margin-bottom: 12px; }
   .no-results-text {
     font-family: 'Fraunces', serif;
     font-size: 20px; font-weight: 700; color: var(--forest);
@@ -221,17 +232,17 @@
     <h1 class="page-title" data-i18n="page.title">Community</h1>
     <p class="page-tagline" data-i18n="page.tagline">Groups and organisations creating change</p>
     <p class="page-desc" data-i18n="page.desc">Groups, sanctuaries, communities, and organisations in Brisbane working towards a kinder, more compassionate world for animals and people.</p>
-    <div class="page-count"><span id="groupCount">13</span> <span data-i18n="page.groups">groups</span></div>
+    <div class="page-count"><span id="groupCount">17</span> <span data-i18n="page.groups">groups</span></div>
   </div>
 
   <!-- FILTERS -->
   <div class="filters-bar">
     <span class="filters-label" data-i18n="filters.label">Sort & Filter</span>
     <button class="filter-btn active" data-filter="all" onclick="setFilter('all')" data-i18n="filter.all">A → Z</button>
-    <button class="filter-btn" data-filter="Activism" onclick="setFilter('Activism')">✊ Activism</button>
-    <button class="filter-btn" data-filter="Guide" onclick="setFilter('Guide')">📖 Guide</button>
-    <button class="filter-btn" data-filter="Meeting" onclick="setFilter('Meeting')">🤝 Meeting</button>
-    <button class="filter-btn" data-filter="Sanctuary" onclick="setFilter('Sanctuary')">🐾 Sanctuary</button>
+    <button class="filter-btn" data-filter="Activism" onclick="setFilter('Activism')">Activism</button>
+    <button class="filter-btn" data-filter="Guide" onclick="setFilter('Guide')">Guide</button>
+    <button class="filter-btn" data-filter="Meeting" onclick="setFilter('Meeting')">Meeting</button>
+    <button class="filter-btn" data-filter="Sanctuary" onclick="setFilter('Sanctuary')">Sanctuary</button>
   </div>
 
   <!-- RESULTS -->
@@ -241,7 +252,6 @@
   <div class="cards-section">
     <div class="cards-grid" id="cardsGrid"></div>
     <div class="no-results" id="noResults" style="display:none;">
-      <div class="no-results-emoji">🌱</div>
       <div class="no-results-text" data-i18n="no.title">No groups found</div>
       <div class="no-results-sub" data-i18n="no.sub">Try adjusting your filters</div>
     </div>
@@ -257,170 +267,222 @@ const groups = [
     name: "Action for Animals Community",
     category: "Activism",
     type: { en: "Activism · Community", pt: "Ativismo · Comunidade" },
-    emoji: "✊",
+    initials: "AC",
     location: "Brisbane, QLD",
     desc: {
       en: "Grassroots animal rights community organising peaceful protests, outreach events, and awareness campaigns across Brisbane.",
       pt: "Comunidade de base pelos direitos animais organizando protestos pacíficos, eventos de divulgação e campanhas de conscientização em Brisbane."
     },
     tags: ["Activism", "Animal Rights", "Community", "Outreach"],
-    url: "#"
+    url: "https://a4acommunity.org"
   },
   {
     name: "Brisbane Animal Save",
     category: "Activism",
     type: { en: "Activism · Vigils", pt: "Ativismo · Vigílias" },
-    emoji: "🕯️",
+    initials: "BS",
     location: "Brisbane, QLD",
     desc: {
       en: "Part of The Save Movement — bearing witness at slaughterhouses, hosting vigils, and raising awareness through peaceful direct action.",
       pt: "Parte do The Save Movement — testemunhando em abatedouros, realizando vigílias e conscientizando por meio de ação direta pacífica."
     },
     tags: ["Activism", "Vigils", "Save Movement", "Direct Action"],
-    url: "#"
+    url: "https://animalkind.org.au/campaigns/join-brisbane-animal-save"
   },
   {
-    name: "Brisbane Vegan Guide",
-    category: "Guide",
-    type: { en: "Guide · Directory", pt: "Guia · Diretório" },
-    emoji: "🌿",
+    name: "Brisbane Outdoor Vegan Adventurers",
+    category: "Meeting",
+    type: { en: "Social · Outdoors", pt: "Social · Ar Livre" },
+    initials: "BA",
     location: "Brisbane, QLD",
     desc: {
-      en: "A comprehensive bilingual guide to vegan living in Brisbane and surrounds — restaurants, groups, people, and resources all in one place.",
-      pt: "Um guia bilíngue completo para a vida vegana em Brisbane e região — restaurantes, grupos, pessoas e recursos em um só lugar."
+      en: "A Facebook community for vegans who love getting outdoors together — bushwalks, hikes, and outdoor meetups around Brisbane and beyond.",
+      pt: "Uma comunidade no Facebook para veganos que adoram atividades ao ar livre juntos — trilhas, caminhadas e encontros ao ar livre por Brisbane e região."
     },
-    tags: ["Guide", "Directory", "Bilingual", "Resource"],
-    url: "#"
+    tags: ["Outdoors", "Hiking", "Social", "Community"],
+    url: "https://www.facebook.com/groups/996272104387814"
+  },
+  {
+    name: "Brisbane Veg Share Houses",
+    category: "Meeting",
+    type: { en: "Community · Housing", pt: "Comunidade · Moradia" },
+    initials: "BH",
+    location: "Brisbane, QLD",
+    desc: {
+      en: "A Facebook group connecting vegetarians and vegans in Brisbane looking for share houses or housemates who share their values.",
+      pt: "Um grupo no Facebook que conecta vegetarianos e veganos em Brisbane em busca de casas compartilhadas ou colegas de casa que compartilhem os mesmos valores."
+    },
+    tags: ["Housing", "Share House", "Community"],
+    url: "https://www.facebook.com/groups/311901178996928"
   },
   {
     name: "Brisbane Vegan Expo",
     category: "Meeting",
     type: { en: "Event · Expo", pt: "Evento · Expo" },
-    emoji: "🎪",
+    initials: "BE",
     location: "Brisbane, QLD",
     desc: {
       en: "Annual vegan expo showcasing plant-based food vendors, ethical brands, speakers, cooking demos, and community stalls.",
       pt: "Expo vegana anual com vendedores de comida plant-based, marcas éticas, palestrantes, demos de culinária e barracas comunitárias."
     },
     tags: ["Meeting", "Expo", "Annual Event", "Food"],
-    url: "#"
+    url: "https://www.instagram.com/brisbaneveganexpo"
+  },
+  {
+    name: "Brisbane Vegan Guide",
+    category: "Guide",
+    type: { en: "Guide · Directory", pt: "Guia · Diretório" },
+    initials: "BG",
+    location: "Brisbane, QLD",
+    desc: {
+      en: "A comprehensive bilingual guide to vegan living in Brisbane and surrounds — restaurants, groups, people, and resources all in one place.",
+      pt: "Um guia bilíngue completo para a vida vegana em Brisbane e região — restaurantes, grupos, pessoas e recursos em um só lugar."
+    },
+    tags: ["Guide", "Directory", "Bilingual", "Resource"],
+    url: "https://brisbaneveganguide.com"
   },
   {
     name: "Brisbane Vegan Markets",
     category: "Meeting",
     type: { en: "Market · Community", pt: "Feira · Comunidade" },
-    emoji: "🛒",
+    initials: "BM",
     location: "Brisbane, QLD",
     desc: {
       en: "Regular vegan markets bringing together local vendors, food trucks, artisans, and community groups in a family-friendly atmosphere.",
       pt: "Feiras veganas regulares reunindo vendedores locais, food trucks, artesãos e grupos comunitários em um ambiente familiar."
     },
     tags: ["Meeting", "Market", "Food", "Community"],
-    url: "#"
+    url: "https://www.qldveganmarkets.com.au/vegan-markets/brisbane-vegan-markets"
+  },
+  {
+    name: "Brisbane Vegan Meetup",
+    category: "Meeting",
+    type: { en: "Meetup · Community", pt: "Encontro · Comunidade" },
+    initials: "BM",
+    location: "Brisbane, QLD",
+    desc: {
+      en: "A long-running vegan meetup group in Brisbane — organising regular dinners, potlucks, and social events for vegans to connect over food.",
+      pt: "Um grupo de encontros veganos de longa data em Brisbane — organizando jantares regulares, potlucks e eventos sociais para veganos se conectarem através da comida."
+    },
+    tags: ["Meetup", "Social", "Food", "Community"],
+    url: "https://www.instagram.com/brisveganmeetup"
   },
   {
     name: "Brisbane Vegan Run Club",
     category: "Meeting",
     type: { en: "Sports · Community", pt: "Esportes · Comunidade" },
-    emoji: "🏃",
+    initials: "BC",
     location: "Brisbane, QLD",
     desc: {
       en: "A social running group for vegans and vegan-curious — weekly runs across Brisbane followed by plant-based brunch or coffee.",
       pt: "Grupo social de corrida para veganos e curiosos — corridas semanais por Brisbane seguidas de brunch ou café plant-based."
     },
     tags: ["Meeting", "Sports", "Running", "Social"],
-    url: "#"
+    url: "https://www.instagram.com/brisbaneveganrunclub"
   },
   {
-    name: "Farm Animal Rescue",
-    category: "Sanctuary",
-    type: { en: "Sanctuary · Rescue", pt: "Santuário · Resgate" },
-    emoji: "🐄",
-    location: "Dayboro, QLD",
-    desc: {
-      en: "Sanctuary for rescued farm animals — offering sanctuary tours, volunteering, sponsorship programs, and educational experiences.",
-      pt: "Santuário para animais de fazenda resgatados — oferecendo tours, voluntariado, programas de apadrinhamento e experiências educacionais."
-    },
-    tags: ["Sanctuary", "Rescue", "Tours", "Volunteering"],
-    url: "#"
-  },
-  {
-    name: "I Travel For Vegan Food",
-    category: "Guide",
-    type: { en: "Guide · Travel", pt: "Guia · Viagem" },
-    emoji: "✈️",
-    location: "Global (Brisbane-based)",
-    desc: {
-      en: "Global vegan travel guide by a Brisbane local — restaurant reviews, city guides, and travel tips for plant-based adventurers worldwide.",
-      pt: "Guia global de viagem vegana por um local de Brisbane — avaliações de restaurantes, guias de cidades e dicas para aventureiros plant-based."
-    },
-    tags: ["Guide", "Travel", "Reviews", "Global"],
-    url: "#"
-  },
-  {
-    name: "Lone Pine Koala Sanctuary",
-    category: "Sanctuary",
-    type: { en: "Wildlife Sanctuary", pt: "Santuário de Vida Selvagem" },
-    emoji: "🐨",
-    location: "Fig Tree Pocket, QLD",
-    desc: {
-      en: "World's first and largest koala sanctuary — home to over 100 koalas plus native Australian wildlife, with conservation and education programs.",
-      pt: "Primeiro e maior santuário de coalas do mundo — lar de mais de 100 coalas e fauna australiana, com programas de conservação e educação."
-    },
-    tags: ["Sanctuary", "Wildlife", "Conservation", "Education"],
-    url: "#"
-  },
-  {
-    name: "UQ Vegan Society",
+    name: "Brisbane Vegans",
     category: "Meeting",
-    type: { en: "University Society", pt: "Sociedade Universitária" },
-    emoji: "🎓",
-    location: "University of Queensland",
-    desc: {
-      en: "Student-run vegan society at UQ — hosting potlucks, movie nights, guest speakers, and campus outreach to promote plant-based living.",
-      pt: "Sociedade vegana estudantil na UQ — organizando potlucks, sessões de cinema, palestrantes convidados e divulgação no campus."
-    },
-    tags: ["Meeting", "University", "Students", "Outreach"],
-    url: "#"
-  },
-  {
-    name: "Vegan Action Brisbane",
-    category: "Activism",
-    type: { en: "Activism · Advocacy", pt: "Ativismo · Advocacy" },
-    emoji: "🌍",
+    type: { en: "Community · Facebook Group", pt: "Comunidade · Grupo no Facebook" },
+    initials: "BV",
     location: "Brisbane, QLD",
     desc: {
-      en: "Advancing veganism in Brisbane through policy advocacy, corporate engagement, public education, and grassroots campaigning.",
-      pt: "Avançando o veganismo em Brisbane por meio de advocacy, engajamento corporativo, educação pública e campanhas de base."
+      en: "A general Facebook community for Brisbane-based vegans to connect, share tips, and ask questions.",
+      pt: "Uma comunidade geral no Facebook para veganos de Brisbane se conectarem, trocarem dicas e tirarem dúvidas."
     },
-    tags: ["Activism", "Advocacy", "Education", "Policy"],
-    url: "#"
+    tags: ["Community", "Facebook Group", "Social"],
+    url: "https://www.facebook.com/groups/406090929485523"
   },
   {
-    name: "Vegan Board Games",
+    name: "Brisbane Vegans Unite",
     category: "Meeting",
-    type: { en: "Social · Games", pt: "Social · Jogos" },
-    emoji: "🎲",
+    type: { en: "Community · Facebook Group", pt: "Comunidade · Grupo no Facebook" },
+    initials: "BU",
     location: "Brisbane, QLD",
     desc: {
-      en: "Monthly social meetup for vegans who love board games — a relaxed space to play, eat plant-based snacks, and make new friends.",
-      pt: "Encontro social mensal para veganos que amam jogos de tabuleiro — um espaço descontraído para jogar, comer snacks veganos e fazer novas amizades."
+      en: "Another active Facebook community bringing Brisbane vegans together to share recommendations, events, and support.",
+      pt: "Outra comunidade ativa no Facebook que reúne veganos de Brisbane para compartilhar recomendações, eventos e apoio mútuo."
     },
-    tags: ["Meeting", "Social", "Games", "Monthly"],
-    url: "#"
+    tags: ["Community", "Facebook Group", "Social"],
+    url: "https://www.facebook.com/groups/448844741870566"
   },
   {
     name: "Cranky's Farm",
     category: "Sanctuary",
     type: { en: "Animal Sanctuary", pt: "Santuário Animal" },
-    emoji: "🐐",
+    initials: "CF",
     location: "Mount Cotton, QLD",
     desc: {
       en: "A loving sanctuary for rescued farm animals — goats, sheep, pigs, cows, and chickens living out their lives in peace with regular open days.",
       pt: "Um santuário amoroso para animais de fazenda resgatados — cabras, ovelhas, porcos, vacas e galinhas vivendo em paz, com dias abertos regulares."
     },
     tags: ["Sanctuary", "Rescue", "Open Days", "Volunteering"],
-    url: "#"
+    url: "https://crankysfarm.org.au"
+  },
+  {
+    name: "Farm Animal Rescue",
+    category: "Sanctuary",
+    type: { en: "Sanctuary · Rescue", pt: "Santuário · Resgate" },
+    initials: "FR",
+    location: "Dayboro, QLD",
+    desc: {
+      en: "Sanctuary for rescued farm animals — offering sanctuary tours, volunteering, sponsorship programs, and educational experiences.",
+      pt: "Santuário para animais de fazenda resgatados — oferecendo tours, voluntariado, programas de apadrinhamento e experiências educacionais."
+    },
+    tags: ["Sanctuary", "Rescue", "Tours", "Volunteering"],
+    url: "https://www.farmanimalrescue.org.au"
+  },
+  {
+    name: "I Travel For Vegan Food",
+    category: "Guide",
+    type: { en: "Guide · Travel", pt: "Guia · Viagem" },
+    initials: "IF",
+    location: "Global (Brisbane-based)",
+    desc: {
+      en: "Global vegan travel guide by a Brisbane local — restaurant reviews, city guides, and travel tips for plant-based adventurers worldwide.",
+      pt: "Guia global de viagem vegana por um local de Brisbane — avaliações de restaurantes, guias de cidades e dicas para aventureiros plant-based."
+    },
+    tags: ["Guide", "Travel", "Reviews", "Global"],
+    url: "https://www.itravelforveganfood.com"
+  },
+  {
+    name: "UQ Vegan Society",
+    category: "Meeting",
+    type: { en: "University Society", pt: "Sociedade Universitária" },
+    initials: "US",
+    location: "University of Queensland",
+    desc: {
+      en: "Student-run vegan society at UQ — hosting potlucks, movie nights, guest speakers, and campus outreach to promote plant-based living.",
+      pt: "Sociedade vegana estudantil na UQ — organizando potlucks, sessões de cinema, palestrantes convidados e divulgação no campus."
+    },
+    tags: ["Meeting", "University", "Students", "Outreach"],
+    url: "https://uqvegsociety.wixsite.com/uqvegsociety"
+  },
+  {
+    name: "Vegan Action Brisbane",
+    category: "Activism",
+    type: { en: "Activism · Advocacy", pt: "Ativismo · Advocacy" },
+    initials: "VB",
+    location: "Brisbane, QLD",
+    desc: {
+      en: "Advancing veganism in Brisbane through policy advocacy, corporate engagement, public education, and grassroots campaigning.",
+      pt: "Avançando o veganismo em Brisbane por meio de advocacy, engajamento corporativo, educação pública e campanhas de base."
+    },
+    tags: ["Activism", "Advocacy", "Education", "Policy"],
+    url: "https://www.instagram.com/veganaction_brisbane"
+  },
+  {
+    name: "Vegan Board Games",
+    category: "Meeting",
+    type: { en: "Social · Games", pt: "Social · Jogos" },
+    initials: "VG",
+    location: "Brisbane, QLD",
+    desc: {
+      en: "Monthly social meetup for vegans who love board games — a relaxed space to play, eat plant-based snacks, and make new friends.",
+      pt: "Encontro social mensal para veganos que amam jogos de tabuleiro — um espaço descontraído para jogar, comer snacks veganos e fazer novas amizades."
+    },
+    tags: ["Meeting", "Social", "Games", "Monthly"],
+    url: "https://www.facebook.com/BrisbaneVeganBoardGames"
   }
 ];
 
@@ -444,7 +506,10 @@ const tagMap = {
   "Sanctuary": "Santuário", "Rescue": "Resgate", "Tours": "Tours",
   "Volunteering": "Voluntariado", "Open Days": "Dias Abertos",
   "Wildlife": "Vida Selvagem", "Conservation": "Conservação",
-  "Education": "Educação", "Advocacy": "Advocacy"
+  "Education": "Educação", "Advocacy": "Advocacy",
+  "Outdoors": "Ar Livre", "Hiking": "Trilhas",
+  "Housing": "Moradia", "Share House": "Casa Compartilhada",
+  "Meetup": "Encontros", "Facebook Group": "Grupo no Facebook"
 };
 
 function translateTag(tag, lang) {
@@ -496,7 +561,7 @@ function renderCards() {
   grid.innerHTML = list.map((g, i) => `
     <div class="card" style="animation-delay:${i * 0.04}s">
       <div class="card-top">
-        <span class="card-emoji">${g.emoji}</span>
+        <div class="card-avatar">${g.initials}</div>
         <span class="card-category-badge ${badgeMap[g.category]}">${categoryLabel[currentLang][g.category]}</span>
       </div>
       <div class="card-type">${g.type[currentLang]}</div>
