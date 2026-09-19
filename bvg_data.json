@@ -701,7 +701,7 @@
     },
     "instagram_reel": "https://www.instagram.com/reel/DXN8dC-gKbO/embed/",
     "web": {
-      "site": "https://greenedgeonline.com.au",
+      "site": "https://www.thegreenedge.com.au",
       "instagram": "https://instagram.com/thegreenedge",
       "facebook": "https://facebook.com/thegreenedgevegancafe",
       "tiktok": ""
@@ -728,15 +728,15 @@
     "next_update": "05/07/2027",
     "final_rating": 5,
     "reviews": {
-      "google":      { "votes": 0, "rating": 5, "scale": 5, "url": "https://share.google/cfTvaiBupxy0xjOnH" },
-      "facebook":    { "votes": 0,  "rating": 100, "scale": 100, "url": "https://facebook.com/thegreenedgevegancafe/reviews" },
-      "happycow":    { "votes": 0, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/the-green-edge-windsor-19791" },
-      "uber_eats":   { "votes": 0, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/the-green-edge/49AbTURFQxagpEZS5ICoJg" },
-      "doordash":    { "votes": 0, "rating": 5, "scale": 5, "url": "https://doordash.com/store/the-green-edge-100%25-vegan!-windsor-31283133/44947978/" },
-      "tripadvisor": { "votes": 0,  "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d7047608-Reviews-The_Green_Edge-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp":        { "votes": 0,  "rating": 5, "scale": 5, "url": "https://yelp.com/biz/the-green-edge-windsor" },
-      "opentable":   { "votes": 0, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/the-green-edge-windsor" },
-      "bvg":         { "votes": 0,  "rating": 5, "scale": 5, "url": "" },
+      "google":      { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/cfTvaiBupxy0xjOnH" },
+      "facebook":    { "votes": null,  "rating": 100, "scale": 100, "url": "https://facebook.com/thegreenedgevegancafe/reviews" },
+      "happycow":    { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/the-green-edge-windsor-19791" },
+      "uber_eats":   { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/the-green-edge/49AbTURFQxagpEZS5ICoJg" },
+      "doordash":    { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/the-green-edge-100%25-vegan!-windsor-31283133/44947978/" },
+      "tripadvisor": { "votes": null,  "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d7047608-Reviews-The_Green_Edge-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp":        { "votes": null,  "rating": 5, "scale": 5, "url": "https://yelp.com/biz/the-green-edge-windsor" },
+      "opentable":   { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/the-green-edge-windsor" },
+      "bvg":         { "votes": null,  "rating": 5, "scale": 5, "url": "" },
       "wanderlog":   { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490341/the-green-edge", "link_only": true }
     }
   },

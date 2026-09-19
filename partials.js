@@ -157,3 +157,12 @@ function initBackToTop() {
   });
 }
 document.addEventListener('DOMContentLoaded', initBackToTop);
+
+// Keep <html lang> in sync with the EN/PT toggle (screen readers, translation tools, language signal).
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('langBtn');
+  if (!btn) return;
+  new MutationObserver(() => {
+    document.documentElement.lang = btn.textContent.trim() === 'EN' ? 'pt' : 'en';
+  }).observe(btn, { childList: true, characterData: true, subtree: true });
+});

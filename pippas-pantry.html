@@ -3,20 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pippa's Pantry — Brisbane Vegan Guide</title>
+<title>Pippa's Pantry — Vegan Cake Shop in Camp Hill</title>
 <meta name="description" content="Pippa's Pantry is a vegan cake and cookie shop in Camp Hill, Brisbane, specialising in custom celebration cakes.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Brisbane Vegan Guide">
-<meta property="og:title" content="Pippa's Pantry — Brisbane Vegan Guide">
+<meta property="og:title" content="Pippa's Pantry — Vegan Cake Shop in Camp Hill">
 <meta property="og:description" content="Pippa's Pantry is a vegan cake and cookie shop in Camp Hill, Brisbane, specialising in custom celebration cakes.">
 <meta property="og:url" content="https://brisbaneveganguide.com/pippas-pantry.html">
 <meta property="og:image" content="https://brisbaneveganguide.com/images/logo_pippas_pantry.jpg">
+<meta property="og:image:alt" content="Pippa's Pantry logo">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pippa's Pantry — Brisbane Vegan Guide">
+<meta name="twitter:title" content="Pippa's Pantry — Vegan Cake Shop in Camp Hill">
 <meta name="twitter:description" content="Pippa's Pantry is a vegan cake and cookie shop in Camp Hill, Brisbane, specialising in custom celebration cakes.">
 <meta name="twitter:image" content="https://brisbaneveganguide.com/images/logo_pippas_pantry.jpg">
 <link rel="canonical" href="https://brisbaneveganguide.com/pippas-pantry.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#1a3a2a">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -621,8 +625,7 @@
            - Recommended: vertical video (reel) for best fit
            ============================================================ -->
       <div class="venue-intro-media">
-        <iframe
-          src="https://www.instagram.com/reel/Dc0FevVy_Vn/embed/"
+        <iframe title="Instagram video from this venue" loading="lazy" src="https://www.instagram.com/reel/Dc0FevVy_Vn/embed/"
           allowtransparency="true"
           scrolling="no"
           frameborder="0"
@@ -840,6 +843,7 @@ function loadVenueData() {
     .then(function(data) {
       var venue = data.find(function(v) { return v.slug === VENUE_SLUG; });
       if (!venue) return;
+      injectVenueSchema(venue);
 
       var ol = document.getElementById('opinionList');
       var reviews = venue.reviews;
@@ -855,6 +859,9 @@ function loadVenueData() {
           linkOnly.push({ key: key, votes: r.votes, rating: r.rating, scale: r.scale, url: r.url, link_only: true });
         } else if (r.votes !== null && r.rating !== null) {
           withVotes.push({ key: key, votes: r.votes, rating: r.rating, scale: r.scale, url: r.url });
+        } else if (r.url) {
+          // has a review link but no vote data yet: list it as link-only
+          linkOnly.push({ key: key, votes: null, rating: null, scale: null, url: r.url, link_only: true });
         }
       });
 
@@ -968,6 +975,55 @@ function loadVenueData() {
     });
 }
 
+// STRUCTURED DATA (JSON-LD, built from bvg_data.json)
+function injectVenueSchema(venue) {
+  var base = 'https://brisbaneveganguide.com';
+  var url = base + '/' + venue.slug + '.html';
+  var tags = venue.tags || [];
+  var has = function(t) { return tags.indexOf(t) !== -1; };
+  var closed = venue.badge === 'Closed';
+  var crumbs = {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: base + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Eat & Drink', item: base + '/food.html' },
+      { '@type': 'ListItem', position: 3, name: venue.name, item: url }
+    ]
+  };
+  var graph = [crumbs];
+  if (!closed) {
+    var type = has('Food Truck') ? 'FoodEstablishment'
+      : has('Bakery') ? 'Bakery'
+      : (has('Caf\u00e9') || has('Juice Bar')) ? 'CafeOrCoffeeShop'
+      : 'Restaurant';
+    var cuisineTags = ['Thai', 'Chinese', 'Japanese', 'Mexican', 'Indian', 'Middle Eastern', 'Mediterranean', 'Pizza', 'Asian', 'Vegetarian'];
+    var cuisines = tags.filter(function(t) { return cuisineTags.indexOf(t) !== -1; });
+    var biz = {
+      '@type': type,
+      '@id': url + '#business',
+      name: venue.name,
+      description: venue.desc && venue.desc.en,
+      url: url
+    };
+    var logoEl = document.querySelector('.venue-logo img');
+    if (logoEl) biz.image = new URL(logoEl.getAttribute('src'), base + '/').href;
+    if (cuisines.length) biz.servesCuisine = cuisines;
+    if (venue.maps_url) biz.hasMap = venue.maps_url;
+    var sameAs = Object.keys(venue.web || {}).map(function(k) { return venue.web[k]; }).filter(Boolean);
+    if (sameAs.length) biz.sameAs = sameAs;
+    var m = /^(.*),\s*([^,]+),\s*QLD\s*(\d{4})$/.exec(venue.address || '');
+    if (m) {
+      biz.address = { '@type': 'PostalAddress', streetAddress: m[1], addressLocality: m[2], addressRegion: 'QLD', postalCode: m[3], addressCountry: 'AU' };
+    } else {
+      biz.areaServed = 'South East Queensland, Australia';
+    }
+    graph.push(biz);
+  }
+  var s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph });
+  document.head.appendChild(s);
+}
 // ── METHODOLOGY TOGGLE ──
 function toggleMethodology() {
   const btn = document.getElementById('methToggle');
