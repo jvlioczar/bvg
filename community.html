@@ -628,7 +628,7 @@ function renderCards() {
     <div class="card" style="animation-delay:${i * 0.04}s">
       <div class="card-top">
         ${g.logo
-          ? `<div class="card-logo"><img src="${g.logo}" alt="${g.name} logo" loading="lazy"></div>`
+          ? `<div class="card-logo"><img src="${g.logo}" alt="${g.name} logo" loading="lazy" onerror="this.parentNode.className='card-avatar';this.replaceWith('${g.initials}')"></div>`
           : `<div class="card-avatar">${g.initials}</div>`}
         <span class="card-category-badge ${badgeMap[g.category]}">${categoryLabel[currentLang][g.category]}</span>
       </div>
