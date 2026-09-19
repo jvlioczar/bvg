@@ -607,7 +607,7 @@
           </div>
         </div>
         <div class="venue-tags">
-          <span class="tag">Vegan-Friendly</span>
+          <span class="tag tag-friendly">Vegan-Friendly</span>
           <span class="tag">Asian</span>
           <span class="tag">Dinner</span>
           <span class="tag">Chinese</span>
@@ -949,7 +949,7 @@ function loadVenueData() {
         var tagsEl = document.querySelector('.venue-tags');
         if (tagsEl) {
           tagsEl.innerHTML = venue.tags.map(function(t) {
-            return '<span class="tag">' + t + '</span>';
+            return '<span class="tag' + (t === '100% Vegan' ? ' tag-vegan' : t === 'Vegan-Friendly' ? ' tag-friendly' : '') + '">' + t + '</span>';
           }).join('');
         }
       }

@@ -24,6 +24,56 @@ const SITE_FOOTER_PT = {
   'hire-a-vegan.html': 'Contrate Um Vegano',
 };
 
+// Portuguese browser-tab titles, keyed by page file name (without .html). The English title is read from the page itself.
+const SITE_TITLE_PT = {
+  'index': 'Brisbane Vegan Guide — Restaurantes Veganos, Cafés e Comunidade',
+  'food': 'Restaurantes e Cafés Veganos em Brisbane | Brisbane Vegan Guide',
+  'community': 'Grupos da Comunidade Vegana em Brisbane | Brisbane Vegan Guide',
+  'people': 'Vozes e Ativistas Veganos em Brisbane | Brisbane Vegan Guide',
+  'vegan-kit': 'Kit Vegano: Veganismo Explicado de Forma Simples | Brisbane Vegan Guide',
+  'vegan-map': 'Mapa Vegano de Brisbane | Brisbane Vegan Guide',
+  'vegan-finder': 'Buscador Vegano: onde comer vegano em Brisbane | Brisbane Vegan Guide',
+  'hire-a-vegan': 'Contrate Um Vegano em Brisbane | Brisbane Vegan Guide',
+  'contribute': 'Contribua e Apoie | Brisbane Vegan Guide',
+  'about': 'Sobre o Projeto | Brisbane Vegan Guide',
+  '404': 'Página não encontrada | Brisbane Vegan Guide',
+  'all-day': 'All Day — Café de Brunch em West End | Brisbane Vegan Guide',
+  'antica': 'Antica Pizzeria — Pizza no Forno a Lenha com Menu Vegano em Wilston',
+  'archie-am-pm': 'Archie AM:PM — Bistrô-Café Plant-Based em Carseldine',
+  'arrivederci_pizzeria': 'Arrivederci Pizzeria — Pizza com Menu Vegano em Milton',
+  'cardamom-pod': 'Cardamom Pod Brickworks — Café Vegano na Gold Coast',
+  'charlies-raw-squeeze': "Charlie's Raw Squeeze — Suco Bar Vegano | Brisbane Vegan Guide",
+  'dickis': "Dicki's — Café Vegano em New Farm | Brisbane Vegan Guide",
+  'doko-demo-v': 'Doko Demo V — Restaurante Asiático Vegano na Gold Coast',
+  'el-planta': 'El Planta — Restaurante Mexicano em South Brisbane',
+  'grassfed': 'GrassFed — Trailer de Hambúrguer Vegano | Brisbane Vegan Guide',
+  'greenhouse-canteen': 'Greenhouse Canteen — Restaurante e Bar Plant-Based na Gold Coast',
+  'hai-hai': 'Hai Hai — Ramen e Izakaya com Ramen Vegano em Paddington',
+  'izakaya-midori': 'Izakaya Midori — Restaurante Japonês Vegano na Gold Coast',
+  'king_tea': 'King Tea — Cozinha Chinesa com Amplo Menu Vegano em Paddington',
+  'loving-hut': 'Loving Hut — Fusão Vegana em Mount Gravatt | Brisbane Vegan Guide',
+  'made-with-love-bakery': 'Made With Love Bakery — Padaria Vegana na Gold Coast',
+  'ma-pa-me': 'Ma Pa Me — Sudeste Asiático com Menu Vegano em South Bank',
+  'naim': 'NAÏM — Restaurante do Oriente Médio em Paddington',
+  'neon-ramen': 'Neon Ramen — Ramen Bar Vegano em Everton Park',
+  'netherworld': 'Netherworld — Bar e Arcade em Fortitude Valley',
+  'piante-pizza': 'Piante Pizza — Pizza Vegana Itinerante | Brisbane Vegan Guide',
+  'pippas-pantry': "Pippa's Pantry — Loja de Bolos Veganos em Camp Hill",
+  'sweet-and-green': 'Sweet & Green — Confeitaria Francesa Vegana | Brisbane Vegan Guide',
+  'tea-master': 'Tea Master — Vegetariano Taiwanês em Fortitude Valley',
+  'the-green-edge': 'The Green Edge — Bistrô · Café · Deli em Windsor',
+  'the-plant-bakery': 'The Plant Bakery — Padaria Vegana Atacadista | Brisbane Vegan Guide',
+  'u-tong': 'U-Tong — Tailandês Vegano em Clayfield | Brisbane Vegan Guide',
+  'vega-cafe': 'Vega Cafe — Café Vegano · Cozinha Tailandesa em Spring Hill',
+  'vegan_thai_riffic': 'Vegan Thai-riffic — Restaurante Tailandês Vegano em North Lakes',
+  'vegan-restaurant': 'Vegan Restaurant — Chinês Vegano em West End',
+  'veganyumm': 'Veganyumm — Padaria Vegana em Everton Park | Brisbane Vegan Guide',
+  'vegeme': 'Vegeme — Restaurante Asiático Vegetariano em South Brisbane',
+  'vegerama': 'Vege Rama — Buffet Vegetariano na Adelaide Street, CBD',
+  'yavanna': 'Yavanna (Encerrado) — Restaurante e Bar Plant-Based em Paddington',
+  'you-came-again': 'You Came Again (Encerrado) — Bar de Tapas Vegano em West End',
+};
+
 const SITE_INSTAGRAM_SVG ='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>';
 
 // Same pages as the hero index on the home page, same numbering/labels.
@@ -188,10 +238,19 @@ function applySiteChromeLang(lang) {
     if (!label.dataset.en) label.dataset.en = label.textContent;
     label.textContent = pt ? SITE_FOOTER_PT[a.dataset.foot] : label.dataset.en;
   });
+  // Browser-tab title (the page's own English <title> is restored when switching back)
+  const pageKey = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '') || 'index';
+  if (!window._siteEnTitle) window._siteEnTitle = document.title;
+  if (SITE_TITLE_PT[pageKey]) document.title = pt ? SITE_TITLE_PT[pageKey] : window._siteEnTitle;
   const visitsLabel = document.getElementById('footerVisitsLabel');
   if (visitsLabel) visitsLabel.textContent = pt ? 'visitas' : 'visits';
   const visitCount = document.getElementById('siteVisitCount');
   if (visitCount && visitCount.dataset.count) visitCount.textContent = Number(visitCount.dataset.count).toLocaleString(pt ? 'pt-BR' : 'en-US');
+  const fieldLabels = { contentFilter: ['Filter by content', 'Filtrar por conteúdo'], categoryFilter: ['Filter by category', 'Filtrar por categoria'] };
+  Object.keys(fieldLabels).forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute('aria-label', fieldLabels[id][pt ? 1 : 0]);
+  });
   const skip = document.getElementById('skipLink');
   if (skip) skip.textContent = pt ? 'Pular para o conteúdo' : 'Skip to content';
   const langBtn = document.getElementById('langBtn');
@@ -203,6 +262,7 @@ function applySiteChromeLang(lang) {
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('langBtn');
   if (!btn) return;
+  applySiteChromeLang('en');
   new MutationObserver(() => {
     const lang = btn.textContent.trim() === 'EN' ? 'pt' : 'en';
     document.documentElement.lang = lang;

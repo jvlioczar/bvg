@@ -196,7 +196,7 @@
 
   .card-type {
     font-size: 10px; font-weight: 600;
-    color: var(--terracotta);
+    color: var(--gold);
     letter-spacing: 0.5px; text-transform: uppercase;
     margin-bottom: 2px;
   }
@@ -644,7 +644,7 @@ const venues = [
       en: "Retro arcade bar with excellent vegan options — loaded fries, burgers, and wings alongside craft beers and pinball machines.",
       pt: "Bar arcade retrô com ótimas opções veganas — batatas carregadas, hambúrgueres e wings com cervejas artesanais e fliperamas."
     },
-    tags: ["Vegan Options", "Bar", "Burgers", "Arcade", "Comfort Food", "Dinner"],
+    tags: ["Vegan-Friendly", "Bar", "Burgers", "Arcade", "Comfort Food", "Dinner"],
     rating: 4.35, votes: 0, vegan: false,
     url: "netherworld.html"
   },
@@ -873,20 +873,6 @@ const venues = [
     url: "ma-pa-me.html"
   },
   {
-    slug: "spaghetti_house",
-    name: "Spaghetti House",
-    type: { en: "Italian Trattoria", pt: "Trattoria Italiana" },
-    logo: "images/logo_spaghetti_house.jpg",
-    location: "South Brisbane",
-    desc: {
-      en: "Italian trattoria near QPAC with vegan dishes marked on the online menu — pizza, pasta and gnocchi — plus gluten-free options.",
-      pt: "Trattoria italiana perto do QPAC com pratos veganos identificados no cardápio online — pizza, massa e nhoque — além de opções sem glúten."
-    },
-    tags: ["Vegan-Friendly", "Italian", "Pizza", "Pasta", "Dinner", "Gluten-Free"],
-    rating: 5, votes: 0, vegan: false,
-    url: "spaghetti_house.html"
-  },
-  {
     slug: "king_tea",
     name: "King Tea",
     type: { en: "Chinese Kitchen & Bar", pt: "Cozinha Chinesa & Bar" },
@@ -965,7 +951,7 @@ const tagMap = {
   "Thai": "Tailandês", "Dinner": "Jantar", "Café": "Café", "Deli": "Deli",
   "Brunch": "Brunch", "Lunch": "Almoço", "Coffee": "Café",
   "Burgers": "Hambúrgueres", "Comfort Food": "Comfort Food",
-  "Fine Dining": "Alta Gastronomia", "Vegan Options": "Opções Veganas",
+  "Fine Dining": "Alta Gastronomia",
   "Budget-Friendly": "Econômico", "Asian": "Asiático", "Bowls": "Bowls",
   "Mexican": "Mexicano", "Street Food": "Comida de Rua",
   "Pizza": "Pizza", "Bakery": "Padaria", "Pastries": "Confeitaria",
@@ -1031,7 +1017,7 @@ function renderCards() {
       <div class="card-name">${v.name}</div>
       <div class="card-location">📍 ${v.location}</div>
       <div class="card-desc">${v.desc[currentLang]}</div>
-      <div class="card-tags">${v.tags.map(t => `<span class="tag">${translateTag(t, currentLang)}</span>`).join('')}</div>
+      <div class="card-tags">${v.tags.map(t => `<span class="tag${t === '100% Vegan' ? ' tag-vegan' : t === 'Vegan-Friendly' ? ' tag-friendly' : ''}">${translateTag(t, currentLang)}</span>`).join('')}</div>
       <div class="card-bottom">
         <div class="card-votes"><span>${v.votes.toLocaleString()}</span> ${votesWord}</div>
         <a href="${v.url}" class="card-btn">${currentLang === 'pt' ? 'Saiba mais' : 'Learn more'}</a>
@@ -1053,7 +1039,7 @@ const limitedBadges = {
   pizza: { en: "Pizza", pt: "Pizza" }, asian: { en: "Asian", pt: "Asiático" }, desserts: { en: "Desserts", pt: "Sobremesas" },
   schnitzel: { en: "Schnitzel", pt: "Schnitzel" }, greek: { en: "Greek", pt: "Grego" }, peri: { en: "Peri-peri chicken", pt: "Frango peri-peri" },
   sandwiches: { en: "Sandwiches", pt: "Sanduíches" }, salads: { en: "Salads", pt: "Saladas" }, poke: { en: "Poke bowls", pt: "Poke bowls" },
-  acai: { en: "Açaí", pt: "Açaí" },
+  acai: { en: "Açaí", pt: "Açaí" }, italian: { en: "Italian", pt: "Italiano" },
   // vegan highlights
   vegMenu: { en: "Vegan menu", pt: "Menu vegano", type: "veg" }, vegDishes: { en: "Vegan dishes marked", pt: "Pratos veganos marcados", type: "veg" },
   manyVeg: { en: "Many vegan dishes", pt: "Vários pratos veganos", type: "veg" }, chefVeg: { en: "Chef's vegan menu", pt: "Menu vegano do chef", type: "veg" },
@@ -1078,6 +1064,7 @@ const limitedVenues = [
   { name: "Pepe's Mexican", kind: "local", url: "https://www.pepesmexican.com.au", b: ["mexican", "vegCheese"] },
   { name: "Phat Boy", kind: "local", url: "https://www.phatboybrisbane.com.au", b: ["thai", "vegMenu"] },
   { name: "Southside", kind: "local", url: "https://www.southside-restaurant.com.au", b: ["eastAsian", "vegBanquet"] },
+  { name: "Spaghetti House", kind: "local", url: "https://www.spaghettihouse.au", b: ["italian", "vegDishes"] },
   { name: "Taro's Ramen", kind: "local", url: "https://taros.com.au", b: ["japanese", "vegRamen"] },
   { name: "Zero Fox", kind: "local", url: "https://www.zerofoxbne.com", b: ["koreanJapanese", "vegDishes"] },
   // Chains

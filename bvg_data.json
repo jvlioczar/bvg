@@ -556,7 +556,7 @@
     "name": "Netherworld",
     "vegan": "Friendly",
     "badge": "",
-    "tags": ["Vegan Options", "Bar", "Burgers", "Arcade", "Comfort Food", "Dinner"],
+    "tags": ["Vegan-Friendly", "Bar", "Burgers", "Arcade", "Comfort Food", "Dinner"],
     "desc": {
       "en": "Netherworld is a retro-horror-themed arcade bar and diner in Fortitude Valley, packed with 15 pinball machines, 25 arcade cabinets and classic consoles. The diner menu of loaded fries, burgers and wings includes solid vegan options, paired with 24 taps of local beer and cider — plus regular trivia nights, live bands and an attached karaoke venue, Lost Souls.",
       "pt": "O Netherworld é um bar arcade e diner com temática retrô de terror em Fortitude Valley, cheio de 15 máquinas de pinball, 25 fliperamas e consoles clássicos. O cardápio do diner, com batatas carregadas, hambúrgueres e wings, tem boas opções veganas, acompanhadas de 24 torneiras de cerveja e cidra locais — além de noites de trivia, bandas ao vivo e uma casa de karaokê anexa, a Lost Souls."
@@ -1520,52 +1520,6 @@
       "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/4111223/ma-pa-me", "link_only": true }
-    }
-  },
-  {
-    "slug": "spaghetti_house",
-    "name": "Spaghetti House",
-    "vegan": "Friendly",
-    "badge": "",
-    "tags": ["Vegan-Friendly", "Italian", "Pizza", "Pasta", "Dinner", "Gluten-Free"],
-    "desc": {
-      "en": "Spaghetti House Trattoria is an Italian restaurant on the corner of Grey and Little Stanley Streets in South Brisbane, near QPAC, serving simple, honest Italian cooking inspired by the piazzas of Italy — pizza, pasta, gnocchi and more, with the pizza bases, sauces and pastas made in house. The menu is mixed, but vegan dishes are identified on the online menu — from garlic focaccia and bruschetta to pizzas, pasta and gnocchi (the basil pesto vegan gnocchi is a favourite) — alongside gluten-free options.",
-      "pt": "O Spaghetti House Trattoria é um restaurante italiano na esquina das ruas Grey e Little Stanley, em South Brisbane, perto do QPAC, que serve comida italiana simples e honesta inspirada nas piazzas da Itália — pizza, massas, nhoque e mais, com massas de pizza, molhos e massas feitos na casa. O cardápio é misto, mas os pratos veganos são identificados no cardápio online — de focaccia de alho e bruschetta a pizzas, massas e nhoque (o nhoque vegano ao pesto de manjericão é um dos favoritos) — além de opções sem glúten."
-    },
-    "instagram_reel": "",
-    "web": { "site": "https://www.spaghettihouse.au", "instagram": "https://www.instagram.com/the_spaghettihouse", "facebook": "https://www.facebook.com/spaghettihousetrattoria", "tiktok": "" },
-    "address": "164 Grey Street, South Brisbane, QLD 4101",
-    "maps_url": "https://www.google.com/maps/search/164+Grey+Street+South+Brisbane+QLD+4101",
-    "why": {
-      "en": "A South Brisbane trattoria with vegan dishes marked on the online menu — from garlic focaccia and bruschetta to pizza, pasta and gnocchi — handy for mixed-diet groups and pre-show dinners near QPAC.",
-      "pt": "Uma trattoria em South Brisbane com pratos veganos identificados no cardápio online — de focaccia de alho e bruschetta a pizza, massa e nhoque — ótima para grupos com dietas diferentes e jantares antes de espetáculos perto do QPAC."
-    },
-    "what_to_order": {
-      "en": "The basil pesto vegan gnocchi and the bruschetta al pomodoro, plus a vegan pizza or pasta from the marked options.",
-      "pt": "O nhoque vegano ao pesto de manjericão e a bruschetta al pomodoro, além de uma pizza ou massa vegana entre as opções identificadas."
-    },
-    "when": {
-      "en": "Open daily for lunch and dinner, with pre-show dining near QPAC, bookings, takeaway and banquet menus. The menu is mixed, and the vegan options are marked on the online menu but not always on the printed one, so check the online menu and confirm with the staff when ordering.",
-      "pt": "Aberto todos os dias para almoço e jantar, com jantar pré-espetáculo perto do QPAC, reservas, opção para levar e menus de banquete. O cardápio é misto, e as opções veganas estão marcadas no cardápio online, mas nem sempre no impresso, então confira o cardápio online e confirme com a equipe ao pedir."
-    },
-    "words_from_owner": {
-      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
-      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
-    },
-    "last_updated": "19/09/2026",
-    "next_update": "19/09/2027",
-    "final_rating": 5,
-    "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/98AgD4MvgDXPP8f8t" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/spaghettihousetrattoria/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/the-spaghetti-house-trattoria-south-brisbane-154380" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d4044204-Reviews-The_Spaghetti_House-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.yelp.com/biz/the-spaghetti-house-trattoria-south-brisbane" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1481405/the-spaghetti-house", "link_only": true }
     }
   },
   {

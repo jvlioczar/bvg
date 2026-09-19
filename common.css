@@ -143,8 +143,14 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
   opacity: 0.6;
 }
 .footer-animals {
-  display: flex; justify-content: center; gap: 22px;
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 22px;
   margin-bottom: 24px; font-size: 24px;
+}
+@media (max-width: 480px) {
+  .footer-animals { gap: 10px 8px; font-size: 20px; }
+}
+@media (max-width: 360px) {
+  .footer-animals { gap: 8px 4px; font-size: 18px; }
 }
 .footer-tagline {
   font-family: 'Fraunces', serif;
@@ -230,6 +236,23 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
 }
 .skip-link:focus { left: 12px; }
 :focus-visible { outline: 2px solid var(--gold, #d4a847); outline-offset: 3px; }
+
+/* Venue status tags: 100% Vegan (green) vs Vegan-Friendly (red, same as the "No vegan cheese" badge).
+   Used on the Eat & Drink cards and on every venue page. */
+.tag.tag-vegan {
+  background: rgba(74, 140, 92, 0.22);
+  color: var(--forest);
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(74, 140, 92, 0.45);
+}
+.tag.tag-vegan:hover { background: rgba(74, 140, 92, 0.3); }
+.tag.tag-friendly {
+  background: rgba(192, 104, 74, 0.13);
+  color: var(--terracotta);
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(192, 104, 74, 0.4);
+}
+.tag.tag-friendly:hover { background: rgba(192, 104, 74, 0.2); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
