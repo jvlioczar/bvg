@@ -283,6 +283,7 @@
   <!-- NAV (shared header, see partials.js) -->
   <div id="site-header"></div>
   <script>document.getElementById('site-header').outerHTML = renderSiteHeader('food.html');</script>
+<main id="main-content">
 
   <!-- PAGE HEADER -->
   <div class="page-header">
@@ -316,7 +317,9 @@
   </div>
 
   <!-- FOOTER (shared, see partials.js) -->
-  <div id="site-footer"></div>
+  </main>
+
+<div id="site-footer"></div>
   <script>document.getElementById('site-footer').outerHTML = renderSiteFooter();</script>
 
 <script>
@@ -371,7 +374,7 @@ const venues = [
     logo: "images/logo_the_green_edge.jpg",
     location: "Windsor",
     desc: {
-      en: "An all-in-one vegan destination — bistrô, café, deli, juice bar, ice cream shop, and grocery store under one roof.",
+      en: "An all-in-one vegan destination — bistro, café, deli, juice bar, ice cream shop, and grocery store under one roof.",
       pt: "Um destino vegano completo — bistrô, café, deli, suqueria, sorveteria e mercearia em um só lugar."
     },
     tags: ["100% Vegan", "Bistro", "Café", "Deli", "Groceries"],

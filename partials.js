@@ -52,7 +52,8 @@ function renderSiteHeader(activeHref) {
     }, 2400);
   }
 
-  return `<nav class="nav" id="navbar">
+  return `<a href="#main-content" class="skip-link">Skip to content</a>
+  <nav class="nav" id="navbar" aria-label="Main">
     <a href="index.html" class="nav-logo">
       <img class="logo-pin" src="icon-bvg.svg" width="18" height="18" alt="BVG">
       ${logoInner}
@@ -66,8 +67,8 @@ function renderSiteHeader(activeHref) {
         <a href="about.html"${aboutActive}>About</a>
         <a href="https://instagram.com/brisbaneveg" target="_blank" rel="noopener" title="Instagram" style="display:inline-flex;align-items:center;">${SITE_INSTAGRAM_SVG}</a>
       </div>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
-      <button class="lang-btn" id="langBtn" onclick="toggleLang()">PT</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language (EN/PT)">PT</button>
     </div>
   </nav>
   <div class="nav-overlay" id="navOverlay" onclick="toggleMenu()"></div>
@@ -129,7 +130,9 @@ function toggleMenu() {
   document.getElementById('hamburger').classList.toggle('open');
   document.getElementById('mobileMenu').classList.toggle('open');
   document.getElementById('navOverlay').classList.toggle('open');
-  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
+  const menuOpen = document.getElementById('mobileMenu').classList.contains('open');
+  document.getElementById('hamburger').setAttribute('aria-expanded', menuOpen ? 'true' : 'false');
+  document.body.style.overflow = menuOpen ? 'hidden' : '';
 }
 
 document.addEventListener('click', (e) => {

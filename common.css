@@ -220,3 +220,21 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
   .footer-nav a { font-size: 11px; padding: 6px 12px; }
   .back-to-top { right: 16px; bottom: 16px; width: 40px; height: 40px; }
 }
+
+/* ── ACCESSIBILITY ── */
+.skip-link {
+  position: absolute; left: -9999px; top: 8px; z-index: 1000;
+  background: var(--forest); color: var(--cream);
+  padding: 8px 14px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { left: 12px; }
+:focus-visible { outline: 2px solid var(--gold, #d4a847); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

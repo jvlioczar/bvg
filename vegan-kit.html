@@ -153,6 +153,7 @@ body{overflow-x:hidden}
 <!-- NAV (shared header, see partials.js) -->
   <div id="site-header"></div>
   <script>document.getElementById('site-header').outerHTML = renderSiteHeader('vegan-kit.html');</script>
+<main id="main-content">
 
   <!-- PAGE HEADER -->
   <div class="page-header">
@@ -379,6 +380,8 @@ body{overflow-x:hidden}
 
 <!-- FOOTER -->
 <!-- FOOTER (shared, see partials.js) -->
+</main>
+
 <div id="site-footer"></div>
 <script>document.getElementById('site-footer').outerHTML = renderSiteFooter();</script>
 
@@ -534,7 +537,7 @@ function toggleLang(){
       if(i18n.pt[k].includes('<'))el.innerHTML=i18n.pt[k];else el.textContent=i18n.pt[k];
     }else if(currentLang==='en'){
       const en=el.getAttribute('data-en');
-      if(en){if(en.includes('<'))el.innerHTML=en;else el.textContent=en;}
+      if(en)el.innerHTML=en;
     }
   });
   if(!window._enStored){

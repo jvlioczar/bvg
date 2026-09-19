@@ -421,6 +421,7 @@
   <!-- NAV (shared header, see partials.js) -->
   <div id="site-header"></div>
   <script>document.getElementById('site-header').outerHTML = renderSiteHeader('');</script>
+<main id="main-content">
 
   <!-- HERO -->
   <section class="hero" id="top">
@@ -464,7 +465,7 @@
         <div class="card-type" data-i18n="food.item1.type">Bistro · Café · Deli</div>
         <div class="card-name">The Green Edge</div>
         <div class="card-location">📍 Windsor</div>
-        <div class="card-desc" data-i18n="food.item1.desc">An all-in-one vegan destination — bistrô, café, deli, juice bar, ice cream shop, and grocery store under one roof.</div>
+        <div class="card-desc" data-i18n="food.item1.desc">An all-in-one vegan destination — bistro, café, deli, juice bar, ice cream shop, and grocery store under one roof.</div>
         <a href="the-green-edge.html" class="card-btn" data-i18n="btn.more">Learn more</a>
       </div>
       <div class="card" data-venue-slug="u-tong">
@@ -559,7 +560,7 @@
     <div class="section-header">
       <div>
         <div class="section-label" data-i18n="people.label">People</div>
-        <div class="section-tagline" data-i18n="people.tagline">Voices leading the animal movement</div>
+        <div class="section-tagline" data-i18n="people.tagline">Voices shaping the vegan movement</div>
       </div>
       <a href="people.html" class="section-cta" data-i18n="people.cta">Meet everyone →</a>
     </div>
@@ -635,7 +636,9 @@
   </section>
 
   <!-- FOOTER -->
-  <div id="site-footer"></div>
+  </main>
+
+<div id="site-footer"></div>
   <script>document.getElementById('site-footer').outerHTML = renderSiteFooter();</script>
 
 </div>

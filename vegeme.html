@@ -530,6 +530,7 @@
   <!-- NAV (shared header, see partials.js) -->
   <div id="site-header"></div>
   <script>document.getElementById('site-header').outerHTML = renderSiteHeader('food.html');</script>
+<main id="main-content">
 
   <!-- ============================================================
        VENUE PAGE TEMPLATE — Fields to replace per venue:
@@ -741,7 +742,9 @@
   </div>
 
   <!-- FOOTER (shared, see partials.js) -->
-  <div id="site-footer"></div>
+  </main>
+
+<div id="site-footer"></div>
   <script>document.getElementById('site-footer').outerHTML = renderSiteFooter();</script>
 
 <script>

@@ -530,6 +530,7 @@
   <!-- NAV (shared header, see partials.js) -->
   <div id="site-header"></div>
   <script>document.getElementById('site-header').outerHTML = renderSiteHeader('food.html');</script>
+<main id="main-content">
 
   <!-- ============================================================
        VENUE PAGE TEMPLATE — Fields to replace per venue:
@@ -613,7 +614,7 @@
           <span class="tag">Ice Cream</span>
           <span class="tag">Groceries</span>
         </div>
-        <p class="venue-desc" data-i18n="desc">The Green Edge is a unique all-in-one vegan destination in Brisbane, combining a bistrô, café, deli, juice bar, ice cream shop, and grocery store. It offers a fully plant-based experience—from casual dining and specialty coffee to fresh juices, desserts, and a wide range of vegan products—making it a go-to spot for both eating and shopping in one place.</p>
+        <p class="venue-desc" data-i18n="desc">The Green Edge is a unique all-in-one vegan destination in Brisbane, combining a bistro, café, deli, juice bar, ice cream shop, and grocery store. It offers a fully plant-based experience—from casual dining and specialty coffee to fresh juices, desserts, and a wide range of vegan products—making it a go-to spot for both eating and shopping in one place.</p>
       </div>
 
       <!-- RIGHT: Instagram embed -->
@@ -759,7 +760,9 @@
   </div>
 
   <!-- FOOTER (shared, see partials.js) -->
-  <div id="site-footer"></div>
+  </main>
+
+<div id="site-footer"></div>
   <script>document.getElementById('site-footer').outerHTML = renderSiteFooter();</script>
 
 <script>
@@ -1043,8 +1046,18 @@ const i18n = {
   en: {
     "back": "Back to Eat & Drink",
     "badge.popular": "Most Popular",
-    "desc": "The Green Edge is a unique all-in-one vegan destination in Brisbane, combining a bistrô, café, deli, juice bar, ice cream shop, and grocery store. It offers a fully plant-based experience—from casual dining and specialty coffee to fresh juices, desserts, and a wide range of vegan products—making it a go-to spot for both eating and shopping in one place.",
+    "desc": "The Green Edge is a unique all-in-one vegan destination in Brisbane, combining a bistro, café, deli, juice bar, ice cream shop, and grocery store. It offers a fully plant-based experience—from casual dining and specialty coffee to fresh juices, desserts, and a wide range of vegan products—making it a go-to spot for both eating and shopping in one place.",
+    "wwww.title": "6W",
+    "wwww.where": "Where",
+    "wwww.web": "Web",
+    "wwww.why": "Why",
+    "wwww.why.value": "A whole vegan world in this place (food plus groceries).",
     "wwww.what": "What to order",
+    "wwww.what.value": "VFC Chicken, Homemade Sausage, Tropical Juice and an Ice Cream.",
+    "wwww.when": "When",
+    "wwww.when.value": "Founded in 2008 by Amanda Benham and Tammy Maree. Originally established in Enoggera, moved to Windsor in 2013. Currently owned by Cale Drouin and Laken McGarvey. Previous owners include Niv and Deepa Galaiya, and Glenn and Sue Cooper.",
+    "wwww.words": "Words from the owner",
+    "wwww.words.value": "\"The owner of this venue will leave a personal message here soon — stay tuned!\"",
     "opinion.title": "Public Opinion",
     "update.last": "Last update:",
     "update.next": "Next update:",
