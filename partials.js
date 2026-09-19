@@ -110,7 +110,7 @@ function renderSiteFooter() {
     <div class="footer-credit">
       <span>© 2026 Brisbane Vegan Guide</span>
       <span class="sep">|</span>
-      <span id="footerVisits" style="display:none;">🐾 <span id="siteVisitCount">···</span> visits</span>
+      <span id="footerVisits" style="display:none;">🐾 <span id="siteVisitCount">···</span> <span id="footerVisitsLabel">visits</span></span>
       <span class="sep" id="footerVisitsSep" style="display:none;">|</span>
       <span><span data-i18n="footer.created">Created by</span> <a href="https://www.instagram.com/sencientista" target="_blank" rel="noopener">Julio Cesar Prava</a></span>
     </div>
@@ -128,7 +128,8 @@ function initSiteVisitCounter() {
     .then((json) => {
       const count = json && json.data && json.data.up_count;
       if (typeof count !== 'number') throw new Error('Unexpected response');
-      countEl.textContent = count.toLocaleString('en-US');
+      countEl.dataset.count = count;
+      countEl.textContent = count.toLocaleString(document.documentElement.lang === 'pt' ? 'pt-BR' : 'en-US');
       wrap.style.display = '';
       sep.style.display = '';
     })
@@ -187,6 +188,10 @@ function applySiteChromeLang(lang) {
     if (!label.dataset.en) label.dataset.en = label.textContent;
     label.textContent = pt ? SITE_FOOTER_PT[a.dataset.foot] : label.dataset.en;
   });
+  const visitsLabel = document.getElementById('footerVisitsLabel');
+  if (visitsLabel) visitsLabel.textContent = pt ? 'visitas' : 'visits';
+  const visitCount = document.getElementById('siteVisitCount');
+  if (visitCount && visitCount.dataset.count) visitCount.textContent = Number(visitCount.dataset.count).toLocaleString(pt ? 'pt-BR' : 'en-US');
   const skip = document.getElementById('skipLink');
   if (skip) skip.textContent = pt ? 'Pular para o conteúdo' : 'Skip to content';
   const langBtn = document.getElementById('langBtn');
