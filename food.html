@@ -693,6 +693,48 @@ const venues = [
     tags: ["Vegan-Friendly", "Thai", "Asian", "Lunch", "Dinner", "Takeaway"],
     rating: 5, votes: 0, vegan: false,
     url: "vegan_thai_riffic.html"
+  },
+  {
+    slug: "all-day",
+    name: "All Day",
+    type: { en: "Brunch Café", pt: "Café & Brunch" },
+    logo: "images/logo_all_day.jpg",
+    location: "West End",
+    desc: {
+      en: "Specialty-coffee brunch café, formerly the 100% vegan Grown — now a mixed menu with vegan dishes clearly marked.",
+      pt: "Café de brunch com café especial, antes o Grown 100% vegano — hoje com cardápio misto e pratos veganos identificados."
+    },
+    tags: ["Vegan-Friendly", "Café", "Breakfast", "Brunch", "Coffee", "Gluten-Free"],
+    rating: 5, votes: 0, vegan: false,
+    url: "all-day.html"
+  },
+  {
+    slug: "naim",
+    name: "NAÏM",
+    type: { en: "Middle Eastern Restaurant", pt: "Restaurante do Oriente Médio" },
+    logo: "images/logo_naim.jpg",
+    location: "Paddington",
+    desc: {
+      en: "Modern Middle Eastern and Mediterranean dishes — hummus, carrot falafel, platters and brunch — with plant-based options on a mixed menu.",
+      pt: "Pratos modernos do Oriente Médio e do Mediterrâneo — homus, falafel de cenoura, tábuas e brunch — com opções plant-based em um cardápio misto."
+    },
+    tags: ["Vegan-Friendly", "Middle Eastern", "Mediterranean", "Brunch", "Lunch", "Gluten-Free"],
+    rating: 5, votes: 0, vegan: false,
+    url: "naim.html"
+  },
+  {
+    slug: "vegeme",
+    name: "Vegeme",
+    type: { en: "Vegetarian Asian Restaurant", pt: "Restaurante Asiático Vegetariano" },
+    logo: "images/logo_vegeme.jpg",
+    location: "South Brisbane",
+    desc: {
+      en: "Asian-inspired vegetarian dishes — laksa, bibimbap, dumplings and more — with many options marked vegan, for dine-in or takeaway.",
+      pt: "Pratos vegetarianos de inspiração asiática — laksa, bibimbap, dumplings e mais — com muitas opções identificadas como veganas, para comer no local ou levar."
+    },
+    tags: ["Vegan-Friendly", "Vegetarian", "Asian", "Lunch", "Dinner", "Gluten-Free"],
+    rating: 5, votes: 0, vegan: false,
+    url: "vegeme.html"
   }
 ];
 
@@ -757,7 +799,9 @@ const tagMap = {
   "Chinese": "Chinês", "Takeaway": "Para Levar", "Cakes": "Bolos",
   "Food Truck": "Food Truck", "Fusion": "Fusão", "Buffet": "Buffet",
   "Multi-Cuisine": "Multi-Cozinha", "Tapas": "Tapas", "Wholesale": "Atacado",
-  "Juice Bar": "Bar de Sucos", "Desserts": "Sobremesas", "Nut-Free": "Sem Nozes"
+  "Juice Bar": "Bar de Sucos", "Desserts": "Sobremesas", "Nut-Free": "Sem Nozes",
+  "Breakfast": "Café da Manhã", "Middle Eastern": "Oriente Médio", "Mediterranean": "Mediterrâneo",
+  "Vegetarian": "Vegetariano"
 };
 
 function translateTag(tag, lang) {

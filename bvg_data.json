@@ -1245,5 +1245,143 @@
       "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
+  },
+  {
+    "slug": "all-day",
+    "name": "All Day",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Café", "Breakfast", "Brunch", "Coffee", "Gluten-Free"],
+    "desc": {
+      "en": "All Day is a specialty-coffee and brunch café on Buchanan Street in West End, open every day from early morning to mid-afternoon. The space was previously Grown, a 100% vegan café; under new ownership it now runs a mixed menu, but still marks its plant-based dishes — including the Woodlands on Toast and the Yellow Veg Curry — and offers vegan swaps on several other brunch mains.",
+      "pt": "O All Day é um café de café especial e brunch na Buchanan Street, em West End, aberto todos os dias do início da manhã até o meio da tarde. O espaço antes era o Grown, um café 100% vegano; sob nova gestão, hoje tem um cardápio misto, mas continua identificando seus pratos plant-based — como o Woodlands on Toast e o Yellow Veg Curry — e oferece trocas veganas em vários outros pratos de brunch."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DdVGXnmKHgg/embed/",
+    "web": { "site": "https://all-day.com.au", "instagram": "https://www.instagram.com/alldaybne", "facebook": "https://www.facebook.com/alldaybne", "tiktok": "" },
+    "address": "G03 / 21 Buchanan Street, West End, QLD 4101",
+    "maps_url": "https://www.google.com/maps/search/G03+21+Buchanan+Street+West+End+QLD+4101",
+    "why": {
+      "en": "A West End brunch spot that used to be the fully vegan Grown and now serves a mixed menu, with vegan dishes marked on the menu and vegan swaps on several mains.",
+      "pt": "Um brunch em West End que antes era o Grown, totalmente vegano, e hoje serve um cardápio misto, com pratos veganos identificados no cardápio e trocas veganas em vários pratos."
+    },
+    "what_to_order": {
+      "en": "The Woodlands on Toast or the Yellow Veg Curry — both marked vegan on the menu — plus a specialty coffee.",
+      "pt": "O Woodlands on Toast ou o Yellow Veg Curry — ambos identificados como veganos no cardápio — e um café especial."
+    },
+    "when": {
+      "en": "Open Monday to Friday from 6:30am to 2:30pm and weekends from 7am to 3pm. It was the 100% vegan Grown before changing ownership, and now serves meat and seafood alongside its plant-based dishes, so look for the (ve) marks on the menu when ordering.",
+      "pt": "Aberto de segunda a sexta das 6h30 às 14h30 e nos fins de semana das 7h às 15h. Era o Grown, 100% vegano, antes de mudar de dono, e hoje serve carnes e frutos do mar ao lado dos pratos plant-based, então procure a marcação (ve) no cardápio ao pedir."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/sw99J0PppGclXFHJU" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/alldaybne/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/grown-west-end-101826" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.ubereats.com/au/store/all-day/6spHENGZUEKKi9xzC-JjZg" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com/Restaurant_Review-g255068-d12948288-Reviews-All_Day-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
+    }
+  },
+  {
+    "slug": "naim",
+    "name": "NAÏM",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Middle Eastern", "Mediterranean", "Brunch", "Lunch", "Gluten-Free"],
+    "desc": {
+      "en": "NAÏM is a modern Middle Eastern and Mediterranean restaurant in Paddington, reimagining traditional flavours with hummus, crisp carrot falafel, shared platters and brunch, plus a wine bar, The Hamsa Room. The menu is mixed, but it offers plant-based options — including plant-based meatballs — alongside gluten-free and halal dishes, and vegan sweets such as slices and almond croissants.",
+      "pt": "O NAÏM é um restaurante moderno de culinária do Oriente Médio e do Mediterrâneo em Paddington, que reinterpreta sabores tradicionais com homus, falafel crocante de cenoura, tábuas para compartilhar e brunch, além de um wine bar, o The Hamsa Room. O cardápio é misto, mas oferece opções plant-based — incluindo almôndegas plant-based — além de pratos sem glúten e halal, e doces veganos como fatias e croissant de amêndoas."
+    },
+    "instagram_reel": "https://www.instagram.com/reel/DML36Awzk-2/embed/",
+    "web": { "site": "https://www.naimrestaurant.com.au", "instagram": "https://www.instagram.com/naimrestaurant", "facebook": "https://www.facebook.com/naimrestaurant", "tiktok": "" },
+    "address": "14 Collingwood Street, Paddington, QLD 4064",
+    "maps_url": "https://www.google.com/maps/search/14+Collingwood+Street+Paddington+QLD+4064",
+    "why": {
+      "en": "A Paddington restaurant reimagining Middle Eastern and Mediterranean classics, with plant-based options — including plant-based meatballs — alongside a mixed menu.",
+      "pt": "Um restaurante em Paddington que reinterpreta clássicos do Oriente Médio e do Mediterrâneo, com opções plant-based — incluindo almôndegas plant-based — em um cardápio misto."
+    },
+    "what_to_order": {
+      "en": "The plant-based meatballs or the Hummus Bowl, with a vegan slice or vegan almond croissant for something sweet — and ask the team to confirm which dishes are vegan.",
+      "pt": "As almôndegas plant-based ou o Hummus Bowl, com uma fatia vegana ou um croissant de amêndoas vegano de sobremesa — e peça à equipe para confirmar quais pratos são veganos."
+    },
+    "when": {
+      "en": "Open for breakfast and lunch from 8am, with shared platters, long-lunch banquets and private functions available by booking. The menu also includes meat, so check which dishes are vegan when ordering.",
+      "pt": "Aberto para café da manhã e almoço a partir das 8h, com tábuas para compartilhar, banquetes de long lunch e eventos privados sob reserva. O cardápio também inclui carne, então confira quais pratos são veganos ao pedir."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/P0xfV8IaxzEb93XNG" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/naimrestaurant/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/naim-paddington-145915" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.ubereats.com/au/store/naim-restaurant/5rxz76qUWWusdvYbjkkuVg" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d6429693-Reviews-NAIM-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.yelp.com/biz/naim-restaurant-brisbane" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1337425/na%C3%AFm", "link_only": true }
+    }
+  },
+  {
+    "slug": "vegeme",
+    "name": "Vegeme",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Vegetarian", "Asian", "Lunch", "Dinner", "Gluten-Free"],
+    "desc": {
+      "en": "Vegeme is a vegetarian restaurant on Melbourne Street in South Brisbane, serving Asian-inspired dishes since 2015 — laksa, bibimbap, dumplings, spring rolls, curry puffs, okonomiyaki and stir-fried udon. Every dish is meat-free and many are marked vegan on the menu, with gluten-free and halal options too, for dine-in or takeaway.",
+      "pt": "O Vegeme é um restaurante vegetariano na Melbourne Street, em South Brisbane, que serve pratos de inspiração asiática desde 2015 — laksa, bibimbap, dumplings, spring rolls, curry puffs, okonomiyaki e udon salteado. Todos os pratos não têm carne e muitos são identificados como veganos no cardápio, com opções sem glúten e halal também, para comer no local ou levar."
+    },
+    "instagram_reel": "",
+    "web": { "site": "", "instagram": "https://www.instagram.com/vege_me", "facebook": "https://www.facebook.com/VegeMe", "tiktok": "" },
+    "address": "Shop 9, 220 Melbourne Street, South Brisbane, QLD 4101",
+    "maps_url": "https://www.google.com/maps/search/Shop+9+220+Melbourne+Street+South+Brisbane+QLD+4101",
+    "why": {
+      "en": "A vegetarian Asian restaurant in South Brisbane with a big menu where many dishes are marked vegan, known for generous portions and affordable prices.",
+      "pt": "Um restaurante asiático vegetariano em South Brisbane com um cardápio grande em que muitos pratos são identificados como veganos, conhecido pelas porções generosas e preços acessíveis."
+    },
+    "what_to_order": {
+      "en": "The laksa, bibimbap, dumplings or spring rolls — choosing the dishes marked vegan on the menu.",
+      "pt": "O laksa, o bibimbap, os dumplings ou os spring rolls — escolhendo os pratos identificados como veganos no cardápio."
+    },
+    "when": {
+      "en": "Open for lunch and dinner, with counter ordering, table service and takeaway. It is vegetarian rather than fully vegan, so look for the vegan marks on the menu when ordering.",
+      "pt": "Aberto para almoço e jantar, com pedido no balcão, atendimento à mesa e opção para levar. É vegetariano, e não totalmente vegano, então procure as marcações de vegano no cardápio ao pedir."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/VegeMe/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/vegeme-brisbane-64155" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d9711829-Reviews-Vegeme-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.yelp.com/biz/vegeme-south-brisbane" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/3660290/vegeme", "link_only": true }
+    }
   }
 ]

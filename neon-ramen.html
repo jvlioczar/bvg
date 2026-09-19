@@ -238,17 +238,21 @@
     font-size: 14px; line-height: 1.6;
     color: var(--text); flex-grow: 1;
   }
-  .web-links { display: flex; flex-wrap: wrap; gap: 6px; }
+  .web-links { display: flex; flex-wrap: wrap; gap: 8px; }
   .web-link {
-    display: inline-flex; align-items: center; gap: 4px;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px;
     text-decoration: none;
-    font-size: 12px; font-weight: 600;
     color: var(--forest);
-    padding: 5px 12px;
     background: rgba(26, 58, 42, 0.08);
-    border-radius: 20px; transition: all 0.25s;
+    border-radius: 50%; transition: all 0.25s ease;
   }
-  .web-link:hover { background: var(--forest); color: var(--cream); }
+  .web-link:hover {
+    background: var(--forest); color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(26, 58, 42, 0.15);
+  }
+  .web-link svg { width: 16px; height: 16px; }
 
   /* ── PUBLIC OPINION ── */
   .opinion-section { margin-top: 40px; }
@@ -646,9 +650,9 @@
           <div class="wwww-icon web">🌐</div>
           <div class="wwww-label" data-i18n="wwww.web">Web</div>
           <div class="web-links">
-            <a href="https://neonramen.com.au" target="_blank" rel="noopener" class="web-link">Site</a>
-            <a href="https://facebook.com/neonramenrestaurant" target="_blank" rel="noopener" class="web-link">Facebook</a>
-            <a href="https://instagram.com/neonramen_restaurantandbar" target="_blank" rel="noopener" class="web-link">Instagram</a>
+            <a href="https://neonramen.com.au" target="_blank" rel="noopener" class="web-link" title="Website" aria-label="Website"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+            <a href="https://facebook.com/neonramenrestaurant" target="_blank" rel="noopener" class="web-link" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com/neonramen_restaurantandbar" target="_blank" rel="noopener" class="web-link" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
           </div>
         </div>
         <div class="wwww-card">
