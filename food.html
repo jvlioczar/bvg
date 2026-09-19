@@ -907,6 +907,20 @@ const venues = [
     tags: ["Vegan-Friendly", "Japanese", "Ramen", "Lunch", "Dinner", "Bar"],
     rating: 5, votes: 0, vegan: false,
     url: "hai-hai.html"
+  },
+  {
+    slug: "phat_boy",
+    name: "Phat Boy",
+    type: { en: "Thai Restaurant", pt: "Restaurante Tailandês" },
+    logo: "images/logo_phat_boy.jpg",
+    location: "Brisbane CBD",
+    desc: {
+      en: "Contemporary Thai restaurant on George Street with a separate vegan menu — pad Thai and pad see ew with tofu, mi krob, san choy bao and stir-fries.",
+      pt: "Restaurante tailandês contemporâneo na George Street com cardápio vegano separado — pad thai e pad see ew com tofu, mi krob, san choy bao e salteados."
+    },
+    tags: ["Vegan-Friendly", "Thai", "Asian", "Lunch", "Dinner", "Gluten-Free"],
+    rating: 5, votes: 0, vegan: false,
+    url: "phat_boy.html"
   }
 ];
 
@@ -1050,10 +1064,9 @@ const limitedBadges = {
   acai: { en: "Açaí", pt: "Açaí" }, italian: { en: "Italian", pt: "Italiano" },
   // vegan highlights
   vegMenu: { en: "Vegan menu", pt: "Menu vegano", type: "veg" }, vegDishes: { en: "Vegan dishes marked", pt: "Pratos veganos marcados", type: "veg" },
-  manyVeg: { en: "Many vegan dishes", pt: "Vários pratos veganos", type: "veg" }, chefVeg: { en: "Chef's vegan menu", pt: "Menu vegano do chef", type: "veg" },
   vegCheese: { en: "Vegan cheese", pt: "Queijo vegano", type: "veg" }, vegBurgers: { en: "Vegan burgers", pt: "Burgers veganos", type: "veg" },
   vegBurger: { en: "Vegan burger", pt: "Burger vegano", type: "veg" }, vegPizzas: { en: "Vegan pizzas", pt: "Pizzas veganas", type: "veg" },
-  vegRamen: { en: "Vegan ramen", pt: "Ramen vegano", type: "veg" }, vegBanquet: { en: "Vegan banquet", pt: "Banquete vegano", type: "veg" },
+  vegRamen: { en: "Vegan ramen", pt: "Ramen vegano", type: "veg" }, vegBanquetOpt: { en: "Vegan banquet option", pt: "Opção de banquete vegano", type: "veg" },
   plantMeat: { en: "Plant-based meat", pt: "Proteína vegetal", type: "veg" }, vegSchnitzel: { en: "Vegan schnitzel", pt: "Schnitzel vegano", type: "veg" },
   vegDesserts: { en: "Vegan desserts", pt: "Sobremesas veganas", type: "veg" }, vegMayo: { en: "Vegan mayo", pt: "Maionese vegana", type: "veg" },
   vegPatty: { en: "Vegan patty", pt: "Patty vegano", type: "veg" }, vegFillings: { en: "Vegan fillings", pt: "Recheios veganos", type: "veg" },
@@ -1065,13 +1078,12 @@ const limitedBadges = {
 
 const limitedVenues = [
   // Restaurants in Brisbane
-  { name: "Alchemy", kind: "local", url: "https://www.alchemyrestaurant.com.au", b: ["australian", "vegMenu"] },
+  { name: "Alchemy", kind: "local", url: "https://www.alchemyrestaurant.com.au", b: ["australian", "someVeg"] },
   { name: "Chu The Phat", kind: "local", url: "https://chuthephat.com.au", b: ["asianFusion", "vegDishes"] },
-  { name: "Himalayan Cafe", kind: "local", url: "https://www.facebook.com/himalayancafenewfarm/", label: "facebook", b: ["nepalese", "manyVeg"] },
-  { name: "Olive Thyme", kind: "local", url: "https://olivethyme.com.au", b: ["turkish", "chefVeg"] },
+  { name: "Himalayan Cafe", kind: "local", url: "https://www.facebook.com/himalayancafenewfarm/", label: "facebook", b: ["nepalese", "vegDishes"] },
+  { name: "Olive Thyme", kind: "local", url: "https://olivethyme.com.au", b: ["turkish", "someVeg"] },
   { name: "Pepe's Mexican", kind: "local", url: "https://www.pepesmexican.com.au", b: ["mexican", "vegCheese"] },
-  { name: "Phat Boy", kind: "local", url: "https://www.phatboybrisbane.com.au", b: ["thai", "vegMenu"] },
-  { name: "Southside", kind: "local", url: "https://www.southside-restaurant.com.au", b: ["eastAsian", "vegBanquet"] },
+  { name: "Southside", kind: "local", url: "https://www.southside-restaurant.com.au", b: ["eastAsian", "vegBanquetOpt"] },
   { name: "Spaghetti House", kind: "local", url: "https://www.spaghettihouse.au", b: ["italian", "vegDishes"] },
   { name: "Taro's Ramen", kind: "local", url: "https://taros.com.au", b: ["japanese", "vegRamen"] },
   { name: "Zero Fox", kind: "local", url: "https://www.zerofoxbne.com", b: ["koreanJapanese", "vegDishes"] },
