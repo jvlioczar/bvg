@@ -200,6 +200,24 @@
   }
   .contact-btn svg { width: 18px; height: 18px; }
 
+  /* ── SITE MAP ── */
+  .sitemap {
+    display: grid; grid-template-columns: 1fr 2fr; gap: 32px;
+  }
+  .sitemap-heading {
+    font-family: 'Fraunces', serif;
+    font-size: 16px; font-weight: 700;
+    color: var(--forest); margin-bottom: 12px;
+  }
+  .sitemap ul { list-style: none; margin: 0; padding: 0; }
+  .sitemap li { margin-bottom: 7px; break-inside: avoid; }
+  .sitemap a {
+    color: var(--text-light); text-decoration: none;
+    font-size: 14px; transition: color 0.2s;
+  }
+  .sitemap a:hover { color: var(--forest); text-decoration: underline; }
+  .sitemap-venues { columns: 2; column-gap: 24px; }
+
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -212,6 +230,7 @@
   @media (max-width: 768px) {
     .about-hero { height: 35vh; min-height: 240px; }
     .about-content { padding: 0 20px 40px; }
+    .sitemap { grid-template-columns: 1fr; gap: 24px; }
     .authors-grid { grid-template-columns: 1fr; }
     .author-card { padding: 22px; }
     .contact-box { padding: 28px 20px; }
@@ -322,6 +341,30 @@
       </a>
     </div>
 
+    <!-- SITE MAP -->
+    <div class="section-title anim" data-i18n="sitemap.title">Site Map</div>
+    <nav class="sitemap anim" aria-label="Site map">
+      <div>
+        <div class="sitemap-heading" data-i18n="sitemap.sections">Sections</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="food.html">Eat &amp; Drink</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="vegan-kit.html">Vegan Kit</a></li>
+          <li><a href="vegan-map.html">Vegan Map</a></li>
+          <li><a href="vegan-finder.html">Vegan Finder</a></li>
+          <li><a href="hire-a-vegan.html">Hire a Vegan</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="sitemap-heading" data-i18n="sitemap.venues">Eat &amp; Drink venues</div>
+        <ul class="sitemap-venues" id="sitemapVenues"><li><a href="food.html">Eat &amp; Drink</a></li></ul>
+      </div>
+    </nav>
+
   </div>
 
   <!-- FOOTER (shared, see partials.js) -->
@@ -339,6 +382,9 @@ const i18n = {
     "project.p3": "The guide provides an independent, quick, and objective assessment — based on a wide range of reviews — of fully vegan restaurants and cafés, followed by a list of vegan-friendly venues.",
     "project.highlight": "Food is the largest driver of animal exploitation. It is essential that vegan businesses are promoted and that they continually improve, so that more people can enjoy the comfort of eating and gathering without harming animals of other species.",
     "project.p4": "The project also showcases groups and key figures in the animal movement who contribute or have contributed to the cause in Brisbane and surrounds.",
+    "sitemap.title": "Site Map",
+    "sitemap.sections": "Sections",
+    "sitemap.venues": "Eat & Drink venues",
     "authors.title": "Meet the Authors",
     "author1.role": "Founder · Designer · Activist",
     "author1.bio": "Graphic designer and vegan activist, Julio has been a student in Brisbane since March 2026 and has been immersing himself in the local vegan culture. Vegan for over 10 years, he is the creator of Vegpedia, a Portuguese-language site that maps everything about veganism in Brazil and worldwide. He decided to launch this project dedicated to Brisbane.",
@@ -358,6 +404,9 @@ const i18n = {
     "project.p3": "O guia oferece uma avaliação independente, rápida e objetiva — baseada em uma ampla gama de avaliações — dos lugares com cardápio completamente vegano, além de uma lista de lugares vegan-friendly.",
     "project.highlight": "A alimentação é a maior fonte de exploração animal. É essencial que negócios veganos sejam divulgados e que melhorem continuamente seus serviços, para que cada vez mais pessoas possam ter o conforto de se alimentar e se reunir sem prejudicar os animais de outras espécies.",
     "project.p4": "O projeto também apresenta grupos e pessoas fundamentais para o movimento animal que colaboram ou colaboraram com a causa em Brisbane e região.",
+    "sitemap.title": "Mapa do Site",
+    "sitemap.sections": "Seções",
+    "sitemap.venues": "Locais em Comer & Beber",
     "authors.title": "Conheça os Autores",
     "author1.role": "Fundador · Designer · Ativista",
     "author1.bio": "Designer gráfico e ativista vegano, Julio é estudante em Brisbane desde março de 2026 e tem absorvido a cultura vegana local. Vegano há mais de 10 anos, é criador do Vegpedia, site em português que mapeia tudo sobre o veganismo no Brasil e no mundo. Julio resolveu lançar este projeto dedicado a Brisbane.",
@@ -379,6 +428,19 @@ function toggleLang() {
     if (i18n[currentLang][key]) el.textContent = i18n[currentLang][key];
   });
 }
+
+// ── SITE MAP: venue list from bvg_data.json (slug = page filename) ──
+fetch('bvg_data.json')
+  .then(res => res.json())
+  .then(data => {
+    const ul = document.getElementById('sitemapVenues');
+    ul.innerHTML = data
+      .slice()
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map(v => `<li><a href="${v.slug}.html">${v.name}</a></li>`)
+      .join('');
+  })
+  .catch(() => {});
 
 // ── SCROLL REVEAL ──
 const obs = new IntersectionObserver((entries) => {
