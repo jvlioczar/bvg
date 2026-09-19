@@ -1290,7 +1290,7 @@ function clearFilter(){
 
 // I18N (PT only — EN is default in HTML)
 const i18n={pt:{
-  "page.title":"Vegan Finder","page.tagline":"Seu atalho para comer vegano e socializar em Brisbane",
+  "page.title":"Buscador Vegano","page.tagline":"Seu atalho para comer vegano e socializar em Brisbane",
   "page.desc":"Com vontade de algo específico, planejando um encontro ou alimentando um grupo? Escolha um filtro abaixo para ir direto à resposta — ou role por mais de 60 perguntas com tudo o que sabemos sobre onde comer bem vegano e viver a comunidade vegana em Brisbane.",
   "filters.label":"Estou procurando...","filters.questions":"perguntas","filters.clear":"Mostrar todas as perguntas",
   "fg.mealtime":"Horário da refeição","fg.cuisine":"Culinária & tipo de local","fg.dietary":"Dieta","fg.price":"Preço","fg.service":"Serviço","fg.who":"Para quem é","fg.purpose":"Propósito",
@@ -1484,6 +1484,7 @@ const i18n={pt:{
 function toggleLang(){
   currentLang=currentLang==='en'?'pt':'en';
   document.getElementById('langBtn').textContent=currentLang==='en'?'PT':'EN';
+  document.title=currentLang==='pt'?'Buscador Vegano: onde comer vegano em Brisbane | Brisbane Vegan Guide':'Vegan Finder: Eat Vegan in Brisbane | Brisbane Vegan Guide';
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const k=el.getAttribute('data-i18n');
     if(currentLang==='pt'&&i18n.pt[k]){
