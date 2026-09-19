@@ -282,7 +282,7 @@
   <h1 class="page-title" data-i18n="page.title">People</h1>
   <p class="page-tagline" data-i18n="page.tagline">Voices shaping the vegan movement</p>
   <p class="page-desc" data-i18n="page.desc">The activists, creators, chefs, athletes, entrepreneurs, and everyday heroes building a kinder Brisbane — Meanjin. Follow them, support them, learn from them.</p>
-  <div class="page-count"><span id="personCount">25</span> <span data-i18n="page.people">people</span></div>
+  <div class="page-count"><span id="personCount">38</span> <span data-i18n="page.people">people</span></div>
 </div>
 
 <!-- FILTERS -->
@@ -330,6 +330,107 @@
 <script>
 // ── DATA ──
 const people = [
+  {
+    name: "Livv Wynne", initials: "LW", slug: "livv-wynne",
+    desc: { en: "Women's online fitness coach on a mission to create strong women, inside and outside the gym — with structured training programs, sustainable nutrition guidance, and real support.", pt: "Coach de fitness online para mulheres, com a missão de criar mulheres fortes, dentro e fora da academia — com programas de treino estruturados, orientação nutricional sustentável e apoio de verdade." },
+    social: { instagram: "https://www.instagram.com/livv_fitnesscoach/" },
+    tags: ["Fitness", "Coach", "Strength"],
+    content: "Fitness",
+    avatar: ""
+  },  {
+    name: "Sean O'Callaghan", initials: "SO", slug: "sean-ocallaghan",
+    desc: { en: "Writer, blogger, and author of Fat Gay Vegan — one of the original vegan bloggers. He grew up in Brisbane and now splits his time between London, Brisbane, and Mexico City, and co-hosts the podcast Tell Me Where I'm Going (Wrong).", pt: "Escritor, blogueiro e autor de Fat Gay Vegan — um dos primeiros blogueiros veganos. Cresceu em Brisbane e hoje divide o tempo entre Londres, Brisbane e Cidade do México, além de apresentar o podcast Tell Me Where I'm Going (Wrong)." },
+    social: { site: "https://fatgayvegan.com", instagram: "https://www.instagram.com/fatgayvegan/", facebook: "https://facebook.com/FatGayVegan", tiktok: "https://tiktok.com/@fatgayvegan", youtube: "https://youtube.com/@TellMeWhereImGoingWrong" },
+    tags: ["Author", "Content Creator", "Podcast"],
+    content: "Content",
+    avatar: ""
+  },  {
+    name: "Leanne Ratcliffe", initials: "LR", slug: "leanne-ratcliffe",
+    desc: { en: "Known online as Freelee the Bananagirl — a Queensland-born vegan activist, author, and YouTuber with a worldwide audience, known for promoting a fruit-based vegan diet.", pt: "Conhecida online como Freelee the Bananagirl — ativista vegana, autora e YouTuber nascida em Queensland, com público no mundo todo, conhecida por promover uma dieta vegana baseada em frutas." },
+    social: { site: "https://thebananagirl.com", instagram: "https://www.instagram.com/freeleethebananagirl/", youtube: "https://www.youtube.com/channel/UCLwUd5KtYONsRJ3UAOojZ0w" },
+    tags: ["Activism", "Content Creator", "Author"],
+    content: "Content",
+    avatar: ""
+  },
+  {
+    name: "Shairie Bhim", initials: "SB", slug: "shairie-bhim",
+    desc: { en: "Founder, owner, and head chef of Veganyumm Bakehouse in Everton Park, Brisbane's first 100% vegan dessert bakehouse. It grew from her egg- and dairy-free cinnamon buns (Cinnayumm) at Charlie's Fruit Market, all made from scratch with family recipes.", pt: "Fundadora, dona e chef principal da Veganyumm Bakehouse, em Everton Park, a primeira confeitaria 100% vegana de Brisbane. O negócio nasceu dos rolinhos de canela sem ovos e laticínios (Cinnayumm) no Charlie's Fruit Market, tudo feito do zero com receitas de família." },
+    social: { site: "https://veganyummbakehouse.com.au", linkedin: "https://au.linkedin.com/in/shairie-bhim-108377218" },
+    tags: ["Entrepreneur", "Bakery", "Food"],
+    content: "Food",
+    avatar: ""
+  },  {
+    name: "Alejandro Cancino", initials: "AC", slug: "alejandro-cancino",
+    desc: { en: "Chef turned plant-based entrepreneur: he led the kitchen at Brisbane's three-hatted Urbane, went vegan, and founded Fënn Foods (makers of vEEF) on the Sunshine Coast. Also co-created Grassfed with Jonny Garrison.", pt: "Chef que virou empreendedor plant-based: comandou a cozinha do Urbane, restaurante três chapéus de Brisbane, tornou-se vegano e fundou a Fënn Foods (criadora da vEEF) na Sunshine Coast. Também criou o Grassfed com Jonny Garrison." },
+    social: { site: "https://fennfoods.com" },
+    tags: ["Chef", "Entrepreneur", "Food"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Carol Slater", initials: "CS", slug: "carol-slater",
+    desc: { en: "Co-founder and director of Farm Animal Rescue in Dayboro, running the vegan sanctuary alongside Brad King and giving rescued farm animals a second chance at life.", pt: "Cofundadora e diretora da Farm Animal Rescue, em Dayboro, que cuida do santuário vegano ao lado de Brad King e dá aos animais de fazenda resgatados uma segunda chance de vida." },
+    social: {},
+    tags: ["Activism", "Sanctuary", "Founder"],
+    content: "Activism",
+    avatar: ""
+  },
+  {
+    name: "Fumiyoshi Iwasaki", initials: "FI", slug: "fumiyoshi-iwasaki",
+    desc: { en: "Chef and co-owner of Izakaya Midori on the Gold Coast — the region's first plant-based Japanese restaurant and first vegan izakaya. He cooked in some of the coast's best Japanese kitchens before going vegan.", pt: "Chef e coproprietário do Izakaya Midori, na Gold Coast — o primeiro restaurante japonês plant-based da região e o primeiro izakaya vegano. Cozinhou em alguns dos melhores restaurantes japoneses da costa antes de se tornar vegano." },
+    social: { site: "https://izakayamidori.com.au" },
+    tags: ["Chef", "Entrepreneur", "Food"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Greg Dean", initials: "GD", slug: "greg-dean",
+    desc: { en: "Co-leader of Vegan Action Brisbane, a grassroots animal rights group that runs weekly street outreach using real footage from farms and laboratories to inspire people to live by their values.", pt: "Co-líder da Vegan Action Brisbane, grupo de base pelos direitos animais que faz divulgação semanal nas ruas, usando imagens reais de fazendas e laboratórios para inspirar as pessoas a viverem de acordo com seus valores." },
+    social: {},
+    tags: ["Activism", "Outreach", "Community"],
+    content: "Activism",
+    avatar: ""
+  },
+  {
+    name: "Jessica Cotton", initials: "JC", slug: "jessica-cotton",
+    desc: { en: "Founder of Plant Powered Press, a vegan PR agency helping plant-based brands and nonprofits reach mainstream audiences. A Brisbane-based journalist and publicist, and a Nourish Vegan Awards panellist.", pt: "Fundadora da Plant Powered Press, agência de relações públicas vegana que ajuda marcas plant-based e organizações sem fins lucrativos a alcançar o grande público. Jornalista e publicitária em Brisbane e jurada do Nourish Vegan Awards." },
+    social: { site: "https://plantpoweredpress.com.au" },
+    tags: ["Entrepreneur", "Media", "Founder"],
+    content: "Content",
+    avatar: ""
+  },
+  {
+    name: "Jonny Garrison", initials: "JG", slug: "jonny-garrison",
+    desc: { en: "Co-owner of Grassfed, Brisbane's first all-vegan burger restaurant, and creator of the dairy-free soft serve I Should Coco. Runs Queensland Vegan Markets with Leizl Estioko.", pt: "Coproprietário do Grassfed, o primeiro restaurante de hambúrgueres 100% veganos de Brisbane, e criador do sorvete vegano I Should Coco. Comanda a Queensland Vegan Markets com Leizl Estioko." },
+    social: {},
+    tags: ["Entrepreneur", "Food", "Events"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Leizl Estioko", initials: "LE", slug: "leizl-estioko",
+    desc: { en: "Founder of the Brisbane Vegan Expo, which ran for seven years and donated over $50,000 in free exhibitor space to animal sanctuaries and charities. Runs Queensland Vegan Markets and is a director of Farm Animal Rescue.", pt: "Fundadora da Brisbane Vegan Expo, que durou sete anos e doou mais de 50 mil dólares australianos em espaço gratuito para santuários e instituições de proteção animal. Comanda a Queensland Vegan Markets e é diretora da Farm Animal Rescue." },
+    social: { site: "https://www.qldveganmarkets.com.au" },
+    tags: ["Events", "Founder", "Community"],
+    content: "Community",
+    avatar: ""
+  },
+  {
+    name: "Marianna Bombardini", initials: "MB", slug: "marianna-bombardini",
+    desc: { en: "Italian vegan chef at The Green Edge in Windsor, behind the bistro's pizzas and fresh focaccia — proof that Italian food doesn't need animals.", pt: "Chef vegana italiana do The Green Edge, em Windsor, responsável pelas pizzas e pela focaccia fresca do bistrô — prova de que a comida italiana não precisa de animais." },
+    social: { instagram: "https://www.instagram.com/mannarancio", facebook: "https://www.facebook.com/marianna.bombardini/" },
+    tags: ["Chef", "Food", "Pizza"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Ryan Cusack", initials: "RC", slug: "ryan-cusack",
+    desc: { en: "Co-leader of Vegan Action Brisbane, a grassroots animal rights group that runs weekly street outreach using real footage from farms and laboratories to inspire people to live by their values.", pt: "Co-líder da Vegan Action Brisbane, grupo de base pelos direitos animais que faz divulgação semanal nas ruas, usando imagens reais de fazendas e laboratórios para inspirar as pessoas a viverem de acordo com seus valores." },
+    social: {},
+    tags: ["Activism", "Outreach", "Community"],
+    content: "Activism",
+    avatar: ""
+  },
   {
     name: "Amanda Benham", initials: "AB", slug: "amanda-benham",
     desc: { en: "Evidence-based dietitian and nutritionist, and founder of The Green Edge — proof that science and compassion go hand in hand.", pt: "Nutricionista e dietista baseada em evidências e fundadora do The Green Edge — prova de que ciência e compaixão andam juntas." },
@@ -544,7 +645,7 @@ const tagMap = {
   "Café":"Café","President":"Presidente","Positivity":"Positividade",
   "Fitness":"Fitness","Coach":"Coach","Strength":"Força","Yoga":"Yoga","Wellness":"Bem-estar",
   "Mindset":"Mentalidade","Design":"Design","Sports Nutrition":"Nutrição Esportiva","Bakery":"Padaria",
-  "Education":"Educação","Hospitality":"Hospitalidade"
+  "Education":"Educação","Hospitality":"Hospitalidade","Media":"Mídia","Outreach":"Divulgação","Pizza":"Pizza","Author":"Autor(a)","Podcast":"Podcast"
 };
 
 const contentLabels = {
