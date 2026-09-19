@@ -1383,5 +1383,281 @@
       "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/3660290/vegeme", "link_only": true }
     }
+  },
+  {
+    "slug": "arrivederci_pizzeria",
+    "name": "Arrivederci Pizzeria",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Italian", "Pizza", "Pasta", "Dinner", "Gluten-Free"],
+    "desc": {
+      "en": "Arrivederci Pizzeria is a family-run Italian pizzeria on Park Road in Milton, best known for pizza served by the metre since opening its Brisbane restaurant in 1992. Alongside a big classic menu of pizzas, pasta, risotto, salads and gelato, it has a dedicated vegan menu — eight vegan pizzas with vegan cheese included, six pastas (including a vegan carbonara), vegan desserts and gelato — plus a monthly Vegan Night with vegan mains for $15.",
+      "pt": "O Arrivederci Pizzeria é uma pizzaria italiana familiar na Park Road, em Milton, mais conhecida pela pizza servida por metro desde que abriu o restaurante de Brisbane, em 1992. Ao lado de um grande cardápio clássico de pizzas, massas, risotos, saladas e gelato, oferece um cardápio vegano dedicado — oito pizzas veganas com queijo vegetal incluído, seis massas (incluindo uma carbonara vegana), sobremesas e gelato veganos — além de uma Noite Vegana mensal com pratos principais veganos por $15."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://www.arrivedercipizza.com.au", "instagram": "https://www.instagram.com/arrivedercipizzeria", "facebook": "https://www.facebook.com/ArrivederciPizza", "tiktok": "" },
+    "address": "1/1 Park Road, Milton, QLD 4064",
+    "maps_url": "https://www.google.com/maps/search/1%2F1+Park+Road+Milton+QLD+4064",
+    "why": {
+      "en": "A family-run Milton pizzeria known for pizza by the metre, with a dedicated vegan menu of pizzas, pastas, desserts and gelato — and vegan cheese included at no extra charge.",
+      "pt": "Uma pizzaria familiar em Milton conhecida pela pizza por metro, com cardápio vegano dedicado de pizzas, massas, sobremesas e gelato — e queijo vegetal incluído sem custo extra."
+    },
+    "what_to_order": {
+      "en": "The vegan Funghi (mixed mushrooms and truffle oil, with optional vegan bacon), the Mediterranean or the Pump King pizza, and the vegan carbonara — then finish with vegan gelato.",
+      "pt": "A Funghi vegana (mix de cogumelos e azeite trufado, com bacon vegano opcional), a Mediterranean ou a Pump King, e a carbonara vegana — e termine com gelato vegano."
+    },
+    "when": {
+      "en": "The original Arrivederci opened on the Gold Coast in 1980, and the Milton restaurant followed in 1992 — still run by the Silvestri family. Open daily for lunch and dinner (11am–9pm, until 10pm on Fridays and Saturdays), with dine-in, takeaway, delivery and catering. Vegan Night runs on the second Tuesday of each month from 6pm. The menu is mixed, so ask for the vegan menu when ordering.",
+      "pt": "O Arrivederci original abriu na Gold Coast em 1980, e o restaurante de Milton veio em 1992 — até hoje administrado pela família Silvestri. Aberto todos os dias para almoço e jantar (11h às 21h, até 22h às sextas e sábados), com atendimento no local, para levar, delivery e catering. A Noite Vegana acontece na segunda terça-feira de cada mês, a partir das 18h. O cardápio é misto, então peça o cardápio vegano ao fazer o pedido."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/c3Pi7MIDEHAtCLgwY" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/ArrivederciPizza/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/arrivederci-pizzeria-milton-113169" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.ubereats.com/au/store/arrivederci-pizza/fDp5IVmtQDWaOHgQST5Pag" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.doordash.com/store/arrivederci-pizza-al-metro-milton-973233/2297346/" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com/Restaurant_Review-g255068-d721641-Reviews-Arrivederci_Pizza-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.yelp.com/biz/arrivederci-pizza-al-metro-milton-2" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1158136/arrivederci-pizza", "link_only": true }
+    }
+  },
+  {
+    "slug": "antica",
+    "name": "Antica Pizzeria",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Italian", "Pizza", "Pasta", "Dinner", "Gluten-Free"],
+    "desc": {
+      "en": "Antica is a Neapolitan-style pizzeria and trattoria in Wilston Village, the flagship restaurant of the team behind Pizzantica, which began in 2012 as a pizza oven in a vintage VW Kombi. Its woodfired oven, imported from Modena, turns out more than 20 pizzas — including the metre-long Antica — plus pasta and desserts. The menu is mixed, but a dedicated vegan menu gives vegans their own antipasti (such as vegan focaccia and zucchini flowers with olive tapenade), pizzas, pasta and desserts, including a vegan chocolate cake and the \"Vagamisu\", a deconstructed vegan tiramisu.",
+      "pt": "O Antica é uma pizzaria e trattoria de estilo napolitano em Wilston Village, restaurante principal da equipe por trás do Pizzantica, que começou em 2012 como um forno de pizza em uma Kombi antiga. Seu forno a lenha, importado de Modena, produz mais de 20 pizzas — incluindo a Antica, de um metro — além de massas e sobremesas. O cardápio é misto, mas um cardápio vegano dedicado oferece aos veganos antepastos próprios (como focaccia vegana e flores de abobrinha com tapenade de azeitona), pizzas, massas e sobremesas, incluindo um bolo de chocolate vegano e o \"Vagamisu\", um tiramisù vegano desconstruído."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://www.anticapizzeria.net.au", "instagram": "https://www.instagram.com/antica.wilston", "facebook": "https://www.facebook.com/Antica.Wilston", "tiktok": "" },
+    "address": "1/70 Kedron Brook Road, Wilston, QLD 4051",
+    "maps_url": "https://www.google.com/maps/search/1%2F70+Kedron+Brook+Road+Wilston+QLD+4051",
+    "why": {
+      "en": "A Wilston woodfired pizzeria whose dedicated vegan menu covers antipasti, pizzas, pasta and desserts — a full Italian dinner for vegans, not just a side option.",
+      "pt": "Uma pizzaria a lenha em Wilston cujo cardápio vegano dedicado cobre antepastos, pizzas, massas e sobremesas — um jantar italiano completo para veganos, e não só uma opção extra."
+    },
+    "what_to_order": {
+      "en": "Vegan focaccia and zucchini flowers with olive tapenade to start, a pizza from the vegan section, and the \"Vagamisu\" vegan tiramisu for dessert.",
+      "pt": "Focaccia vegana e flores de abobrinha com tapenade de azeitona de entrada, uma pizza da seção vegana e o tiramisù vegano \"Vagamisu\" de sobremesa."
+    },
+    "when": {
+      "en": "Started in 2012 as Pizzantica, a pizza oven on a vintage VW Kombi, then moved to Casa Italia in New Farm before opening Antica in Wilston in 2022. Open for dinner Wednesday to Sunday, plus lunch on Fridays, and closed on Mondays and Tuesdays. The menu is mixed, so ask for the vegan menu when ordering.",
+      "pt": "Começou em 2012 como Pizzantica, um forno de pizza em uma Kombi antiga, depois passou pelo Casa Italia, em New Farm, antes de abrir o Antica em Wilston, em 2022. Aberto para jantar de quarta a domingo, além de almoço às sextas, e fechado às segundas e terças. O cardápio é misto, então peça o cardápio vegano ao fazer o pedido."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/My9YjbM1vWVagKPwi" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/Antica.Wilston/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/antica-new-farm-224130" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d23860581-Reviews-Antica-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/8090914/antica", "link_only": true }
+    }
+  },
+  {
+    "slug": "ma-pa-me",
+    "name": "Ma Pa Me",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Asian", "Lunch", "Dinner", "Gluten-Free", "Banquet"],
+    "desc": {
+      "en": "Ma Pa Me is a Southeast Asian restaurant in South Bank, serving home-cooked-style regional dishes with a modern twist and a lively cocktail list, open seven days from 11:30am until late. Led by chef and owner Alfan Musthafa, it has a separate vegan menu — one of South Bank's largest selections of vegan Southeast Asian dishes — with tofu bao, spring rolls, eggplant tempura, nasi goreng, pad Thai, gado gado, jackfruit rendang and pumpkin white curry, plus a $65-per-person vegan banquet.",
+      "pt": "O Ma Pa Me é um restaurante do Sudeste Asiático em South Bank, que serve pratos regionais no estilo de comida caseira com um toque moderno e uma carta de coquetéis animada, aberto todos os dias das 11h30 até tarde. Comandado pelo chef e dono Alfan Musthafa, tem um cardápio vegano separado — uma das maiores seleções de pratos veganos do Sudeste Asiático em South Bank — com bao de tofu, spring rolls, tempurá de berinjela, nasi goreng, pad thai, gado gado, rendang de jaca e curry branco de abóbora, além de um banquete vegano por $65 por pessoa."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://www.mapame.com.au", "instagram": "https://www.instagram.com/ma.pa.me", "facebook": "https://www.facebook.com/MaPaMe.SouthBank", "tiktok": "" },
+    "address": "Shop 6C, Little Stanley Street, South Bank, QLD 4101",
+    "maps_url": "https://www.google.com/maps/search/Shop+6C+Little+Stanley+Street+South+Bank+QLD+4101",
+    "why": {
+      "en": "A South Bank Southeast Asian restaurant with a separate vegan menu — one of the area's largest selections of vegan dishes — including a $65-per-person vegan banquet for sharing.",
+      "pt": "Um restaurante do Sudeste Asiático em South Bank com cardápio vegano separado — uma das maiores seleções de pratos veganos da região — incluindo um banquete vegano para compartilhar por $65 por pessoa."
+    },
+    "what_to_order": {
+      "en": "The jackfruit rendang curry, the pumpkin white curry or the vegan gado gado, with the tofu bao and eggplant tempura to start — or go for the vegan banquet.",
+      "pt": "O curry rendang de jaca, o curry branco de abóbora ou o gado gado vegano, com o bao de tofu e o tempurá de berinjela de entrada — ou vá de banquete vegano."
+    },
+    "when": {
+      "en": "Open seven days from 11:30am until late, for lunch, dinner and cocktails, with online bookings and takeaway. The menu is mixed, so ask for the vegan menu and choose the vegan version of each dish when ordering.",
+      "pt": "Aberto todos os dias das 11h30 até tarde, para almoço, jantar e coquetéis, com reservas online e opção para levar. O cardápio é misto, então peça o cardápio vegano e escolha a versão vegana de cada prato ao pedir."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/4QmCAeB7O8njxDQ0X" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/MaPaMe.SouthBank/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/ma-pa-me-south-brisbane-307088" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d23821375-Reviews-Ma_Pa_Me-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/4111223/ma-pa-me", "link_only": true }
+    }
+  },
+  {
+    "slug": "spaghetti_house",
+    "name": "Spaghetti House",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Italian", "Pizza", "Pasta", "Dinner", "Gluten-Free"],
+    "desc": {
+      "en": "Spaghetti House Trattoria is an Italian restaurant on the corner of Grey and Little Stanley Streets in South Brisbane, near QPAC, serving simple, honest Italian cooking inspired by the piazzas of Italy — pizza, pasta, gnocchi and more, with the pizza bases, sauces and pastas made in house. The menu is mixed, but vegan dishes are identified on the online menu — from garlic focaccia and bruschetta to pizzas, pasta and gnocchi (the basil pesto vegan gnocchi is a favourite) — alongside gluten-free options.",
+      "pt": "O Spaghetti House Trattoria é um restaurante italiano na esquina das ruas Grey e Little Stanley, em South Brisbane, perto do QPAC, que serve comida italiana simples e honesta inspirada nas piazzas da Itália — pizza, massas, nhoque e mais, com massas de pizza, molhos e massas feitos na casa. O cardápio é misto, mas os pratos veganos são identificados no cardápio online — de focaccia de alho e bruschetta a pizzas, massas e nhoque (o nhoque vegano ao pesto de manjericão é um dos favoritos) — além de opções sem glúten."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://www.spaghettihouse.au", "instagram": "https://www.instagram.com/the_spaghettihouse", "facebook": "https://www.facebook.com/spaghettihousetrattoria", "tiktok": "" },
+    "address": "164 Grey Street, South Brisbane, QLD 4101",
+    "maps_url": "https://www.google.com/maps/search/164+Grey+Street+South+Brisbane+QLD+4101",
+    "why": {
+      "en": "A South Brisbane trattoria with vegan dishes marked on the online menu — from garlic focaccia and bruschetta to pizza, pasta and gnocchi — handy for mixed-diet groups and pre-show dinners near QPAC.",
+      "pt": "Uma trattoria em South Brisbane com pratos veganos identificados no cardápio online — de focaccia de alho e bruschetta a pizza, massa e nhoque — ótima para grupos com dietas diferentes e jantares antes de espetáculos perto do QPAC."
+    },
+    "what_to_order": {
+      "en": "The basil pesto vegan gnocchi and the bruschetta al pomodoro, plus a vegan pizza or pasta from the marked options.",
+      "pt": "O nhoque vegano ao pesto de manjericão e a bruschetta al pomodoro, além de uma pizza ou massa vegana entre as opções identificadas."
+    },
+    "when": {
+      "en": "Open daily for lunch and dinner, with pre-show dining near QPAC, bookings, takeaway and banquet menus. The menu is mixed, and the vegan options are marked on the online menu but not always on the printed one, so check the online menu and confirm with the staff when ordering.",
+      "pt": "Aberto todos os dias para almoço e jantar, com jantar pré-espetáculo perto do QPAC, reservas, opção para levar e menus de banquete. O cardápio é misto, e as opções veganas estão marcadas no cardápio online, mas nem sempre no impresso, então confira o cardápio online e confirme com a equipe ao pedir."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/98AgD4MvgDXPP8f8t" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/spaghettihousetrattoria/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/the-spaghetti-house-trattoria-south-brisbane-154380" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d4044204-Reviews-The_Spaghetti_House-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.yelp.com/biz/the-spaghetti-house-trattoria-south-brisbane" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1481405/the-spaghetti-house", "link_only": true }
+    }
+  },
+  {
+    "slug": "king_tea",
+    "name": "King Tea",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Chinese", "Lunch", "Dinner", "Banquet", "Bar"],
+    "desc": {
+      "en": "King Tea is a Chinese kitchen and bar on Latrobe Terrace in Paddington, serving Chinese share plates — dumplings, noodles and wok dishes — with a strong vegan side. It has a large number of vegan items (almost everything vegetarian is also vegan, except the fried rice, which they make without egg on request), built on tofu, mushrooms and vegetables rather than fake meat, plus dedicated vegan banquets for groups. Standouts include the spring onion pancake, XO cauliflower, beans and magic tofu, and the rich vegan dan dan noodles.",
+      "pt": "O King Tea é uma cozinha e bar chinês na Latrobe Terrace, em Paddington, que serve pratos chineses para compartilhar — dumplings, noodles e pratos no wok — com um lado vegano forte. Tem um grande número de itens veganos (quase tudo o que é vegetariano também é vegano, exceto o arroz frito, que fazem sem ovo se você pedir), baseados em tofu, cogumelos e vegetais em vez de carne falsa, além de banquetes veganos dedicados para grupos. Os destaques incluem a panqueca de cebolinha, a couve-flor XO, o feijão com tofu mágico e o rico dan dan noodles vegano."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://www.king-tea.co/", "instagram": "https://www.instagram.com/kingteachinese", "facebook": "https://www.facebook.com/kingteabarandrestaurant/", "tiktok": "" },
+    "address": "100 Latrobe Terrace, Paddington, QLD 4064",
+    "maps_url": "https://www.google.com/maps/search/100+Latrobe+Terrace+Paddington+QLD+4064",
+    "why": {
+      "en": "A Paddington Chinese kitchen with a large vegan menu — almost everything vegetarian is also vegan — built on tofu, mushrooms and vegetables, with dedicated vegan banquets for groups.",
+      "pt": "Uma cozinha chinesa em Paddington com um grande cardápio vegano — quase tudo o que é vegetariano também é vegano — baseado em tofu, cogumelos e vegetais, com banquetes veganos dedicados para grupos."
+    },
+    "what_to_order": {
+      "en": "The spring onion pancake, XO cauliflower, beans and magic tofu and the vegan dan dan noodles — or book the vegan banquet and share it all.",
+      "pt": "A panqueca de cebolinha, a couve-flor XO, o feijão com tofu mágico e o dan dan noodles vegano — ou reserve o banquete vegano e divida tudo."
+    },
+    "when": {
+      "en": "Open for dinner every day from 5pm (until 8:30pm on Sundays), plus lunch Friday to Sunday from 12pm, with bookings, takeaway and gift vouchers. Groups of six or more choose a banquet, and there is a dedicated vegan banquet. The menu is mixed, so ask for the vegan dishes — the fried rice comes with egg unless you ask for it to be left out.",
+      "pt": "Aberto para jantar todos os dias a partir das 17h (até 20h30 aos domingos), além de almoço de sexta a domingo a partir das 12h, com reservas, opção para levar e vale-presente. Grupos de seis ou mais escolhem um banquete, e existe um banquete vegano dedicado. O cardápio é misto, então peça os pratos veganos — o arroz frito vem com ovo, a menos que você peça para tirar."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/PWCaYBph0N2NSJKPq" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/kingteabarandrestaurant/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/king-tea-paddington-149450" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.ubereats.com/au/store/king-tea-chinese/j0sgYwntXMeaH47i5U1Jaw" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d12675760-Reviews-King_Tea-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.opentable.com.au/r/king-tea-chinese-kitchen-and-bar-paddington" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1296864/king-tea", "link_only": true }
+    }
+  },
+  {
+    "slug": "hai-hai",
+    "name": "Hai Hai",
+    "vegan": "Friendly",
+    "badge": "",
+    "tags": ["Vegan-Friendly", "Japanese", "Ramen", "Lunch", "Dinner", "Bar"],
+    "desc": {
+      "en": "Hai Hai is a ramen and izakaya bar with two Brisbane locations — the original on Latrobe Terrace in Paddington, open since 2016, and a larger West End flagship on Boundary Street that opened on Anzac Day 2025 — serving ramen, bao, snacks, beer and cocktails. The menu is mixed and mostly meaty, but there is a small vegan selection: vegetarian and vegan ramen (the miso ramen is vegan by default, and the veg shoyu is vegan without the egg), a tofu bao and vegan-friendly sides such as edamame.",
+      "pt": "O Hai Hai é um bar de ramen e izakaya com duas unidades em Brisbane — a original na Latrobe Terrace, em Paddington, aberta desde 2016, e uma unidade principal maior em West End, na Boundary Street, inaugurada no Anzac Day de 2025 — que serve ramen, bao, petiscos, cerveja e coquetéis. O cardápio é misto e majoritariamente com carne, mas há uma pequena seleção vegana: ramen vegetariano e vegano (o ramen de miso é vegano por padrão, e o veg shoyu é vegano sem o ovo), um bao de tofu e acompanhamentos amigáveis a veganos, como edamame."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://www.haihai.com.au", "instagram": "https://www.instagram.com/haihairamen", "facebook": "https://www.facebook.com/haihairamen", "tiktok": "" },
+    "address": "102 Latrobe Terrace, Paddington, QLD 4064",
+    "maps_url": "https://www.google.com/maps/search/102+Latrobe+Terrace+Paddington+QLD+4064",
+    "why": {
+      "en": "A ramen and izakaya bar in Paddington and West End with vegan ramen — the miso is vegan by default — plus a tofu bao and vegan-friendly sides.",
+      "pt": "Um bar de ramen e izakaya em Paddington e West End com ramen vegano — o de miso é vegano por padrão — além de bao de tofu e acompanhamentos amigáveis a veganos."
+    },
+    "what_to_order": {
+      "en": "The miso ramen (vegan by default) or the veg shoyu without the egg, with the tofu bao and edamame on the side.",
+      "pt": "O ramen de miso (vegano por padrão) ou o veg shoyu sem o ovo, com o bao de tofu e edamame de acompanhamento."
+    },
+    "when": {
+      "en": "Serving Brisbane since 2016 on Latrobe Terrace in Paddington, with a second, larger restaurant on Boundary Street in West End that opened on Anzac Day 2025 — from Crowded House Hospitality. Both open for dinner every day from 5pm (until 8pm on Sundays), with lunch Friday to Sunday in Paddington and Wednesday to Sunday in West End. The menu is mixed and the vegan selection is small, so confirm each dish with the team when ordering.",
+      "pt": "Serve Brisbane desde 2016 na Latrobe Terrace, em Paddington, com um segundo restaurante, maior, na Boundary Street, em West End, inaugurado no Anzac Day de 2025 — do grupo Crowded House Hospitality. Ambos abrem para jantar todos os dias a partir das 17h (até 20h aos domingos), com almoço de sexta a domingo em Paddington e de quarta a domingo em West End. O cardápio é misto e a seleção vegana é pequena, então confirme cada prato com a equipe ao pedir."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "19/09/2026",
+    "next_update": "19/09/2027",
+    "final_rating": 5,
+    "reviews": {
+      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/nbAxmg8BW0EG8kkBD" },
+      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/haihairamen/reviews" },
+      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/hai-hai-brisbane-194848" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.ubereats.com/au/store/hai-hai-ramen/Gxs6rUcBTYKPjceI4A13vw" },
+      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d12169710-Reviews-Hai_Hai-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
+    }
   }
 ]

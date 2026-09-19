@@ -248,6 +248,79 @@
     box-shadow: 0 4px 14px rgba(26, 58, 42, 0.15);
   }
 
+  /* ── FEW VEGAN OPTIONS (secondary block) ── */
+  .limited-section {
+    max-width: 1100px; margin: 0 auto;
+    padding: 20px 40px 60px;
+  }
+  .limited-title {
+    font-family: 'Boldonse', system-ui;
+    font-size: 14px; color: var(--forest);
+    letter-spacing: 1px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .limited-title::after {
+    content: ''; flex: 1; height: 1px;
+    background: rgba(26, 58, 42, 0.08);
+  }
+  .limited-desc {
+    font-size: 14px; line-height: 1.7;
+    color: var(--text-light); max-width: 680px;
+    margin-bottom: 22px;
+  }
+  .limited-sub {
+    font-family: 'Fraunces', serif;
+    font-size: 17px; font-weight: 700; color: var(--forest);
+    margin: 26px 0 12px;
+  }
+  .limited-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+  }
+  .limited-card {
+    background: white; border-radius: 12px;
+    padding: 16px 18px;
+    border: 1px solid rgba(42, 42, 40, 0.06);
+    display: flex; flex-direction: column; gap: 10px;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .limited-card:hover {
+    box-shadow: 0 8px 24px rgba(26, 58, 42, 0.07);
+    border-color: rgba(74, 140, 92, 0.15);
+  }
+  .limited-name {
+    font-family: 'Fraunces', serif;
+    font-size: 16px; font-weight: 700; color: var(--forest);
+    line-height: 1.25;
+  }
+  .limited-badges { display: flex; flex-wrap: wrap; gap: 5px; flex-grow: 1; align-content: flex-start; }
+  .badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.3px;
+    background: rgba(42, 42, 40, 0.06); color: var(--text-light);
+  }
+  .badge.veg { background: rgba(74, 140, 92, 0.12); color: var(--moss); }
+  .badge.warn { background: rgba(192, 104, 74, 0.13); color: var(--terracotta); }
+  .limited-btn {
+    align-self: flex-start;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 16px;
+    border: 1.5px solid var(--forest);
+    border-radius: 24px;
+    font-size: 12px; font-weight: 600;
+    color: var(--forest); text-decoration: none;
+    transition: all 0.25s ease;
+  }
+  .limited-btn:hover { background: var(--forest); color: var(--cream); }
+  .limited-btn svg { width: 12px; height: 12px; }
+  .limited-note {
+    margin-top: 22px;
+    font-size: 12px; line-height: 1.6;
+    color: var(--sage); font-style: italic;
+  }
+
   /* ── NO RESULTS ── */
   .no-results {
     text-align: center; padding: 60px 20px;
@@ -272,6 +345,7 @@
     .page-header { padding: 80px 20px 0; }
     .filters-bar { padding: 0 20px; }
     .results-info { padding: 0 20px; }
+    .limited-section { padding: 10px 20px 40px; }
     .cards-section { padding: 0 20px 40px; }
     .cards-grid { grid-template-columns: 1fr; }
     .card { padding: 18px; }
@@ -315,6 +389,17 @@
       <div class="no-results-sub" data-i18n="no.sub">Try adjusting your filters</div>
     </div>
   </div>
+
+  <!-- FEW VEGAN OPTIONS (data: limitedVenues in the script below) -->
+  <section class="limited-section" id="few-vegan-options" aria-labelledby="limitedTitle">
+    <h2 class="limited-title" id="limitedTitle" data-i18n="limited.title">Few vegan options</h2>
+    <p class="limited-desc" data-i18n="limited.desc">These places aren't vegan-friendly — their vegan menus are small — but they do have clearly identified vegan options. Handy when the group has picked a spot and you need a plan B.</p>
+    <h3 class="limited-sub" data-i18n="limited.local">Restaurants in Brisbane</h3>
+    <div class="limited-grid" id="limitedLocal"></div>
+    <h3 class="limited-sub" data-i18n="limited.chains">Chains</h3>
+    <div class="limited-grid" id="limitedChains"></div>
+    <p class="limited-note" data-i18n="limited.note">Menus change often, especially at chains and between stores. Options were last checked in September 2026 — always confirm with the staff before ordering.</p>
+  </section>
 
   <!-- FOOTER (shared, see partials.js) -->
   </main>
@@ -744,6 +829,90 @@ const venues = [
     tags: ["Vegan-Friendly", "Vegetarian", "Asian", "Lunch", "Dinner", "Gluten-Free"],
     rating: 5, votes: 0, vegan: false,
     url: "vegeme.html"
+  },
+  {
+    slug: "arrivederci_pizzeria",
+    name: "Arrivederci Pizzeria",
+    type: { en: "Italian Pizzeria", pt: "Pizzaria Italiana" },
+    logo: "images/logo_arrivederci_pizzeria.jpg",
+    location: "Milton",
+    desc: {
+      en: "Family-run Italian pizzeria known for pizza by the metre, with a dedicated vegan menu — vegan pizzas, pastas and gelato — and a monthly Vegan Night.",
+      pt: "Pizzaria italiana familiar conhecida pela pizza por metro, com cardápio vegano dedicado — pizzas, massas e gelato veganos — e uma Noite Vegana mensal."
+    },
+    tags: ["Vegan-Friendly", "Italian", "Pizza", "Pasta", "Dinner", "Gluten-Free"],
+    rating: 5, votes: 0, vegan: false,
+    url: "arrivederci_pizzeria.html"
+  },
+  {
+    slug: "antica",
+    name: "Antica Pizzeria",
+    type: { en: "Woodfired Pizzeria", pt: "Pizzaria a Lenha" },
+    logo: "images/logo_antica.jpg",
+    location: "Wilston",
+    desc: {
+      en: "Neapolitan-style woodfired pizzeria with a dedicated vegan menu — antipasti, pizzas, pasta and desserts — and gluten-free bases.",
+      pt: "Pizzaria napolitana a lenha com cardápio vegano dedicado — antepastos, pizzas, massas e sobremesas — e massas sem glúten."
+    },
+    tags: ["Vegan-Friendly", "Italian", "Pizza", "Pasta", "Dinner", "Gluten-Free"],
+    rating: 5, votes: 0, vegan: false,
+    url: "antica.html"
+  },
+  {
+    slug: "ma-pa-me",
+    name: "Ma Pa Me",
+    type: { en: "Southeast Asian Restaurant", pt: "Restaurante do Sudeste Asiático" },
+    logo: "images/logo_ma_pa_me.jpg",
+    location: "South Bank",
+    desc: {
+      en: "Southeast Asian restaurant with a separate vegan menu — curries, stir fries and share plates — and a vegan banquet for sharing.",
+      pt: "Restaurante do Sudeste Asiático com cardápio vegano separado — currys, salteados e pratos para compartilhar — e um banquete vegano."
+    },
+    tags: ["Vegan-Friendly", "Asian", "Lunch", "Dinner", "Gluten-Free", "Banquet"],
+    rating: 5, votes: 0, vegan: false,
+    url: "ma-pa-me.html"
+  },
+  {
+    slug: "spaghetti_house",
+    name: "Spaghetti House",
+    type: { en: "Italian Trattoria", pt: "Trattoria Italiana" },
+    logo: "images/logo_spaghetti_house.jpg",
+    location: "South Brisbane",
+    desc: {
+      en: "Italian trattoria near QPAC with vegan dishes marked on the online menu — pizza, pasta and gnocchi — plus gluten-free options.",
+      pt: "Trattoria italiana perto do QPAC com pratos veganos identificados no cardápio online — pizza, massa e nhoque — além de opções sem glúten."
+    },
+    tags: ["Vegan-Friendly", "Italian", "Pizza", "Pasta", "Dinner", "Gluten-Free"],
+    rating: 5, votes: 0, vegan: false,
+    url: "spaghetti_house.html"
+  },
+  {
+    slug: "king_tea",
+    name: "King Tea",
+    type: { en: "Chinese Kitchen & Bar", pt: "Cozinha Chinesa & Bar" },
+    logo: "images/logo_king_tea.jpg",
+    location: "Paddington",
+    desc: {
+      en: "Chinese share plates with a large vegan menu — almost everything vegetarian is also vegan — and dedicated vegan banquets for groups.",
+      pt: "Pratos chineses para compartilhar com um grande cardápio vegano — quase tudo o que é vegetariano também é vegano — e banquetes veganos dedicados para grupos."
+    },
+    tags: ["Vegan-Friendly", "Chinese", "Lunch", "Dinner", "Banquet", "Bar"],
+    rating: 5, votes: 0, vegan: false,
+    url: "king_tea.html"
+  },
+  {
+    slug: "hai-hai",
+    name: "Hai Hai",
+    type: { en: "Ramen & Izakaya Bar", pt: "Ramen & Izakaya" },
+    logo: "images/logo_hai_hai.jpg",
+    location: "Paddington & West End",
+    desc: {
+      en: "Ramen and izakaya bar with vegan ramen — the miso is vegan by default — plus a tofu bao and vegan-friendly sides.",
+      pt: "Bar de ramen e izakaya com ramen vegano — o de miso é vegano por padrão — além de bao de tofu e acompanhamentos amigáveis a veganos."
+    },
+    tags: ["Vegan-Friendly", "Japanese", "Ramen", "Lunch", "Dinner", "Bar"],
+    rating: 5, votes: 0, vegan: false,
+    url: "hai-hai.html"
   }
 ];
 
@@ -810,7 +979,7 @@ const tagMap = {
   "Multi-Cuisine": "Multi-Cozinha", "Tapas": "Tapas", "Wholesale": "Atacado",
   "Juice Bar": "Bar de Sucos", "Desserts": "Sobremesas", "Nut-Free": "Sem Nozes",
   "Breakfast": "Café da Manhã", "Middle Eastern": "Oriente Médio", "Mediterranean": "Mediterrâneo",
-  "Vegetarian": "Vegetariano"
+  "Vegetarian": "Vegetariano", "Italian": "Italiano", "Pasta": "Massas", "Banquet": "Banquete"
 };
 
 function translateTag(tag, lang) {
@@ -871,6 +1040,91 @@ function renderCards() {
   `).join('');
 }
 
+// ── FEW VEGAN OPTIONS (secondary block) ──
+// Restaurants whose vegan menu is small. Each entry shows only: name, badges (b) and a website button.
+// kind: 'local' | 'chain'. url: the restaurant's site (Australian version for chains). label: 'site' (default) or 'facebook'.
+// Badge keys live in limitedBadges below (type: '' = cuisine, 'veg' = vegan highlight, 'warn' = caution).
+const limitedBadges = {
+  // cuisine
+  australian: { en: "Modern Australian", pt: "Australiana moderna" }, asianFusion: { en: "Asian fusion", pt: "Fusão asiática" },
+  nepalese: { en: "Nepalese", pt: "Nepalês" }, turkish: { en: "Turkish", pt: "Turco" }, mexican: { en: "Mexican", pt: "Mexicano" },
+  thai: { en: "Thai", pt: "Tailandês" }, eastAsian: { en: "East Asian", pt: "Leste Asiático" }, japanese: { en: "Japanese", pt: "Japonês" },
+  koreanJapanese: { en: "Korean-Japanese", pt: "Coreano-japonês" }, burgers: { en: "Burgers", pt: "Hambúrgueres" },
+  pizza: { en: "Pizza", pt: "Pizza" }, asian: { en: "Asian", pt: "Asiático" }, desserts: { en: "Desserts", pt: "Sobremesas" },
+  schnitzel: { en: "Schnitzel", pt: "Schnitzel" }, greek: { en: "Greek", pt: "Grego" }, peri: { en: "Peri-peri chicken", pt: "Frango peri-peri" },
+  sandwiches: { en: "Sandwiches", pt: "Sanduíches" }, salads: { en: "Salads", pt: "Saladas" }, poke: { en: "Poke bowls", pt: "Poke bowls" },
+  acai: { en: "Açaí", pt: "Açaí" },
+  // vegan highlights
+  vegMenu: { en: "Vegan menu", pt: "Menu vegano", type: "veg" }, vegDishes: { en: "Vegan dishes marked", pt: "Pratos veganos marcados", type: "veg" },
+  manyVeg: { en: "Many vegan dishes", pt: "Vários pratos veganos", type: "veg" }, chefVeg: { en: "Chef's vegan menu", pt: "Menu vegano do chef", type: "veg" },
+  vegCheese: { en: "Vegan cheese", pt: "Queijo vegano", type: "veg" }, vegBurgers: { en: "Vegan burgers", pt: "Burgers veganos", type: "veg" },
+  vegBurger: { en: "Vegan burger", pt: "Burger vegano", type: "veg" }, vegPizzas: { en: "Vegan pizzas", pt: "Pizzas veganas", type: "veg" },
+  vegRamen: { en: "Vegan ramen", pt: "Ramen vegano", type: "veg" }, vegBanquet: { en: "Vegan banquet", pt: "Banquete vegano", type: "veg" },
+  plantMeat: { en: "Plant-based meat", pt: "Proteína vegetal", type: "veg" }, vegSchnitzel: { en: "Vegan schnitzel", pt: "Schnitzel vegano", type: "veg" },
+  vegDesserts: { en: "Vegan desserts", pt: "Sobremesas veganas", type: "veg" }, vegMayo: { en: "Vegan mayo", pt: "Maionese vegana", type: "veg" },
+  vegPatty: { en: "Vegan patty", pt: "Patty vegano", type: "veg" }, vegFillings: { en: "Vegan fillings", pt: "Recheios veganos", type: "veg" },
+  someVeg: { en: "Some vegan options", pt: "Algumas opções veganas", type: "veg" }, vegBowls: { en: "Some vegan bowls", pt: "Alguns bowls veganos", type: "veg" },
+  // cautions
+  sharedGrill: { en: "Shared grill", pt: "Mesma chapa", type: "warn" }, noVegCheese: { en: "No vegan cheese", pt: "Sem queijo vegano", type: "warn" },
+  checkBread: { en: "Check the bread", pt: "Confira o pão", type: "warn" }
+};
+
+const limitedVenues = [
+  // Restaurants in Brisbane
+  { name: "Alchemy", kind: "local", url: "https://www.alchemyrestaurant.com.au", b: ["australian", "vegMenu"] },
+  { name: "Chu The Phat", kind: "local", url: "https://chuthephat.com.au", b: ["asianFusion", "vegDishes"] },
+  { name: "Himalayan Cafe", kind: "local", url: "https://www.facebook.com/himalayancafenewfarm/", label: "facebook", b: ["nepalese", "manyVeg"] },
+  { name: "Olive Thyme", kind: "local", url: "https://olivethyme.com.au", b: ["turkish", "chefVeg"] },
+  { name: "Pepe's Mexican", kind: "local", url: "https://www.pepesmexican.com.au", b: ["mexican", "vegCheese"] },
+  { name: "Phat Boy", kind: "local", url: "https://www.phatboybrisbane.com.au", b: ["thai", "vegMenu"] },
+  { name: "Southside", kind: "local", url: "https://www.southside-restaurant.com.au", b: ["eastAsian", "vegBanquet"] },
+  { name: "Taro's Ramen", kind: "local", url: "https://taros.com.au", b: ["japanese", "vegRamen"] },
+  { name: "Zero Fox", kind: "local", url: "https://www.zerofoxbne.com", b: ["koreanJapanese", "vegDishes"] },
+  // Chains
+  { name: "Betty's Burgers", kind: "chain", url: "https://www.bettysburgers.com.au", b: ["burgers", "vegBurgers", "vegCheese"] },
+  { name: "Domino's", kind: "chain", url: "https://www.dominos.com.au", b: ["pizza", "vegPizzas", "vegCheese"] },
+  { name: "Fish Bowl", kind: "chain", url: "https://www.fishbowl.com.au", b: ["poke", "vegBowls"] },
+  { name: "Grill'd", kind: "chain", url: "https://grilld.com.au", b: ["burgers", "vegBurgers", "vegCheese"] },
+  { name: "Guzman y Gomez", kind: "chain", url: "https://www.guzmanygomez.com.au", b: ["mexican", "vegMayo", "noVegCheese"] },
+  { name: "Mad Mex", kind: "chain", url: "https://www.madmex.com.au", b: ["mexican", "vegCheese", "plantMeat"] },
+  { name: "Motto Motto", kind: "chain", url: "https://www.mottomotto.com.au", b: ["japanese", "vegDishes"] },
+  { name: "Nando's", kind: "chain", url: "https://www.nandos.com.au", b: ["peri", "plantMeat", "sharedGrill"] },
+  { name: "Oakberry", kind: "chain", url: "https://www.oakberry.com.au", b: ["acai", "vegBowls"] },
+  { name: "Oporto", kind: "chain", url: "https://www.oporto.com.au", b: ["burgers", "vegBurger"] },
+  { name: "P'Nut Street Noodles", kind: "chain", url: "https://www.pnut.com.au", b: ["thai", "vegDishes"] },
+  { name: "Pizza Hut", kind: "chain", url: "https://www.pizzahut.com.au", b: ["pizza", "vegPizzas", "vegCheese"] },
+  { name: "San Churro", kind: "chain", url: "https://www.sanchurro.com.au", b: ["desserts", "vegDesserts"] },
+  { name: "Schnitz", kind: "chain", url: "https://schnitz.com.au", b: ["schnitzel", "vegSchnitzel"] },
+  { name: "Soul Origin", kind: "chain", url: "https://www.soulorigin.com.au", b: ["salads", "someVeg"] },
+  { name: "Subway", kind: "chain", url: "https://www.subway.com/en-au/", b: ["sandwiches", "vegPatty", "checkBread"] },
+  { name: "Sumo Salad", kind: "chain", url: "https://www.sumosalad.com.au", b: ["salads", "someVeg"] },
+  { name: "Zambrero", kind: "chain", url: "https://www.zambrero.com.au", b: ["mexican", "vegCheese", "vegFillings"] },
+  { name: "Zeus Street Greek", kind: "chain", url: "https://www.zeusstreetgreek.com.au", b: ["greek", "vegMenu"] }
+];
+
+function renderLimited() {
+  const esc = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  const card = v => {
+    const badges = v.b.map(k => {
+      const b = limitedBadges[k];
+      return `<span class="badge${b.type ? ' ' + b.type : ''}">${b[currentLang]}</span>`;
+    }).join('');
+    const isFb = v.label === 'facebook';
+    const btn = isFb ? 'Facebook' : (currentLang === 'pt' ? 'Site' : 'Website');
+    return `
+    <div class="limited-card">
+      <div class="limited-name">${esc(v.name)}</div>
+      <div class="limited-badges">${badges}</div>
+      <a class="limited-btn" href="${v.url}" target="_blank" rel="noopener" aria-label="${esc(v.name)} — ${btn}">${btn}
+        <svg viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3L3 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>`;
+  };
+  const byName = (a, b) => a.name.localeCompare(b.name);
+  document.getElementById('limitedLocal').innerHTML = limitedVenues.filter(v => v.kind === 'local').sort(byName).map(card).join('');
+  document.getElementById('limitedChains').innerHTML = limitedVenues.filter(v => v.kind === 'chain').sort(byName).map(card).join('');
+}
+
 // ── SORT ──
 function setSort(type) {
   currentSort = type;
@@ -900,6 +1154,11 @@ const i18n = {
     "filter.vegan": "🌿 100% Vegan",
     "no.title": "No venues found",
     "no.sub": "Try adjusting your filters",
+    "limited.title": "Few vegan options",
+    "limited.desc": "These places aren't vegan-friendly — their vegan menus are small — but they do have clearly identified vegan options. Handy when the group has picked a spot and you need a plan B.",
+    "limited.local": "Restaurants in Brisbane",
+    "limited.chains": "Chains",
+    "limited.note": "Menus change often, especially at chains and between stores. Options were last checked in September 2026 — always confirm with the staff before ordering.",
     "footer.tagline": "A better world for the animals.",
     "footer.created": "Created by"
   },
@@ -915,6 +1174,11 @@ const i18n = {
     "filter.vegan": "🌿 100% Vegano",
     "no.title": "Nenhum local encontrado",
     "no.sub": "Tente ajustar os filtros",
+    "limited.title": "Poucas opções veganas",
+    "limited.desc": "Estes lugares não são vegan-friendly — o menu vegano é pequeno — mas têm opções veganas bem identificadas. Bom para quando o grupo já escolheu o lugar e você precisa de um plano B.",
+    "limited.local": "Restaurantes em Brisbane",
+    "limited.chains": "Redes",
+    "limited.note": "Os cardápios mudam com frequência, principalmente nas redes e entre lojas. As opções foram verificadas pela última vez em setembro de 2026 — sempre confirme com a equipe antes de pedir.",
     "footer.tagline": "Um mundo melhor para os animais.",
     "footer.created": "Criado por"
   }
@@ -928,6 +1192,7 @@ function toggleLang() {
     if (i18n[currentLang][key]) el.textContent = i18n[currentLang][key];
   });
   renderCards();
+  renderLimited();
 }
 
 // ── LOAD RATINGS FROM bvg_data.json ──
@@ -951,6 +1216,7 @@ function applyRatingsFromJSON() {
 }
 
 // ── INIT ──
+renderLimited();
 applyRatingsFromJSON();
 
 </script>
