@@ -30,7 +30,7 @@
 <link rel="icon" type="image/svg+xml" href="icon-bvg.svg">
 <script src="partials.js"></script>
 <style>
-  a, .card-btn, .filter-btn {
+  a, .card-btn, .filter-btn, .social-btn {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847'/></g></svg>") 6 26, pointer;
   }
 
@@ -178,17 +178,6 @@
     line-height: 1.25;
     margin-bottom: 6px;
   }
-  .card-social {
-    font-size: 13px;
-    margin-bottom: 2px;
-  }
-  .card-social a {
-    color: var(--leaf);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s;
-  }
-  .card-social a:hover { color: var(--forest); }
   .card-followers {
     font-size: 12px;
     color: var(--sage);
@@ -203,7 +192,43 @@
   }
   .card-tags {
     display: flex; flex-wrap: wrap; gap: 6px;
+    margin-bottom: 12px;
   }
+  .card-tags:last-child { margin-bottom: 0; }
+  .card-socials {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+    align-self: flex-start;
+  }
+  .social-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 34px; height: 34px;
+    background: rgba(26, 58, 42, 0.06); color: var(--forest);
+    border-radius: 50%;
+    transition: all 0.25s ease;
+  }
+  .social-btn:hover {
+    background: var(--forest); color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(26, 58, 42, 0.15);
+  }
+  .social-btn svg { width: 16px; height: 16px; }
+  .social-btn .be-glyph { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 11px; }
+
+  /* ── UPDATE DATES ── */
+  .update-dates {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    margin-top: 28px;
+    padding: 14px 20px;
+    background: rgba(45, 90, 61, 0.03);
+    border-radius: 10px;
+  }
+  .update-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; color: var(--text-light);
+  }
+  .update-item svg { flex-shrink: 0; opacity: 0.5; }
+  .update-label { font-weight: 600; color: var(--sage); }
+  .update-value { font-weight: 500; }
   .tag {
     display: inline-block;
     padding: 3px 10px;
@@ -241,6 +266,7 @@
     .cards-section { padding: 0 20px 40px; }
     .cards-grid { grid-template-columns: 1fr; }
     .card { padding: 18px; }
+    .update-dates { flex-direction: column; gap: 10px; }
   }
 </style>
 </head>
@@ -256,7 +282,7 @@
   <h1 class="page-title" data-i18n="page.title">People</h1>
   <p class="page-tagline" data-i18n="page.tagline">Voices shaping the vegan movement</p>
   <p class="page-desc" data-i18n="page.desc">The activists, creators, chefs, athletes, entrepreneurs, and everyday heroes building a kinder Brisbane — Meanjin. Follow them, support them, learn from them.</p>
-  <div class="page-count"><span id="personCount">16</span> <span data-i18n="page.people">people</span></div>
+  <div class="page-count"><span id="personCount">25</span> <span data-i18n="page.people">people</span></div>
 </div>
 
 <!-- FILTERS -->
@@ -280,6 +306,20 @@
     <div class="no-results-text" data-i18n="no.title">No people found</div>
     <div class="no-results-sub" data-i18n="no.sub">Try adjusting your filters</div>
   </div>
+
+  <!-- Update dates (filled from bvg_data_people.json) -->
+  <div class="update-dates">
+    <div class="update-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      <span class="update-label" data-i18n="update.last">Instagram followers updated on:</span>
+      <span class="update-value" id="followersUpdated">—</span>
+    </div>
+    <div class="update-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span class="update-label" data-i18n="update.next">Next update:</span>
+      <span class="update-value" id="followersNextUpdate">—</span>
+    </div>
+  </div>
 </div>
 
 <!-- FOOTER -->
@@ -291,145 +331,201 @@
 // ── DATA ──
 const people = [
   {
-    name: "Amanda Benham", initials: "AB",
-    desc: { en: "Evidence-based dietitian and nutritionist who proves that science and compassion go hand in hand. Founder of The Green Edge — Brisbane's most complete vegan destination.", pt: "Nutricionista baseada em evidências que prova que ciência e compaixão andam juntas. Fundadora do The Green Edge — o destino vegano mais completo de Brisbane." },
-    social: "https://www.instagram.com/thehumanherbivore", handle: "@thehumanherbivore",
-    followers: 5200,
+    name: "Amanda Benham", initials: "AB", slug: "amanda-benham",
+    desc: { en: "Evidence-based dietitian and nutritionist, and founder of The Green Edge — proof that science and compassion go hand in hand.", pt: "Nutricionista e dietista baseada em evidências e fundadora do The Green Edge — prova de que ciência e compaixão andam juntas." },
+    social: { instagram: "https://www.instagram.com/thehumanherbivore", linkedin: "https://www.linkedin.com/in/amanda-benham-phd-apd-faslm-134b2555/" },
     tags: ["Dietitian", "Entrepreneur", "Health"],
     content: "Health",
     avatar: ""
   },
   {
-    name: "Amanda Ducks", initials: "AD",
+    name: "Amanda Ducks", initials: "AD", slug: "amanda-ducks",
     desc: { en: "Vegan recipe creator who makes plant-based cooking feel effortless and delicious. Her feed is a constant stream of 'I need to make that right now.'", pt: "Criadora de receitas veganas que faz a culinária plant-based parecer fácil e deliciosa. O feed dela é um fluxo constante de 'preciso fazer isso agora.'" },
-    social: "https://www.instagram.com/amandaducks", handle: "@amandaducks",
-    followers: 3800,
+    social: { site: "https://www.amandaducks.com", instagram: "https://www.instagram.com/amandaducks", tiktok: "https://www.tiktok.com/@amanda.ducks", youtube: "https://www.youtube.com/amandaducks" },
     tags: ["Content Creator", "Recipes", "Food"],
     content: "Food",
     avatar: ""
   },
   {
-    name: "Andy", initials: "A",
-    desc: { en: "The person behind I Travel For Vegan Food — a Brisbane local who turned a passion for plant-based eating into a global travel guide. If there's a vegan spot worth visiting, Andy has probably already been there.", pt: "A pessoa por trás do I Travel For Vegan Food — um local de Brisbane que transformou a paixão por comida plant-based em um guia global de viagem. Se tem um lugar vegano que vale visitar, Andy provavelmente já esteve lá." },
-    social: "https://www.instagram.com/itravelforveganfood", handle: "@itravelforveganfood",
-    followers: 42000,
+    name: "Andy", initials: "A", slug: "andy",
+    desc: { en: "The person behind I Travel For Vegan Food — a travel and food influencer based in Brisbane who maps the best vegan eats from Brisbane to Bangkok.", pt: "A pessoa por trás do I Travel For Vegan Food, referência em viagens e gastronomia vegana — mapeia, a partir de Brisbane, os melhores lugares veganos de Bangkok a Taipei." },
+    social: { site: "https://www.itravelforveganfood.com", instagram: "https://www.instagram.com/andyfromhk" },
     tags: ["Travel", "Food", "Reviews"],
     content: "Food",
     avatar: ""
   },
   {
-    name: "Brad King", initials: "BK",
-    desc: { en: "Founder of Farm Animal Rescue — giving exploited farm animals a second chance at life through sanctuary, education, and unwavering dedication to the cause.", pt: "Fundador do Farm Animal Rescue — dando aos animais de fazenda explorados uma segunda chance de vida por meio de santuário, educação e dedicação inabalável à causa." },
-    social: "", handle: "",
-    followers: 0,
+    name: "Brad King", initials: "BK", slug: "brad-king",
+    desc: { en: "Founder and president of Farm Animal Rescue — giving exploited farm animals a second chance at life through sanctuary, education, and unwavering dedication to the cause.", pt: "Fundador e presidente da Farm Animal Rescue — dando aos animais de fazenda explorados uma segunda chance de vida por meio de santuário, educação e dedicação inabalável à causa." },
+    social: { linkedin: "https://www.linkedin.com/in/brad-king-b1110a251/" },
     tags: ["Activism", "Sanctuary", "Founder"],
     content: "Activism",
     avatar: ""
   },
   {
-    name: "Cameron Green", initials: "CG",
+    name: "Cale Drouin", initials: "CD", slug: "cale-drouin",
+    desc: { en: "Plant-based entrepreneur: co-founder of Cale & Daughters (now Made With Plants), co-founder of Yavanna, and co-owner of The Green Edge.", pt: "Empreendedor do setor plant-based: cofundador da Cale & Daughters (atual Made With Plants), cofundador do Yavanna e coproprietário do The Green Edge." },
+    social: { linkedin: "https://www.linkedin.com/in/cale-drouin/" },
+    tags: ["Entrepreneur", "Food", "Founder"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Cameron Green", initials: "CG", slug: "cameron-green",
     desc: { en: "Co-organiser of Brisbane Vegan Meetup — the person who makes sure vegans in Brisbane actually get together, share meals, and build real connections.", pt: "Co-organizador do Brisbane Vegan Meetup — a pessoa que garante que os veganos de Brisbane realmente se reúnam, compartilhem refeições e construam conexões reais." },
-    social: "https://www.facebook.com/camerondavidgreen", handle: "Cameron D. Green",
-    followers: 1200,
+    social: { facebook: "https://www.facebook.com/camerondavidgreen" },
     tags: ["Community", "Events", "Meetup"],
     content: "Community",
     avatar: ""
   },
   {
-    name: "Catherine Laurence", initials: "CL",
+    name: "Cassandra Haddad", initials: "CH", slug: "cassandra-haddad",
+    desc: { en: "Vegan strength and fitness coach helping plant-based women build muscle and confidence — without compromising their values.", pt: "Coach vegana de força e fitness que ajuda mulheres plant-based a ganhar músculos e confiança — sem abrir mão dos seus valores." },
+    social: { site: "https://cassandrahaddadfitness.com", instagram: "https://www.instagram.com/veganlovebycass", linkedin: "https://www.linkedin.com/in/cassandra-haddad-638148159/" },
+    tags: ["Fitness", "Coach", "Strength"],
+    content: "Fitness",
+    avatar: ""
+  },
+  {
+    name: "Catherine Laurence", initials: "CL", slug: "catherine-laurence",
     desc: { en: "Co-organiser of Brisbane Vegan Meetup — bringing vegans together with warmth, intention, and a genuine love for community building in Brisbane.", pt: "Co-organizadora do Brisbane Vegan Meetup — unindo veganos com acolhimento, intenção e amor genuíno pela construção comunitária em Brisbane." },
-    social: "https://www.instagram.com/c.a.laurence", handle: "@c.a.laurence",
-    followers: 980,
+    social: { instagram: "https://www.instagram.com/c.a.laurence" },
     tags: ["Community", "Events", "Meetup"],
     content: "Community",
     avatar: ""
   },
   {
-    name: "Chay Neal", initials: "CN",
+    name: "Chay Neal", initials: "CN", slug: "chay-neal",
     desc: { en: "Executive Director of Animal Liberation Queensland (now AnimalKind) — leading systemic change for animals through policy, campaigns, and relentless advocacy.", pt: "Diretor Executivo da Animal Liberation Queensland (atual AnimalKind) — liderando mudanças sistêmicas para os animais por meio de políticas, campanhas e advocacy incansável." },
-    social: "", handle: "",
-    followers: 0,
+    social: { instagram: "https://www.instagram.com/chayneal" },
     tags: ["Activism", "Leadership", "Policy"],
     content: "Activism",
     avatar: ""
   },
   {
-    name: "Christina Meyers", initials: "CM",
-    desc: { en: "A vibrant voice in Brisbane's vegan scene — sharing lifestyle, food, and everyday moments that prove veganism is anything but boring.", pt: "Uma voz vibrante na cena vegana de Brisbane — compartilhando estilo de vida, comida e momentos do dia a dia que provam que veganismo é tudo menos entediante." },
-    social: "https://www.instagram.com/christinamareemeyers", handle: "@christinamareemeyers",
-    followers: 2400,
-    tags: ["Content Creator", "Lifestyle", "Food"],
-    content: "Lifestyle",
+    name: "Christina Meyers", initials: "CM", slug: "christina-meyers",
+    desc: { en: "Yoga teacher and sound healer on the Gold Coast, sharing mindful, plant-based living and everyday moments that prove veganism is anything but boring.", pt: "Professora de yoga e sound healer na Gold Coast, compartilhando um estilo de vida consciente e plant-based e momentos do dia a dia que provam que veganismo é tudo menos entediante." },
+    social: { instagram: "https://www.instagram.com/christinamareemeyers", facebook: "https://www.facebook.com/share/1E8Ftx2iKa/" },
+    tags: ["Yoga", "Wellness", "Lifestyle"],
+    content: "Wellness",
     avatar: ""
   },
   {
-    name: "Humane Vision", initials: "HV",
-    desc: { en: "Jakob Alan Guy, aka Humane Vision — using comedy and sharp social media content to make people laugh, think, and maybe reconsider their next meal. Brisbane's funniest vegan.", pt: "Jakob Alan Guy, aka Humane Vision — usando comédia e conteúdo afiado nas redes para fazer as pessoas rirem, pensarem e talvez reconsiderarem sua próxima refeição. O vegano mais engraçado de Brisbane." },
-    social: "https://www.instagram.com/humane_vision", handle: "@humane_vision",
-    followers: 18500,
+    name: "Emma Goldenage", initials: "EG", slug: "emma-goldenage",
+    desc: { en: "Wellness and mindset creator sharing plant-based living, healthy habits, and an abundance mindset.", pt: "Criadora de conteúdo de bem-estar e mentalidade, compartilhando vida plant-based, hábitos saudáveis e uma mentalidade de abundância." },
+    social: { site: "https://www.emmagoldenage.com", instagram: "https://www.instagram.com/emma_goldenage" },
+    tags: ["Wellness", "Mindset", "Lifestyle"],
+    content: "Wellness",
+    avatar: ""
+  },
+  {
+    name: "Jakob Alan Guy", initials: "JG", slug: "jakob-alan-guy",
+    desc: { en: "Aka Humane Vision — Brisbane comedian and social media influencer using humour and sharp content to make people laugh, think, and maybe reconsider their next meal.", pt: "Aka Humane Vision — comediante e influenciador de Brisbane que usa humor e conteúdo afiado para fazer as pessoas rirem, pensarem e talvez reconsiderarem a próxima refeição." },
+    social: { site: "https://www.humanevision.com.au", instagram: "https://www.instagram.com/humane_vision", facebook: "https://www.facebook.com/p/Humane-Vision-61571625337729/", youtube: "https://www.youtube.com/channel/UCSe-jO013XfrDTJUQAIuL4w" },
     tags: ["Comedian", "Content Creator", "Activism"],
     content: "Content",
     avatar: ""
   },
   {
-    name: "Jacki Batzloff", initials: "JB",
-    desc: { en: "Founder of Animal Liberation Queensland (now AnimalKind) — a pioneer of the animal rights movement in Queensland who laid the groundwork for decades of advocacy.", pt: "Fundadora da Animal Liberation Queensland (atual AnimalKind) — uma pioneira do movimento pelos direitos animais em Queensland que construiu as bases para décadas de advocacy." },
-    social: "", handle: "",
-    followers: 0,
-    tags: ["Activism", "Founder", "Pioneer"],
+    name: "Jane", initials: "J", slug: "jane",
+    desc: { en: "Gold Coast foodie behind Vegan on the GC — reels, recipes, and honest reviews of the coast's best vegan-friendly finds, all in the name of a more compassionate world.", pt: "Foodie da Gold Coast por trás do Vegan on the GC — reels, receitas e avaliações sinceras dos melhores achados veganos e vegan-friendly da região, em nome de um mundo mais compassivo." },
+    social: { instagram: "https://www.instagram.com/veganonthegc", facebook: "https://www.facebook.com/veganonthegc/" },
+    tags: ["Content Creator", "Reviews", "Food"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Julio Cesar Prava", initials: "JP", slug: "julio-cesar-prava",
+    desc: { en: "Infoactivist and artivist, founder of Brisbane Vegan Guide and Vegpedia.", pt: "Infoativista e artivista, fundador do Brisbane Vegan Guide e do Vegpedia." },
+    social: { instagram: "https://www.instagram.com/sencientista" },
+    tags: ["Activism", "Design", "Founder"],
     content: "Activism",
     avatar: ""
   },
   {
-    name: "Kelly James", initials: "KJ",
-    desc: { en: "Vegan tattoo artist creating beautiful, cruelty-free ink in Brisbane. Because compassion looks good on everyone — permanently.", pt: "Tatuadora vegana criando tinta bonita e livre de crueldade em Brisbane. Porque compaixão fica bem em todo mundo — permanentemente." },
-    social: "https://www.instagram.com/kelly_mcquirktattoo", handle: "@kelly_mcquirktattoo",
-    followers: 3100,
+    name: "Kelly James", initials: "KJ", slug: "kelly-james",
+    desc: { en: "Tattoo artist at Fox & Moon Tattoo, Queensland's first 100% vegan tattoo studio — custom, heartfelt tattoos and art. Because compassion looks good on everyone, permanently.", pt: "Tatuadora no Fox & Moon Tattoo, o primeiro estúdio de tatuagem 100% vegano de Queensland — tatuagens e arte personalizadas, feitas com carinho. Porque compaixão fica bem em todo mundo, permanentemente." },
+    social: { instagram: "https://www.instagram.com/kelly_mcquirktattoo", tiktok: "https://www.tiktok.com/@kellymcquirk" },
     tags: ["Artist", "Tattoo", "Cruelty-Free"],
     content: "Art",
     avatar: ""
   },
   {
-    name: "Lauren McGeachin", initials: "LM",
-    desc: { en: "Creator of Vegan with Lauren — making veganism approachable, relatable, and genuinely enjoyable through recipes, tips, and an infectious positive energy.", pt: "Criadora do Vegan with Lauren — tornando o veganismo acessível, identificável e genuinamente agradável por meio de receitas, dicas e uma energia positiva contagiante." },
-    social: "https://www.instagram.com/laurenmcgeachin", handle: "@laurenmcgeachin",
-    followers: 8700,
-    tags: ["Content Creator", "Recipes", "Lifestyle"],
+    name: "Lauren McGeachin", initials: "LM", slug: "lauren-mcgeachin",
+    desc: { en: "Australian vegan activist and creator of Vegan with Lauren — using her voice and reach to speak up for animals and make veganism visible, approachable, and hard to ignore.", pt: "Ativista vegana australiana e criadora do Vegan with Lauren — usando sua voz e seu alcance para defender os animais e tornar o veganismo visível, acessível e difícil de ignorar." },
+    social: { instagram: "https://www.instagram.com/laurenmcgeachin", tiktok: "https://www.tiktok.com/@laurennmcgeachin", youtube: "https://www.youtube.com/channel/UCSkX2sI80_3UYgxOl9-LdQQ" },
+    tags: ["Activism", "Content Creator", "Lifestyle"],
     content: "Content",
     avatar: ""
   },
   {
-    name: "Lexie Lou", initials: "LL",
+    name: "Lex (Leah) Higl", initials: "LH", slug: "lex-leah-higl",
+    desc: { en: "Brisbane-based sports dietitian (APD) and competitive vegan powerlifter, behind Plant Strong Co — evidence-based plant-based nutrition for athletes and everyone else.", pt: "Nutricionista esportiva (APD) com base em Brisbane e atleta de powerlifting vegan, por trás da Plant Strong Co — nutrição plant-based baseada em evidências para atletas e para todo mundo." },
+    social: { site: "https://www.plantstrongco.com", instagram: "https://www.instagram.com/plantstrong_dietitian", linkedin: "https://www.linkedin.com/in/leah-higl-331b6a123/" },
+    tags: ["Dietitian", "Sports Nutrition", "Health"],
+    content: "Health",
+    avatar: ""
+  },
+  {
+    name: "Lexie Lou", initials: "LL", slug: "lexie-lou",
     desc: { en: "Creator of vegan recipes and restaurant recommendations — your personal vegan food map for Brisbane. If it's plant-based and worth eating, Lexie has the inside scoop.", pt: "Criadora de receitas veganas e recomendações de restaurantes — seu mapa pessoal de comida vegana em Brisbane. Se é plant-based e vale a pena, Lexie tem a dica." },
-    social: "https://www.instagram.com/lexie.lou.x", handle: "@lexie.lou.x",
-    followers: 4500,
+    social: { instagram: "https://www.instagram.com/lexie.lou.x", tiktok: "https://www.tiktok.com/@lexie.lou.x" },
     tags: ["Content Creator", "Recipes", "Reviews"],
     content: "Food",
     avatar: ""
   },
   {
-    name: "Pippa Blatch", initials: "PB",
-    desc: { en: "Founder of Pippa's Pantry — turning Brisbane's neighbourhood café scene vegan, one sandwich at a time. Proof that good food and good values are the same thing.", pt: "Fundadora do Pippa's Pantry — transformando a cena de cafés de bairro em Brisbane em vegana, um sanduíche de cada vez. Prova de que boa comida e bons valores são a mesma coisa." },
-    social: "https://www.instagram.com/pippablatch_", handle: "@pippablatch_",
-    followers: 2100,
-    tags: ["Entrepreneur", "Chef", "Café"],
+    name: "Miranda Pentland", initials: "MP", slug: "miranda-pentland",
+    desc: { en: "Known as Mandy, co-founder of Brisbane Vegan Guide. A Brisbane local all her life and vegan for over 10 years, with experience in administration and hospitality — the last 8 years as a manager, waitress, and barista. Pet lover with 2 dogs and 2 cats.", pt: "Conhecida como Mandy, cofundadora do Brisbane Vegan Guide. Moradora de Brisbane a vida toda e vegana há mais de 10 anos, com experiência em administração e hospitalidade — nos últimos 8 anos como gerente, garçonete e barista. Ama pets e tem 2 cachorros e 2 gatos." },
+    social: { instagram: "https://www.instagram.com/mamdymoo" },
+    tags: ["Founder", "Hospitality", "Community"],
+    content: "Community",
+    avatar: ""
+  },
+  {
+    name: "Pippa Blatch", initials: "PB", slug: "pippa-blatch",
+    desc: { en: "Founder of Pippa's Pantry — Brisbane's beloved vegan bakery in Camp Hill, which started as an Instagram story when she was 18. Vegan for over 12 years, and proof that good food and good values are the same thing.", pt: "Fundadora do Pippa's Pantry — a querida padaria vegana de Brisbane, em Camp Hill, que começou como um story no Instagram quando ela tinha 18 anos. Vegana há mais de 12 anos e prova de que boa comida e bons valores são a mesma coisa." },
+    social: { instagram: "https://www.instagram.com/pippablatch_" },
+    tags: ["Entrepreneur", "Bakery", "Food"],
     content: "Food",
     avatar: ""
   },
   {
-    name: "Rico Andrade", initials: "RA",
-    desc: { en: "President of The Vegan Society of Queensland — leading the state's oldest and most established vegan organisation with vision, energy, and a deep commitment to the animals.", pt: "Presidente da The Vegan Society of Queensland — liderando a organização vegana mais antiga e estabelecida do estado com visão, energia e compromisso profundo com os animais." },
-    social: "", handle: "",
-    followers: 0,
+    name: "Pratana “Gifty” Langkapinth", initials: "PL", slug: "pratana-gifty-langkapinth",
+    desc: { en: "Co-founder of Vega Cafe — 100% vegan Thai flavours and Western classics in Spring Hill, Brisbane.", pt: "Cofundador(a) do Vega Cafe — sabores tailandeses e clássicos ocidentais 100% veganos em Spring Hill, Brisbane." },
+    social: {},
+    tags: ["Entrepreneur", "Café", "Founder"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Prince Khamkaew", initials: "PK", slug: "prince-khamkaew",
+    desc: { en: "Co-founder of Vega Cafe — 100% vegan Thai flavours and Western classics in Spring Hill, Brisbane.", pt: "Cofundador(a) do Vega Cafe — sabores tailandeses e clássicos ocidentais 100% veganos em Spring Hill, Brisbane." },
+    social: {},
+    tags: ["Entrepreneur", "Café", "Founder"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Renata Halpin", initials: "RH", slug: "renata-halpin",
+    desc: { en: "Vegan cook and advocate who shows how to veganise everyday recipes — supermarket tours included — and even ran a crowdfunding campaign for a vegan billboard in Toowoomba.", pt: "Cozinheira e defensora vegana que mostra como veganizar receitas do dia a dia — com direito a tour pelo supermercado — e que até fez uma campanha de financiamento coletivo por um outdoor vegano em Toowoomba." },
+    social: { instagram: "https://www.instagram.com/renatahalpin", youtube: "https://www.youtube.com/channel/UCUO0VZe2oJwpYMhGbohURUQ" },
+    tags: ["Recipes", "Education", "Activism"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Rico Andrade", initials: "RA", slug: "rico-andrade",
+    desc: { en: "President of The Vegan Society of Queensland — supporting and educating the community, hosting events, and building creative activism programs for animals.", pt: "Presidente da The Vegan Society of Queensland — apoiando e educando a comunidade, promovendo eventos e criando programas de ativismo criativo pelos animais." },
+    social: {},
     tags: ["Community", "Leadership", "Advocacy"],
     content: "Community",
     avatar: ""
   },
   {
-    name: "Tyra Rose", initials: "TR",
-    desc: { en: "Creator of Tyrabundance — sharing abundance, positivity, and plant-based living with a warmth that makes you want to be her friend immediately.", pt: "Criadora do Tyrabundance — compartilhando abundância, positividade e vida plant-based com uma afetuosidade que faz você querer ser amiga dela imediatamente." },
-    social: "https://www.instagram.com/tyraleorose", handle: "@tyraleorose",
-    followers: 6300,
+    name: "Tyra Eberwein", initials: "TE", slug: "tyra-eberwein",
+    desc: { en: "Creator of tyrabundance — vegan for over ten years, sharing abundance, positivity, and plant-based living with a warmth that makes you want to be her friend immediately.", pt: "Criadora do tyrabundance — vegana há mais de dez anos, compartilhando abundância, positividade e vida plant-based com uma afetuosidade que faz você querer ser amiga dela imediatamente." },
+    social: { instagram: "https://www.instagram.com/tyraleorose" },
     tags: ["Content Creator", "Lifestyle", "Positivity"],
     content: "Lifestyle",
     avatar: ""
@@ -445,12 +541,15 @@ const tagMap = {
   "Advocacy":"Advocacy","Leadership":"Liderança","Policy":"Políticas","Lifestyle":"Estilo de Vida",
   "Comedian":"Comediante","Social Media":"Mídias Sociais","Pioneer":"Pioneiro(a)","Animal Rights":"Direitos Animais",
   "Artist":"Artista","Tattoo":"Tatuagem","Cruelty-Free":"Livre de Crueldade","Chef":"Chef",
-  "Café":"Café","President":"Presidente","Positivity":"Positividade"
+  "Café":"Café","President":"Presidente","Positivity":"Positividade",
+  "Fitness":"Fitness","Coach":"Coach","Strength":"Força","Yoga":"Yoga","Wellness":"Bem-estar",
+  "Mindset":"Mentalidade","Design":"Design","Sports Nutrition":"Nutrição Esportiva","Bakery":"Padaria",
+  "Education":"Educação","Hospitality":"Hospitalidade"
 };
 
 const contentLabels = {
-  en: { all:"All content", Food:"Food", Content:"Content", Activism:"Activism", Community:"Community", Health:"Health", Lifestyle:"Lifestyle", Art:"Art" },
-  pt: { all:"Todo conteúdo", Food:"Comida", Content:"Conteúdo", Activism:"Ativismo", Community:"Comunidade", Health:"Saúde", Lifestyle:"Estilo de Vida", Art:"Arte" }
+  en: { all:"All content", Food:"Food", Content:"Content", Activism:"Activism", Community:"Community", Health:"Health", Lifestyle:"Lifestyle", Art:"Art", Fitness:"Fitness", Wellness:"Wellness" },
+  pt: { all:"Todo conteúdo", Food:"Comida", Content:"Conteúdo", Activism:"Ativismo", Community:"Comunidade", Health:"Saúde", Lifestyle:"Estilo de Vida", Art:"Arte", Fitness:"Fitness", Wellness:"Bem-estar" }
 };
 
 let currentLang = 'en';
@@ -461,10 +560,53 @@ function translateTag(tag) {
   return currentLang === 'pt' && tagMap[tag] ? tagMap[tag] : tag;
 }
 
+// 5200 -> "5.2K" (EN) / "5,2 mil" (PT); 1,250,000 -> "1.3M" / "1,3 mi"
 function formatFollowers(n) {
-  if (n === 0) return '';
-  if (n >= 1000) return (n / 1000).toFixed(n >= 10000 ? 0 : 1) + 'K';
-  return n.toString();
+  if (!n) return '';
+  const pt = currentLang === 'pt';
+  let v, unit;
+  if (n >= 1000000) { v = n / 1000000; unit = pt ? ' mi' : 'M'; }
+  else if (n >= 1000) { v = n / 1000; unit = pt ? ' mil' : 'K'; }
+  else return n.toLocaleString(pt ? 'pt-BR' : 'en-US');
+  let s = String(v >= 10 ? Math.round(v) : Math.round(v * 10) / 10);
+  if (pt) s = s.replace('.', ',');
+  return s + unit;
+}
+
+// ── SOCIAL ICONS ──
+const socialIconSvg = {
+  site: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>',
+  facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V7a1 1 0 0 1 1-1h3z"/></svg>',
+  tiktok: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V3c.4 2.6 2.4 4.4 5 4.6"/></svg>',
+  youtube: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/></svg>',
+  linkedin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>',
+  behance: '<svg viewBox="0 0 24 24"><text x="12" y="16" text-anchor="middle" class="be-glyph" fill="currentColor">Bē</text></svg>'
+};
+const socialLabels = { site: 'Website', instagram: 'Instagram', facebook: 'Facebook', tiktok: 'TikTok', youtube: 'YouTube', linkedin: 'LinkedIn', behance: 'Behance' };
+
+function renderSocialBtns(p) {
+  const order = ['site', 'instagram', 'facebook', 'tiktok', 'youtube', 'linkedin', 'behance'];
+  return order
+    .filter(k => p.social && p.social[k])
+    .map(k => `<a href="${p.social[k]}" target="_blank" rel="noopener" class="social-btn" title="${socialLabels[k]}" aria-label="${socialLabels[k]} — ${p.name}">${socialIconSvg[k]}</a>`)
+    .join('');
+}
+
+// ── FOLLOWERS DATA (bvg_data_people.json) ──
+function loadFollowersData() {
+  fetch('bvg_data_people.json')
+    .then(res => res.json())
+    .then(data => {
+      (data.people || []).forEach(entry => {
+        const person = people.find(p => p.slug === entry.slug);
+        if (person && typeof entry.instagram_followers === 'number') person.followers = entry.instagram_followers;
+      });
+      if (data.last_updated) document.getElementById('followersUpdated').textContent = data.last_updated;
+      if (data.next_update) document.getElementById('followersNextUpdate').textContent = data.next_update;
+      renderCards();
+    })
+    .catch(() => { /* file missing or invalid: cards simply show no follower counts */ });
 }
 
 function renderFilter() {
@@ -479,7 +621,7 @@ function renderCards() {
   let list = [...people];
   if (currentContent !== 'all') list = list.filter(p => p.content === currentContent);
   if (currentSort === 'alpha') list.sort((a, b) => a.name.localeCompare(b.name));
-  else if (currentSort === 'followers') list.sort((a, b) => b.followers - a.followers);
+  else if (currentSort === 'followers') list.sort((a, b) => (b.followers || 0) - (a.followers || 0) || a.name.localeCompare(b.name));
 
   const grid = document.getElementById('cardsGrid');
   const noRes = document.getElementById('noResults');
@@ -498,26 +640,24 @@ function renderCards() {
   info.textContent = `${showingWord} ${list.length} ${peopleWord}`;
   document.getElementById('personCount').textContent = list.length;
 
-  const followersWord = currentLang === 'pt' ? 'seguidores' : 'followers';
+  const followersWord = currentLang === 'pt' ? 'seguidores no Instagram' : 'followers on Instagram';
 
   grid.innerHTML = list.map((p, i) => {
     const avatarContent = p.avatar
       ? `<img src="${p.avatar}" alt="${p.name}">`
       : p.initials;
-    const socialHtml = p.handle
-      ? `<div class="card-social"><a href="${p.social}" target="_blank" rel="noopener">${p.handle}</a></div>`
-      : '';
-    const followersHtml = p.followers > 0
+    const followersHtml = (p.followers > 0 && p.social.instagram)
       ? `<div class="card-followers">${formatFollowers(p.followers)} ${followersWord}</div>`
-      : (p.handle ? '' : '<div class="card-followers">&nbsp;</div>');
+      : '';
+    const socialsHtml = renderSocialBtns(p);
     return `
     <div class="card">
       <div class="card-avatar">${avatarContent}</div>
       <div class="card-name">${p.name}</div>
-      ${socialHtml}
       ${followersHtml}
       <div class="card-desc">${p.desc[currentLang]}</div>
       <div class="card-tags">${p.tags.slice(0, 3).map(t => `<span class="tag">${translateTag(t)}</span>`).join('')}</div>
+      ${socialsHtml ? `<div class="card-socials">${socialsHtml}</div>` : ''}
     </div>`;
   }).join('');
 }
@@ -544,6 +684,8 @@ const i18n = { pt: {
   "filter.alpha": "A → Z",
   "filter.followers": "Mais seguidos",
   "filter.all": "Todo conteúdo",
+  "update.last": "Seguidores no Instagram atualizados em:",
+  "update.next": "Próxima atualização em:",
   "no.title": "Nenhuma pessoa encontrada",
   "no.sub": "Tente ajustar os filtros",
   "footer.tagline": "Um mundo melhor para os animais.",
@@ -569,6 +711,7 @@ window.addEventListener('load', () => {
 // ── INIT ──
 renderFilter();
 renderCards();
+loadFollowersData();
 </script>
 </body>
 </html>

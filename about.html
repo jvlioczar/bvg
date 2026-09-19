@@ -132,7 +132,18 @@
   }
   .author-card:hover::before { transform: scaleX(1); }
 
-  .author-emoji { font-size: 40px; margin-bottom: 14px; display: block; }
+  .author-photo {
+    width: 120px; height: 120px; border-radius: 50%;
+    margin-bottom: 18px;
+    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--leaf-light), var(--teal));
+    color: var(--cream);
+    font-family: 'Fraunces', serif; font-size: 40px; font-weight: 700;
+    border: 3px solid rgba(245, 240, 232, 0.8);
+    box-shadow: 0 4px 18px rgba(26, 58, 42, 0.14);
+  }
+  .author-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .author-name {
     font-family: 'Fraunces', serif;
     font-size: 22px; font-weight: 700;
@@ -144,6 +155,8 @@
     letter-spacing: 0.5px; text-transform: uppercase;
     margin-bottom: 12px;
   }
+  /* keep author names aligned when one role wraps to two lines (two-column layout) */
+  @media (min-width: 740px) { .author-role { min-height: 36px; } }
   .author-bio {
     font-size: 13px; line-height: 1.65;
     color: var(--text-light);
@@ -263,7 +276,7 @@
   <div class="about-content">
 
     <!-- ABOUT THE PROJECT -->
-    <div class="section-title anim" data-i18n="project.title">The Project</div>
+    <div class="section-title anim" data-i18n="project.title">The project</div>
 
     <div class="about-text anim" id="projectText">
       <p data-i18n="project.p1">First and foremost, this site is dedicated to all animals — those exploited by humans and those suffering across the planet. This project exists, above all, to help them.</p>
@@ -278,31 +291,23 @@
     <div class="about-text anim">
       <p data-i18n="project.p4">The project also showcases groups and key figures in the animal movement who contribute or have contributed to the cause in Brisbane and surrounds.</p>
 
-      <p data-i18n="project.p5">There's more to explore, too. The Vegan Kit serves up the essentials of veganism — no lectures, just facts with a side of good humour. The Vegan Map shows where the good stuff is hiding across Brisbane. The Vegan Finder is your shortcut for everything from a second date to a birthday feast for the whole gang, with more than 50 questions answered. And Hire a Vegan connects you with vegan professionals, because solidarity tastes even better when it's shared.</p>
+      <p data-i18n="project.p5">There's more to explore, too. The Vegan Kit serves up the essentials of veganism — no lectures, just facts with a side of good humour. The Vegan Map shows where the good stuff is hiding across Brisbane. The Vegan Finder is your shortcut for everything from a second date to a birthday feast for the whole gang, with more than 60 questions answered. And Hire a Vegan connects you with vegan professionals, because solidarity tastes even better when it's shared.</p>
     </div>
 
     <!-- MEET THE AUTHORS -->
-    <div class="section-title anim" data-i18n="authors.title">Meet the Authors</div>
+    <div class="section-title anim" data-i18n="authors.title">Meet the authors</div>
 
     <div class="authors-grid anim">
       <!-- Julio -->
       <div class="author-card">
-        <span class="author-emoji">🌱</span>
-        <div class="author-role" data-i18n="author1.role">Founder · Designer · Activist</div>
+        <div class="author-photo"><img src="images/bvg_julio.jpg" alt="Julio Cesar Prava" width="120" height="120" loading="lazy" onerror="this.parentNode.textContent='JP'"></div>
+        <div class="author-role" data-i18n="author1.role">Founder · Curator · Writer · Designer · Activist</div>
         <div class="author-name">Julio Cesar Prava</div>
-        <p class="author-bio" data-i18n="author1.bio">Graphic designer and vegan activist, Julio has been a student in Brisbane since March 2026 and has been immersing himself in the local vegan culture. Vegan for over 10 years, he is the creator of Vegpedia, a Portuguese-language site that maps everything about veganism in Brazil and worldwide. He decided to launch this project dedicated to Brisbane.</p>
+        <p class="author-bio" data-i18n="author1.bio">Writer, curator, graphic designer and vegan activist, Julio has been a student in Brisbane since March 2026 and has been immersing himself in the local vegan culture. Vegan for over 10 years, he is the creator of Vegpedia, a Portuguese-language site that maps everything about veganism in Brazil and worldwide. He decided to launch this project dedicated to Brisbane.</p>
         <div class="author-links">
-          <a href="https://jvlio.biblioverse.org" target="_blank" rel="noopener" class="social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-            Website
-          </a>
-          <a href="https://instagram.com/jvlio.biblioverse" target="_blank" rel="noopener" class="social-link">
+          <a href="https://www.instagram.com/sencientista/" target="_blank" rel="noopener" class="social-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
             Instagram
-          </a>
-          <a href="https://vegpedia.com" target="_blank" rel="noopener" class="social-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            Vegpedia
           </a>
           <a href="/cdn-cgi/l/email-protection#5f352a3336301f293a383e313d2d362c3d3e313a382a363b3a713c3032" class="social-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
@@ -313,12 +318,12 @@
 
       <!-- Mandy -->
       <div class="author-card">
-        <span class="author-emoji">🌻</span>
+        <div class="author-photo"><img src="images/bvg_mandy.jpg" alt="Mandy Pentland" width="120" height="120" loading="lazy" onerror="this.parentNode.textContent='MP'"></div>
         <div class="author-role" data-i18n="author2.role">Co-leader · Hospitality · Local Expert</div>
         <div class="author-name">Mandy Pentland</div>
         <p class="author-bio" data-i18n="author2.bio">Vegan for over a decade, Mandy has lived in Brisbane her whole life. With experience in vegan hospitality and deep expertise in the city's vegan movement, she brings invaluable local knowledge and a genuine passion for building a kinder community.</p>
         <div class="author-links">
-          <a href="#" target="_blank" rel="noopener" class="social-link">
+          <a href="https://www.instagram.com/mamdymoo/" target="_blank" rel="noopener" class="social-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
             Instagram
           </a>
@@ -341,7 +346,7 @@
     <!-- CONTACT -->
     <div class="contact-box anim">
       <div class="contact-emoji">📬</div>
-      <div class="contact-title" data-i18n="contact.title">Get in Touch</div>
+      <div class="contact-title" data-i18n="contact.title">Get in touch</div>
       <p class="contact-desc" data-i18n="contact.desc">Want to suggest something to make our collection more complete, or explore a partnership? Reach out via Instagram!</p>
       <a href="https://instagram.com/brisbaneveg" target="_blank" rel="noopener" class="contact-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
@@ -350,7 +355,7 @@
     </div>
 
     <!-- SITE MAP -->
-    <div class="section-title anim" data-i18n="sitemap.title">Site Map</div>
+    <div class="section-title anim" data-i18n="sitemap.title">Site map</div>
     <nav class="sitemap anim" aria-label="Site map">
       <div>
         <div class="sitemap-heading" data-i18n="sitemap.sections">Sections</div>
@@ -415,22 +420,22 @@ const i18n = {
   en: {
     "hero.title": "About the Project",
     "hero.sub": "For the animals, always",
-    "project.title": "The Project",
+    "project.title": "The project",
     "project.p1": "First and foremost, this site is dedicated to all animals — those exploited by humans and those suffering across the planet. This project exists, above all, to help them.",
     "project.p2": "Secondly, this guide was created to help vegans — those who want to reduce, as much as possible, their negative impact on animals' lives — and anyone interested in veganism and plant-based eating to find the best places in Brisbane for a great meal.",
     "project.p3": "In the Eat & Drink section, the guide offers a quick, objective, aggregated rating — based on a wide range of reviews from the main platforms, written by people who have actually visited these places — of venues with a fully vegan menu, followed by a list of vegan-friendly places.",
     "project.highlight": "Food is the largest driver of animal exploitation. It is essential to promote, and create value for, businesses and projects that help animals, and to help them keep improving — since people who consume animals carry many biases and prejudices, both the food and the people need to be inclusive. That way, more people can enjoy the comfort of eating and gathering without harming animals of other species.",
     "project.p4": "The project also showcases groups and key figures in the animal movement who contribute or have contributed to the cause in Brisbane and surrounds.",
-    "project.p5": "There's more to explore, too. The Vegan Kit serves up the essentials of veganism — no lectures, just facts with a side of good humour. The Vegan Map shows where the good stuff is hiding across Brisbane. The Vegan Finder is your shortcut for everything from a second date to a birthday feast for the whole gang, with more than 50 questions answered. And Hire a Vegan connects you with vegan professionals, because solidarity tastes even better when it's shared.",
-    "sitemap.title": "Site Map",
+    "project.p5": "There's more to explore, too. The Vegan Kit serves up the essentials of veganism — no lectures, just facts with a side of good humour. The Vegan Map shows where the good stuff is hiding across Brisbane. The Vegan Finder is your shortcut for everything from a second date to a birthday feast for the whole gang, with more than 60 questions answered. And Hire a Vegan connects you with vegan professionals, because solidarity tastes even better when it's shared.",
+    "sitemap.title": "Site map",
     "sitemap.sections": "Sections",
     "sitemap.venues": "Eat & Drink venues",
-    "authors.title": "Meet the Authors",
-    "author1.role": "Founder · Designer · Activist",
-    "author1.bio": "Graphic designer and vegan activist, Julio has been a student in Brisbane since March 2026 and has been immersing himself in the local vegan culture. Vegan for over 10 years, he is the creator of Vegpedia, a Portuguese-language site that maps everything about veganism in Brazil and worldwide. He decided to launch this project dedicated to Brisbane.",
+    "authors.title": "Meet the authors",
+    "author1.role": "Founder · Curator · Writer · Designer · Activist",
+    "author1.bio": "Writer, curator, graphic designer and vegan activist, Julio has been a student in Brisbane since March 2026 and has been immersing himself in the local vegan culture. Vegan for over 10 years, he is the creator of Vegpedia, a Portuguese-language site that maps everything about veganism in Brazil and worldwide. He decided to launch this project dedicated to Brisbane.",
     "author2.role": "Co-leader · Hospitality · Local Expert",
     "author2.bio": "Vegan for over a decade, Mandy has lived in Brisbane her whole life. With experience in vegan hospitality and deep expertise in the city's vegan movement, she brings invaluable local knowledge and a genuine passion for building a kinder community.",
-    "contact.title": "Get in Touch",
+    "contact.title": "Get in touch",
     "contact.desc": "Want to suggest something to make our collection more complete, or explore a partnership? Reach out via Instagram!",
     "footer.tagline": "A better world for the animals.",
     "footer.created": "Created by"
@@ -438,22 +443,22 @@ const i18n = {
   pt: {
     "hero.title": "Conheça o Projeto",
     "hero.sub": "Pelos animais, sempre",
-    "project.title": "O Projeto",
+    "project.title": "O projeto",
     "project.p1": "Em primeiro lugar, este site é dedicado a todos os animais — os explorados pelos humanos e os que sofrem em todo o planeta. O projeto existe, acima de tudo, para ajudá-los.",
     "project.p2": "Em segundo lugar, o guia foi criado para ajudar pessoas veganas, aquelas que desejam reduzir ao máximo seu impacto negativo na vida dos animais, e qualquer pessoa interessada no veganismo e na alimentação plant-based a encontrar os melhores lugares em Brisbane para uma ótima refeição.",
     "project.p3": "Na seção Eat & Drink, o guia oferece uma avaliação agregada, rápida e objetiva — baseada em uma ampla gama de avaliações das principais plataformas, feitas por quem já visitou esses locais — dos lugares com cardápio completamente vegano, além de uma lista de lugares vegan-friendly.",
     "project.highlight": "A alimentação é a maior fonte de exploração animal. É fundamental divulgar e gerar valor para empreendimentos e projetos que ajudem os animais, além de ajudá-los a se aprimorar continuamente — haja vista que quem consome animais tem muitos vieses e preconceitos, então tanto a comida quanto as pessoas precisam ser inclusivas. Assim, cada vez mais gente poderá ter o conforto de se alimentar e se reunir sem prejudicar os animais de outras espécies.",
     "project.p4": "O projeto também apresenta grupos e pessoas fundamentais para o movimento animal que colaboram ou colaboraram com a causa em Brisbane e região.",
-    "project.p5": "Tem mais para explorar! O Kit Vegano traz o essencial sobre veganismo — sem sermão, só fatos com uma pitada de bom humor. O Mapa Vegano mostra onde as delícias estão escondidas por Brisbane. O Vegan Finder é seu atalho para tudo, de um segundo encontro a um banquete de aniversário para a turma toda, com mais de 50 perguntas respondidas. E o Contrate um Vegano conecta você a profissionais veganos, porque a solidariedade fica ainda mais gostosa quando é compartilhada.",
-    "sitemap.title": "Mapa do Site",
+    "project.p5": "Tem mais para explorar! O Kit Vegano traz o essencial sobre veganismo — sem sermão, só fatos com uma pitada de bom humor. O Mapa Vegano mostra onde as delícias estão escondidas por Brisbane. O Vegan Finder é seu atalho para tudo, de um segundo encontro a um banquete de aniversário para a turma toda, com mais de 60 perguntas respondidas. E o Contrate um Vegano conecta você a profissionais veganos, porque a solidariedade fica ainda mais gostosa quando é compartilhada.",
+    "sitemap.title": "Mapa do site",
     "sitemap.sections": "Seções",
     "sitemap.venues": "Locais em Comer & Beber",
-    "authors.title": "Conheça os Autores",
-    "author1.role": "Fundador · Designer · Ativista",
-    "author1.bio": "Designer gráfico e ativista vegano, Julio é estudante em Brisbane desde março de 2026 e tem absorvido a cultura vegana local. Vegano há mais de 10 anos, é criador do Vegpedia, site em português que mapeia tudo sobre o veganismo no Brasil e no mundo. Julio resolveu lançar este projeto dedicado a Brisbane.",
+    "authors.title": "Conheça os autores",
+    "author1.role": "Fundador · Curador · Escritor · Designer · Ativista",
+    "author1.bio": "Escritor, curador, designer gráfico e ativista vegano, Julio é estudante em Brisbane desde março de 2026 e tem absorvido a cultura vegana local. Vegano há mais de 10 anos, é criador do Vegpedia, site em português que mapeia tudo sobre o veganismo no Brasil e no mundo. Julio resolveu lançar este projeto dedicado a Brisbane.",
     "author2.role": "Co-líder · Hospitalidade · Especialista Local",
     "author2.bio": "Vegana há mais de uma década, Mandy vive em Brisbane desde sempre. Com experiência na área da hospitalidade vegana e grande expertise sobre o movimento vegano na cidade, ela traz um conhecimento local inestimável e uma paixão genuína por construir uma comunidade mais gentil.",
-    "contact.title": "Entre em Contato",
+    "contact.title": "Entre em contato",
     "contact.desc": "Quer sugerir algo para deixar nosso acervo ainda mais completo ou fazer uma parceria? Entre em contato via Instagram!",
     "footer.tagline": "Um mundo melhor para os animais.",
     "footer.created": "Criado por"
