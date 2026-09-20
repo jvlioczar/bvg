@@ -253,6 +253,14 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
   box-shadow: inset 0 0 0 1px rgba(74, 140, 92, 0.28);
 }
 .tag.tag-vegan.tag-vegan-99:hover { background: rgba(74, 140, 92, 0.16); }
+/* Initials avatar, used instead of a logo when a venue has none (e.g. JR Vegan Thai). */
+.card-logo.avatar-initials, .venue-logo.avatar-initials {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--leaf-light), var(--teal));
+  color: var(--cream);
+  font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700; letter-spacing: 0.5px;
+}
+@media (max-width: 768px) { .venue-logo.avatar-initials { font-size: 20px; } }
 .tag.tag-friendly {
   background: rgba(192, 104, 74, 0.13);
   color: var(--terracotta);

@@ -833,7 +833,7 @@ const venues = [
     regions: ["sunshine"],
     name: "JR Vegan Thai",
     type: { en: "Vegan Thai Kitchen", pt: "Cozinha Tailandesa Vegana" },
-    logo: "images/logo_jr_vegan_thai.jpg",
+    initials: "JR",
     location: "Nambour · Sunshine Coast",
     desc: {
       en: "A small, fully vegan Thai kitchen — stir-fries, curries and noodles cooked without garlic or onion. Dinner only, cash only, and best to call ahead.",
@@ -1313,7 +1313,9 @@ function renderCards() {
   grid.innerHTML = list.map((v, i) => `
     <div class="card" style="animation-delay:${i * 0.04}s">
       <div class="card-top">
-        <div class="card-logo"><img src="${v.logo}" alt="${v.name} logo" width="64" height="64" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+        ${v.logo
+          ? `<div class="card-logo"><img src="${v.logo}" alt="${v.name} logo" width="64" height="64" loading="lazy" onerror="this.parentNode.style.display='none'"></div>`
+          : v.initials ? `<div class="card-logo avatar-initials" aria-hidden="true">${v.initials}</div>` : ''}
         <div class="card-rating">
           <div class="card-stars">${starsHTML(v.rating)}</div>
           <span class="card-rating-num">${v.rating}</span>
