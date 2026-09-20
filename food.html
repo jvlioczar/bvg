@@ -82,30 +82,19 @@
     max-width: 1100px; margin: 26px auto 0;
     padding: 0 40px;
   }
-  .guide-intro-lead {
-    font-size: 14px; line-height: 1.7;
-    color: var(--text-light); max-width: 720px;
-    margin-bottom: 16px;
+  .intro-lines { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .intro-line {
+    position: relative; padding-left: 16px;
+    font-size: 13px; line-height: 1.5; color: var(--text-light);
   }
-  .intro-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 12px;
+  .intro-line::before {
+    content: ''; position: absolute; left: 0; top: 0.5em;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--leaf);
   }
-  .intro-card {
-    background: white; border-radius: 12px;
-    padding: 16px 18px 18px;
-    border: 1px solid rgba(42, 42, 40, 0.06);
-    border-top: 3px solid var(--leaf);
-  }
-  .intro-card.friendly { border-top-color: var(--terracotta); }
-  .intro-card.few { border-top-color: var(--sand); }
-  .intro-card h3 {
-    font-family: 'Fraunces', serif;
-    font-size: 16px; font-weight: 700; color: var(--forest);
-    margin-bottom: 6px;
-  }
-  .intro-card p { font-size: 13px; line-height: 1.6; color: var(--text-light); }
+  .intro-line.friendly::before { background: var(--terracotta); }
+  .intro-line.few::before { background: var(--sand); }
+  .intro-line strong { font-family: 'Fraunces', serif; font-size: 14px; color: var(--forest); margin-right: 4px; }
 
   /* ── PART HEADINGS (vegan / vegan-friendly / few options) ── */
   .part-head {
@@ -147,12 +136,6 @@
   }
 
   /* ── RESULTS COUNT ── */
-  .results-info {
-    max-width: 1100px; margin: 20px auto 0;
-    padding: 0 40px;
-    font-size: 12px; color: var(--sage);
-  }
-
   /* ── CARDS GRID ── */
   .cards-section {
     max-width: 1100px; margin: 16px auto 0;
@@ -340,18 +323,6 @@
   }
   .badge.veg { background: rgba(74, 140, 92, 0.12); color: var(--moss); }
   .badge.warn { background: rgba(192, 104, 74, 0.13); color: var(--terracotta); }
-  .limited-btn {
-    align-self: flex-start;
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 16px;
-    border: 1.5px solid var(--forest);
-    border-radius: 24px;
-    font-size: 12px; font-weight: 600;
-    color: var(--forest); text-decoration: none;
-    transition: all 0.25s ease;
-  }
-  .limited-btn:hover { background: var(--forest); color: var(--cream); }
-  .limited-btn svg { width: 12px; height: 12px; }
   .limited-note {
     margin-top: 22px;
     font-size: 12px; line-height: 1.6;
@@ -359,13 +330,6 @@
   }
 
   /* ── VEGAN-FRIENDLY (cards without a venue page) ── */
-  .card-initials {
-    display: flex; align-items: center; justify-content: center;
-    background: linear-gradient(135deg, var(--leaf-light), var(--teal));
-    color: var(--cream);
-    font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700;
-    border: 2px solid rgba(245, 240, 232, 0.6);
-  }
   .card-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
   .web-link {
     display: inline-flex; align-items: center; justify-content: center;
@@ -406,7 +370,6 @@
     .page-header { padding: 80px 20px 0; }
     .guide-intro, .part-head { padding: 0 20px; }
     .filters-bar { padding: 0 20px; }
-    .results-info { padding: 0 20px; }
     .limited-section { padding: 10px 20px 40px; }
     .cards-section { padding: 0 20px 40px; }
     .cards-grid { grid-template-columns: 1fr; }
@@ -431,23 +394,12 @@
   </div>
 
   <!-- HOW THIS PAGE WORKS -->
-  <section class="guide-intro" aria-labelledby="introTitle">
-    <h2 class="limited-title" id="introTitle" data-i18n="intro.title">How this page works</h2>
-    <p class="guide-intro-lead" data-i18n="intro.lead">We sort Brisbane's plant-based food into three groups, from the safest choice to the most limited one, so you know what to expect before you go.</p>
-    <div class="intro-grid">
-      <div class="intro-card">
-        <h3 data-i18n="intro.vegan.t">Vegan</h3>
-        <p data-i18n="intro.vegan.d">Menus that are safe for vegans: everything is vegan (or the only non-vegan item is an optional add-on, like dairy milk for coffee at Vega Cafe and Cardamom Pod Brickworks, marked 99% Vegan). Order anything. These places have their own page with reviews and ratings.</p>
-      </div>
-      <div class="intro-card friendly">
-        <h3 data-i18n="intro.friendly.t">Vegan-friendly</h3>
-        <p data-i18n="intro.friendly.d">Mixed menus that also serve meat, fish or dairy, but have a dedicated vegan menu or plenty of clearly marked vegan dishes. Ask for the vegan menu and confirm when ordering. No page here — just the essentials and links.</p>
-      </div>
-      <div class="intro-card few">
-        <h3 data-i18n="intro.few.t">Few vegan options</h3>
-        <p data-i18n="intro.few.d">Restaurants and chains with a small vegan selection. Handy as a plan B when the group has already picked the place.</p>
-      </div>
-    </div>
+  <section class="guide-intro" aria-label="Vegan, vegan-friendly and few vegan options">
+    <ul class="intro-lines">
+      <li class="intro-line"><strong data-i18n="intro.vegan.t">Vegan</strong> <span data-i18n="intro.vegan.d">Everything on the menu is vegan — order anything. 99% Vegan means only optional dairy milk for coffee. Own page with reviews.</span></li>
+      <li class="intro-line friendly"><strong data-i18n="intro.friendly.t">Vegan-friendly</strong> <span data-i18n="intro.friendly.d">Mixed menus with a dedicated vegan menu or clearly marked vegan dishes. Ask for it and confirm when ordering.</span></li>
+      <li class="intro-line few"><strong data-i18n="intro.few.t">Few vegan options</strong> <span data-i18n="intro.few.d">A small vegan selection — a plan B when the group has already picked the place.</span></li>
+    </ul>
   </section>
 
   <!-- PART 1: VEGAN -->
@@ -464,9 +416,6 @@
     <button class="filter-btn" data-sort="popular" onclick="setSort('popular')" data-i18n="filter.popular">Most popular</button>
   </div>
 
-  <!-- RESULTS -->
-  <div class="results-info" id="resultsInfo"></div>
-
   <!-- CARDS -->
   <div class="cards-section">
     <div class="cards-grid" id="cardsGrid"></div>
@@ -480,14 +429,14 @@
   <!-- PART 2: VEGAN-FRIENDLY (data: friendlyVenues in the script below; no venue pages, not affected by the sort/filter) -->
   <section class="limited-section" id="vegan-friendly" aria-labelledby="friendlyTitle">
     <h2 class="limited-title" id="friendlyTitle" data-i18n="friendly.title">Vegan-friendly</h2>
-    <p class="limited-desc" data-i18n="friendly.desc">Mixed menus with a dedicated vegan menu or plenty of clearly marked vegan dishes. Ask for the vegan menu and confirm with the staff when you order.</p>
+    <p class="limited-desc" data-i18n="friendly.desc">Ask for the vegan menu and confirm with the staff when you order.</p>
     <div class="cards-grid" id="friendlyGrid"></div>
   </section>
 
   <!-- PART 3: FEW VEGAN OPTIONS (data: limitedVenues in the script below) -->
   <section class="limited-section" id="few-vegan-options" aria-labelledby="limitedTitle">
     <h2 class="limited-title" id="limitedTitle" data-i18n="limited.title">Few vegan options</h2>
-    <p class="limited-desc" data-i18n="limited.desc">These places aren't vegan-friendly — their vegan menus are small — but they do have clearly identified vegan options. Handy when the group has picked a spot and you need a plan B.</p>
+    <p class="limited-desc" data-i18n="limited.desc">These places aren't vegan-friendly, but they do have clearly identified vegan options.</p>
     <h3 class="limited-sub" data-i18n="limited.local">Restaurants in Brisbane</h3>
     <div class="limited-grid" id="limitedLocal"></div>
     <h3 class="limited-sub" data-i18n="limited.chains">Chains</h3>
@@ -832,7 +781,7 @@ const venues = [
 const friendlyVenues = [
   {
     name: "Baba Ganouj",
-    type: { en: "Lebanese Restaurant", pt: "Restaurante Libanês" },
+    tags: ["Lebanese", "Vegan Plate", "Family-Run"],
     location: "South Bank",
     desc: {
       en: "Family-run Lebanese restaurant with many vegan dishes — falafel, fattoush, tabouli, dips and stuffed vine leaves — and a vegan plate.",
@@ -842,7 +791,7 @@ const friendlyVenues = [
   },
   {
     name: "Bacchus",
-    type: { en: "Fine Dining", pt: "Alta Gastronomia" },
+    tags: ["Fine Dining", "Vegan Degustation", "High Tea"],
     location: "South Bank",
     desc: {
       en: "Fine-dining restaurant at Rydges South Bank with a fully vegan degustation menu on request, plus vegan and gluten-free high tea options.",
@@ -852,7 +801,7 @@ const friendlyVenues = [
   },
   {
     name: "Boom Boom Room",
-    type: { en: "Izakaya & Supper Club", pt: "Izakaya & Supper Club" },
+    tags: ["Izakaya", "Vegan Banquet", "Supper Club"],
     location: "Brisbane CBD",
     desc: {
       en: "Opulent Japanese izakaya and supper club in the vaults of a heritage bank, with clearly labelled dishes and a full vegan banquet.",
@@ -862,7 +811,7 @@ const friendlyVenues = [
   },
   {
     name: "Coco Bliss",
-    type: { en: "Açaí & Wholefood Café", pt: "Café de Açaí & Comida Natural" },
+    tags: ["Açaí", "Mostly Vegan", "Café"],
     location: "South Bank & Chermside",
     desc: {
       en: "Açaí and wholefood café with a mostly vegan menu — açaí and nice cream bowls, vegan toasties, buddha bowls and raw slices — though it now also serves chicken wraps.",
@@ -872,7 +821,7 @@ const friendlyVenues = [
   },
   {
     name: "Donna Chang",
-    type: { en: "Modern Chinese", pt: "Chinês Moderno" },
+    tags: ["Chinese", "Vegan Menu", "Vegan Banquet"],
     location: "Brisbane CBD",
     desc: {
       en: "Elegant modern Chinese restaurant in a heritage bank building, with a separate vegan menu and vegan banquet, plus vegan dishes marked on the main menu.",
@@ -882,7 +831,7 @@ const friendlyVenues = [
   },
   {
     name: "La Bodega Taqueria",
-    type: { en: "Mexican Taqueria", pt: "Taqueria Mexicana" },
+    tags: ["Mexican", "Vegan Menu", "Tacos"],
     location: "East Brisbane",
     desc: {
       en: "LA-style Mexican taqueria with a separate vegan menu — chipotle cauliflower wings, loaded fries and tacos with jackfruit, shiitake birria or spiced black beans.",
@@ -892,7 +841,7 @@ const friendlyVenues = [
   },
   {
     name: "Little Black Pug",
-    type: { en: "Café", pt: "Café" },
+    tags: ["Café", "Marked Vegan Dishes", "Breakfast"],
     location: "Mount Gravatt",
     desc: {
       en: "Neighbourhood café with many vegan dishes clearly marked — vegan breakfast, pakoras, polenta porridge, risotto and corn fritters — and plant milks.",
@@ -902,7 +851,7 @@ const friendlyVenues = [
   },
   {
     name: "Little Clive Cafe",
-    type: { en: "Vietnamese-Inspired Café", pt: "Café de Inspiração Vietnamita" },
+    tags: ["Vietnamese", "Marked Vegan Dishes", "Café"],
     location: "Annerley",
     desc: {
       en: "Vietnamese-inspired café with vegan and vegan-optional dishes marked on the menu — banh mi, noodle salad, corn fritters, miso mushroom toast and mock duck laksa.",
@@ -912,7 +861,7 @@ const friendlyVenues = [
   },
   {
     name: "Luckies Kitchen",
-    type: { en: "Cantonese-Inspired Kitchen", pt: "Cozinha de Inspiração Cantonesa" },
+    tags: ["Cantonese", "Vegan Menu", "Vegan Banquet"],
     location: "Bulimba",
     desc: {
       en: "Colourful Cantonese-inspired kitchen with a dedicated vegan menu — spring rolls, popcorn cauliflower, eggplant chips, tofu bao and sweet & sour tofu — plus a vegan banquet on selected nights.",
@@ -922,7 +871,7 @@ const friendlyVenues = [
   },
   {
     name: "Old Monk Modern Indian",
-    type: { en: "Modern Indian", pt: "Indiano Moderno" },
+    tags: ["Indian", "Marked Vegan Dishes", "Vegan Dessert"],
     location: "Paddington",
     desc: {
       en: "Modern Indian restaurant with plenty of dishes marked vegan (VG) — malai kofta, tikka masala, chana masala — and a vegan brownie for dessert.",
@@ -932,7 +881,7 @@ const friendlyVenues = [
   },
   {
     name: "Otto Ristorante",
-    type: { en: "Italian Fine Dining", pt: "Alta Gastronomia Italiana" },
+    tags: ["Italian", "Vegan Menu", "Fine Dining"],
     location: "South Bank",
     desc: {
       en: "Upscale riverfront Italian restaurant with a separate vegan menu across starters, mains and dessert.",
@@ -942,7 +891,7 @@ const friendlyVenues = [
   },
   {
     name: "Rogue Bistro",
-    type: { en: "Fine Dining", pt: "Alta Gastronomia" },
+    tags: ["Fine Dining", "Vegan Menu", "Seasonal Menu"],
     location: "Newstead",
     desc: {
       en: "Fine-dining degustation restaurant with a separate vegan menu that changes monthly with the season.",
@@ -952,7 +901,7 @@ const friendlyVenues = [
   },
   {
     name: "SEN Legend",
-    type: { en: "Vietnamese Fusion", pt: "Fusão Vietnamita" },
+    tags: ["Vietnamese", "Vegan Menu", "Fusion"],
     location: "East Brisbane",
     desc: {
       en: "Modern Vietnamese restaurant with a separate vegan menu — pho, hot and sour noodle soup, lettuce cups, duck pancakes, netted spring rolls and a vegan fish platter.",
@@ -962,7 +911,7 @@ const friendlyVenues = [
   },
   {
     name: "Sinjeon K-Street Food",
-    type: { en: "Korean Street Food", pt: "Comida de Rua Coreana" },
+    tags: ["Korean", "Vegan Menu", "Street Food"],
     location: "Brisbane City & Chermside",
     desc: {
       en: "Korean street-food chain with a vegan menu across its stores — vegan set meal, tteokbokki, tofu kimbap, dumplings, bibimbap and japchae. The kimchi contains fish sauce.",
@@ -972,7 +921,7 @@ const friendlyVenues = [
   },
   {
     name: "Sunshine",
-    type: { en: "Mediterranean Eatery", pt: "Restaurante Mediterrâneo" },
+    tags: ["Mediterranean", "Marked Vegan Dishes", "Pay by Weight"],
     location: "Fortitude Valley",
     desc: {
       en: "Pay-by-weight Mediterranean eatery on James Street with plenty of vegan dishes — stuffed tomatoes, bean salads, spinach rice and more. It also serves some meat.",
@@ -982,7 +931,7 @@ const friendlyVenues = [
   },
   {
     name: "The Burrow",
-    type: { en: "Pizza & Pub", pt: "Pizzaria & Pub" },
+    tags: ["Pizza", "Vegan Cheese", "Pub"],
     location: "West End",
     desc: {
       en: "Pizza, burgers and beer in a wonky old house, with vegan cheese and clearly marked vegan pizzas, burger and nachos.",
@@ -992,7 +941,7 @@ const friendlyVenues = [
   },
   {
     name: "The Rustic Olive",
-    type: { en: "Italian Restaurant", pt: "Restaurante Italiano" },
+    tags: ["Italian", "Vegan Menu", "Pizza"],
     location: "Redcliffe",
     desc: {
       en: "Italian restaurant with a separate vegan menu — focaccia, pizzas, pastas and salads. Ask for the vegan menu when you sit down.",
@@ -1002,7 +951,7 @@ const friendlyVenues = [
   },
   {
     name: "Thai Patio",
-    type: { en: "Thai Restaurant", pt: "Restaurante Tailandês" },
+    tags: ["Thai", "Vegan Menu", "Mock Meat"],
     location: "Ferny Grove",
     desc: {
       en: "Small local Thai restaurant with a complete separate vegan menu — vegan duck curry, stir-fries, satay skewers and house-made seitan. Ask for no egg and no fish or oyster sauce.",
@@ -1012,7 +961,7 @@ const friendlyVenues = [
   },
   {
     name: "Thai Redcliffe Restaurant",
-    type: { en: "Thai Restaurant", pt: "Restaurante Tailandês" },
+    tags: ["Thai", "Vegan Menu", "Mock Meat"],
     location: "Redcliffe",
     desc: {
       en: "Thai restaurant with a dedicated vegan section on the menu — entrées, salads, stir-fries, curries and mock-meat dishes.",
@@ -1022,7 +971,7 @@ const friendlyVenues = [
   },
   {
     name: "To Be Thai",
-    type: { en: "Thai Restaurant", pt: "Restaurante Tailandês" },
+    tags: ["Thai", "Vegan Menu", "Family-Run"],
     location: "New Farm",
     desc: {
       en: "Family-run Thai restaurant with a vegan special menu — 2 entrées and 9 mains, with plant-based \"chicken\" and \"duck\".",
@@ -1032,7 +981,7 @@ const friendlyVenues = [
   },
   {
     name: "Vietfood Springwood",
-    type: { en: "Vietnamese Restaurant", pt: "Restaurante Vietnamita" },
+    tags: ["Vietnamese", "Vegan Menu", "Banh Mi"],
     location: "Springwood",
     desc: {
       en: "Vietnamese restaurant with a whole menu page of vegan options — banh mi, rice paper rolls, noodle salads and pho with tofu, vegan duck and BBQ pork.",
@@ -1042,8 +991,7 @@ const friendlyVenues = [
   },
   {
     name: "Netherworld",
-    type: { en: "Bar & Arcade", pt: "Bar & Arcade" },
-    logo: "images/logo_netherworld.jpg",
+    tags: ["Bar", "Arcade", "Burgers"],
     location: "Fortitude Valley",
     desc: {
       en: "Retro arcade bar with excellent vegan options — loaded fries, burgers, and wings alongside craft beers and pinball machines.",
@@ -1053,8 +1001,7 @@ const friendlyVenues = [
   },
   {
     name: "Tea Master",
-    type: { en: "Taiwanese Vegetarian", pt: "Vegetariano Taiwanês" },
-    logo: "images/logo_tea_master.jpg",
+    tags: ["Taiwanese", "Vegetarian", "Bubble Tea"],
     location: "Fortitude Valley",
     desc: {
       en: "One of Brisbane's original vegetarian restaurants, serving Taiwanese-style bento boxes, stir-fries, noodles, hot pots, and bubble tea.",
@@ -1064,8 +1011,7 @@ const friendlyVenues = [
   },
   {
     name: "Sweet & Green",
-    type: { en: "French Vegan Patisserie", pt: "Confeitaria Francesa Vegana" },
-    logo: "images/logo_sweet_and_green.jpg",
+    tags: ["French", "Bakery", "Pastries"],
     location: "Pop-Up · Markets",
     desc: {
       en: "A French vegan patisserie known for its croissants, pastries, cookies, and savoury focaccia and pizza slices.",
@@ -1075,8 +1021,7 @@ const friendlyVenues = [
   },
   {
     name: "Vegan Thai-riffic",
-    type: { en: "Vegan Thai Restaurant", pt: "Restaurante Tailandês Vegano" },
-    logo: "images/logo_vegan_thai_riffic.jpg",
+    tags: ["Thai", "Vegan Versions", "Takeaway"],
     location: "North Lakes",
     desc: {
       en: "Vegan versions of Thai favourites — pad thai, curries, laksa, and satay sticks — for dine-in, takeaway, or delivery.",
@@ -1086,8 +1031,7 @@ const friendlyVenues = [
   },
   {
     name: "All Day",
-    type: { en: "Brunch Café", pt: "Café & Brunch" },
-    logo: "images/logo_all_day.jpg",
+    tags: ["Café", "Brunch", "Marked Vegan Dishes"],
     location: "West End",
     desc: {
       en: "Specialty-coffee brunch café, formerly the 100% vegan Grown — now a mixed menu with vegan dishes clearly marked.",
@@ -1097,8 +1041,7 @@ const friendlyVenues = [
   },
   {
     name: "NAÏM",
-    type: { en: "Middle Eastern Restaurant", pt: "Restaurante do Oriente Médio" },
-    logo: "images/logo_naim.jpg",
+    tags: ["Middle Eastern", "Mediterranean", "Brunch"],
     location: "Paddington",
     desc: {
       en: "Modern Middle Eastern and Mediterranean dishes — hummus, carrot falafel, platters and brunch — with plant-based options on a mixed menu.",
@@ -1108,8 +1051,7 @@ const friendlyVenues = [
   },
   {
     name: "Vegeme",
-    type: { en: "Vegetarian Asian Restaurant", pt: "Restaurante Asiático Vegetariano" },
-    logo: "images/logo_vegeme.jpg",
+    tags: ["Vegetarian", "Asian", "Takeaway"],
     location: "South Brisbane",
     desc: {
       en: "Asian-inspired vegetarian dishes — laksa, bibimbap, dumplings and more — with many options marked vegan, for dine-in or takeaway.",
@@ -1119,8 +1061,7 @@ const friendlyVenues = [
   },
   {
     name: "Arrivederci Pizzeria",
-    type: { en: "Italian Pizzeria", pt: "Pizzaria Italiana" },
-    logo: "images/logo_arrivederci_pizzeria.jpg",
+    tags: ["Italian", "Pizza", "Vegan Menu"],
     location: "Milton",
     desc: {
       en: "Family-run Italian pizzeria known for pizza by the metre, with a dedicated vegan menu — vegan pizzas, pastas and gelato — and a monthly Vegan Night.",
@@ -1130,8 +1071,7 @@ const friendlyVenues = [
   },
   {
     name: "Antica Pizzeria",
-    type: { en: "Woodfired Pizzeria", pt: "Pizzaria a Lenha" },
-    logo: "images/logo_antica.jpg",
+    tags: ["Pizza", "Woodfired", "Vegan Menu"],
     location: "Wilston",
     desc: {
       en: "Neapolitan-style woodfired pizzeria with a dedicated vegan menu — antipasti, pizzas, pasta and desserts — and gluten-free bases.",
@@ -1141,8 +1081,7 @@ const friendlyVenues = [
   },
   {
     name: "Ma Pa Me",
-    type: { en: "Southeast Asian Restaurant", pt: "Restaurante do Sudeste Asiático" },
-    logo: "images/logo_ma_pa_me.jpg",
+    tags: ["Southeast Asian", "Vegan Menu", "Vegan Banquet"],
     location: "South Bank",
     desc: {
       en: "Southeast Asian restaurant with a separate vegan menu — curries, stir fries and share plates — and a vegan banquet for sharing.",
@@ -1152,8 +1091,7 @@ const friendlyVenues = [
   },
   {
     name: "King Tea",
-    type: { en: "Chinese Kitchen & Bar", pt: "Cozinha Chinesa & Bar" },
-    logo: "images/logo_king_tea.jpg",
+    tags: ["Chinese", "Vegan Menu", "Vegan Banquet"],
     location: "Paddington",
     desc: {
       en: "Chinese share plates with a large vegan menu — almost everything vegetarian is also vegan — and dedicated vegan banquets for groups.",
@@ -1163,8 +1101,7 @@ const friendlyVenues = [
   },
   {
     name: "Hai Hai",
-    type: { en: "Ramen & Izakaya Bar", pt: "Ramen & Izakaya" },
-    logo: "images/logo_hai_hai.jpg",
+    tags: ["Ramen", "Izakaya", "Vegan Ramen"],
     location: "Paddington & West End",
     desc: {
       en: "Ramen and izakaya bar with vegan ramen — the miso is vegan by default — plus a tofu bao and vegan-friendly sides.",
@@ -1174,8 +1111,7 @@ const friendlyVenues = [
   },
   {
     name: "Phat Boy",
-    type: { en: "Thai Restaurant", pt: "Restaurante Tailandês" },
-    logo: "images/logo_phat_boy.jpg",
+    tags: ["Thai", "Vegan Menu", "Contemporary"],
     location: "Brisbane CBD",
     desc: {
       en: "Contemporary Thai restaurant on George Street with a separate vegan menu — pad Thai and pad see ew with tofu, mi krob, san choy bao and stir-fries.",
@@ -1249,7 +1185,16 @@ const tagMap = {
   "Multi-Cuisine": "Multi-Cozinha", "Tapas": "Tapas", "Wholesale": "Atacado",
   "Juice Bar": "Bar de Sucos", "Desserts": "Sobremesas", "Nut-Free": "Sem Nozes",
   "Breakfast": "Café da Manhã", "Middle Eastern": "Oriente Médio", "Mediterranean": "Mediterrâneo",
-  "Vegetarian": "Vegetariano", "Italian": "Italiano", "Pasta": "Massas", "Banquet": "Banquete"
+  "Vegetarian": "Vegetariano", "Italian": "Italiano", "Pasta": "Massas", "Banquet": "Banquete",
+  "Lebanese": "Libanês", "Vietnamese": "Vietnamita", "Cantonese": "Cantonês", "Korean": "Coreano",
+  "Taiwanese": "Taiwanês", "French": "Francês", "Southeast Asian": "Sudeste Asiático",
+  "Açaí": "Açaí", "Izakaya": "Izakaya", "Supper Club": "Supper Club", "High Tea": "High Tea", "Pub": "Pub",
+  "Tacos": "Tacos", "Banh Mi": "Banh Mi", "Bubble Tea": "Bubble Tea",
+  "Vegan Menu": "Cardápio Vegano", "Marked Vegan Dishes": "Pratos Veganos Marcados", "Vegan Banquet": "Banquete Vegano",
+  "Vegan Plate": "Prato Vegano", "Vegan Degustation": "Degustação Vegana", "Vegan Dessert": "Sobremesa Vegana",
+  "Vegan Cheese": "Queijo Vegano", "Vegan Ramen": "Ramen Vegano", "Vegan Versions": "Versões Veganas",
+  "Mostly Vegan": "Majoritariamente Vegano", "Mock Meat": "Carne Vegetal", "Seasonal Menu": "Cardápio Sazonal",
+  "Pay by Weight": "Pagamento por Peso", "Family-Run": "Familiar", "Woodfired": "Forno a Lenha", "Contemporary": "Contemporâneo"
 };
 
 function translateTag(tag, lang) {
@@ -1268,20 +1213,15 @@ function renderCards() {
 
   const grid = document.getElementById('cardsGrid');
   const noRes = document.getElementById('noResults');
-  const info = document.getElementById('resultsInfo');
 
   if (list.length === 0) {
     grid.innerHTML = '';
     noRes.style.display = 'block';
-    info.textContent = '';
     return;
   }
   noRes.style.display = 'none';
 
   const votesWord = currentLang === 'pt' ? 'votos' : 'votes';
-  const venuesWord = currentLang === 'pt' ? 'locais' : 'venues';
-  const showingWord = currentLang === 'pt' ? 'Exibindo' : 'Showing';
-  info.textContent = `${showingWord} ${list.length} ${venuesWord}`;
 
   grid.innerHTML = list.map((v, i) => `
     <div class="card" style="animation-delay:${i * 0.04}s">
@@ -1306,7 +1246,7 @@ function renderCards() {
   `).join('');
 }
 
-// ── VEGAN-FRIENDLY (cards: logo, name, description and links — no venue page) ──
+// ── VEGAN-FRIENDLY (cards: name, description, 3 tags and link icons — no venue page) ──
 const linkIcons = {
   site: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
   instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>',
@@ -1318,11 +1258,6 @@ const linkLabels = {
   pt: { site: 'Site', instagram: 'Instagram', facebook: 'Facebook', maps: 'Mapa' }
 };
 
-// Initials shown in the logo circle when a venue has no logo file yet
-function initialsOf(name) {
-  return name.split(/\s+/).filter(w => /[A-Za-z0-9]/.test(w) && !/^(the|and)$/i.test(w)).slice(0, 2).map(w => w.replace(/[^A-Za-z0-9]/g, '').charAt(0)).join('').toUpperCase();
-}
-
 function renderFriendly() {
   const list = [...friendlyVenues].sort((a, b) => a.name.localeCompare(b.name));
   document.getElementById('friendlyGrid').innerHTML = list.map((v, i) => {
@@ -1332,24 +1267,19 @@ function renderFriendly() {
     }).join('');
     return `
     <div class="card" style="animation-delay:${i * 0.04}s">
-      <div class="card-top">
-        ${v.logo
-          ? `<div class="card-logo"><img src="${v.logo}" alt="${v.name} logo" width="64" height="64" loading="lazy"></div>`
-          : `<div class="card-logo card-initials" aria-hidden="true">${initialsOf(v.name)}</div>`}
-      </div>
-      <div class="card-type">${v.type[currentLang]}</div>
       <div class="card-name">${v.name}</div>
       <div class="card-location">📍 ${v.location}</div>
       <div class="card-desc">${v.desc[currentLang]}</div>
+      <div class="card-tags">${v.tags.map(t => `<span class="tag">${translateTag(t, currentLang)}</span>`).join('')}</div>
       <div class="card-links">${links}</div>
     </div>`;
   }).join('');
 }
 
-// ── COUNTS (header line): vegan places (open ones), vegan-friendly places, places with few vegan options ──
+// ── COUNTS (header line): vegan venues (all vegan cards shown), vegan-friendly places, places with few vegan options ──
 function updateCounts() {
   const n = {
-    v: venues.filter(v => !v.closed).length,
+    v: venues.length,
     f: friendlyVenues.length,
     l: limitedVenues.length
   };
@@ -1450,15 +1380,13 @@ function renderLimited() {
       const b = limitedBadges[k];
       return `<span class="badge${b.type ? ' ' + b.type : ''}">${b[currentLang]}</span>`;
     }).join('');
-    const isFb = v.label === 'facebook';
-    const btn = isFb ? 'Facebook' : (currentLang === 'pt' ? 'Site' : 'Website');
+    const kind = v.label === 'facebook' ? 'facebook' : 'site';
+    const label = linkLabels[currentLang][kind];
     return `
     <div class="limited-card">
       <div class="limited-name">${esc(v.name)}</div>
       <div class="limited-badges">${badges}</div>
-      <a class="limited-btn" href="${v.url}" target="_blank" rel="noopener" aria-label="${esc(v.name)} — ${btn}">${btn}
-        <svg viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3L3 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      <div class="card-links"><a class="web-link" href="${v.url}" target="_blank" rel="noopener" title="${label}" aria-label="${esc(v.name)} — ${label}">${linkIcons[kind]}</a></div>
     </div>`;
   };
   const byName = (a, b) => a.name.localeCompare(b.name);
@@ -1480,19 +1408,17 @@ const i18n = {
     "page.title": "Eat & Drink",
     "page.tagline": "Where flavour meets compassion",
     "page.desc": "Where to eat and drink plant-based in Brisbane, sorted from the safest to the most limited: vegan places, vegan-friendly places, and places with few vegan options.",
-    "count.template": "{v} vegan places, {f} vegan-friendly places and {l} places with few vegan options",
-    "intro.title": "How this page works",
-    "intro.lead": "We sort Brisbane's plant-based food into three groups, from the safest choice to the most limited one, so you know what to expect before you go.",
+    "count.template": "{v} vegan venues, {f} vegan-friendly places and {l} places with few vegan options",
     "intro.vegan.t": "Vegan",
-    "intro.vegan.d": "Menus that are safe for vegans: everything is vegan (or the only non-vegan item is an optional add-on, like dairy milk for coffee at Vega Cafe and Cardamom Pod Brickworks, marked 99% Vegan). Order anything. These places have their own page with reviews and ratings.",
+    "intro.vegan.d": "Everything on the menu is vegan — order anything. 99% Vegan means only optional dairy milk for coffee. Own page with reviews.",
     "intro.friendly.t": "Vegan-friendly",
-    "intro.friendly.d": "Mixed menus that also serve meat, fish or dairy, but have a dedicated vegan menu or plenty of clearly marked vegan dishes. Ask for the vegan menu and confirm when ordering. No page here — just the essentials and links.",
+    "intro.friendly.d": "Mixed menus with a dedicated vegan menu or clearly marked vegan dishes. Ask for it and confirm when ordering.",
     "intro.few.t": "Few vegan options",
-    "intro.few.d": "Restaurants and chains with a small vegan selection. Handy as a plan B when the group has already picked the place.",
+    "intro.few.d": "A small vegan selection — a plan B when the group has already picked the place.",
     "vegan.title": "Vegan",
     "vegan.desc": "Safe menus for vegans — order anything.",
     "friendly.title": "Vegan-friendly",
-    "friendly.desc": "Mixed menus with a dedicated vegan menu or plenty of clearly marked vegan dishes. Ask for the vegan menu and confirm with the staff when you order.",
+    "friendly.desc": "Ask for the vegan menu and confirm with the staff when you order.",
     "filters.label": "Sort & Filter",
     "filter.alpha": "A → Z",
     "filter.rating": "Best rated",
@@ -1500,7 +1426,7 @@ const i18n = {
     "no.title": "No venues found",
     "no.sub": "Try adjusting your filters",
     "limited.title": "Few vegan options",
-    "limited.desc": "These places aren't vegan-friendly — their vegan menus are small — but they do have clearly identified vegan options. Handy when the group has picked a spot and you need a plan B.",
+    "limited.desc": "These places aren't vegan-friendly, but they do have clearly identified vegan options.",
     "limited.local": "Restaurants in Brisbane",
     "limited.chains": "Chains",
     "limited.note": "Menus change often, especially at chains and between stores. Options were last checked in September 2026 — always confirm with the staff before ordering.",
@@ -1512,18 +1438,16 @@ const i18n = {
     "page.tagline": "Onde o sabor encontra a compaixão",
     "page.desc": "Onde comer e beber plant-based em Brisbane, do mais seguro ao mais limitado: locais veganos, locais vegan-friendly e locais com poucas opções veganas.",
     "count.template": "{v} locais veganos, {f} locais vegan-friendly e {l} locais com poucas opções veganas",
-    "intro.title": "Como esta página funciona",
-    "intro.lead": "Organizamos a comida plant-based de Brisbane em três grupos, da escolha mais segura à mais limitada, para você saber o que esperar antes de ir.",
     "intro.vegan.t": "Vegano",
-    "intro.vegan.d": "Cardápios seguros para veganos: tudo é vegano (ou o único item não vegano é um adicional opcional, como leite de vaca para o café no Vega Cafe e no Cardamom Pod Brickworks, marcados como 99% Vegano). Peça qualquer coisa. Estes locais têm página própria, com avaliações e notas.",
+    "intro.vegan.d": "Tudo no cardápio é vegano — peça qualquer coisa. 99% Vegano significa só leite de vaca opcional no café. Página própria com avaliações.",
     "intro.friendly.t": "Vegan-friendly",
-    "intro.friendly.d": "Cardápios mistos, que também servem carne, peixe ou laticínios, mas têm um cardápio vegano dedicado ou vários pratos veganos bem marcados. Peça o cardápio vegano e confirme ao pedir. Aqui não há página — só o essencial e os links.",
+    "intro.friendly.d": "Cardápios mistos com menu vegano dedicado ou pratos veganos bem marcados. Peça o menu vegano e confirme ao pedir.",
     "intro.few.t": "Poucas opções veganas",
-    "intro.few.d": "Restaurantes e redes com uma seleção vegana pequena. Bom como plano B quando o grupo já escolheu o lugar.",
+    "intro.few.d": "Uma seleção vegana pequena — um plano B quando o grupo já escolheu o lugar.",
     "vegan.title": "Vegano",
     "vegan.desc": "Cardápios seguros para veganos — peça qualquer coisa.",
     "friendly.title": "Vegan-friendly",
-    "friendly.desc": "Cardápios mistos com um cardápio vegano dedicado ou vários pratos veganos bem marcados. Peça o cardápio vegano e confirme com a equipe ao pedir.",
+    "friendly.desc": "Peça o cardápio vegano e confirme com a equipe ao pedir.",
     "filters.label": "Ordenar & Filtrar",
     "filter.alpha": "A → Z",
     "filter.rating": "Melhor nota",
@@ -1531,7 +1455,7 @@ const i18n = {
     "no.title": "Nenhum local encontrado",
     "no.sub": "Tente ajustar os filtros",
     "limited.title": "Poucas opções veganas",
-    "limited.desc": "Estes lugares não são vegan-friendly — o menu vegano é pequeno — mas têm opções veganas bem identificadas. Bom para quando o grupo já escolheu o lugar e você precisa de um plano B.",
+    "limited.desc": "Estes lugares não são vegan-friendly, mas têm opções veganas bem identificadas.",
     "limited.local": "Restaurantes em Brisbane",
     "limited.chains": "Redes",
     "limited.note": "Os cardápios mudam com frequência, principalmente nas redes e entre lojas. As opções foram verificadas pela última vez em setembro de 2026 — sempre confirme com a equipe antes de pedir.",
