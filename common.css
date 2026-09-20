@@ -237,7 +237,7 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
 .skip-link:focus { left: 12px; }
 :focus-visible { outline: 2px solid var(--gold, #d4a847); outline-offset: 3px; }
 
-/* Venue status tags: 100% Vegan (green) vs Vegan-Friendly (red, same as the "No vegan cheese" badge).
+/* Venue status tags: 100% Vegan (green), 99% Vegan (lighter green) vs Vegan-Friendly (red, same as the "No vegan cheese" badge).
    Used on the Eat & Drink cards and on every venue page. */
 .tag.tag-vegan {
   background: rgba(74, 140, 92, 0.22);
@@ -246,6 +246,13 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
   box-shadow: inset 0 0 0 1px rgba(74, 140, 92, 0.45);
 }
 .tag.tag-vegan:hover { background: rgba(74, 140, 92, 0.3); }
+/* 99% Vegan: same green family, lighter (Vega Cafe and Cardamom Pod: optional dairy milk for coffee). */
+.tag.tag-vegan.tag-vegan-99 {
+  background: rgba(74, 140, 92, 0.1);
+  color: #2f6b43;
+  box-shadow: inset 0 0 0 1px rgba(74, 140, 92, 0.28);
+}
+.tag.tag-vegan.tag-vegan-99:hover { background: rgba(74, 140, 92, 0.16); }
 .tag.tag-friendly {
   background: rgba(192, 104, 74, 0.13);
   color: var(--terracotta);

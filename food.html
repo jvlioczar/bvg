@@ -437,7 +437,7 @@
     <div class="intro-grid">
       <div class="intro-card">
         <h3 data-i18n="intro.vegan.t">Vegan</h3>
-        <p data-i18n="intro.vegan.d">Menus that are safe for vegans: everything is vegan (or the only non-vegan item is an optional add-on, like dairy milk for coffee at Vega Cafe and Cardamom Pod Brickworks). Order anything. These places have their own page with reviews and ratings.</p>
+        <p data-i18n="intro.vegan.d">Menus that are safe for vegans: everything is vegan (or the only non-vegan item is an optional add-on, like dairy milk for coffee at Vega Cafe and Cardamom Pod Brickworks, marked 99% Vegan). Order anything. These places have their own page with reviews and ratings.</p>
       </div>
       <div class="intro-card friendly">
         <h3 data-i18n="intro.friendly.t">Vegan-friendly</h3>
@@ -528,7 +528,7 @@ const venues = [
       en: "A fully plant-based café with an Indian-inspired menu — açaí and smoothie bowls, vegan pancakes, curries, and fresh juices.",
       pt: "Um café totalmente plant-based com cardápio de inspiração indiana — açaí e smoothie bowls, panquecas veganas, curries e sucos frescos."
     },
-    tags: ["100% Vegan", "Café", "Indian", "Brunch", "Gluten-Free", "Coffee"],
+    tags: ["99% Vegan", "Café", "Indian", "Brunch", "Gluten-Free", "Coffee"],
     rating: 5, votes: 0, vegan: true,
     url: "cardamom-pod.html"
   },
@@ -626,7 +626,7 @@ const venues = [
       en: "Vegan café by day, Thai-inspired kitchen by night — brunch classics alongside curries, noodle dishes, and 'tofish' & chips.",
       pt: "Café vegano de dia, cozinha de inspiração tailandesa à noite — clássicos de brunch ao lado de curries, pratos de macarrão e 'tofish' & chips."
     },
-    tags: ["100% Vegan", "Café", "Thai", "Brunch", "Gluten-Free", "Dinner"],
+    tags: ["99% Vegan", "Café", "Thai", "Brunch", "Gluten-Free", "Dinner"],
     rating: 4.57, votes: 0, vegan: true,
     url: "vega-cafe.html"
   },
@@ -1231,7 +1231,7 @@ function starsHTML(rating) {
 
 // ── TAG TRANSLATIONS ──
 const tagMap = {
-  "100% Vegan": "100% Vegano", "Bistro": "Bistrô", "Groceries": "Mercearia",
+  "100% Vegan": "100% Vegano", "99% Vegan": "99% Vegano", "Bistro": "Bistrô", "Groceries": "Mercearia",
   "Thai": "Tailandês", "Dinner": "Jantar", "Café": "Café", "Deli": "Deli",
   "Brunch": "Brunch", "Lunch": "Almoço", "Coffee": "Café",
   "Burgers": "Hambúrgueres", "Comfort Food": "Comfort Food",
@@ -1297,7 +1297,7 @@ function renderCards() {
       <div class="card-name">${v.name}</div>
       <div class="card-location">📍 ${v.location}</div>
       <div class="card-desc">${v.desc[currentLang]}</div>
-      <div class="card-tags">${v.tags.map(t => `<span class="tag${t === '100% Vegan' ? ' tag-vegan' : t === 'Vegan-Friendly' ? ' tag-friendly' : ''}">${translateTag(t, currentLang)}</span>`).join('')}</div>
+      <div class="card-tags">${v.tags.map(t => `<span class="tag${t === '100% Vegan' ? ' tag-vegan' : t === '99% Vegan' ? ' tag-vegan tag-vegan-99' : t === 'Vegan-Friendly' ? ' tag-friendly' : ''}">${translateTag(t, currentLang)}</span>`).join('')}</div>
       <div class="card-bottom">
         <div class="card-votes"><span>${v.votes.toLocaleString()}</span> ${votesWord}</div>
         <a href="${v.url}" class="card-btn">${currentLang === 'pt' ? 'Saiba mais' : 'Learn more'}</a>
@@ -1484,7 +1484,7 @@ const i18n = {
     "intro.title": "How this page works",
     "intro.lead": "We sort Brisbane's plant-based food into three groups, from the safest choice to the most limited one, so you know what to expect before you go.",
     "intro.vegan.t": "Vegan",
-    "intro.vegan.d": "Menus that are safe for vegans: everything is vegan (or the only non-vegan item is an optional add-on, like dairy milk for coffee at Vega Cafe and Cardamom Pod Brickworks). Order anything. These places have their own page with reviews and ratings.",
+    "intro.vegan.d": "Menus that are safe for vegans: everything is vegan (or the only non-vegan item is an optional add-on, like dairy milk for coffee at Vega Cafe and Cardamom Pod Brickworks, marked 99% Vegan). Order anything. These places have their own page with reviews and ratings.",
     "intro.friendly.t": "Vegan-friendly",
     "intro.friendly.d": "Mixed menus that also serve meat, fish or dairy, but have a dedicated vegan menu or plenty of clearly marked vegan dishes. Ask for the vegan menu and confirm when ordering. No page here — just the essentials and links.",
     "intro.few.t": "Few vegan options",
@@ -1515,7 +1515,7 @@ const i18n = {
     "intro.title": "Como esta página funciona",
     "intro.lead": "Organizamos a comida plant-based de Brisbane em três grupos, da escolha mais segura à mais limitada, para você saber o que esperar antes de ir.",
     "intro.vegan.t": "Vegano",
-    "intro.vegan.d": "Cardápios seguros para veganos: tudo é vegano (ou o único item não vegano é um adicional opcional, como leite de vaca para o café no Vega Cafe e no Cardamom Pod Brickworks). Peça qualquer coisa. Estes locais têm página própria, com avaliações e notas.",
+    "intro.vegan.d": "Cardápios seguros para veganos: tudo é vegano (ou o único item não vegano é um adicional opcional, como leite de vaca para o café no Vega Cafe e no Cardamom Pod Brickworks, marcados como 99% Vegano). Peça qualquer coisa. Estes locais têm página própria, com avaliações e notas.",
     "intro.friendly.t": "Vegan-friendly",
     "intro.friendly.d": "Cardápios mistos, que também servem carne, peixe ou laticínios, mas têm um cardápio vegano dedicado ou vários pratos veganos bem marcados. Peça o cardápio vegano e confirme ao pedir. Aqui não há página — só o essencial e os links.",
     "intro.few.t": "Poucas opções veganas",
