@@ -106,10 +106,14 @@
   .filters-bar {
     max-width: 1100px; margin: 24px auto 0;
     padding: 0 40px;
+    display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  }
+  .filter-row {
     display: flex; align-items: center; gap: 10px;
     flex-wrap: wrap;
   }
   .filters-label {
+    min-width: 62px;
     font-size: 11px; font-weight: 600;
     color: var(--sage); letter-spacing: 0.8px;
     text-transform: uppercase; margin-right: 4px;
@@ -197,6 +201,7 @@
   }
   .card-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .card-rating {
+    margin-left: auto;
     display: flex; align-items: center; gap: 6px;
   }
   .card-stars { display: inline-flex; gap: 2px; }
@@ -410,10 +415,20 @@
 
   <!-- FILTERS (apply to the Vegan places only) -->
   <div class="filters-bar">
-    <span class="filters-label" data-i18n="filters.label">Sort & Filter</span>
-    <button class="filter-btn active" data-sort="alpha" onclick="setSort('alpha')" data-i18n="filter.alpha">A → Z</button>
-    <button class="filter-btn" data-sort="rating" onclick="setSort('rating')" data-i18n="filter.rating">Best rated</button>
-    <button class="filter-btn" data-sort="popular" onclick="setSort('popular')" data-i18n="filter.popular">Most popular</button>
+    <div class="filter-row">
+      <span class="filters-label" data-i18n="filters.sort">Sort</span>
+      <button class="filter-btn active" data-sort="alpha" onclick="setSort('alpha')" data-i18n="filter.alpha">A → Z</button>
+      <button class="filter-btn" data-sort="rating" onclick="setSort('rating')" data-i18n="filter.rating">Best rated</button>
+      <button class="filter-btn" data-sort="popular" onclick="setSort('popular')" data-i18n="filter.popular">Most popular</button>
+    </div>
+    <div class="filter-row">
+      <span class="filters-label" data-i18n="filters.location">Location</span>
+      <button class="filter-btn active" data-region="all" onclick="setRegion('all')" data-i18n="region.all">All Places</button>
+      <button class="filter-btn" data-region="city" onclick="setRegion('city')" data-i18n="region.city">Brisbane City</button>
+      <button class="filter-btn" data-region="greater" onclick="setRegion('greater')" data-i18n="region.greater">Greater Brisbane</button>
+      <button class="filter-btn" data-region="gold" onclick="setRegion('gold')" data-i18n="region.gold">Gold Coast</button>
+      <button class="filter-btn" data-region="sunshine" onclick="setRegion('sunshine')" data-i18n="region.sunshine">Sunshine Coast</button>
+    </div>
   </div>
 
   <!-- CARDS -->
@@ -455,6 +470,7 @@
 const venues = [
   {
     slug: "vegan-restaurant",
+    regions: ["city"],
     name: "Vegan Restaurant",
     type: { en: "Vegan Chinese", pt: "Chinês Vegano" },
     logo: "images/logo_vegan_restaurant.jpg",
@@ -469,6 +485,7 @@ const venues = [
   },
   {
     slug: "cardamom-pod",
+    regions: ["gold"],
     name: "Cardamom Pod Brickworks",
     type: { en: "Vegan Café", pt: "Café Vegano" },
     logo: "images/logo_cardamom_pod_brickworks.jpg",
@@ -483,6 +500,7 @@ const venues = [
   },
   {
     slug: "charlies-raw-squeeze",
+    regions: ["greater"],
     name: "Charlie's Raw Squeeze",
     type: { en: "Vegan Juice Bar", pt: "Suco Bar Vegano" },
     logo: "images/logo_charlies_raw_squeeze.jpg",
@@ -497,6 +515,7 @@ const venues = [
   },
   {
     slug: "dickis",
+    regions: ["city"],
     name: "Dicki's",
     type: { en: "Vegan Café", pt: "Café Vegano" },
     logo: "images/logo_dickis_new_farm.jpg",
@@ -511,6 +530,7 @@ const venues = [
   },
   {
     slug: "yavanna",
+    regions: ["city"],
     name: "Yavanna",
     type: { en: "Plant-Based Restaurant & Bar", pt: "Restaurante & Bar Plant-Based" },
     logo: "images/logo_yavanna.jpg",
@@ -525,6 +545,7 @@ const venues = [
   },
   {
     slug: "the-green-edge",
+    regions: ["greater"],
     name: "The Green Edge",
     type: { en: "Bistro · Café · Deli", pt: "Bistrô · Café · Deli" },
     logo: "images/logo_the_green_edge.jpg",
@@ -539,6 +560,7 @@ const venues = [
   },
   {
     slug: "u-tong",
+    regions: ["greater"],
     name: "U-Tong",
     type: { en: "Thai Vegan", pt: "Tailandês Vegano" },
     logo: "images/logo_u_tong_thai.jpg",
@@ -553,6 +575,7 @@ const venues = [
   },
   {
     slug: "el-planta",
+    regions: ["city"],
     name: "El Planta",
     type: { en: "Mexican Restaurant", pt: "Restaurante Mexicano" },
     logo: "images/logo_el_planta.jpg",
@@ -567,6 +590,7 @@ const venues = [
   },
   {
     slug: "vega-cafe",
+    regions: ["city"],
     name: "Vega Cafe",
     type: { en: "Vegan Café · Thai Kitchen", pt: "Café Vegano · Cozinha Tailandesa" },
     logo: "images/logo_vega_cafe.jpg",
@@ -581,6 +605,7 @@ const venues = [
   },
   {
     slug: "veganyumm",
+    regions: ["greater"],
     name: "Veganyumm",
     type: { en: "Vegan Bakery", pt: "Padaria Vegana" },
     logo: "images/logo_veganyumm.jpg",
@@ -595,6 +620,7 @@ const venues = [
   },
   {
     slug: "grassfed",
+    regions: ["city", "greater", "gold", "sunshine"],
     name: "GrassFed",
     type: { en: "Vegan Burger Trailer", pt: "Trailer de Hambúrguer Vegano" },
     logo: "images/logo_grassfed.jpg",
@@ -609,6 +635,7 @@ const venues = [
   },
   {
     slug: "loving-hut",
+    regions: ["greater"],
     name: "Loving Hut",
     type: { en: "Vegan Fusion", pt: "Fusão Vegana" },
     logo: "images/logo_loving_hut.jpg",
@@ -623,6 +650,7 @@ const venues = [
   },
   {
     slug: "vegerama",
+    regions: ["city"],
     name: "Vege Rama",
     type: { en: "Vegetarian Buffet", pt: "Buffet Vegetariano" },
     logo: "images/logo_vegerama.jpg",
@@ -637,6 +665,7 @@ const venues = [
   },
   {
     slug: "you-came-again",
+    regions: ["city"],
     name: "You Came Again",
     type: { en: "Vegan Tapas Bar", pt: "Bar de Tapas Vegano" },
     logo: "images/logo_you_came_again.jpg",
@@ -651,6 +680,7 @@ const venues = [
   },
   {
     slug: "piante-pizza",
+    regions: ["city", "greater", "gold"],
     name: "Piante Pizza",
     type: { en: "Mobile Vegan Pizza", pt: "Pizza Vegana Itinerante" },
     logo: "images/logo_piante.jpg",
@@ -665,6 +695,7 @@ const venues = [
   },
   {
     slug: "the-plant-bakery",
+    regions: ["greater"],
     name: "The Plant Bakery",
     type: { en: "Wholesale Vegan Bakery", pt: "Padaria Vegana Atacado" },
     logo: "images/logo_the_plant_bakery.jpg",
@@ -679,6 +710,7 @@ const venues = [
   },
   {
     slug: "pippas-pantry",
+    regions: ["greater"],
     name: "Pippa's Pantry",
     type: { en: "Vegan Cake Shop", pt: "Loja de Bolos Vegana" },
     logo: "images/logo_pippas_pantry.jpg",
@@ -693,6 +725,7 @@ const venues = [
   },
   {
     slug: "neon-ramen",
+    regions: ["greater"],
     name: "Neon Ramen",
     type: { en: "Vegan Ramen Bar", pt: "Ramen Bar Vegano" },
     logo: "images/logo_neon_ramen.jpg",
@@ -707,6 +740,7 @@ const venues = [
   },
   {
     slug: "archie-am-pm",
+    regions: ["greater"],
     name: "Archie AM:PM",
     type: { en: "Plant-Based Bistro-Café", pt: "Bistrô-Café Plant-Based" },
     logo: "images/logo_archie_am_pm.jpg",
@@ -721,6 +755,7 @@ const venues = [
   },
   {
     slug: "doko-demo-v",
+    regions: ["gold"],
     name: "Doko Demo V",
     type: { en: "Vegan Asian Restaurant", pt: "Restaurante Asiático Vegano" },
     logo: "images/logo_doko_demo_v.jpg",
@@ -735,6 +770,7 @@ const venues = [
   },
   {
     slug: "greenhouse-canteen",
+    regions: ["gold"],
     name: "Greenhouse Canteen",
     type: { en: "Plant-Based Restaurant & Bar", pt: "Restaurante & Bar Plant-Based" },
     logo: "images/logo_greenhouse_canteen.jpg",
@@ -749,6 +785,7 @@ const venues = [
   },
   {
     slug: "izakaya-midori",
+    regions: ["gold"],
     name: "Izakaya Midori",
     type: { en: "Vegan Japanese", pt: "Japonês Vegano" },
     logo: "images/logo_izakaya_midori.jpg",
@@ -763,6 +800,7 @@ const venues = [
   },
   {
     slug: "made-with-love-bakery",
+    regions: ["gold"],
     name: "Made With Love Bakery",
     type: { en: "Vegan Bakery", pt: "Padaria Vegana" },
     logo: "images/logo_made_with_love.jpg",
@@ -774,6 +812,51 @@ const venues = [
     tags: ["100% Vegan", "Bakery", "Pastries", "Gluten-Free", "Desserts", "Wholesale"],
     rating: 4.6, votes: 0, vegan: true,
     url: "made-with-love-bakery.html"
+  },
+  {
+    slug: "nurcha",
+    regions: ["sunshine"],
+    name: "Nurcha",
+    type: { en: "Vegan Café & Lifestyle Store", pt: "Café Vegano & Loja" },
+    logo: "images/logo_nurcha.jpg",
+    location: "Birtinya · Sunshine Coast",
+    desc: {
+      en: "A fully vegan café with a vegan grocery and eco-friendly store attached — a changing menu of bagels, açaí bowls, curries, dahl, pizzas, nachos and burgers.",
+      pt: "Um café totalmente vegano com mercearia vegana e loja ecológica no mesmo espaço — cardápio que muda, com bagels, açaí bowls, curries, dahl, pizzas, nachos e hambúrgueres."
+    },
+    tags: ["100% Vegan", "Café", "Brunch", "Groceries", "Pizza", "Gluten-Free"],
+    rating: 5, votes: 0, vegan: true,
+    url: "nurcha.html"
+  },
+  {
+    slug: "jr-vegan-thai",
+    regions: ["sunshine"],
+    name: "JR Vegan Thai",
+    type: { en: "Vegan Thai Kitchen", pt: "Cozinha Tailandesa Vegana" },
+    logo: "images/logo_jr_vegan_thai.jpg",
+    location: "Nambour · Sunshine Coast",
+    desc: {
+      en: "A small, fully vegan Thai kitchen — stir-fries, curries and noodles cooked without garlic or onion. Dinner only, cash only, and best to call ahead.",
+      pt: "Uma pequena cozinha tailandesa totalmente vegana — salteados, curries e macarrões preparados sem alho nem cebola. Só jantar, só dinheiro, e é melhor ligar antes."
+    },
+    tags: ["100% Vegan", "Thai", "Dinner", "Asian", "Budget-Friendly"],
+    rating: 5, votes: 0, vegan: true,
+    url: "jr-vegan-thai.html"
+  },
+  {
+    slug: "kindest_cakery",
+    regions: ["sunshine"],
+    name: "Kindest Cakery",
+    type: { en: "Vegan & Gluten-Free Bakery", pt: "Padaria Vegana & Sem Glúten" },
+    logo: "images/logo_kindest_cakery.jpg",
+    location: "Kunda Park · Sunshine Coast",
+    desc: {
+      en: "A fully vegan, gluten-free and coeliac-safe bakery — custom cakes, a daily treat cabinet and frozen meals from its sister brand, Kindest Kitchen.",
+      pt: "Uma padaria totalmente vegana, sem glúten e segura para celíacos — bolos personalizados, uma vitrine de doces diária e refeições congeladas da marca irmã, Kindest Kitchen."
+    },
+    tags: ["100% Vegan", "Bakery", "Cakes", "Desserts", "Gluten-Free", "Takeaway"],
+    rating: 5, votes: 0, vegan: true,
+    url: "kindest_cakery.html"
   }
 ];
 
@@ -1124,6 +1207,7 @@ const friendlyVenues = [
 
 // ── STATE ──
 let currentSort = 'alpha';
+let currentRegion = 'all';
 let veganOnly = false;
 let currentLang = 'en';
 
@@ -1206,6 +1290,9 @@ function translateTag(tag, lang) {
 function renderCards() {
   let list = [...venues];
 
+  // Location filter (vegan places only)
+  if (currentRegion !== 'all') list = list.filter(v => v.regions.includes(currentRegion));
+
   // Sort
   if (currentSort === 'alpha') list.sort((a, b) => a.name.localeCompare(b.name));
   else if (currentSort === 'rating') list.sort((a, b) => b.rating - a.rating || b.votes - a.votes);
@@ -1226,7 +1313,7 @@ function renderCards() {
   grid.innerHTML = list.map((v, i) => `
     <div class="card" style="animation-delay:${i * 0.04}s">
       <div class="card-top">
-        <div class="card-logo"><img src="${v.logo}" alt="${v.name} logo" width="64" height="64" loading="lazy"></div>
+        <div class="card-logo"><img src="${v.logo}" alt="${v.name} logo" width="64" height="64" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
         <div class="card-rating">
           <div class="card-stars">${starsHTML(v.rating)}</div>
           <span class="card-rating-num">${v.rating}</span>
@@ -1394,6 +1481,13 @@ function renderLimited() {
   document.getElementById('limitedChains').innerHTML = limitedVenues.filter(v => v.kind === 'chain').sort(byName).map(card).join('');
 }
 
+// ── LOCATION FILTER ──
+function setRegion(region) {
+  currentRegion = region;
+  document.querySelectorAll('.filter-btn[data-region]').forEach(b => b.classList.toggle('active', b.dataset.region === region));
+  renderCards();
+}
+
 // ── SORT ──
 function setSort(type) {
   currentSort = type;
@@ -1419,7 +1513,13 @@ const i18n = {
     "vegan.desc": "Safe menus for vegans — order anything.",
     "friendly.title": "Vegan-friendly",
     "friendly.desc": "Ask for the vegan menu and confirm with the staff when you order.",
-    "filters.label": "Sort & Filter",
+    "filters.sort": "Sort",
+    "filters.location": "Location",
+    "region.all": "All Places",
+    "region.city": "Brisbane City",
+    "region.greater": "Greater Brisbane",
+    "region.gold": "Gold Coast",
+    "region.sunshine": "Sunshine Coast",
     "filter.alpha": "A → Z",
     "filter.rating": "Best rated",
     "filter.popular": "Most popular",
@@ -1448,7 +1548,13 @@ const i18n = {
     "vegan.desc": "Cardápios seguros para veganos — peça qualquer coisa.",
     "friendly.title": "Vegan-friendly",
     "friendly.desc": "Peça o cardápio vegano e confirme com a equipe ao pedir.",
-    "filters.label": "Ordenar & Filtrar",
+    "filters.sort": "Ordenar",
+    "filters.location": "Localidade",
+    "region.all": "Todos os locais",
+    "region.city": "Brisbane City",
+    "region.greater": "Grande Brisbane",
+    "region.gold": "Gold Coast",
+    "region.sunshine": "Sunshine Coast",
     "filter.alpha": "A → Z",
     "filter.rating": "Melhor nota",
     "filter.popular": "Mais popular",
