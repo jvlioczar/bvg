@@ -36,7 +36,7 @@
       "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/HJ9NSKR1VR4noSZED" },
       "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/archieampm/reviews" },
       "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/archie-am-pm-carseldine-404975" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.ubereats.com/au/store/archie-ampm/jb2yYM6-QLi-BI9TLsZRHA" },
+      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
       "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
@@ -658,7 +658,7 @@
       "site": "https://www.thegreenedge.com.au",
       "instagram": "https://instagram.com/thegreenedge",
       "facebook": "https://facebook.com/thegreenedgevegancafe",
-      "tiktok": ""
+      "tiktok": "https://www.tiktok.com/@the.green.edge"
     },
     "address": "Shop 2B, 229 Lutwyche Road, Windsor, QLD 4030",
     "maps_url": "https://www.google.com/maps/search/Shop+2B+229+Lutwyche+Road+Windsor+QLD+4030",

@@ -253,6 +253,9 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
   box-shadow: inset 0 0 0 1px rgba(74, 140, 92, 0.28);
 }
 .tag.tag-vegan.tag-vegan-99:hover { background: rgba(74, 140, 92, 0.16); }
+/* Venue pages, Web card: room for up to six icons in one row, and text glyphs (Uber Eats / DoorDash). */
+.wwww-card .web-links { gap: 6px; }
+.web-link svg.glyph { width: 20px; height: 20px; }
 /* Initials avatar, used instead of a logo when a venue has none (e.g. JR Vegan Thai). */
 .card-logo.avatar-initials, .venue-logo.avatar-initials {
   display: flex; align-items: center; justify-content: center;
