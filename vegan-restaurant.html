@@ -299,10 +299,10 @@
     flex-shrink: 0;
   }
   .platform-name { font-size: 14px; font-weight: 500; color: var(--text); }
-  .opinion-stars { display: flex; gap: 2px; justify-self: center; }
+  .opinion-stars { display: flex; gap: 2px; justify-self: end; }
   .opinion-stars .star-icon { width: 16px; height: 16px; }
   .opinion-votes {
-    justify-self: end;
+    justify-self: center;
     font-size: 13px;
     color: var(--text-light);
     font-weight: 500;
@@ -501,7 +501,7 @@
     .wwww-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
-    .venue-hero { height: 40vh; min-height: 240px; }
+    .venue-hero { height: auto; aspect-ratio: 5 / 3; min-height: 0; max-height: none; }
     .venue-header { padding: 20px 20px 0; }
     .venue-intro { grid-template-columns: 1fr; }
     .venue-intro-text { grid-column: span 1; }
@@ -913,8 +913,8 @@ function loadVenueData() {
             '</div>';
 
         row.innerHTML = platformHtml +
-          '<div class="opinion-stars"></div>' +
-          '<div class="opinion-votes"><span>' + r.votes.toLocaleString() + '</span> <em class="votes-label">votes</em></div>';
+          '<div class="opinion-votes"><span>' + r.votes.toLocaleString() + '</span> <em class="votes-label">votes</em></div>' +
+          '<div class="opinion-stars"></div>';
         ol.appendChild(row);
         renderStars(row.querySelector('.opinion-stars'), normalized);
       });
@@ -931,8 +931,8 @@ function loadVenueData() {
             '<span class="platform-name">' + meta.name + '</span>' +
             '<svg class="link-arrow" width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M5 3h8v8M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
           '</a>' +
-          '<div class="opinion-stars" style="opacity:0.35;font-size:11px;color:var(--sage)">link only</div>' +
-          '<div class="opinion-votes" style="opacity:0.35">—</div>';
+          '<div class="opinion-votes" style="opacity:0.35">—</div>' +
+          '<div class="opinion-stars" style="opacity:0.35;font-size:11px;color:var(--sage)">link only</div>';
         ol.appendChild(row);
       });
 

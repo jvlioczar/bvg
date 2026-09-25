@@ -197,8 +197,15 @@ body{overflow-x:hidden}
 <script>
 // ── DATA ──
 const professionals = [
-  { name: "Julio Cesar Prava", service: "Graphic Design · Web Design · Video Editing", category: "Design", social: "https://instagram.com/sencientista", socialLabel: "@sencientista" },
-  { name: "Mandy Pentland", service: "Hospitality · Event Planning · Consulting", category: "Hospitality", social: "https://instagram.com/mamdymoo", socialLabel: "@mamdymoo" },
+  { name: "Julio Cesar Prava", service: "Graphic Design · Web Design · Social Media · Video Editing", category: "Design", social: "https://instagram.com/sencientista", socialLabel: "@sencientista" },
+  { name: "Mandy Pentland", service: "Hospitality · Event Planning · Consulting · Pet Sitting", category: "Hospitality", social: "https://instagram.com/mamdymoo", socialLabel: "@mamdymoo" },
+  { name: "Andy", service: "Food Photography", category: "Photography", social: "https://instagram.com/photosbyandyfromhk", socialLabel: "@photosbyandyfromhk" },
+  { name: "Lexie Lou", service: "Writing · Social Media Management", category: "Content", social: "https://instagram.com/lexielou.workswithyou", socialLabel: "@lexielou.workswithyou" },
+  { name: "Kelly James", service: "Tattooing", category: "Art", social: "https://instagram.com/kelly_mcquirktattoo", socialLabel: "@kelly_mcquirktattoo" },
+  { name: "Marianna Bombardini", service: "Private Chef · Italian Cuisine", category: "Food", social: "https://instagram.com/mannarancio", socialLabel: "@mannarancio" },
+  { name: "Liz Anya", service: "Drag Performance · Event Hosting", category: "Events", social: "https://instagram.com/the.liz.anya", socialLabel: "@the.liz.anya" },
+  { name: "Ember Burris", service: "Illustration · Tattooing", category: "Art", social: "https://instagram.com/embers.tattoo", socialLabel: "@embers.tattoo" },
+  { name: "Gabi Heather", service: "Pet Sitting", category: "Pets", social: "https://www.instagram.com/gabiraechel/", socialLabel: "@gabiraechel" },
   { name: "Your Name Here", service: "Your service goes here", category: "Other", social: "#", socialLabel: "Send us a DM!" }
 ];
 
@@ -239,7 +246,7 @@ function filterTable() {
         <td class="td-name">${p.name}</td>
         <td class="td-service">${p.service}</td>
         <td><a href="${p.social}" target="_blank" rel="noopener" class="table-link">${p.socialLabel}</a></td>
-        <td class="td-email"><a href="https://instagram.com/brisbaneveg" target="_blank" rel="noopener">${contactLabel}</a></td>
+        <td class="td-email"><a href="${p.social === '#' ? 'https://instagram.com/brisbaneveg' : p.social}" target="_blank" rel="noopener">${contactLabel}</a></td>
       </tr>
     `).join('');
   }
