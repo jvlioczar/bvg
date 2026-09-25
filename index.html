@@ -707,6 +707,7 @@ const i18n = {
     "kit.item3.type": "Health & Nutrition",
     "kit.item3.name": "Are plant-based diets healthy?",
     "kit.item3.desc": "What the science says about plant-based nutrition — health benefits, essential nutrients, and how to thrive on a well-planned vegan diet.",
+    "footer.privacy": "Política de Privacidade",
     "footer.tagline": "A better world for the animals.",
     "footer.created": "Created by",
     "explore.label": "Explore more",
@@ -776,6 +777,7 @@ const i18n = {
     "kit.item3.type": "Saúde & Nutrição",
     "kit.item3.name": "Dietas plant-based são saudáveis?",
     "kit.item3.desc": "O que a ciência diz sobre nutrição plant-based — benefícios para a saúde, nutrientes essenciais e como prosperar com uma dieta vegana bem planejada.",
+    "footer.privacy": "Política de Privacidade",
     "footer.tagline": "Um mundo melhor para os animais.",
     "footer.created": "Criado por",
     "explore.label": "Explore mais",
@@ -844,11 +846,19 @@ fetch('bvg_data.json')
     data.forEach(v => { bySlug[v.slug] = v; });
     document.querySelectorAll('.card[data-venue-slug]').forEach(card => {
       const venue = bySlug[card.dataset.venueSlug];
-      if (!venue || typeof venue.final_rating !== 'number' || venue.final_rating <= 0) return;
+      if (!venue || typeof venue.final_result !== 'number') return;
       const starsEl = card.querySelector('.card-stars');
       const numEl = card.querySelector('.card-rating-num');
-      if (starsEl) starsEl.innerHTML = starsHTML(venue.final_rating);
-      if (numEl) numEl.textContent = venue.final_rating.toFixed(1);
+      // published rating is on a 0-10 scale; stars are shown out of 5
+      if (starsEl) starsEl.innerHTML = starsHTML(venue.final_result / 2);
+      if (numEl) numEl.textContent = venue.final_result.toFixed(1);
+      // hover tooltip: rating confidence from the venue's total number of reviews
+      const ratingEl = card.querySelector('.card-rating');
+      if (ratingEl && venue.reviews) {
+        const total = Object.keys(venue.reviews).reduce((s, k) => { const r = venue.reviews[k]; return s + (k !== 'bvg' && r && typeof r.votes === 'number' ? r.votes : 0); }, 0);
+        ratingEl.setAttribute('data-conf-votes', total);
+        ratingEl.setAttribute('tabindex', '0');
+      }
     });
   })
   .catch(err => {

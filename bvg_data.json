@@ -4,13 +4,18 @@
     "name": "Archie AM:PM",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Zacchary Bird", "Mel Gillard"],
+    "founded": 2024,
+    "contact": { "emails": ["contact@meliora.org.au"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/archie-ampm/jb2yYM6-QLi-BI9TLsZRHA", "doordash": "" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/12040593/archie-am-pm" },
     "tags": ["100% Vegan", "Bistro", "Café", "Burgers", "Desserts", "Coffee"],
     "desc": {
       "en": "Archie AM:PM is a 100% vegan bistro-café in Carseldine, run by Meliora Support Services as a supported-employment workplace that pays disabled workers full award wages. Open Wednesday to Sunday under executive chef Kya Knights, it serves globally-inspired plant-based dishes — from smash burgers and loaded yiros to house-baked desserts and creative coffee.",
       "pt": "O Archie AM:PM é um bistrô-café 100% vegano em Carseldine, administrado pela Meliora Support Services como um espaço de emprego apoiado que paga salário integral a trabalhadores com deficiência. Aberto de quarta a domingo sob o comando da chef executiva Kya Knights, serve pratos plant-based com influências de várias partes do mundo — de hambúrgueres smash a yiros recheados, além de sobremesas caseiras e cafés criativos."
     },
     "instagram_reel": "https://www.instagram.com/reel/DdZ6HsaTQZC/embed/",
-    "web": { "site": "https://meliora.org.au/pages/archie-cafe", "instagram": "https://instagram.com/archieampm", "facebook": "https://www.facebook.com/archieampm/", "tiktok": "" },
+    "web": { "site": "https://meliora.org.au/pages/archie-cafe", "instagram": "https://instagram.com/archieampm", "facebook": "https://facebook.com/archieampm/", "tiktok": "" },
     "address": "Shop 23, 735 Beams Rd, Carseldine, QLD 4034",
     "maps_url": "https://www.google.com/maps/search/Shop+23+735+Beams+Rd+Carseldine+QLD+4034",
     "why": {
@@ -22,27 +27,28 @@
       "pt": "Korean Fried 'Chicken' Burger, Cheesy Smash Burger, Gado Gado e um Peanut Brownie de sobremesa."
     },
     "when": {
-      "en": "Run by Meliora Support Services, a Brisbane social enterprise operating since 2019 that provides supported employment in hospitality. Archie's kitchen is led by executive chef Kya Knights.",
-      "pt": "Administrado pela Meliora Support Services, um empreendimento social de Brisbane em atividade desde 2019 que oferece emprego apoiado na hotelaria. A cozinha do Archie é liderada pela chef executiva Kya Knights."
+      "en": "Founded in 2024 by Zacchary Bird and Mel Gillard. Run by Meliora Support Services, a Brisbane social enterprise operating since 2019 that provides supported employment in hospitality. Archie's kitchen is led by executive chef Kya Knights.",
+      "pt": "Fundado em 2024 por Zacchary Bird e Mel Gillard. Administrado pela Meliora Support Services, empresa social de Brisbane que atua desde 2019 oferecendo emprego apoiado na área de hospitalidade. A cozinha do Archie é comandada pela chef executiva Kya Knights."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.0,
+    "final_score": 8.0000,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/HJ9NSKR1VR4noSZED" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/archieampm/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/archie-am-pm-carseldine-404975" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/12040593/archie-am-pm", "link_only": true }
+      "google": { "votes": 110, "rating": 4.7, "scale": 5, "url": "https://share.google/HJ9NSKR1VR4noSZED" },
+      "facebook": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "happycow": { "votes": 24, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/archie-am-pm-carseldine-404975" },
+      "uber_eats": { "votes": 29, "rating": 4.1, "scale": 5, "url": "https://ubereats.com/au/store/archie-ampm/jb2yYM6-QLi-BI9TLsZRHA" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -50,13 +56,18 @@
     "name": "Cardamom Pod Brickworks",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Manju Pinnell", "Sean Pinnell", "Mamta Pinnell"],
+    "founded": 2016,
+    "contact": { "emails": ["support@cardamompodbrickworks.com"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/the-cardamom-pod-vegetarian/nIhYR1B1TAaN_EYzp9OwwA", "doordash": "" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1420149/cardamom-pod-25-years" },
     "tags": ["99% Vegan", "Café", "Indian", "Brunch", "Gluten-Free", "Coffee"],
     "desc": {
-      "en": "Cardamom Pod Brickworks is a plant-forward café at The Brickworks in Southport, Gold Coast, open for breakfast and brunch 8am–3pm every day. Its Indian-inspired menu spans loaded açaí bowls, specialty pancakes and French toast, curries and bowls, alongside gourmet coffee and cold-pressed juices — the kitchen is 100% plant-based, and the only non-vegan item is cow's milk as an option for coffee.",
-      "pt": "O Cardamom Pod Brickworks é um café plant-forward no The Brickworks, em Southport, Gold Coast, aberto para café da manhã e brunch das 8h às 15h todos os dias. Seu cardápio de inspiração indiana traz açaí bowls recheados, panquecas e rabanadas especiais, curries e bowls, além de café gourmet e sucos prensados a frio — a cozinha é 100% plant-based, e o único item não vegano é o leite de vaca como opção para o café."
+      "en": "Cardamom Pod Brickworks is a plant-forward café at The Brickworks in Southport, Gold Coast, open for breakfast and brunch every day. Its Indian-inspired menu spans loaded açaí bowls, specialty pancakes and French toast, curries and bowls, alongside gourmet coffee and cold-pressed juices — the kitchen is 100% plant-based, and the only non-vegan item is cow's milk as an option for coffee.",
+      "pt": "O Cardamom Pod Brickworks é um café plant-forward no The Brickworks, em Southport, Gold Coast, aberto para café da manhã e brunch todos os dias. Seu cardápio de inspiração indiana traz açaí bowls recheados, panquecas e rabanadas especiais, curries e bowls, além de café gourmet e sucos prensados a frio — a cozinha é 100% plant-based, e o único item não vegano é o leite de vaca como opção para o café."
     },
     "instagram_reel": "https://www.instagram.com/reel/DZ7J0_OyeYx/embed/",
-    "web": { "site": "https://cardamompodbrickworks.com", "instagram": "https://instagram.com/cardamompodbrickworks", "facebook": "https://facebook.com/p/Cardamom-Pod-Brickworks-Ferry-Rd-Southport-100063559841571", "tiktok": "" },
+    "web": { "site": "https://cardamompodbrickworks.com/", "instagram": "https://instagram.com/cardamompodbrickworks", "facebook": "https://facebook.com/p/Cardamom-Pod-Brickworks-Ferry-Rd-Southport-100063559841571", "tiktok": "" },
     "address": "3/3 Brolga Avenue, Southport, QLD 4215",
     "maps_url": "https://www.google.com/maps/search/3+3+Brolga+Avenue+Southport+QLD+4215",
     "why": {
@@ -68,27 +79,28 @@
       "pt": "Pod Special Açaí, o Bollywood Burger, Pumpkin Pie Pancakes e um Pistachio Latte."
     },
     "when": {
-      "en": "Open at The Brickworks in Southport since 2016, serving an Indian-inspired, plant-based menu of açaí bowls, brunch plates and specialty coffee.",
-      "pt": "Funcionando no The Brickworks, em Southport, desde 2016, com um cardápio de inspiração indiana e plant-based de açaí bowls, pratos de brunch e café especial."
+      "en": "Founded in 2016 by Manju Pinnell, Sean Pinnell and Mamta Pinnell at The Brickworks in Southport, on the Gold Coast, serving an Indian-inspired, plant-based menu ever since.",
+      "pt": "Fundado em 2016 por Manju Pinnell, Sean Pinnell e Mamta Pinnell no The Brickworks, em Southport, na Gold Coast, com um cardápio de inspiração indiana e plant-based desde então."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.6,
+    "final_score": 8.6117,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/YjyoMV7DHF0P0G6Vy" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/p/Cardamom-Pod-Brickworks-Ferry-Rd-Southport-100063559841571/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/the-cardamom-pod-southport-28442" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/the-cardamom-pod-vegetarian/nIhYR1B1TAaN_EYzp9OwwA" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g495002-d10430436-Reviews-The_Cardamom_Pod-Southport_Gold_Coast_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/the-cardamom-pod-southport?osq=Cardamom+Pod" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1420149/cardamom-pod-25-years", "link_only": true }
+      "google": { "votes": 1213, "rating": 4.6, "scale": 5, "url": "https://share.google/pCNB2wRstK3iew4ht" },
+      "facebook": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "happycow": { "votes": 108, "rating": 4.5, "scale": 5, "url": "https://happycow.net/reviews/the-cardamom-pod-southport-28442" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": 187, "rating": 4.4, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g495002-d10430436-Reviews-The_Cardamom_Pod-Southport_Gold_Coast_Queensland.html" },
+      "yelp": { "votes": 9, "rating": 4.3, "scale": 5, "url": "https://yelp.com/biz/the-cardamom-pod-southport" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -96,45 +108,51 @@
     "name": "Charlie's Raw Squeeze",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Johnny Tabet", "Michael Tabet"],
+    "founded": 2015,
+    "contact": { "emails": ["johnny@charliesgroup.com.au", "michael@charliesgroup.com.au"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/charlies-raw-squeeze-greenslopes/TBmjyZ7zScWj8NFW6Ah1UQ", "doordash": "https://doordash.com/store/charlie's-raw-squeeze-greenslopes-958346/14983950/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490347/charlies-raw-squeeze-greenslopes" },
     "tags": ["100% Vegan", "Juice Bar", "Café", "Burgers", "Brunch", "Coffee"],
     "desc": {
-      "en": "Charlie's Raw Squeeze is a Brisbane juice-bar chain with four locations — Greenslopes, Clayfield, Clontarf and Wynnum — open daily from 7am. The Greenslopes store serves açaí bowls, fresh juices and smoothies alongside smashed avo toast, falafel wraps and burgers, plus moofins and coffee for an easy, everyday menu.",
-      "pt": "O Charlie's Raw Squeeze é uma rede de sucos de Brisbane com quatro unidades — Greenslopes, Clayfield, Clontarf e Wynnum — abertas todos os dias a partir das 7h. A loja de Greenslopes serve açaí bowls, sucos frescos e smoothies, além de torradas com abacate, wraps de falafel e hambúrgueres, moofins e café, num cardápio simples para o dia a dia."
+      "en": "Charlie's Raw Squeeze is a Brisbane juice-bar chain with four locations — Greenslopes, Clayfield, Clontarf and Wynnum — open daily. The Greenslopes store serves açaí bowls, fresh juices and smoothies alongside smashed avo toast, falafel wraps and burgers, plus moofins and coffee for an easy, everyday menu.",
+      "pt": "O Charlie's Raw Squeeze é uma rede de sucos de Brisbane com quatro unidades — Greenslopes, Clayfield, Clontarf e Wynnum — abertas todos os dias. A loja de Greenslopes serve açaí bowls, sucos frescos e smoothies, além de torradas com abacate, wraps de falafel e hambúrgueres, moofins e café, num cardápio simples para o dia a dia."
     },
     "instagram_reel": "https://www.instagram.com/reel/DcVsaQiSBNm/embed/",
-    "web": { "site": "https://www.rawsqueeze.com.au", "instagram": "https://www.instagram.com/rawsqueeze", "facebook": "https://www.facebook.com/rawsqueeze/", "tiktok": "" },
+    "web": { "site": "https://rawsqueeze.com.au/", "instagram": "https://instagram.com/rawsqueeze", "facebook": "https://facebook.com/rawsqueeze/", "tiktok": "" },
     "address": "51 Old Cleveland Road, Greenslopes, QLD 4120",
     "maps_url": "https://www.google.com/maps/search/51+Old+Cleveland+Road+Greenslopes+QLD+4120",
     "why": {
-      "en": "A laid-back juice bar chain serving açaí bowls, fresh juices and smoothies alongside easy breakfast and lunch bites, open daily from 7am.",
-      "pt": "Uma rede de sucos descontraída, com açaí bowls, sucos frescos e smoothies, além de opções fáceis de café da manhã e almoço, aberta todos os dias a partir das 7h."
+      "en": "A laid-back juice bar chain serving açaí bowls, fresh juices and smoothies alongside easy breakfast and lunch bites, open daily.",
+      "pt": "Uma rede de sucos descontraída, com açaí bowls, sucos frescos e smoothies, além de opções fáceis de café da manhã e almoço, aberta todos os dias."
     },
     "what_to_order": {
       "en": "Peanut Butter Açaí Bowl, a Falafel Wrap, Smashed Avo Toast and a fresh juice.",
       "pt": "Peanut Butter Açaí Bowl, um Falafel Wrap, torrada com abacate (Smashed Avo Toast) e um suco fresco."
     },
     "when": {
-      "en": "Grown from its Brisbane roots into a small local chain, Charlie's Raw Squeeze now runs stores in Greenslopes, Clayfield, Clontarf and Wynnum, with franchise opportunities open to new operators.",
-      "pt": "Crescendo a partir de suas raízes em Brisbane, o Charlie's Raw Squeeze hoje tem lojas em Greenslopes, Clayfield, Clontarf e Wynnum, com oportunidades de franquia abertas a novos operadores."
+      "en": "Founded in 2015 by Johnny Tabet and Michael Tabet. Grown from its Brisbane roots into a small local chain, Charlie's Raw Squeeze now runs stores in Greenslopes, Clayfield, Clontarf and Wynnum, with franchise opportunities open to new operators.",
+      "pt": "Fundado em 2015 por Johnny Tabet e Michael Tabet. Crescendo a partir de suas raízes em Brisbane, o Charlie's Raw Squeeze virou uma pequena rede local, com unidades em Greenslopes, Clayfield, Clontarf e Wynnum e oportunidades de franquia abertas a novos operadores."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.7,
+    "final_score": 8.7319,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/Wly8ESqBqygdR3e4C" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/rawsqueeze/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/charlies-raw-squeeze-greenslopes-65483" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.ubereats.com/au/store/charlies-raw-squeeze-greenslopes/TBmjyZ7zScWj8NFW6Ah1UQ" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.doordash.com/store/charlies-raw-squeeze-greenslopes-958346" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g255068-d11004988-Reviews-Charlie_s_Raw_Squeeze_Ashgrove-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.yelp.com/biz/charlies-raw-squeeze-greenslopes-greenslopes" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490347/charlies-raw-squeeze-greenslopes", "link_only": true }
+      "google": { "votes": 557, "rating": 4.1, "scale": 5, "url": "https://share.google/txT0jB8l8QihIkTSI" },
+      "facebook": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "happycow": { "votes": 20, "rating": 4.5, "scale": 5, "url": "https://happycow.net/reviews/charlies-raw-squeeze-greenslopes-65483" },
+      "uber_eats": { "votes": 4000, "rating": 4.7, "scale": 5, "url": "https://ubereats.com/au/store/charlies-raw-squeeze-greenslopes/TBmjyZ7zScWj8NFW6Ah1UQ" },
+      "doordash": { "votes": 500, "rating": 4.4, "scale": 5, "url": "https://doordash.com/store/charlie's-raw-squeeze-greenslopes-958346/14983950/" },
+      "tripadvisor": { "votes": 1, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d15701785-Reviews-Charlies_Raw_Squeeze_Stones_Corner-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": 8, "rating": 3.9, "scale": 5, "url": "https://yelp.com/biz/charlies-raw-squeeze-greenslopes-greenslopes" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -142,45 +160,51 @@
     "name": "Dicki's",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Justine Khoury", "Lexi Golding", "Choy Zulueta"],
+    "founded": 2018,
+    "contact": { "emails": ["info@dickis.com.au"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/dickis-plant-based-dining/FyoB-QspT-OvQANPDVzmUg", "doordash": "https://doordash.com/store/dickis-new-farm-26148110/28247763/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490345/dickis-new-farm", "opentable": "https://opentable.com.au/r/dickis-brisbane" },
     "tags": ["100% Vegan", "Café", "Brunch", "Burgers", "Desserts", "Coffee"],
     "desc": {
-      "en": "Dicki's is a 100% vegan café on Brunswick Street in New Farm, open 7am–2pm for specialty coffee, all-day breakfast and lunch. Its comfort-food menu leans on mock-meat classics — Breaky Burritos, 'Duck' Toasties, satay wraps and smash burgers — alongside custom cakes, smoothies and a relaxed, dog-friendly balcony.",
-      "pt": "O Dicki's é um café 100% vegano na Brunswick Street, em New Farm, aberto das 7h às 14h para café especial, café da manhã e almoço o dia todo. Seu cardápio de comfort food aposta em clássicos à base de \"carnes\" vegetais — Breaky Burrito, \"Duck\" Toastie, wraps de satay e smash burgers — além de bolos personalizados, smoothies e uma varanda descontraída e pet-friendly."
+      "en": "Dicki's is a 100% vegan café on Brunswick Street in New Farm, serving specialty coffee, all-day breakfast and lunch. Its comfort-food menu leans on mock-meat classics — Breaky Burritos, 'Duck' Toasties, satay wraps and smash burgers — alongside custom cakes, smoothies and a relaxed, dog-friendly balcony.",
+      "pt": "O Dicki's é um café 100% vegano na Brunswick Street, em New Farm, com café especial, café da manhã e almoço o dia todo. Seu cardápio de comfort food aposta em clássicos à base de \"carnes\" vegetais — Breaky Burrito, \"Duck\" Toastie, wraps de satay e smash burgers — além de bolos personalizados, smoothies e uma varanda descontraída e pet-friendly."
     },
     "instagram_reel": "https://www.instagram.com/reel/DdVEIRoTxh9/embed/",
     "web": { "site": "https://dickis.com.au", "instagram": "https://instagram.com/dickis.newfarm", "facebook": "https://facebook.com/dickis.newfarm", "tiktok": "" },
     "address": "893 Brunswick Street, New Farm, QLD 4005",
     "maps_url": "https://www.google.com/maps/search/893+Brunswick+Street+New+Farm+QLD+4005",
     "why": {
-      "en": "A dog-friendly neighbourhood café serving 100% vegan comfort food and specialty coffee from 7am to 2pm.",
-      "pt": "Um café de bairro pet-friendly, com comfort food 100% vegana e café especial das 7h às 14h."
+      "en": "A dog-friendly neighbourhood café serving 100% vegan comfort food and specialty coffee.",
+      "pt": "Um café de bairro pet-friendly, com comfort food 100% vegana e café especial."
     },
     "what_to_order": {
       "en": "The Breaky Burrito, a \"Duck\" Toastie, Dicki's Classic Burger and an Almond Croissant.",
       "pt": "O Breaky Burrito, um \"Duck\" Toastie, o Dicki's Classic Burger e um Almond Croissant."
     },
     "when": {
-      "en": "A New Farm neighbourhood favourite known for its fully vegan spin on café classics and mock-meat comfort food, with a relaxed, dog-friendly balcony on Brunswick Street.",
-      "pt": "Um point queridinho de New Farm, conhecido por sua versão totalmente vegana dos clássicos de café e comfort food à base de \"carnes\" vegetais, com uma varanda descontraída e pet-friendly na Brunswick Street."
+      "en": "Founded in 2018 by Justine Khoury, Lexi Golding and Choy Zulueta, Dicki's has become a New Farm neighbourhood favourite for its fully vegan spin on café classics and mock-meat comfort food.",
+      "pt": "Fundado em 2018 por Justine Khoury, Lexi Golding e Choy Zulueta, o Dicki's virou um queridinho do bairro de New Farm por suas versões 100% veganas de clássicos de café e comfort food com \"carnes\" vegetais."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 9.2,
+    "final_score": 9.2050,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/7YkFhCEvYm1bv1WYW" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/dickis.newfarm/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/dickis-new-farm-112875" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/dickis-plant-based-dining/FyoB-QspT-OvQANPDVzmUg" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/dickis-new-farm-26148110/28247763/" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d13987678-Reviews-Dicki_s-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/dicki-s-new-farm" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/dickis-brisbane" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490345/dickis-new-farm", "link_only": true }
+      "google": { "votes": 746, "rating": 4.8, "scale": 5, "url": "https://share.google/7YkFhCEvYm1bv1WYW" },
+      "facebook": { "votes": 346, "rating": 98, "scale": 100, "url": "https://facebook.com/dickis.newfarm/reviews" },
+      "happycow": { "votes": 117, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/dickis-new-farm-112875" },
+      "uber_eats": { "votes": 1500, "rating": 4.9, "scale": 5, "url": "https://ubereats.com/au/store/dickis-plant-based-dining/FyoB-QspT-OvQANPDVzmUg" },
+      "doordash": { "votes": 50, "rating": 4.5, "scale": 5, "url": "https://doordash.com/store/dickis-new-farm-26148110/28247763/" },
+      "tripadvisor": { "votes": 27, "rating": 4.4, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d13987678-Reviews-Dicki_s-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": 2, "rating": 3, "scale": 5, "url": "https://yelp.com/biz/dicki-s-new-farm" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -188,6 +212,11 @@
     "name": "Doko Demo V",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Vian Wu", "Jared Peck"],
+    "founded": 2018,
+    "contact": { "emails": ["dokodemovkim@gmail.com"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/doko-demo-v-vegan-restaurant/CtBZz5-8TF27U-YQ5Qqktw", "doordash": "" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490357/doko-demo-v-vegan-restaurant" },
     "tags": ["100% Vegan", "Asian", "Dinner", "Burgers", "Pizza", "Coffee"],
     "desc": {
       "en": "Doko Demo V is a fully vegan restaurant and bar in Burleigh Waters, Gold Coast, serving an expansive all-day menu that spans breakfast, Asian classics like pad thai and laksa, burgers, pizza, pasta and mains — plus a full vegan coffee bar and a licensed cocktail list, swapping in plant-based versions of Western comfort-food favourites too.",
@@ -206,27 +235,28 @@
       "pt": "Cooked Pad Thai, um Mushroom Burger, a Peking Duck Pizza e a sobremesa-assinatura Pot Plant Ice Cream."
     },
     "when": {
-      "en": "A fully vegan restaurant and bar in Burleigh Waters with one of the Gold Coast's largest all-vegan menus — spanning breakfast to late-night cocktails, seven days a week.",
-      "pt": "Um restaurante e bar totalmente vegano em Burleigh Waters com um dos maiores cardápios 100% veganos da Gold Coast — do café da manhã a coquetéis à noite, todos os dias da semana."
+      "en": "Founded in 2018 by Vian Wu and Jared Peck, Doko Demo V is a fully vegan restaurant and bar in Burleigh Waters, with one of the Gold Coast's largest all-vegan menus — spanning breakfast to late-night cocktails.",
+      "pt": "Fundado em 2018 por Vian Wu e Jared Peck, o Doko Demo V é um restaurante e bar totalmente vegano em Burleigh Waters, com um dos maiores cardápios 100% veganos da Gold Coast — do café da manhã aos coquetéis da noite."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 9.1,
+    "final_score": 9.0774,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/O2xU8BUETV0GUvkVA" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/DokoDemoV/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/doko-demo-v-west-burleigh-125770" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/doko-demo-v-vegan-restaurant/CtBZz5-8TF27U-YQ5Qqktw" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g4371546-d14965487-Reviews-DokoDemo_V-Burleigh_Waters_Gold_Coast_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490357/doko-demo-v-vegan-restaurant", "link_only": true }
+      "google": { "votes": 692, "rating": 4.8, "scale": 5, "url": "https://share.google/O2xU8BUETV0GUvkVA" },
+      "facebook": { "votes": 377, "rating": 100, "scale": 100, "url": "https://facebook.com/DokoDemoV/reviews" },
+      "happycow": { "votes": 104, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/doko-demo-v-west-burleigh-125770" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": 37, "rating": 4.9, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g4371546-d14965487-Reviews-DokoDemo_V-Burleigh_Waters_Gold_Coast_Queensland.html" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -234,6 +264,11 @@
     "name": "El Planta",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Adrienne Jory", "Rick Gibson"],
+    "founded": 2019,
+    "contact": { "emails": ["hola@elplanta.com"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
     "tags": ["100% Vegan", "Mexican", "Street Food", "Dinner", "Bar", "Gluten-Free"],
     "desc": {
       "en": "El Planta is a family-run, 100% plant-based Mexican restaurant on Hope Street, just off Fish Lane in South Brisbane. Everything is made from scratch, including hand-pressed tortillas cooked to order, on a share-style menu that changes with the seasons — paired with Brisbane's margaritas, natural wines and tequila. Open Tuesday to Saturday evenings only.",
@@ -252,26 +287,27 @@
       "pt": "Tacos prensados à mão, o acompanhamento Corn & Brussels Sprouts, uma margarita para compartilhar e os especiais da Taco Tuesday."
     },
     "when": {
-      "en": "Family-run for over seven years, El Planta has built a loyal following in South Brisbane for its scratch-made, share-style Mexican menu — a short walk from QPAC and South Bank.",
-      "pt": "Administrado pela mesma família há mais de sete anos, o El Planta conquistou um público fiel em South Brisbane com seu cardápio mexicano feito do zero, para compartilhar — a poucos minutos a pé do QPAC e do South Bank."
+      "en": "Founded in 2019 by Adrienne Jory and Rick Gibson and family-run ever since, El Planta has built a loyal following in South Brisbane for its scratch-made, share-style Mexican menu.",
+      "pt": "Fundado em 2019 por Adrienne Jory e Rick Gibson e administrado em família desde então, o El Planta conquistou um público fiel em South Brisbane com seu cardápio mexicano feito do zero e para compartilhar."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.9,
+    "final_score": 8.9073,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/1a6lPnMnnlLP0kzOE" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/elplantamexican/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/el-planta-south-brisbane-164804#reviews" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d21001197-Reviews-El_Planta-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/el-planta-south-brisbane" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "google": { "votes": 855, "rating": 4.7, "scale": 5, "url": "https://share.google/1a6lPnMnnlLP0kzOE" },
+      "facebook": { "votes": 28, "rating": 100, "scale": 100, "url": "https://facebook.com/elplantamexican/reviews" },
+      "happycow": { "votes": 79, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/el-planta-south-brisbane-164804#reviews" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": 10, "rating": 4.6, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d21001197-Reviews-El_Planta-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": 563, "rating": 4.8, "scale": 5, "url": "https://opentable.com.au/r/el-planta-south-brisbane" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
@@ -280,6 +316,11 @@
     "name": "GrassFed",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Alejandro Cancino", "Jonny Garrison"],
+    "founded": 2018,
+    "contact": { "emails": ["info@grassfedvegan.com.au"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
     "tags": ["100% Vegan", "Food Truck", "Burgers", "Street Food", "Comfort Food", "Takeaway"],
     "desc": {
       "en": "GrassFed is a 100% vegan food trailer serving burgers and its signature loaded fries at markets and events across South East Queensland, including the Queensland Vegan Markets in Brisbane, Gold Coast and Sunshine Coast. After closing its original bricks-and-mortar restaurant, the team now brings the same burger menu on the road — and is available for private catering at parties, weddings and corporate events.",
@@ -298,26 +339,27 @@
       "pt": "Um hambúrguer vegano do cardápio rotativo, acompanhado das Loaded Fries de assinatura."
     },
     "when": {
-      "en": "Originally a bricks-and-mortar restaurant, GrassFed closed its physical location and now operates as a food trailer, serving the same burger menu at SEQ markets and private events.",
-      "pt": "Antes um restaurante com endereço fixo, o GrassFed fechou o local físico e hoje funciona como um trailer de comida, servindo o mesmo cardápio de hambúrgueres em feiras do Sudeste de Queensland e em eventos privados."
+      "en": "Founded in 2018 by Alejandro Cancino and Jonny Garrison as Brisbane's first all-vegan burger restaurant. GrassFed later closed its physical location and now operates as a food trailer, serving the same burger menu at SEQ markets and private events.",
+      "pt": "Fundado em 2018 por Alejandro Cancino e Jonny Garrison como o primeiro restaurante de hambúrgueres 100% veganos de Brisbane. O GrassFed depois fechou a loja física e hoje funciona como um trailer de comida, servindo o mesmo cardápio de hambúrgueres em feiras da SEQ e eventos privados."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.9,
+    "final_score": 8.9036,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/TuOUDTQCE3DxEOVGV" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/Grassfedplantbased/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/grassfed-brisbane-408790" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "google": { "votes": 698, "rating": 4.7, "scale": 5, "url": "https://share.google/TuOUDTQCE3DxEOVGV" },
+      "facebook": { "votes": 353, "rating": 98, "scale": 100, "url": "https://facebook.com/Grassfedplantbased/reviews" },
+      "happycow": { "votes": 6, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/grassfed-brisbane-408790" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
@@ -326,6 +368,11 @@
     "name": "Greenhouse Canteen & Bar",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Natalie Evans", "Charlie Evans"],
+    "founded": 2013,
+    "contact": { "emails": ["socials@greenhousecanteen.com"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490340/greenhouse-canteen--bar" },
     "tags": ["100% Vegan", "Bar", "Dinner", "Lunch", "Gluten-Free", "Comfort Food"],
     "desc": {
       "en": "Greenhouse Canteen & Bar is a 100% vegan restaurant and bar set in Tallebudgera Valley on the Gold Coast, part of the Greenhouse the Bathhouse wellness complex. Its plant-based whole-food menu spans mushroom burgers, cauliflower wings and arancini alongside a full bar of cocktails and wine, served across a relaxed indoor dining room and garden patio for lunch and dinner.",
@@ -344,27 +391,28 @@
       "pt": "A panqueca vietnamita (Vietnamese pancake), um hambúrguer de cogumelo, asinhas de couve-flor e o cheesecake de sobremesa."
     },
     "when": {
-      "en": "Part of the Greenhouse the Bathhouse wellness complex in Tallebudgera Valley, pairing its 100% vegan kitchen with on-site soak sessions and massages for a full day out.",
-      "pt": "Parte do complexo de bem-estar Greenhouse the Bathhouse em Tallebudgera Valley, combinando sua cozinha 100% vegana com sessões de banho e massagens no local para um dia completo."
+      "en": "Founded in 2013 by Natalie Evans and Charlie Evans, Greenhouse Canteen is part of the Greenhouse the Bathhouse wellness complex in Tallebudgera Valley, pairing its 100% vegan kitchen with on-site soak sessions and massages for a full day out.",
+      "pt": "Fundado em 2013 por Natalie Evans e Charlie Evans, o Greenhouse Canteen faz parte do complexo de bem-estar Greenhouse the Bathhouse, em Tallebudgera Valley, unindo sua cozinha 100% vegana a banhos de imersão e massagens no local para um dia completo de passeio."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 9.0,
+    "final_score": 8.9753,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/WHaxQJBvdrsMCXG5R" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/greenhousecanteentandbar/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/greenhouse-canteen-and-bar-tallebudgera-vallley-73882" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/greenhouse-canteen-%26-bar/cXEfheW2TSa8aZQid95FAA" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d20016925-Reviews-Greenhouse_Canteen-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/greenhouse-canteen-and-bar-miami" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/greenhouse-canteen-and-bar-tallebudgera-miami" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490340/greenhouse-canteen--bar", "link_only": true }
+      "google": { "votes": 507, "rating": 4.7, "scale": 5, "url": "https://share.google/WHaxQJBvdrsMCXG5R" },
+      "facebook": { "votes": 772, "rating": 96, "scale": 100, "url": "https://facebook.com/greenhousecanteentandbar/reviews" },
+      "happycow": { "votes": 70, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/greenhouse-canteen-and-bar-tallebudgera-vallley-73882" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": 11, "rating": 4, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d20016925-Reviews-Greenhouse_Canteen-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": 5, "rating": 3.8, "scale": 5, "url": "https://yelp.com/biz/greenhouse-canteen-and-bar-miami" },
+      "opentable": { "votes": 582, "rating": 4.9, "scale": 5, "url": "https://opentable.com.au/r/greenhouse-canteen-and-bar-tallebudgera-miami" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -372,6 +420,11 @@
     "name": "Izakaya Midori",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Fumiyoshi Iwasaki", "Yuka Otani"],
+    "founded": 2019,
+    "contact": { "emails": ["info@izakayamidori.com.au"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/izakaya-midori/gUndi0WkT1-T3vTLSyHF8A", "doordash": "https://doordash.com/store/izakaya-midori-reedy-creek-1461128/1989658" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/id/place/details/1235728/izakaya-midori" },
     "tags": ["100% Vegan", "Japanese", "Dinner", "Lunch", "Gluten-Free", "Bar"],
     "desc": {
       "en": "Izakaya Midori is the Gold Coast's only 100% plant-based Japanese restaurant, tucked into a suburban corner shop in Reedy Creek. Its izakaya-style menu spans sushi, ramen, gyoza and rice dishes built around plant-based takes on classic Japanese flavours, served in a calm, minimalist dining room with undercover outdoor seating — plus a full bar, including its signature Midori Illusion cocktail.",
@@ -390,27 +443,28 @@
       "pt": "O Nigiri Omakase, os dumplings Gyozaholic, o Aka Ramen e um coquetel Midori Illusion."
     },
     "when": {
-      "en": "Winner of OpenTable's Diners' Choice Award and rated 5 stars on Eat Safe Gold Coast, Izakaya Midori has built a loyal following as the Gold Coast's only fully plant-based Japanese kitchen.",
-      "pt": "Vencedor do Diners' Choice Award do OpenTable e avaliado com 5 estrelas no Eat Safe Gold Coast, o Izakaya Midori construiu um público fiel como a única cozinha japonesa totalmente plant-based da Gold Coast."
+      "en": "Founded in 2019 by Fumiyoshi Iwasaki and Yuka Otani as the Gold Coast's first plant-based Japanese restaurant and first vegan izakaya. It has since won OpenTable's Diners' Choice Award and a 5-star rating on Eat Safe Gold Coast.",
+      "pt": "Fundado em 2019 por Fumiyoshi Iwasaki e Yuka Otani como o primeiro restaurante japonês plant-based e o primeiro izakaya vegano da Gold Coast. Desde então, ganhou o Diners' Choice Award do OpenTable e nota 5 estrelas no Eat Safe Gold Coast."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 9.0,
+    "final_score": 9.0402,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/rZN3xquKjsbDKxnMK" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/people/Izakaya-Midori/100063837811559/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/izakaya-midori-reedy-creek-170516" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/izakaya-midori/gUndi0WkT1-T3vTLSyHF8A" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/izakaya-midori-reedy-creek-1461128/1989658" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g7907726-d17734765-Reviews-Izakaya_Midori-Reedy_Creek_Gold_Coast_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/izakaya-midori-reedy-creek" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/id/place/details/1235728/izakaya-midori", "link_only": true }
+      "google": { "votes": 939, "rating": 4.9, "scale": 5, "url": "https://share.google/rZN3xquKjsbDKxnMK" },
+      "facebook": { "votes": 36, "rating": 100, "scale": 100, "url": "https://www.facebook.com/profile.php?id=100063837811559&sk=reviews" },
+      "happycow": { "votes": 119, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/izakaya-midori-reedy-creek-170516" },
+      "uber_eats": { "votes": 130, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/izakaya-midori/gUndi0WkT1-T3vTLSyHF8A" },
+      "doordash": { "votes": 500, "rating": 4.7, "scale": 5, "url": "https://doordash.com/store/izakaya-midori-reedy-creek-1461128/1989658" },
+      "tripadvisor": { "votes": 53, "rating": 4.9, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g7907726-d17734765-Reviews-Izakaya_Midori-Reedy_Creek_Gold_Coast_Queensland.html" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": 221, "rating": 4.9, "scale": 5, "url": "https://opentable.com.au/r/izakaya-midori-reedy-creek" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -418,6 +472,11 @@
     "name": "Loving Hut",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Ching Hai"],
+    "founded": 2009,
+    "contact": { "emails": ["lovinghutmtgravatt@gmail.com"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/loving-hut-brisbane-vegan-restaurant/tF2G29P-XXWsP0_zPizl5Q", "doordash": "https://doordash.com/store/loving-hut-brisbane-mount-gravatt-23801070/35515158" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490343/loving-hut-brisbane" },
     "tags": ["100% Vegan", "Fusion", "Budget-Friendly", "Chinese", "Takeaway", "Lunch"],
     "desc": {
       "en": "Loving Hut is a 100% vegan restaurant in Mount Gravatt, part of a global plant-based chain built on kindness and compassion for all beings. The menu fuses Western and Eastern cuisine — think laksa, fried rice and spaghetti bolognese — served dine-in or takeaway, with catering and frozen vegan foods also available.",
@@ -436,27 +495,28 @@
       "pt": "O Laksa, o Seven Seas Delight, um Loving Wrap e o espaguete à bolonhesa vegano."
     },
     "when": {
-      "en": "Open six days a week in Mount Gravatt, Loving Hut also caters events, functions and large gatherings, and stocks a range of frozen vegan foods to take home.",
-      "pt": "Aberto seis dias por semana em Mount Gravatt, o Loving Hut também atende eventos, festas e grandes grupos, além de vender uma variedade de comidas veganas congeladas para levar para casa."
+      "en": "Started in 2009 as the Mount Gravatt branch of Loving Hut, the global vegan chain founded by Ching Hai. It also caters events, functions and large gatherings, and stocks a range of frozen vegan foods to take home.",
+      "pt": "Começou em 2009 como a unidade de Mount Gravatt do Loving Hut, rede vegana global fundada por Ching Hai. Também faz catering para eventos, festas e grandes encontros e vende uma linha de congelados veganos para levar para casa."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.6,
+    "final_score": 8.6460,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/H8bfNi50VjVp1nAOf" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/loving.hut.brisbane/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/loving-hut-mount-gravatt-15666" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/loving-hut-brisbane-vegan-restaurant/tF2G29P-XXWsP0_zPizl5Q" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/loving-hut-brisbane-mount-gravatt-23801070/35515158" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g2020555-d2457626-Reviews-Loving_Hut_Mount_Gravatt-Mount_Gravatt_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/loving-hut-mount-gravatt-mt-gravatt" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490343/loving-hut-brisbane", "link_only": true }
+      "google": { "votes": 753, "rating": 4.6, "scale": 5, "url": "https://share.google/H8bfNi50VjVp1nAOf" },
+      "facebook": { "votes": 734, "rating": 94, "scale": 100, "url": "https://facebook.com/loving.hut.brisbane/reviews" },
+      "happycow": { "votes": 82, "rating": 4.5, "scale": 5, "url": "https://happycow.net/reviews/loving-hut-mount-gravatt-15666" },
+      "uber_eats": { "votes": 310, "rating": 4.8, "scale": 5, "url": "https://ubereats.com/au/store/loving-hut-brisbane-vegan-restaurant/tF2G29P-XXWsP0_zPizl5Q" },
+      "doordash": { "votes": 100, "rating": 4.8, "scale": 5, "url": "https://doordash.com/store/loving-hut-brisbane-mount-gravatt-23801070/35515158" },
+      "tripadvisor": { "votes": 79, "rating": 4.3, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g2020555-d2457626-Reviews-Loving_Hut_Mount_Gravatt-Mount_Gravatt_Queensland.html" },
+      "yelp": { "votes": 21, "rating": 4.2, "scale": 5, "url": "https://yelp.com/biz/loving-hut-mount-gravatt-mt-gravatt" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -464,6 +524,11 @@
     "name": "Made With Love Bakery",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Alana Borg", "Brady Borg"],
+    "founded": 2023,
+    "contact": { "emails": ["info@madewithlovebakery.com.au"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/made-with-love-bakery-southport/eVtmxXsGW-2QqKYlddR4fQ", "doordash": "https://doordash.com/products/made-with-love-cake/ugp_fc9e5420-37ca-41c5-b111-98ab32f6bfbd" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/10864371/made-with-love-bakery" },
     "tags": ["100% Vegan", "Bakery", "Pastries", "Gluten-Free", "Desserts", "Wholesale"],
     "desc": {
       "en": "Made With Love Bakery is a 100% vegan, family-owned bakery in Southport, Gold Coast, opened in 2023. Everything is baked fresh on site — croissants, cinnamon scrolls, savoury pies, doughnuts and cakes — with a dedicated gluten-free range, plus wholesale and catering for other businesses and events.",
@@ -482,27 +547,28 @@
       "pt": "Um croissant de 'presunto' e queijo, a Curry Pie, um rolinho de canela Biscoff e uma Raw Snickers Bar."
     },
     "when": {
-      "en": "Opened in 2023, this family-run bakery has built a loyal following stretching from the Northern Rivers of NSW to the Sunshine Coast, and now supplies other businesses through wholesale.",
-      "pt": "Aberta em 2023, essa padaria familiar construiu um público fiel que vai do Northern Rivers, em NSW, até a Sunshine Coast, e hoje também abastece outros negócios por atacado."
+      "en": "Founded in 2023 by Alana Borg and Brady Borg, this family-run bakery has built a loyal following stretching from the Northern Rivers of NSW to the Sunshine Coast, and now supplies other businesses through wholesale.",
+      "pt": "Fundado em 2023 por Alana Borg e Brady Borg, esta padaria familiar conquistou um público fiel que vai do Northern Rivers, em NSW, até a Sunshine Coast, e hoje também abastece outros negócios por atacado."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.7,
+    "final_score": 8.6727,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/KBl1r6dcqhN5ZdIRK" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/madewithlovebakeryGC/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/made-with-love-bakery-southport-376521" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/made-with-love-bakery-southport/eVtmxXsGW-2QqKYlddR4fQ" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/products/made-with-love-cake/ugp_fc9e5420-37ca-41c5-b111-98ab32f6bfbd" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/10864371/made-with-love-bakery", "link_only": true }
+      "google": { "votes": 306, "rating": 4.8, "scale": 5, "url": "https://share.google/KBl1r6dcqhN5ZdIRK" },
+      "facebook": { "votes": 12, "rating": 94, "scale": 100, "url": "https://facebook.com/madewithlovebakeryGC/reviews" },
+      "happycow": { "votes": 36, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/made-with-love-bakery-southport-376521" },
+      "uber_eats": { "votes": 180, "rating": 4.8, "scale": 5, "url": "https://ubereats.com/au/store/made-with-love-bakery-southport/eVtmxXsGW-2QqKYlddR4fQ" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -510,6 +576,11 @@
     "name": "Neon Ramen",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Bella"],
+    "founded": 2023,
+    "contact": { "emails": ["ayo@neonramen.com.au"] },
+    "delivery": { "ubereats": "", "doordash": "https://doordash.com/store/neon-ramen-everton-park-everton-park-44754973/109287355/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/6768112/neon-ramen", "tripadvisor": "https://tripadvisor.com/Restaurant_Review-g14216897-d26701270-Reviews-Neon_Ramen-Everton_Park_Brisbane_Region_Queensland.html" },
     "tags": ["100% Vegan", "Ramen", "Japanese", "Dinner", "Lunch", "Bar"],
     "desc": {
       "en": "Neon Ramen is a 100% vegan ramen restaurant and bar in Everton Park, set inside a neon-lit, anime and cyberpunk-inspired space with cherry-blossom ceilings and gaming booths. Its plant-based menu spans rich miso and spicy tantanmen ramen with house-made noodles, \"make-your-own\" bowls, and thick shakes, served alongside a full bar.",
@@ -528,27 +599,28 @@
       "pt": "Uma tigela de tantanmen, o ramen de missô, um bowl \"monte o seu\" e um milk-shake."
     },
     "when": {
-      "en": "Tucked upstairs from a vegan bakery in Everton Park, Neon Ramen has built a loyal following across Brisbane's northern suburbs for its anime-inspired décor and generous, fully vegan ramen bowls.",
-      "pt": "Instalado em cima de uma padaria vegana em Everton Park, o Neon Ramen construiu um público fiel na zona norte de Brisbane com sua decoração inspirada em anime e tigelas de ramen generosas e totalmente veganas."
+      "en": "Founded in 2023 by Bella, Neon Ramen is tucked upstairs from a vegan bakery in Everton Park and has built a loyal following across Brisbane's northern suburbs for its anime-inspired décor and generous, fully vegan ramen bowls.",
+      "pt": "Fundado em 2023 por Bella, o Neon Ramen fica no andar de cima de uma padaria vegana em Everton Park e conquistou um público fiel nos subúrbios do norte de Brisbane pelo décor inspirado em anime e pelos generosos bowls de ramen 100% veganos."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.6,
+    "final_score": 8.6227,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/BsfsvJrw2YU2jAtDs" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/neonramenrestaurant/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/neon-ramen-everton-park-345658" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/neon-ramen/TyzafUJYUXm30aI_eUbaDw" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/neon-ramen-everton-park-everton-park-44754973/109287355/" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com/Restaurant_Review-g14216897-d26701270-Reviews-Neon_Ramen-Everton_Park_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/neon-ramen-everton-park" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/6768112/neon-ramen", "link_only": true }
+      "google": { "votes": 607, "rating": 4.6, "scale": 5, "url": "https://share.google/BsfsvJrw2YU2jAtDs" },
+      "facebook": { "votes": 10, "rating": 100, "scale": 100, "url": "https://facebook.com/neonramenrestaurant/reviews" },
+      "happycow": { "votes": 42, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/neon-ramen-everton-park-345658" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": 206, "rating": 4.8, "scale": 5, "url": "https://opentable.com.au/r/neon-ramen-everton-park" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -556,6 +628,11 @@
     "name": "Piante Pizza",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Tarunyamrta Young"],
+    "founded": 2020,
+    "contact": { "emails": ["hello@piantepizza.com.au"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
     "tags": ["100% Vegan", "Pizza", "Food Truck", "Street Food", "Takeaway", "Nut-Free"],
     "desc": {
       "en": "Piante Pizza is a 100% plant-based Neapolitan pizza pop-up, run by a Naples-trained pizza chef and found at the Brisbane and Gold Coast Vegan Markets. Every base is hand-stretched and proofed for 24–48 hours before a 90-second blast at 450°C, topped with quality Italian tomatoes, local Queensland produce and nut-free vegan cheese — plus mobile catering for private events.",
@@ -574,26 +651,27 @@
       "pt": "A Margherita, a Marinara, a Magic Mushy ou a The Queen."
     },
     "when": {
-      "en": "Trained in traditional Neapolitan technique in Naples, Piante's chef now brings vegan pizza to the Brisbane and Gold Coast Vegan Markets, plus private and corporate catering across South East Queensland.",
-      "pt": "Treinado na técnica napolitana tradicional em Nápoles, o pizzaiolo do Piante hoje leva pizza vegana às Vegan Markets de Brisbane e Gold Coast, além de catering para eventos privados e corporativos no Sudeste de Queensland."
+      "en": "Founded in 2020 by Tarunyamrta Young. Trained in traditional Neapolitan technique in Naples, Piante's chef now brings vegan pizza to the Brisbane and Gold Coast Vegan Markets, plus private and corporate catering across South East Queensland.",
+      "pt": "Fundado em 2020 por Tarunyamrta Young. Treinado(a) na técnica napolitana tradicional em Nápoles, o(a) chef da Piante leva hoje pizza vegana às Vegan Markets de Brisbane e da Gold Coast, além de catering privado e corporativo em todo o Sudeste de Queensland."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.0,
+    "final_score": 8.0000,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/IStQxDRVitNYwIRNr" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/piantepizza/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/piante-pizza-brisbane-236775" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "google": { "votes": 39, "rating": 4.7, "scale": 5, "url": "https://share.google/IStQxDRVitNYwIRNr" },
+      "facebook": { "votes": 6, "rating": 100, "scale": 100, "url": "https://facebook.com/piantepizza/reviews" },
+      "happycow": { "votes": 3, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/piante-pizza-brisbane-236775" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
@@ -602,6 +680,11 @@
     "name": "Pippa's Pantry",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Pippa Blatch"],
+    "founded": 2017,
+    "contact": { "emails": ["pippa@pippaspantry.com.au"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/14541053/pippas-pantry" },
     "tags": ["100% Vegan", "Cakes", "Bakery", "Desserts", "Pastries", "Takeaway"],
     "desc": {
       "en": "Pippa's Pantry is a 100% vegan cake, cupcake and cookie shop in Camp Hill, run by baker Pippa Blatch since 2017. Every cake, cupcake and treat is baked fresh daily — dairy, egg and gelatine-free — with custom celebration cakes made to order, available for pickup or delivery from the shop's pink storefront on Fridays and Saturday mornings.",
@@ -620,27 +703,28 @@
       "pt": "Um bolo personalizado de celebração, cupcakes e uma caixa de cookies fresquinhos do balcão de fim de semana."
     },
     "when": {
-      "en": "Pippa Blatch started baking at the end of 2017 and went full-time within months, building Pippa's Pantry into a dedicated vegan cake shop in Camp Hill, open for pickup and custom orders Fridays and Saturdays.",
-      "pt": "Pippa Blatch começou a confeitar no fim de 2017 e se tornou empreendedora em tempo integral poucos meses depois, transformando o Pippa's Pantry numa loja de bolos vegana dedicada em Camp Hill, aberta para retirada e encomendas personalizadas às sextas e sábados."
+      "en": "Founded in 2017 by Pippa Blatch, who started baking at the end of that year and went full-time within months. Pippa's Pantry has grown into a dedicated vegan cake shop in Camp Hill.",
+      "pt": "Fundado em 2017 por Pippa Blatch, que começou a assar no fim daquele ano e passou a trabalhar em tempo integral em poucos meses. O Pippa's Pantry virou uma confeitaria vegana dedicada, em Camp Hill."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.4,
+    "final_score": 8.3558,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/gd0K5iWDcXQ0o0xPI" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/pippaspantry1/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/pippas-pantry-camp-hill-311499" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/14541053/pippas-pantry", "link_only": true }
+      "google": { "votes": 92, "rating": 4.8, "scale": 5, "url": "https://share.google/gd0K5iWDcXQ0o0xPI" },
+      "facebook": { "votes": 37, "rating": 100, "scale": 100, "url": "https://facebook.com/pippaspantry1/reviews" },
+      "happycow": { "votes": 6, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/pippas-pantry-camp-hill-311499" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -648,18 +732,19 @@
     "name": "The Green Edge",
     "vegan": "Yes",
     "badge": "Most Popular",
+    "badge_pt": "Mais Popular",
+    "founders": ["Amanda Jane Benham"],
+    "founded": 2008,
+    "contact": { "emails": ["admin@thegreenedge.com.au"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/the-green-edge/49AbTURFQxagpEZS5ICoJg", "doordash": "https://doordash.com/store/the-green-edge-100%25-vegan!-windsor-31283133/44947978/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490341/the-green-edge" },
     "tags": ["100% Vegan", "Bistro", "Café", "Deli", "Ice Cream", "Groceries"],
     "desc": {
       "en": "The Green Edge is a unique all-in-one vegan destination in Brisbane, combining a bistro, café, deli, juice bar, ice cream shop, and grocery store. It offers a fully plant-based experience—from casual dining and specialty coffee to fresh juices, desserts, and a wide range of vegan products—making it a go-to spot for both eating and shopping in one place.",
       "pt": "O The Green Edge é um destino vegano único e completo em Brisbane, combinando bistrô, café, deli, bar de sucos, sorveteria e mercearia. Oferece uma experiência totalmente plant-based — desde refeições casuais e café especial até sucos frescos, sobremesas e uma ampla variedade de produtos veganos — tornando-se o lugar ideal para comer e comprar em um só espaço."
     },
     "instagram_reel": "https://www.instagram.com/reel/DXN8dC-gKbO/embed/",
-    "web": {
-      "site": "https://www.thegreenedge.com.au",
-      "instagram": "https://instagram.com/thegreenedge",
-      "facebook": "https://facebook.com/thegreenedgevegancafe",
-      "tiktok": "https://www.tiktok.com/@the.green.edge"
-    },
+    "web": { "site": "https://greenedgeonline.com.au", "instagram": "https://instagram.com/thegreenedge", "facebook": "https://facebook.com/thegreenedgevegancafe", "tiktok": "https://www.tiktok.com/@the.green.edge" },
     "address": "Shop 2B, 229 Lutwyche Road, Windsor, QLD 4030",
     "maps_url": "https://www.google.com/maps/search/Shop+2B+229+Lutwyche+Road+Windsor+QLD+4030",
     "why": {
@@ -671,72 +756,27 @@
       "pt": "VFC Chicken, Sausage Caseira, Tropical Juice e um Sorvete."
     },
     "when": {
-      "en": "Founded in 2008 by Amanda Benham and Tammy Maree. Originally established in Enoggera, moved to Windsor in 2013. Currently owned by Cale Drouin and Laken McGarvey. Previous owners include Niv and Deepa Galaiya, and Glenn and Sue Cooper.",
-      "pt": "Fundado em 2008 por Amanda Benham e Tammy Maree. Originalmente estabelecido em Enoggera, mudou para Windsor em 2013. Atualmente tem como donos Cale Drouin e Laken McGarvey. Donos anteriores incluem Niv e Deepa Galaiya, e Glenn e Sue Cooper."
+      "en": "Founded in 2008 by Amanda Benham. Originally established in Enoggera, moved to Windsor in 2013. Currently owned by Cale Drouin and Laken McGarvey. Previous owners include Niv and Deepa Galaiya, and Glenn and Sue Cooper.",
+      "pt": "Fundado em 2008 por Amanda Benham. Originalmente estabelecido em Enoggera, mudou para Windsor em 2013. Atualmente tem como donos Cale Drouin e Laken McGarvey. Donos anteriores incluem Niv e Deepa Galaiya, e Glenn e Sue Cooper."
     },
     "words_from_owner": {
       "en": "\"The owner of this venue will leave a personal message here soon — stay tuned!\"",
       "pt": "\"O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!\""
     },
-    "last_updated": "05/07/2026",
-    "next_update": "05/07/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 9.0,
+    "final_score": 8.9943,
     "reviews": {
-      "google":      { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/cfTvaiBupxy0xjOnH" },
-      "facebook":    { "votes": null,  "rating": 100, "scale": 100, "url": "https://facebook.com/thegreenedgevegancafe/reviews" },
-      "happycow":    { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/the-green-edge-windsor-19791" },
-      "uber_eats":   { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/the-green-edge/49AbTURFQxagpEZS5ICoJg" },
-      "doordash":    { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/the-green-edge-100%25-vegan!-windsor-31283133/44947978/" },
-      "tripadvisor": { "votes": null,  "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d7047608-Reviews-The_Green_Edge-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp":        { "votes": null,  "rating": 5, "scale": 5, "url": "https://yelp.com/biz/the-green-edge-windsor" },
-      "opentable":   { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/the-green-edge-windsor" },
-      "bvg":         { "votes": null,  "rating": 5, "scale": 5, "url": "" },
-      "wanderlog":   { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490341/the-green-edge", "link_only": true }
-    }
-  },
-  {
-    "slug": "the-plant-bakery",
-    "name": "The Plant Bakery",
-    "vegan": "Yes",
-    "badge": "",
-    "tags": ["100% Vegan", "Wholesale", "Gluten-Free", "Desserts", "Bakery", "Pastries"],
-    "desc": {
-      "en": "The Plant Bakery is a Brisbane-based wholesale producer of vegan and gluten-free desserts, supplying cafés, restaurants and grocers across Australia under two ranges, Plant Baked and Sweet Nectar. Built on more than a decade of recipe development, it has no public storefront — its treats are sold only through stockists, including Brisbane's own Dicki's in New Farm.",
-      "pt": "O The Plant Bakery é um produtor vegano e sem glúten de sobremesas por atacado, sediado em Brisbane, que abastece cafés, restaurantes e mercados por toda a Austrália sob duas marcas, Plant Baked e Sweet Nectar. Construído com mais de uma década de desenvolvimento de receitas, não tem loja física ao público — seus produtos são vendidos apenas através de revendedores, incluindo o próprio Dicki's, aqui de Brisbane, em New Farm."
-    },
-    "instagram_reel": "https://www.instagram.com/reel/CcZdInSgRo_/embed/",
-    "web": { "site": "https://theplantbakery.com.au", "instagram": "https://instagram.com/plantbaked", "facebook": "https://facebook.com/PlantBakedAus", "tiktok": "" },
-    "address": "Wholesale only — no public storefront",
-    "maps_url": "https://plantbaked.com.au/where-to-buy/",
-    "why": {
-      "en": "A wholesale vegan and gluten-free dessert maker with over a decade of recipe development, supplying cafés and restaurants rather than selling direct to the public.",
-      "pt": "Um produtor de sobremesas veganas e sem glúten por atacado, com mais de uma década de desenvolvimento de receitas, que abastece cafés e restaurantes em vez de vender direto ao público."
-    },
-    "what_to_order": {
-      "en": "Look out for Plant Baked treats on the dessert counter at stockists like Dicki's in New Farm — biscuit-base slices, creamy layered desserts and caramel treats.",
-      "pt": "Procure pelos docinhos da Plant Baked no balcão de sobremesas de revendedores como o Dicki's, em New Farm — fatias com base de biscoito, sobremesas em camadas cremosas e doces de caramelo."
-    },
-    "when": {
-      "en": "Built over more than a decade of recipe testing, The Plant Bakery now supplies its Plant Baked and Sweet Nectar ranges to cafés and restaurants across Australia — including fellow Brisbane favourite Dicki's.",
-      "pt": "Construído com mais de uma década de testes de receitas, o The Plant Bakery hoje abastece suas linhas Plant Baked e Sweet Nectar para cafés e restaurantes por toda a Austrália — incluindo o queridinho de Brisbane, o Dicki's."
-    },
-    "words_from_owner": {
-      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
-      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
-    },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
-    "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/p5KVAQdNoEXdyzBXB" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "google": { "votes": 1624, "rating": 4.7, "scale": 5, "url": "https://share.google/cfTvaiBupxy0xjOnH" },
+      "facebook": { "votes": 1504, "rating": 94, "scale": 100, "url": "https://facebook.com/thegreenedgevegancafe/reviews" },
+      "happycow": { "votes": 215, "rating": 4.5, "scale": 5, "url": "https://happycow.net/reviews/the-green-edge-windsor-19791" },
+      "uber_eats": { "votes": 800, "rating": 4.8, "scale": 5, "url": "https://ubereats.com/au/store/the-green-edge/49AbTURFQxagpEZS5ICoJg" },
+      "doordash": { "votes": 50, "rating": 4.8, "scale": 5, "url": "https://doordash.com/store/the-green-edge-100%25-vegan!-windsor-31283133/44947978/" },
+      "tripadvisor": { "votes": 85, "rating": 4.6, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d7047608-Reviews-The_Green_Edge-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": 16, "rating": 4.4, "scale": 5, "url": "https://yelp.com/biz/the-green-edge-windsor" },
+      "opentable": { "votes": 58, "rating": 4.9, "scale": 5, "url": "https://opentable.com.au/r/the-green-edge-windsor" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
@@ -745,6 +785,11 @@
     "name": "U-Tong",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Sirisak"],
+    "founded": 2019,
+    "contact": { "emails": ["sirisak2515@yahoo.com.au"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/u-tong-thai-vegan-restaurant/1YfGPqpgX-6vYeUoAT-HXw", "doordash": "https://doordash.com/store/u-tong-thai-vegan-restaurant-clayfield-2415437/2478154/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490348/u-tong-thai-vegan-restaurant" },
     "tags": ["100% Vegan", "Thai", "Lunch", "Dinner", "Asian", "Comfort Food"],
     "desc": {
       "en": "U-Tong is a 100% vegan Thai restaurant in Clayfield, serving an extensive menu of curries, stir-fries, fried rice and noodles built around mock meats and seafood — think Crispy Mock Honey Chicken, Popcorn Mock Chicken and duck-style buns — alongside classics like Pad See Ew and Pad Thai.",
@@ -763,27 +808,28 @@
       "pt": "O Crispy Mock Honey Chicken, o Pad See Ew, o Popcorn Mock Chicken e uma porção de Duck Buns."
     },
     "when": {
-      "en": "Open most days for lunch and dinner (closed Tuesdays), U-Tong has built a loyal following in Clayfield for its huge range of mock-meat Thai dishes.",
-      "pt": "Aberto na maioria dos dias para almoço e jantar (fechado às terças), o U-Tong construiu um público fiel em Clayfield com sua enorme variedade de pratos tailandeses à base de substitutos de carne."
+      "en": "Founded in 2019 by Sirisak, U-Tong has built a loyal following in Clayfield for its huge range of mock-meat Thai dishes.",
+      "pt": "Fundado em 2019 por Sirisak, o U-Tong conquistou um público fiel em Clayfield com sua enorme variedade de pratos tailandeses com \"carnes\" vegetais."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 9.0,
+    "final_score": 8.9808,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/f3C6nfmMpQ7d4dbWQ" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/UTongThaiVegan/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/u-tong-clayfield-176255" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/u-tong-thai-vegan-restaurant/1YfGPqpgX-6vYeUoAT-HXw" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/u-tong-thai-vegan-restaurant-clayfield-2415437/2478154/" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d18968049-Reviews-U_Tong_Thai_Vegan_Restaurant-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490348/u-tong-thai-vegan-restaurant", "link_only": true }
+      "google": { "votes": 500, "rating": 4.8, "scale": 5, "url": "https://share.google/f3C6nfmMpQ7d4dbWQ" },
+      "facebook": { "votes": 22, "rating": 96, "scale": 100, "url": "https://facebook.com/UTongThaiVegan/reviews" },
+      "happycow": { "votes": 74, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/u-tong-clayfield-176255" },
+      "uber_eats": { "votes": 1500, "rating": 4.7, "scale": 5, "url": "https://ubereats.com/au/store/u-tong-thai-vegan-restaurant/1YfGPqpgX-6vYeUoAT-HXw" },
+      "doordash": { "votes": 200, "rating": 4.8, "scale": 5, "url": "https://doordash.com/store/u-tong-thai-vegan-restaurant-clayfield-2415437/2478154/" },
+      "tripadvisor": { "votes": 6, "rating": 4, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d18968049-Reviews-U_Tong_Thai_Vegan_Restaurant-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -791,13 +837,18 @@
     "name": "Vega Cafe",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Pratana Langkapinth", "Prince Khamkaew"],
+    "founded": 2021,
+    "contact": { "emails": ["winfinitycafe@gmail.com"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/vega-cafe/XFxZTnOsXu-nabjOLcVoRw", "doordash": "https://doordash.com/store/vega-cafe-spring-hill-25010030" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/9257960/vega-cafe" },
     "tags": ["99% Vegan", "Café", "Thai", "Brunch", "Gluten-Free", "Dinner"],
     "desc": {
       "en": "Vega Cafe is a plant-based café in Spring Hill serving Thai-inspired comfort food with a creative twist — think loaded rice noodles, stuffed murtabah and vegan omelettes — plus desserts and coffee, with dairy milk available on request. Open daily for breakfast and lunch, and Wednesday to Friday for dinner.",
       "pt": "O Vega Cafe é um café plant-based em Spring Hill com comida reconfortante de inspiração tailandesa e um toque criativo — pense em macarrão de arroz recheado, murtabah recheado e omeletes veganas — além de sobremesas e café, com opção de leite de vaca sob pedido. Aberto todos os dias para café da manhã e almoço, e de quarta a sexta para jantar."
     },
     "instagram_reel": "https://www.instagram.com/reel/DcBilf1OUcQ/embed/",
-    "web": { "site": "https://vegacafe.com.au", "instagram": "https://instagram.com/vega_cafe_", "facebook": "https://facebook.com/vegacafebrisbane", "tiktok": "" },
+    "web": { "site": "https://vegacafe.com.au/", "instagram": "https://instagram.com/vega_cafe_", "facebook": "https://facebook.com/vegacafebrisbane", "tiktok": "" },
     "address": "1/448 Boundary Street, Spring Hill, QLD 4000",
     "maps_url": "https://www.google.com/maps/search/1+448+Boundary+Street+Spring+Hill+QLD+4000",
     "why": {
@@ -809,27 +860,28 @@
       "pt": "O macarrão First-Kiss, um Croffle Stack, o Murtabah e o Vega Wonder de sobremesa."
     },
     "when": {
-      "en": "Open every day for breakfast and lunch, and Wednesday to Friday for dinner, Vega Cafe also hosts monthly board game nights and weekday lunch specials for its Spring Hill regulars.",
-      "pt": "Aberto todos os dias para café da manhã e almoço, e de quarta a sexta para jantar, o Vega Cafe também promove noites mensais de jogos de tabuleiro e especiais de almoço durante a semana para os frequentadores de Spring Hill."
+      "en": "Founded in 2021 by Pratana Langkapinth and Prince Khamkaew, Vega Cafe also hosts monthly board game nights and weekday lunch specials for its Spring Hill regulars.",
+      "pt": "Fundado em 2021 por Pratana Langkapinth e Prince Khamkaew, o Vega Cafe também promove noites mensais de jogos de tabuleiro e pratos do dia no almoço, durante a semana, para seus clientes fiéis de Spring Hill."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.9,
+    "final_score": 8.8729,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/j90mdVQvOhR2j8Fbh" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/vegacafebrisbane/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/vega-spring-hill-263318" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/vega-cafe/XFxZTnOsXu-nabjOLcVoRw" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/vega-cafe-spring-hill-25010030/22820547/" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d27637772-Reviews-Vega_Cafe-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/9257960/vega-cafe", "link_only": true }
+      "google": { "votes": 647, "rating": 4.8, "scale": 5, "url": "https://share.google/YYwsQLKarxeaFNWzz" },
+      "facebook": { "votes": 21, "rating": 100, "scale": 100, "url": "https://facebook.com/vegacafebrisbane/reviews" },
+      "happycow": { "votes": 88, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/vega-spring-hill-263318" },
+      "uber_eats": { "votes": 94, "rating": 4.8, "scale": 5, "url": "https://ubereats.com/au/store/vega-cafe/XFxZTnOsXu-nabjOLcVoRw" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": 8, "rating": 4.5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d27637772-Reviews-Vega_Cafe-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -837,13 +889,18 @@
     "name": "Vegan Restaurant",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Chin"],
+    "founded": 2019,
+    "contact": { "emails": [] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/vegan-restaurant-west-end/ODMQURO0TXiNzfjboo1WMg", "doordash": "https://doordash.com/store/vegan-restaurant-west-end-west-end-2127690/2317399/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1695402/vegan-restaurant-west-end" },
     "tags": ["100% Vegan", "Chinese", "Takeaway", "Dinner", "Lunch", "Comfort Food"],
     "desc": {
       "en": "Vegan Restaurant is a 100% vegan Chinese takeaway in West End, serving mock-meat classics like honey 'chicken', sweet & sour 'pork' and stuffed BBQ buns alongside combination fried rice. Open Wednesday to Sunday for lunch and dinner, with online ordering for pickup.",
       "pt": "O Vegan Restaurant é um restaurante chinês 100% vegano para levar, em West End, com clássicos à base de substitutos de carne como \"frango\" ao mel, \"porco\" agridoce e pães BBQ recheados, além de arroz combinado. Aberto de quarta a domingo para almoço e jantar, com pedidos online para retirada."
     },
     "instagram_reel": "https://www.instagram.com/p/DGAawlNREGL/embed/",
-    "web": { "site": "https://veganrestaurant-online.com.au", "instagram": "https://www.instagram.com/veganrestaurantwestend/", "facebook": "https://facebook.com/westendveganrestaurant", "tiktok": "" },
+    "web": { "site": "https://veganrestaurant-online.com.au", "instagram": "https://instagram.com/veganrestaurantwestend", "facebook": "https://facebook.com/westendveganrestaurant", "tiktok": "" },
     "address": "209 Boundary Street, West End, QLD 4101",
     "maps_url": "https://www.google.com/maps/search/209+Boundary+Street+West+End+QLD+4101",
     "why": {
@@ -855,27 +912,28 @@
       "pt": "O V. Honey Chicken, o Combination Fried Rice, os Stuffed BBQ Buns e o V. Sweet & Sour Pork."
     },
     "when": {
-      "en": "Open Wednesday to Sunday (closed Mondays and Tuesdays), Vegan Restaurant serves West End's vegan Chinese-food cravings with online ordering for pickup.",
-      "pt": "Aberto de quarta a domingo (fechado às segundas e terças), o Vegan Restaurant atende a vontade de comida chinesa vegana em West End, com pedidos online para retirada."
+      "en": "Founded in 2019 by Chin, Vegan Restaurant serves West End's vegan Chinese-food cravings, with online ordering for pickup.",
+      "pt": "Fundado em 2019 por Chin, o Vegan Restaurant atende a vontade de comida chinesa vegana em West End, com pedidos online para retirada."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 9.2,
+    "final_score": 9.1880,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/9dXC3pyUhWwputC2P" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/westendveganrestaurant/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/west-end-vegan-restaurant-west-end-161565" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/vegan-restaurant-west-end/ODMQURO0TXiNzfjboo1WMg" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/vegan-restaurant-west-end-west-end-2127690/2317399/" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d23408409-Reviews-Vegan_Restaurant_West_End-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1695402/vegan-restaurant-west-end", "link_only": true }
+      "google": { "votes": 536, "rating": 4.8, "scale": 5, "url": "https://share.google/9dXC3pyUhWwputC2P" },
+      "facebook": { "votes": 15, "rating": 100, "scale": 100, "url": "https://facebook.com/westendveganrestaurant/reviews" },
+      "happycow": { "votes": 101, "rating": 4.5, "scale": 5, "url": "https://happycow.net/reviews/west-end-vegan-restaurant-west-end-161565" },
+      "uber_eats": { "votes": 1500, "rating": 4.9, "scale": 5, "url": "https://ubereats.com/au/store/vegan-restaurant-west-end/ODMQURO0TXiNzfjboo1WMg" },
+      "doordash": { "votes": 200, "rating": 4.9, "scale": 5, "url": "https://doordash.com/store/vegan-restaurant-west-end-west-end-2127690/2317399/" },
+      "tripadvisor": { "votes": 7, "rating": 4.9, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d23408409-Reviews-Vegan_Restaurant_West_End-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -883,6 +941,11 @@
     "name": "Veganyumm",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Shairie Bhim"],
+    "founded": 2016,
+    "contact": { "emails": ["veganyumm.communications@gmail.com"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/veganyumm/1-JNBqJpXda-SJu9RtZfKQ", "doordash": "https://doordash.com/store/veganyumm-everton-park-27692144/31810746/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1431234/veganyumm" },
     "tags": ["100% Vegan", "Bakery", "Cakes", "Desserts", "Gluten-Free", "Takeaway"],
     "desc": {
       "en": "Veganyumm is Brisbane's first and only 100% vegan bakery, a family-run bakehouse in Everton Park using their own family recipes. The menu spans custom celebration and wedding cakes, cupcakes, brownies, cookies, pies and sausage rolls, with gluten-free, dairy-free and allergy-friendly options — order online for pickup or delivery.",
@@ -901,27 +964,28 @@
       "pt": "Um bolo personalizado de celebração, o brownie Cherry Ripe, um sausage roll e uma caixa de cookies."
     },
     "when": {
-      "en": "Open seven days a week from 8am to 9pm, Veganyumm has built a loyal following in Everton Park for its family-recipe cakes and gluten-free treats.",
-      "pt": "Aberto sete dias por semana das 8h às 21h, o Veganyumm construiu um público fiel em Everton Park com seus bolos de receita de família e opções sem glúten."
+      "en": "Founded in 2016 by Shairie Bhim, Veganyumm grew from her egg- and dairy-free cinnamon buns (Cinnayumm), first sold at Charlie's Fruit Market, into Brisbane's first 100% vegan dessert bakehouse in Everton Park — built on family recipes, all made from scratch.",
+      "pt": "Fundado em 2016 por Shairie Bhim, o Veganyumm nasceu dos rolinhos de canela sem ovos e laticínios (Cinnayumm), vendidos primeiro no Charlie's Fruit Market, e virou a primeira confeitaria 100% vegana de Brisbane, em Everton Park — com receitas de família, tudo feito do zero."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.9,
+    "final_score": 8.9426,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/CWyubQXGfXKBKchw2" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/Veganyumm/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/veganyumm-bakehouse-brisbane-73898" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/veganyumm/1-JNBqJpXda-SJu9RtZfKQ" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/veganyumm-everton-park-27692144/31810746/" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d11779331-Reviews-Veganyumm-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/veganyumm-brisbane" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1431234/veganyumm", "link_only": true }
+      "google": { "votes": 838, "rating": 4.6, "scale": 5, "url": "https://share.google/CWyubQXGfXKBKchw2" },
+      "facebook": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "happycow": { "votes": 70, "rating": 4.5, "scale": 5, "url": "https://happycow.net/reviews/veganyumm-bakehouse-brisbane-73898" },
+      "uber_eats": { "votes": 1000, "rating": 4.9, "scale": 5, "url": "https://ubereats.com/au/store/veganyumm/1-JNBqJpXda-SJu9RtZfKQ" },
+      "doordash": { "votes": 50, "rating": 4.8, "scale": 5, "url": "https://doordash.com/store/veganyumm-everton-park-27692144/31810746/" },
+      "tripadvisor": { "votes": 25, "rating": 4.4, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d11779331-Reviews-Veganyumm-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": 4, "rating": 2.8, "scale": 5, "url": "https://yelp.com/biz/veganyumm-brisbane" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -929,45 +993,51 @@
     "name": "Vege Rama",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Ruchi Sharma"],
+    "founded": 2009,
+    "contact": { "emails": ["admin@vegerama.com.au"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/vege-rama/01bXdKMsT6GXi9ohaTQF4Q", "doordash": "" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1338484/vege-rama-adelaide-st" },
     "tags": ["100% Vegan", "Buffet", "Multi-Cuisine", "Indian", "Gluten-Free", "Lunch"],
     "desc": {
       "en": "Vege Rama is a 100% vegan eatery on Adelaide Street in Brisbane's CBD, open for lunch on weekdays. Since opening as a fully vegan store in 2012, it has built its menu around family recipes reinterpreted as rotating Indian-inspired specialties, gourmet salads, warm bakes, plant-based burgers and dosas — plus a full dessert case of raw tarts, cheesecakes and cold-pressed juice.",
       "pt": "O Vege Rama é um estabelecimento 100% vegano na Adelaide Street, no centro de Brisbane, aberto para almoço nos dias de semana. Desde que se tornou uma loja totalmente vegana em 2012, monta seu cardápio a partir de receitas de família reinterpretadas em especialidades de inspiração indiana em rodízio, saladas gourmet, assados quentes, hambúrgueres plant-based e dosas — além de uma vitrine completa de tortas cruas, cheesecakes e suco prensado a frio."
     },
     "instagram_reel": "https://www.instagram.com/reel/DAXtuxdPd7M/embed/",
-    "web": { "site": "https://vegerama.com.au", "instagram": "https://instagram.com/vegerama", "facebook": "https://facebook.com/VegeRama", "tiktok": "" },
+    "web": { "site": "https://vegerama.com.au", "instagram": "https://instagram.com/vegerama_brisbane", "facebook": "https://facebook.com/VegeRama", "tiktok": "" },
     "address": "241 Adelaide Street, Brisbane, QLD 4000",
     "maps_url": "https://www.google.com/maps/search/241+Adelaide+Street+Brisbane+QLD+4000",
     "why": {
-      "en": "A 100% vegan lunch counter in the CBD, open weekdays 8am–6pm, with a different menu rotation every day.",
-      "pt": "Um balcão 100% vegano no centro, aberto de segunda a sexta das 8h às 18h, com um cardápio diferente a cada dia."
+      "en": "A 100% vegan lunch counter in the CBD, open on weekdays, with a different menu rotation every day.",
+      "pt": "Um balcão 100% vegano no centro, aberto nos dias de semana, com um cardápio diferente a cada dia."
     },
     "what_to_order": {
       "en": "Masala Dosa, a Moroccan Lentil or Satay burger, Sambar Dahl and a raw tart for dessert.",
       "pt": "Masala Dosa, um hambúrguer Moroccan Lentil ou Satay, Sambar Dahl e uma torta crua de sobremesa."
     },
     "when": {
-      "en": "Founded by Ruchi, who opened the first Vege Rama on Queen Street in 2009. The Adelaide Street store opened as a fully vegan outlet in November 2012 and is now the only location still open — the Myer Centre, West End and Carindale stores have since closed.",
-      "pt": "Fundado por Ruchi, que abriu o primeiro Vege Rama na Queen Street em 2009. A loja da Adelaide Street abriu como unidade totalmente vegana em novembro de 2012 e hoje é a única ainda em funcionamento — as lojas do Myer Centre, West End e Carindale já fecharam."
+      "en": "Founded in 2009 by Ruchi Sharma, who opened the first Vege Rama on Queen Street. The Adelaide Street store opened as a fully vegan outlet in November 2012 and is now the only location still open — the Myer Centre, West End and Carindale stores have since closed.",
+      "pt": "Fundado em 2009 por Ruchi Sharma, que abriu o primeiro Vege Rama na Queen Street. A loja da Adelaide Street abriu como unidade totalmente vegana em novembro de 2012 e hoje é a única ainda aberta — as lojas do Myer Centre, de West End e de Carindale já fecharam."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.5,
+    "final_score": 8.5469,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/zeNMbErvXURXdxxwR" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/VegeRama/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/vege-rama-post-office-square-brisbane-35825" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/vege-rama/01bXdKMsT6GXi9ohaTQF4Q" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d2195737-Reviews-Vege_Rama-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/vege-rama-brisbane" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1338484/vege-rama-adelaide-st", "link_only": true }
+      "google": { "votes": 644, "rating": 4.6, "scale": 5, "url": "https://share.google/zeNMbErvXURXdxxwR" },
+      "facebook": { "votes": 522, "rating": 90, "scale": 100, "url": "https://facebook.com/VegeRama/reviews" },
+      "happycow": { "votes": 136, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/vege-rama-post-office-square-brisbane-35825" },
+      "uber_eats": { "votes": 310, "rating": 4.7, "scale": 5, "url": "https://ubereats.com/au/store/vege-rama/01bXdKMsT6GXi9ohaTQF4Q" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": 118, "rating": 4.6, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d2195737-Reviews-Vege_Rama-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": 18, "rating": 4.5, "scale": 5, "url": "https://yelp.com/biz/vege-rama-brisbane" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -975,13 +1045,19 @@
     "name": "Yavanna",
     "vegan": "Yes",
     "badge": "Closed",
+    "founders": ["Cale Drouin"],
+    "founded": 2018,
+    "closed": 2026,
+    "contact": { "emails": ["yavannav4064@gmail.com"] },
+    "delivery": { "ubereats": "https://ubereats.com/au/store/yavanna/6orC-XGdTPmmyCcpWlG6wA", "doordash": "https://doordash.com/store/yavanna-paddington-950085/28504553/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490336/yavanna-plant-based-restaurant", "opentable": "https://opentable.com.au/r/yavanna-paddington" },
     "tags": ["100% Vegan", "Bar", "Dinner", "Burgers", "Comfort Food", "Takeaway"],
     "desc": {
       "en": "Yavanna was a 100% plant-based restaurant and bar in Paddington, known for BBQ-style \"ribs\", flame-grilled \"chicken\", burgers and burritos, alongside craft beer and wine. The venue has since closed.",
       "pt": "O Yavanna foi um restaurante e bar 100% plant-based em Paddington, conhecido por \"costelinha\" estilo BBQ, \"frango\" grelhado na chama, hambúrgueres e burritos, além de cervejas artesanais e vinhos. O local encerrou as atividades."
     },
     "instagram_reel": "https://www.instagram.com/reel/C5jyjyaSflx/embed/",
-    "web": { "site": "https://yavanna.com.au", "instagram": "https://instagram.com/yavannavbrisbane", "facebook": "", "tiktok": "" },
+    "web": { "site": "https://yavanna.com.au", "instagram": "https://instagram.com/yavannavbrisbane", "facebook": "https://facebook.com/yavannaeat", "tiktok": "" },
     "address": "9/2 Latrobe Terrace, Paddington, QLD 4064",
     "maps_url": "https://www.google.com/maps/search/9+2+Latrobe+Terrace+Paddington+QLD+4064",
     "why": {
@@ -993,27 +1069,28 @@
       "pt": "Quando estava aberto, os frequentadores adoravam a \"costelinha\" BBQ, o hambúrguer de \"frango\" grelhado e um burrito, com uma cerveja artesanal."
     },
     "when": {
-      "en": "Yavanna operated in Paddington as one of Brisbane's plant-based dining destinations before permanently closing its doors.",
-      "pt": "O Yavanna funcionou em Paddington como um dos destinos plant-based de Brisbane, até encerrar suas atividades de forma permanente."
+      "en": "Founded in 2018 by Cale Drouin, Yavanna operated in Paddington as one of Brisbane's plant-based dining destinations before permanently closing its doors in 2026.",
+      "pt": "Fundado em 2018 por Cale Drouin, o Yavanna funcionou em Paddington como um dos destinos de gastronomia plant-based de Brisbane, até fechar definitivamente as portas em 2026."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 9.0,
+    "final_score": 9.0230,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/if8xkmAm9xvi7qmOR" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/yavanna-paddington-123682" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "https://ubereats.com/au/store/yavanna/6orC-XGdTPmmyCcpWlG6wA" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/yavanna-paddington-950085/28504553/" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d14882210-Reviews-Yavanna_Plant_Based_Eatery-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/yavanna-paddington" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490336/yavanna-plant-based-restaurant", "link_only": true }
+      "google": { "votes": 971, "rating": 4.7, "scale": 5, "url": "https://share.google/if8xkmAm9xvi7qmOR" },
+      "facebook": { "votes": 267, "rating": 98, "scale": 100, "url": "https://facebook.com/yavannaeat/reviews" },
+      "happycow": { "votes": 93, "rating": 4.5, "scale": 5, "url": "https://happycow.net/reviews/yavanna-paddington-123682" },
+      "uber_eats": { "votes": 1500, "rating": 4.8, "scale": 5, "url": "https://ubereats.com/au/store/yavanna/6orC-XGdTPmmyCcpWlG6wA" },
+      "doordash": { "votes": 100, "rating": 4.7, "scale": 5, "url": "https://doordash.com/store/yavanna-paddington-950085/28504553/" },
+      "tripadvisor": { "votes": 29, "rating": 4.2, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d14882210-Reviews-Yavanna_Plant_Based_Eatery-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -1021,6 +1098,12 @@
     "name": "You Came Again",
     "vegan": "Yes",
     "badge": "Closed",
+    "founders": ["Nicola Stone"],
+    "founded": 2019,
+    "closed": 2025,
+    "contact": { "emails": ["hello@youcameagain.com.au"] },
+    "delivery": { "ubereats": "", "doordash": "https://doordash.com/store/you-came-again-west-end-2610407/2582207/" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/place/details/1490334/you-came-again", "opentable": "https://opentable.com.au/r/you-came-again-south-brisbane" },
     "tags": ["100% Vegan", "Tapas", "Bar", "Dinner", "Comfort Food", "Brunch"],
     "desc": {
       "en": "You Came Again was Brisbane's first vegan tapas bar, in West End, known for small plates like cheese platters and patatas bravas, paired with cocktails and wine. The venue has since permanently closed.",
@@ -1039,27 +1122,28 @@
       "pt": "Quando estava aberto, os frequentadores adoravam a tábua de queijo, as patatas bravas e uma taça de vinho ou coquetel."
     },
     "when": {
-      "en": "You Came Again operated in West End as Brisbane's first vegan tapas bar before permanently closing its doors.",
-      "pt": "O You Came Again funcionou em West End como o primeiro bar de tapas vegano de Brisbane, até encerrar suas atividades de forma permanente."
+      "en": "Founded in 2019 by Nicola Stone, You Came Again operated in West End as Brisbane's first vegan tapas bar before permanently closing its doors in 2025.",
+      "pt": "Fundado em 2019 por Nicola Stone, o You Came Again funcionou em West End como o primeiro bar de tapas vegano de Brisbane, até fechar definitivamente as portas em 2025."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "18/09/2026",
-    "next_update": "18/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.2,
+    "final_score": 8.1874,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/7J5KjziukuuSgHdnh" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://facebook.com/youcameagain/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/you-came-again-west-end-150840" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "https://doordash.com/store/you-came-again-west-end-2610407/2582207/" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d16750388-Reviews-You_Came_Again_Vegan_Tapas-Brisbane_Brisbane_Region_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/you-came-again-west-end" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "https://opentable.com.au/r/you-came-again-south-brisbane" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/place/details/1490334/you-came-again", "link_only": true }
+      "google": { "votes": 673, "rating": 4.3, "scale": 5, "url": "https://share.google/7J5KjziukuuSgHdnh" },
+      "facebook": { "votes": 368, "rating": 92, "scale": 100, "url": "https://facebook.com/youcameagain/reviews" },
+      "happycow": { "votes": 81, "rating": 4.5, "scale": 5, "url": "https://happycow.net/reviews/you-came-again-west-end-150840" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": 10, "rating": 4.2, "scale": 5, "url": "https://doordash.com/store/you-came-again-west-end-2610407/2582207/" },
+      "tripadvisor": { "votes": 33, "rating": 4.8, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g255068-d16750388-Reviews-You_Came_Again_Vegan_Tapas-Brisbane_Brisbane_Region_Queensland.html" },
+      "yelp": { "votes": 3, "rating": 5, "scale": 5, "url": "https://yelp.com/biz/you-came-again-west-end" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -1067,13 +1151,18 @@
     "name": "Nurcha",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Kaye Halligan"],
+    "founded": 2014,
+    "contact": { "emails": ["hello@nurcha.com.au"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": { "wanderlog": "https://wanderlog.com/sv/place/details/4798093/nurcha-kawana", "yelp": "https://yelp.com/biz/cafe-nurcha-maroochydore" },
     "tags": ["100% Vegan", "Café", "Brunch", "Groceries", "Pizza", "Gluten-Free"],
     "desc": {
       "en": "Nurcha is a plant-based hub in Birtinya, on the Sunshine Coast, pairing a fully vegan café with a lifestyle store of vegan groceries, eco-friendly products and giftware. The café serves a changing menu — breakfast and brunch plates like bagels, avocado dishes and açaí bowls, plus all-day curries, dahl, pizzas, nachos and burgers — with gluten-free options, a kids' menu and outdoor seating.",
       "pt": "O Nurcha é um centro plant-based em Birtinya, na Sunshine Coast, que reúne um café totalmente vegano e uma loja de estilo de vida com mercearia vegana, produtos ecológicos e presentes. O café serve um cardápio que muda — pratos de café da manhã e brunch como bagels, pratos com abacate e açaí bowls, além de curries, dahl, pizzas, nachos e hambúrgueres o dia todo — com opções sem glúten, cardápio infantil e área externa."
     },
     "instagram_reel": "",
-    "web": { "site": "https://nurcha.com.au", "instagram": "https://www.instagram.com/nurcha_bodymindearth", "facebook": "https://www.facebook.com/nurchabodymindearth", "tiktok": "" },
+    "web": { "site": "https://nurcha.com.au", "instagram": "https://instagram.com/nurcha_bodymindearth", "facebook": "https://facebook.com/nurchabodymindearth", "tiktok": "" },
     "address": "Shop 3B, 566 Kawana Way, Birtinya, QLD 4575",
     "maps_url": "https://www.google.com/maps/search/Shop+3B+566+Kawana+Way+Birtinya+QLD+4575",
     "why": {
@@ -1085,27 +1174,28 @@
       "pt": "Uma pizza, um curry ou dahl, ou um café da manhã com bagel do cardápio que muda — e depois dê uma olhada na mercearia vegana antes de sair."
     },
     "when": {
-      "en": "Café open every day, 8am–3:30pm (kitchen closes at 2:30pm); the store stays open until 4pm. Hours can change for special events — check their Facebook before you go.",
-      "pt": "Café aberto todos os dias, das 8h às 15h30 (a cozinha fecha às 14h30); a loja fica aberta até as 16h. Os horários podem mudar em eventos especiais — confira o Facebook deles antes de ir."
+      "en": "Founded in 2014 by Kaye Halligan, Nurcha now trades from Birtinya, on the Sunshine Coast, combining its vegan café with a store of vegan groceries, eco-friendly products and giftware.",
+      "pt": "Fundado em 2014 por Kaye Halligan, o Nurcha funciona hoje em Birtinya, na Sunshine Coast, unindo seu café vegano a uma loja de mercearia vegana, produtos ecológicos e presentes."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "20/09/2026",
-    "next_update": "20/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.9,
+    "final_score": 8.8662,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/Qv2Rj34j3aJozY8T1" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/nurchabodymindearth/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/nurcha-kawana-birtinya-235442" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g4354976-d19932482-Reviews-Nurcha_Kawana-Birtinya_Sunshine_Coast_Queensland.html" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.yelp.com/biz/cafe-nurcha-maroochydore" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "https://wanderlog.com/sv/place/details/4798093/nurcha-kawana", "link_only": true }
+      "google": { "votes": 697, "rating": 4.6, "scale": 5, "url": "https://share.google/Qv2Rj34j3aJozY8T1" },
+      "facebook": { "votes": 847, "rating": 96, "scale": 100, "url": "https://facebook.com/nurchabodymindearth/reviews" },
+      "happycow": { "votes": 47, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/nurcha-kawana-birtinya-235442" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": 19, "rating": 4.2, "scale": 5, "url": "https://tripadvisor.com.au/Restaurant_Review-g4354976-d19932482-Reviews-Nurcha_Kawana-Birtinya_Sunshine_Coast_Queensland.html" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
@@ -1113,10 +1203,15 @@
     "name": "JR Vegan Thai",
     "vegan": "Yes",
     "badge": "",
+    "founders": [],
+    "founded": 2024,
+    "contact": { "emails": [] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
     "tags": ["100% Vegan", "Thai", "Dinner", "Asian", "Budget-Friendly"],
     "desc": {
-      "en": "JR Vegan Thai is a small, fully vegan Thai kitchen at 25 Howard Street in Nambour, on the Sunshine Coast, serving stir-fries, curries and noodle dishes cooked without garlic or onion. Open since early 2024, it trades for dinner on Tuesdays and Thursday to Saturday, 5pm–8:30pm. Payment is cash only, and since the owner mainly works at local markets and uses the space as a kitchen, it is best to call ahead.",
-      "pt": "O JR Vegan Thai é uma pequena cozinha tailandesa totalmente vegana na 25 Howard Street, em Nambour, na Sunshine Coast, com salteados, curries e macarrões preparados sem alho nem cebola. Funciona desde o início de 2024 e abre para o jantar às terças e de quinta a sábado, das 17h às 20h30. O pagamento é somente em dinheiro e, como o(a) dono(a) trabalha principalmente em feiras locais e usa o espaço como cozinha, é melhor ligar antes."
+      "en": "JR Vegan Thai is a small, fully vegan Thai kitchen at 25 Howard Street in Nambour, on the Sunshine Coast, serving stir-fries, curries and noodle dishes cooked without garlic or onion. Open since early 2024, it trades for dinner on Tuesdays and from Thursday to Saturday. Payment is cash only, and since the owner mainly works at local markets and uses the space as a kitchen, it is best to call ahead.",
+      "pt": "O JR Vegan Thai é uma pequena cozinha tailandesa totalmente vegana na 25 Howard Street, em Nambour, na Sunshine Coast, com salteados, curries e macarrões preparados sem alho nem cebola. Funciona desde o início de 2024 e abre para o jantar às terças e de quinta a sábado. O pagamento é somente em dinheiro e, como o(a) dono(a) trabalha principalmente em feiras locais e usa o espaço como cozinha, é melhor ligar antes."
     },
     "instagram_reel": "",
     "web": { "site": "", "instagram": "", "facebook": "", "tiktok": "" },
@@ -1131,41 +1226,47 @@
       "pt": "Os salteados, curries ou macarrões — tudo é vegano, e nada leva alho nem cebola."
     },
     "when": {
-      "en": "Dinner only: Tuesday and Thursday to Saturday, 5pm–8:30pm. Cash only — call ahead on 0436 962 153, as the gate may be locked.",
-      "pt": "Somente jantar: terça e de quinta a sábado, das 17h às 20h30. Só dinheiro — ligue antes para 0436 962 153, pois o portão pode estar trancado."
+      "en": "Open since 2024 in Nambour, JR Vegan Thai is run by an owner who mainly works at local markets and uses the space as a kitchen.",
+      "pt": "Funciona desde 2024 em Nambour; o(a) dono(a) trabalha principalmente em feiras locais e usa o espaço como cozinha."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "20/09/2026",
-    "next_update": "20/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.0,
+    "final_score": 8.0000,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/jr-vegan-nambour-396990" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "google": { "votes": 33, "rating": 4.8, "scale": 5, "url": "https://share.google/2JsywuuEApo0TvFVv" },
+      "facebook": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "happycow": { "votes": 12, "rating": 4, "scale": 5, "url": "https://happycow.net/reviews/jr-vegan-nambour-396990" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   },
   {
-    "slug": "kindest_cakery",
+    "slug": "kindest-cakery",
     "name": "Kindest Cakery",
     "vegan": "Yes",
     "badge": "",
+    "founders": ["Danni King", "Sarah Joy Hutto"],
+    "founded": 2024,
+    "contact": { "emails": ["hello@kindestcakery.com"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
     "tags": ["100% Vegan", "Bakery", "Cakes", "Desserts", "Gluten-Free", "Takeaway"],
     "desc": {
-      "en": "Kindest Cakery — listed as Kynd Cakery on some platforms — is a fully plant-based and gluten-free bakery in Kunda Park, on the Sunshine Coast, made in a coeliac-safe kitchen. Along with custom cakes, cupcakes and holiday treat boxes, it stocks a daily rotating treat cabinet and small-batch frozen meals from its sister brand, Kindest Kitchen. Open to the public Monday to Saturday, 9am–4pm.",
-      "pt": "O Kindest Cakery — listado como Kynd Cakery em algumas plataformas — é uma padaria totalmente plant-based e sem glúten em Kunda Park, na Sunshine Coast, feita em uma cozinha segura para celíacos. Além de bolos personalizados, cupcakes e caixas de doces sazonais, tem uma vitrine de doces que muda todos os dias e refeições congeladas em pequenos lotes da marca irmã, Kindest Kitchen. Aberto ao público de segunda a sábado, das 9h às 16h."
+      "en": "Kindest Cakery — listed as Kynd Cakery on some platforms — is a fully plant-based and gluten-free bakery in Kunda Park, on the Sunshine Coast, made in a coeliac-safe kitchen. It makes custom cakes, cupcakes and holiday treat boxes, and stocks a daily rotating treat cabinet for walk-in customers. Open to the public Monday to Saturday.",
+      "pt": "O Kindest Cakery — listado como Kynd Cakery em algumas plataformas — é uma padaria totalmente plant-based e sem glúten em Kunda Park, na Sunshine Coast, feita em uma cozinha segura para celíacos. Faz bolos personalizados, cupcakes e caixas de doces sazonais e mantém uma vitrine de doces que muda todos os dias para quem passa por lá. Aberto ao público de segunda a sábado."
     },
     "instagram_reel": "https://www.instagram.com/reel/DVCllFXEu-v/embed/",
-    "web": { "site": "https://www.kindestcakery.com", "instagram": "https://www.instagram.com/kindest_cakery", "facebook": "https://www.facebook.com/KindestCakery/", "tiktok": "" },
+    "web": { "site": "https://kindestcakery.com", "instagram": "https://www.instagram.com/kindest_cakery", "facebook": "https://facebook.com/KindestCakery/", "tiktok": "" },
     "address": "Unit 1/13 Endeavour Drive, Kunda Park, QLD 4556",
     "maps_url": "https://www.google.com/maps/search/Unit+1+13+Endeavour+Drive+Kunda+Park+QLD+4556",
     "why": {
@@ -1173,30 +1274,345 @@
       "pt": "Uma padaria onde tudo é vegano e sem glúten, feito em uma cozinha segura para celíacos."
     },
     "what_to_order": {
-      "en": "Something from the daily treat cabinet, a pre-ordered custom cake or cupcakes, and a frozen meal from Kindest Kitchen to take home.",
-      "pt": "Algo da vitrine de doces do dia, um bolo personalizado ou cupcakes encomendados, e uma refeição congelada do Kindest Kitchen para levar para casa."
+      "en": "Something from the daily treat cabinet, or a pre-ordered custom cake or cupcakes.",
+      "pt": "Algo da vitrine de doces do dia, ou um bolo personalizado ou cupcakes encomendados."
     },
     "when": {
-      "en": "Open Monday to Saturday, 9am–4pm. Custom cakes need to be pre-ordered.",
-      "pt": "Aberto de segunda a sábado, das 9h às 16h. Bolos personalizados precisam ser encomendados com antecedência."
+      "en": "Founded in 2024 by Danni King and Sarah Joy Hutto, who have been creating together since 2017. Kindest Cakery is part of Kindest Concept, whose other brands include Kindest Kitchen (frozen meals) and Kindest Threads (preloved clothing).",
+      "pt": "Fundado em 2024 por Danni King e Sarah Joy Hutto, que criam projetos em parceria desde 2017. O Kindest Cakery faz parte da Kindest Concept, cujas outras marcas incluem o Kindest Kitchen (refeições congeladas) e o Kindest Threads (roupas de segunda mão)."
     },
     "words_from_owner": {
       "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
       "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
     },
-    "last_updated": "20/09/2026",
-    "next_update": "20/09/2027",
-    "final_rating": 5,
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.0,
+    "final_score": 8.0000,
     "reviews": {
-      "google": { "votes": null, "rating": 5, "scale": 5, "url": "https://share.google/fVXHETrpzufE5xfzI" },
-      "facebook": { "votes": null, "rating": 100, "scale": 100, "url": "https://www.facebook.com/KindestCakery/reviews" },
-      "happycow": { "votes": null, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/kynd-cakery-sunshine-coast-445792" },
-      "uber_eats": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "doordash": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "tripadvisor": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "yelp": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "opentable": { "votes": null, "rating": 5, "scale": 5, "url": "" },
-      "bvg": { "votes": null, "rating": 5, "scale": 5, "url": "" },
+      "google": { "votes": 13, "rating": 5, "scale": 5, "url": "https://share.google/fVXHETrpzufE5xfzI" },
+      "facebook": { "votes": 3, "rating": 100, "scale": 100, "url": "https://facebook.com/KindestCakery/reviews" },
+      "happycow": { "votes": 4, "rating": 5, "scale": 5, "url": "https://happycow.net/reviews/kynd-cakery-sunshine-coast-445792" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
+    }
+  },
+  {
+    "slug": "plant-baked",
+    "name": "Plant Baked",
+    "vegan": "Yes",
+    "badge": "Made to Order",
+    "badge_pt": "Sob Encomenda",
+    "founders": ["Jessie"],
+    "founded": 2021,
+    "contact": { "emails": ["hello@theplantbakery.com.au"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
+    "tags": ["100% Vegan", "Wholesale", "Gluten-Free", "Desserts", "Bakery", "Cakes"],
+    "desc": {
+      "en": "Plant Baked is a Brisbane-based bakery making vegan and gluten-free desserts — biscuit-base slices, creamy layered treats, sponge cakes and caramel-filled sweets — all built on house-made flour blends, jams and caramel fillings. It has no public storefront: the range is made to order for cafés, restaurants and retailers, and sold through stockists across Australia, with a where-to-buy locator on its website.",
+      "pt": "A Plant Baked é uma confeitaria de Brisbane que faz sobremesas veganas e sem glúten — fatias com base de biscoito, doces cremosos em camadas, bolos de pão de ló e doces recheados de caramelo — todas feitas com misturas de farinha, geleias e recheios de caramelo da casa. Não tem loja física: a linha é feita sob encomenda para cafés, restaurantes e varejistas e vendida por revendedores em toda a Austrália, com um localizador de pontos de venda no site."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://plantbaked.com.au", "instagram": "https://www.instagram.com/plantbaked", "facebook": "https://www.facebook.com/PlantBakedAus", "tiktok": "" },
+    "address": "Wholesale only — no public storefront",
+    "maps_url": "https://plantbaked.com.au/where-to-buy/",
+    "why": {
+      "en": "A 100% vegan and gluten-free dessert range with the texture of the classics — soft, fudgy and creamy — found on the counters of cafés and stockists.",
+      "pt": "Uma linha de sobremesas 100% veganas e sem glúten com a textura dos clássicos — macia, fudgy e cremosa — encontrada no balcão de cafés e revendedores."
+    },
+    "what_to_order": {
+      "en": "Look out for Plant Baked treats on the dessert counter at stockists like Dicki's in New Farm — biscuit-base slices, creamy layered desserts and caramel treats.",
+      "pt": "Procure as sobremesas da Plant Baked no balcão de revendedores como o Dicki's, em New Farm — fatias com base de biscoito, sobremesas cremosas em camadas e doces de caramelo."
+    },
+    "when": {
+      "en": "Founded in 2021 by Jessie as a sister brand to Sweet Nectar under The Plant Bakery, and built on more than a decade of recipe development.",
+      "pt": "Fundada em 2021 por Jessie como marca irmã da Sweet Nectar dentro da The Plant Bakery, com base em mais de uma década de desenvolvimento de receitas."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.0,
+    "final_score": 8.0000,
+    "reviews": {
+      "google": { "votes": 7, "rating": 5, "scale": 5, "url": "https://share.google/Qlod3brdIvf7IXxOM" },
+      "facebook": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "happycow": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
+    }
+  },
+  {
+    "slug": "sweet-nectar",
+    "name": "Sweet Nectar",
+    "vegan": "Yes",
+    "badge": "Made to Order",
+    "badge_pt": "Sob Encomenda",
+    "founders": ["Jessie"],
+    "founded": 2018,
+    "contact": { "emails": ["hello@theplantbakery.com.au"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
+    "tags": ["100% Vegan", "Wholesale", "Gluten-Free", "Desserts", "Bakery"],
+    "desc": {
+      "en": "Sweet Nectar makes whole-food desserts to feel good about: plant-based, vegan and gluten-free slices and treats, naturally sweetened and built on nuts, coconut, cacao and fruit — like the Fruit and Nut Goodness Bar, Marz Slice, Lemon Cheesecake Slice, Peanut Butter Cup and Ferrero Rawcher Slice. It has no public storefront: it is made to order for cafés and health-food retailers across Australia, with stockists including Merlo Coffee Roasters, Go Vita, Flannery's and QPAC, and new stockists can apply on its website.",
+      "pt": "A Sweet Nectar faz sobremesas de comida de verdade para fazer bem: fatias e doces plant-based, veganos e sem glúten, adoçados naturalmente e feitos com nozes, coco, cacau e frutas — como a Fruit and Nut Goodness Bar, a Marz Slice, a Lemon Cheesecake Slice, a Peanut Butter Cup e a Ferrero Rawcher Slice. Não tem loja física: é feita sob encomenda para cafés e lojas de alimentos saudáveis em toda a Austrália, com revendedores como Merlo Coffee Roasters, Go Vita, Flannery's e QPAC, e novos revendedores podem se candidatar pelo site."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://sweetnectar.com.au", "instagram": "https://www.instagram.com/sweetnectar", "facebook": "https://www.facebook.com/sweetnectardesserts", "tiktok": "" },
+    "address": "Wholesale only — no public storefront",
+    "maps_url": "https://sweetnectar.com.au/",
+    "why": {
+      "en": "Whole-food, naturally sweetened vegan and gluten-free slices — nutrient-rich desserts you will find at cafés and health-food stores.",
+      "pt": "Fatias veganas e sem glúten de comida integral, adoçadas naturalmente — sobremesas nutritivas que você encontra em cafés e lojas de alimentos saudáveis."
+    },
+    "what_to_order": {
+      "en": "The Lemon Cheesecake Slice, Peanut Butter Cup or Marz Slice at a stockist near you — or the Fruit and Nut Goodness Bar.",
+      "pt": "A Lemon Cheesecake Slice, a Peanut Butter Cup ou a Marz Slice em um revendedor perto de você — ou a Fruit and Nut Goodness Bar."
+    },
+    "when": {
+      "en": "Founded in 2018 by Jessie, Sweet Nectar is the sister brand of Plant Baked under The Plant Bakery, focused on whole-food, naturally sweetened desserts.",
+      "pt": "Fundada em 2018 por Jessie, a Sweet Nectar é a marca irmã da Plant Baked dentro da The Plant Bakery, com foco em sobremesas de comida integral adoçadas naturalmente."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.0,
+    "final_score": 8.0000,
+    "reviews": {
+      "google": { "votes": 7, "rating": 5, "scale": 5, "url": "https://share.google/p5KVAQdNoEXdyzBXB" },
+      "facebook": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "happycow": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
+    }
+  },
+  {
+    "slug": "kindest-kitchen",
+    "name": "Kindest Kitchen",
+    "vegan": "Yes",
+    "badge": "",
+    "founders": ["Danni King", "Sarah Joy Hutto"],
+    "founded": 2024,
+    "contact": { "emails": ["hello@kyndkitchen.com"] },
+    "delivery": { "ubereats": "", "doordash": "https://www.doordash.com/store/kindest-concept-kunda-park-38782573/89880553" },
+    "extra_links": {  },
+    "tags": ["100% Vegan", "Frozen Meals", "Gluten-Free", "Takeaway", "Delivery"],
+    "desc": {
+      "en": "Kindest Kitchen makes plant-based, gluten-free frozen meals in a coeliac-safe kitchen in Kunda Park, on the Sunshine Coast. Each week it curates a new menu of small-batch meals built around plant-based proteins and vegetables, ready to take home from the in-store freezer or to pick up on a pre-order, with delivery to the Sunshine Coast, Brisbane and Gympie. It shares its Kunda Park base with its sister brand, Kindest Cakery.",
+      "pt": "O Kindest Kitchen faz refeições congeladas plant-based e sem glúten em uma cozinha segura para celíacos em Kunda Park, na Sunshine Coast. A cada semana, monta um novo cardápio de refeições em pequenos lotes, com proteínas vegetais e legumes, prontas para levar do freezer da loja ou retirar por encomenda, com entrega na Sunshine Coast, em Brisbane e em Gympie. Divide a base de Kunda Park com a marca irmã, o Kindest Cakery."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://www.kindestkitchen.com", "instagram": "https://www.instagram.com/kindest_kitchen", "facebook": "https://www.facebook.com/KindestKitchen", "tiktok": "" },
+    "address": "Unit 1/13 Endeavour Drive, Kunda Park, QLD 4556",
+    "maps_url": "https://www.google.com/maps/search/Unit+1+13+Endeavour+Drive+Kunda+Park+QLD+4556",
+    "why": {
+      "en": "Plant-based, gluten-free and coeliac-safe frozen meals, with a new small-batch menu every week.",
+      "pt": "Refeições congeladas plant-based, sem glúten e seguras para celíacos, com um novo cardápio em pequenos lotes toda semana."
+    },
+    "what_to_order": {
+      "en": "A few meals from the in-store freezer — or pre-order your favourites from the week's menu for pickup or delivery.",
+      "pt": "Algumas refeições do freezer da loja — ou encomende seus favoritos do cardápio da semana para retirar ou receber em casa."
+    },
+    "when": {
+      "en": "Founded in 2024 by Danni King and Sarah Joy Hutto, who have been creating together since 2017 under Kindest Concept — the company behind Kindest Cakery and Kindest Threads as well.",
+      "pt": "Fundado em 2024 por Danni King e Sarah Joy Hutto, que criam projetos em parceria desde 2017 dentro da Kindest Concept — a empresa por trás também do Kindest Cakery e do Kindest Threads."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.0,
+    "final_score": 8.0000,
+    "reviews": {
+      "google": { "votes": 2, "rating": 5, "scale": 5, "url": "https://share.google/UX9ZZHmZE693geJRl" },
+      "facebook": { "votes": 2, "rating": 100, "scale": 100, "url": "https://www.facebook.com/KindestKitchen/reviews" },
+      "happycow": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
+    }
+  },
+  {
+    "slug": "rosebed-and-finch",
+    "name": "Rosebed & Finch",
+    "vegan": "Yes",
+    "badge": "",
+    "founders": ["Cheryse Healy", "Rhys Williams"],
+    "founded": 2016,
+    "contact": { "emails": ["rosebedandfinch@outlook.com"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
+    "tags": ["100% Vegan", "Café", "Bakery", "Desserts", "Gluten-Free", "Raw"],
+    "desc": {
+      "en": "Rosebed & Finch is a raw, vegan, gluten-free catering and baking business in Eudlo, on the Sunshine Coast, run from a garden studio beside the family home. It makes ready-made plant-based meals, coffees, grab-and-go desserts and a small savoury range — all coeliac-safe, free from refined sugar and seed oils, and made from scratch with local and seasonal produce — plus custom cakes, workshops and a self-serve garden pantry.",
+      "pt": "A Rosebed & Finch é um negócio de catering e confeitaria crua, vegana e sem glúten em Eudlo, na Sunshine Coast, que funciona em um estúdio no jardim, ao lado da casa da família. Faz refeições plant-based prontas, cafés, sobremesas para levar e uma pequena linha de salgados — tudo seguro para celíacos, sem açúcar refinado nem óleos de sementes, feito do zero com ingredientes locais e sazonais — além de bolos personalizados, oficinas e uma despensa de autoatendimento no jardim."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://www.rosebedandfinch.com.au", "instagram": "https://www.instagram.com/rosebedandfinch", "facebook": "", "tiktok": "" },
+    "address": "15 Rosebed Street, Eudlo, QLD 4554",
+    "maps_url": "https://www.google.com/maps/search/15+Rosebed+Street+Eudlo+QLD+4554",
+    "why": {
+      "en": "A garden studio where everything is raw or plant-based, gluten-free and made from scratch — with a self-serve garden pantry and workshops on the side.",
+      "pt": "Um estúdio no jardim onde tudo é cru ou plant-based, sem glúten e feito do zero — com despensa de autoatendimento e oficinas."
+    },
+    "what_to_order": {
+      "en": "A coffee with a grab-and-go dessert, a ready-made plant-based meal to take home, or a custom cake for the next celebration.",
+      "pt": "Um café com uma sobremesa para levar, uma refeição plant-based pronta para levar para casa ou um bolo personalizado para a próxima comemoração."
+    },
+    "when": {
+      "en": "Founded in 2016 by Cheryse Healy and Rhys Williams. It started in rented commercial kitchens, with a few boxes of treats sold each week, and grew into a home-based business and, in 2020, a purpose-built garden café beside the house. The name comes from Rosebed Street, where the family lives.",
+      "pt": "Fundado em 2016 por Cheryse Healy e Rhys Williams. Começou em cozinhas comerciais alugadas, com algumas caixas de doces vendidas por semana, e cresceu até virar um negócio caseiro e, em 2020, um café-jardim construído para esse fim ao lado da casa. O nome vem da Rosebed Street, onde a família mora."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.0,
+    "final_score": 8.0000,
+    "reviews": {
+      "google": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "facebook": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "happycow": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
+    }
+  },
+  {
+    "slug": "tian-ran",
+    "name": "Tian Ran",
+    "vegan": "Yes",
+    "badge": "",
+    "founders": ["Irene Chiew Kait Yeo"],
+    "founded": 2000,
+    "contact": { "emails": ["info@tianranvegetarian.com.au"] },
+    "delivery": { "ubereats": "https://www.ubereats.com/au/store/tian-ran-vegetarian-restaurant/BgzkSTaKQIuGRiocTkJQoQ", "doordash": "https://www.doordash.com/store/tian-ran-vegan-mermaid-beach-1249551/1811843" },
+    "extra_links": {  },
+    "tags": ["100% Vegan", "Chinese", "Asian", "Dinner", "Gluten-Free", "Takeaway"],
+    "desc": {
+      "en": "Tian Ran — “Nature” in Chinese — is an all-vegan Chinese and Asian restaurant in Mermaid Beach, on the Gold Coast, with a Buddhist-style kitchen that cooks without meat, dairy, alcohol, garlic, onion or MSG. Its plant-based “meats” are made from soy, wheat, yam, seaweed and mushroom, and the menu runs from set menus, tofu and bean curd to vegan meat and seafood dishes, curries, hot pots, noodles and rice, with gluten-free options, for dine-in or takeaway.",
+      "pt": "O Tian Ran — “Natureza” em chinês — é um restaurante chinês e asiático totalmente vegano em Mermaid Beach, na Gold Coast, com uma cozinha de estilo budista que não usa carne, laticínios, álcool, alho, cebola nem glutamato. As “carnes” plant-based são feitas de soja, trigo, inhame, algas e cogumelos, e o cardápio vai de menus completos, tofu e bean curd a pratos de carne e frutos do mar veganos, curries, hot pots, macarrões e arroz, com opções sem glúten, para comer no local ou levar."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://tianranvegetarian.com.au", "instagram": "https://www.instagram.com/tianranvegetarian", "facebook": "https://www.facebook.com/tianranvegetariangc/", "tiktok": "" },
+    "address": "Shop 8, 2464 Gold Coast Highway, Mermaid Beach, QLD 4218",
+    "maps_url": "https://www.google.com/maps/search/Shop+8+2464+Gold+Coast+Highway+Mermaid+Beach+QLD+4218",
+    "why": {
+      "en": "A long-running all-vegan Asian kitchen on the Gold Coast: a huge plant-based menu cooked without garlic, onion or MSG.",
+      "pt": "Uma cozinha asiática 100% vegana de longa data na Gold Coast: um enorme cardápio plant-based feito sem alho, cebola nem glutamato."
+    },
+    "what_to_order": {
+      "en": "The vegan meat and seafood dishes, a hot pot or a set menu to share — and the tofu and bean curd specialties.",
+      "pt": "Os pratos de carne e frutos do mar veganos, um hot pot ou um menu completo para compartilhar — e as especialidades de tofu e bean curd."
+    },
+    "when": {
+      "en": "Founded in 2000 by Irene Chiew Kait Yeo, Tian Ran has been serving Gold Coast diners plant-based Chinese and Asian food ever since.",
+      "pt": "Fundado em 2000 por Irene Chiew Kait Yeo, o Tian Ran serve comida chinesa e asiática plant-based aos moradores e visitantes da Gold Coast desde então."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.8,
+    "final_score": 8.7899,
+    "reviews": {
+      "google": { "votes": 721, "rating": 4.7, "scale": 5, "url": "https://share.google/UADMjLmMoOWDPw1de" },
+      "facebook": { "votes": 384, "rating": 96, "scale": 100, "url": "https://www.facebook.com/tianranvegetariangc/reviews" },
+      "happycow": { "votes": 86, "rating": 4.5, "scale": 5, "url": "https://www.happycow.net/reviews/tian-ran-mermaid-beach-442" },
+      "uber_eats": { "votes": 1000, "rating": 4.7, "scale": 5, "url": "https://www.ubereats.com/au/store/tian-ran-vegetarian-restaurant/BgzkSTaKQIuGRiocTkJQoQ" },
+      "doordash": { "votes": 200, "rating": 4.7, "scale": 5, "url": "https://www.doordash.com/store/tian-ran-vegan-mermaid-beach-1249551/1811843" },
+      "tripadvisor": { "votes": 101, "rating": 4.6, "scale": 5, "url": "https://www.tripadvisor.com.au/Restaurant_Review-g659067-d4698648-Reviews-Tian_Ran_Vegetarian_Restaurant-Mermaid_Beach_Gold_Coast_Queensland.html" },
+      "yelp": { "votes": 8, "rating": 5, "scale": 5, "url": "https://www.yelp.com/biz/tian-ran-vegetarian-restaurant-mermaid-beach" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
+    }
+  },
+  {
+    "slug": "jing-si-books-and-cafe",
+    "name": "Jing Si Books & Cafe",
+    "vegan": "Yes",
+    "badge": "",
+    "founders": ["Dharma Master Cheng Yen"],
+    "founded": 2022,
+    "contact": { "emails": ["hello@jingsi.org.au"] },
+    "delivery": { "ubereats": "", "doordash": "" },
+    "extra_links": {  },
+    "tags": ["100% Vegan", "Café", "Books", "Lunch", "Desserts", "Coffee"],
+    "desc": {
+      "en": "Jing Si Books & Cafe is a fully vegan café, bookstore and community space in Salisbury, in Brisbane's south, run by Tzu Chi Brisbane as a place of peace and quiet. The café serves light meals like rice bowls, dumplings, soups and salads, pastries and desserts — mud cakes, Danish pastries and vegan croissants — plus smoothies and a signature range of teas and lattes, including turmeric, black sesame, multi-grain, black rice and hojicha.",
+      "pt": "O Jing Si Books & Cafe é um café, livraria e espaço comunitário totalmente vegano em Salisbury, no sul de Brisbane, mantido pelo Tzu Chi Brisbane como um lugar de paz e silêncio. O café serve refeições leves como rice bowls, dumplings, sopas e saladas, além de doces e salgados — mud cakes, danishes e croissants veganos — e ainda smoothies e uma linha própria de chás e lattes, como cúrcuma, gergelim preto, multigrãos, arroz preto e hojicha."
+    },
+    "instagram_reel": "",
+    "web": { "site": "https://brisbanetzuchi.org.au", "instagram": "https://www.instagram.com/jingsibookscafe_au", "facebook": "https://www.facebook.com/jingsi.bne", "tiktok": "" },
+    "address": "Suite 3/60 Rosebank Square, Salisbury, QLD 4107",
+    "maps_url": "https://www.google.com/maps/search/Suite+3+60+Rosebank+Square+Salisbury+QLD+4107",
+    "why": {
+      "en": "A calm, all-vegan café and bookstore tucked away in Salisbury, known for its rice bowls, pastries and unusual lattes.",
+      "pt": "Um café e livraria 100% vegano, calmo e escondido em Salisbury, conhecido pelos rice bowls, doces e lattes diferentes."
+    },
+    "what_to_order": {
+      "en": "The J.S. Rice Bowl, the dumpling soup or a bagel, followed by a pastry and a turmeric, black sesame or hojicha latte.",
+      "pt": "O J.S. Rice Bowl, a sopa de dumplings ou um bagel, seguido de um doce e um latte de cúrcuma, gergelim preto ou hojicha."
+    },
+    "when": {
+      "en": "Opened in 2022 by Tzu Chi Brisbane, the Brisbane branch of the Buddhist Tzu Chi Foundation founded by Dharma Master Cheng Yen, as a space of peace and quiet for the community.",
+      "pt": "Aberto em 2022 pelo Tzu Chi Brisbane, filial de Brisbane da Fundação budista Tzu Chi, fundada por Dharma Master Cheng Yen, como um espaço de paz e silêncio para a comunidade."
+    },
+    "words_from_owner": {
+      "en": "The owner of this venue will leave a personal message here soon — stay tuned!",
+      "pt": "O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!"
+    },
+    "last_updated": "23/09/2026",
+    "next_update": "23/09/2027",
+    "final_result": 8.3,
+    "final_score": 8.3164,
+    "reviews": {
+      "google": { "votes": 108, "rating": 4.8, "scale": 5, "url": "https://share.google/6MswSK6BHVPUV24XP" },
+      "facebook": { "votes": 3, "rating": 100, "scale": 100, "url": "https://www.facebook.com/jingsi.bne/reviews" },
+      "happycow": { "votes": 3, "rating": 5, "scale": 5, "url": "https://www.happycow.net/reviews/jing-si-books-and-cafe-salisbury-347625" },
+      "uber_eats": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "doordash": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "tripadvisor": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "yelp": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "opentable": { "votes": null, "rating": null, "scale": null, "url": "" },
+      "bvg": { "votes": null, "rating": null, "scale": null, "url": "" },
       "wanderlog": { "votes": null, "rating": null, "scale": null, "url": "", "link_only": true }
     }
   }

@@ -30,49 +30,41 @@ const SITE_TITLE_PT = {
   'food': 'Restaurantes e Cafés Veganos em Brisbane | Brisbane Vegan Guide',
   'community': 'Grupos da Comunidade Vegana em Brisbane | Brisbane Vegan Guide',
   'people': 'Vozes e Ativistas Veganos em Brisbane | Brisbane Vegan Guide',
-  'vegan-kit': 'Kit Vegano: Veganismo Explicado de Forma Simples | Brisbane Vegan Guide',
+  'vegan-kit': 'Kit Vegano: Veganismo Simplificado | Brisbane Vegan Guide',
   'vegan-map': 'Mapa Vegano de Brisbane | Brisbane Vegan Guide',
   'vegan-finder': 'Buscador Vegano: onde comer vegano em Brisbane | Brisbane Vegan Guide',
   'hire-a-vegan': 'Contrate Um Vegano em Brisbane | Brisbane Vegan Guide',
   'contribute': 'Contribua e Apoie | Brisbane Vegan Guide',
   'about': 'Sobre o Projeto | Brisbane Vegan Guide',
   '404': 'Página não encontrada | Brisbane Vegan Guide',
-  'all-day': 'All Day — Café de Brunch em West End | Brisbane Vegan Guide',
-  'antica': 'Antica Pizzeria — Pizza no Forno a Lenha com Menu Vegano em Wilston',
   'archie-am-pm': 'Archie AM:PM — Bistrô-Café Plant-Based em Carseldine',
-  'arrivederci_pizzeria': 'Arrivederci Pizzeria — Pizza com Menu Vegano em Milton',
   'cardamom-pod': 'Cardamom Pod Brickworks — Café Vegano na Gold Coast',
   'nurcha': 'Nurcha — Café Vegano e Loja na Sunshine Coast | Brisbane Vegan Guide',
-  'jr-vegan-thai': 'JR Vegan Thai — Cozinha Tailandesa Vegana em Nambour | Brisbane Vegan Guide',
-  'kindest_cakery': 'Kindest Cakery — Padaria Vegana Sem Glúten na Sunshine Coast | Brisbane Vegan Guide',
+  'jr-vegan-thai': 'JR Vegan Thai — Tailandês Vegano em Nambour | Brisbane Vegan Guide',
+  'kindest-cakery': 'Kindest Cakery — Padaria Vegana Sem Glúten, Sunshine Coast',
+  'kindest-kitchen': 'Kindest Kitchen — Refeições Veganas Congeladas, Sunshine Coast',
+  'rosebed-and-finch': 'Rosebed & Finch — Café Vegano Cru e Sem Glúten em Eudlo',
+  'tian-ran': 'Tian Ran — Restaurante Vegano Chinês em Mermaid Beach',
+  'jing-si-books-and-cafe': 'Jing Si Books & Cafe — Café Vegano e Livraria em Salisbury',
   'charlies-raw-squeeze': "Charlie's Raw Squeeze — Suco Bar Vegano | Brisbane Vegan Guide",
   'dickis': "Dicki's — Café Vegano em New Farm | Brisbane Vegan Guide",
   'doko-demo-v': 'Doko Demo V — Restaurante Asiático Vegano na Gold Coast',
   'el-planta': 'El Planta — Restaurante Mexicano em South Brisbane',
   'grassfed': 'GrassFed — Trailer de Hambúrguer Vegano | Brisbane Vegan Guide',
-  'greenhouse-canteen': 'Greenhouse Canteen — Restaurante e Bar Plant-Based na Gold Coast',
-  'hai-hai': 'Hai Hai — Ramen e Izakaya com Ramen Vegano em Paddington',
+  'greenhouse-canteen': 'Greenhouse Canteen — Restaurante e Bar na Gold Coast',
   'izakaya-midori': 'Izakaya Midori — Restaurante Japonês Vegano na Gold Coast',
-  'king_tea': 'King Tea — Cozinha Chinesa com Amplo Menu Vegano em Paddington',
-  'loving-hut': 'Loving Hut — Fusão Vegana em Mount Gravatt | Brisbane Vegan Guide',
+  'loving-hut': 'Loving Hut — Fusão Vegana, Mount Gravatt | Brisbane Vegan Guide',
   'made-with-love-bakery': 'Made With Love Bakery — Padaria Vegana na Gold Coast',
-  'ma-pa-me': 'Ma Pa Me — Sudeste Asiático com Menu Vegano em South Bank',
-  'naim': 'NAÏM — Restaurante do Oriente Médio em Paddington',
   'neon-ramen': 'Neon Ramen — Ramen Bar Vegano em Everton Park',
-  'netherworld': 'Netherworld — Bar e Arcade em Fortitude Valley',
-  'phat_boy': 'Phat Boy — Restaurante Tailandês com Menu Vegano no Centro de Brisbane',
   'piante-pizza':'Piante Pizza — Pizza Vegana Itinerante | Brisbane Vegan Guide',
   'pippas-pantry': "Pippa's Pantry — Loja de Bolos Veganos em Camp Hill",
-  'sweet-and-green': 'Sweet & Green — Confeitaria Francesa Vegana | Brisbane Vegan Guide',
-  'tea-master': 'Tea Master — Vegetariano Taiwanês em Fortitude Valley',
   'the-green-edge': 'The Green Edge — Bistrô · Café · Deli em Windsor',
-  'the-plant-bakery': 'The Plant Bakery — Padaria Vegana Atacadista | Brisbane Vegan Guide',
+  'plant-baked': 'Plant Baked — Sobremesas Veganas Sem Glúten por Atacado',
+  'sweet-nectar': 'Sweet Nectar — Sobremesas Veganas Integrais por Atacado',
   'u-tong': 'U-Tong — Tailandês Vegano em Clayfield | Brisbane Vegan Guide',
   'vega-cafe': 'Vega Cafe — Café Vegano · Cozinha Tailandesa em Spring Hill',
-  'vegan_thai_riffic': 'Vegan Thai-riffic — Restaurante Tailandês Vegano em North Lakes',
   'vegan-restaurant': 'Vegan Restaurant — Chinês Vegano em West End',
   'veganyumm': 'Veganyumm — Padaria Vegana em Everton Park | Brisbane Vegan Guide',
-  'vegeme': 'Vegeme — Restaurante Asiático Vegetariano em South Brisbane',
   'vegerama': 'Vege Rama — Buffet Vegetariano na Adelaide Street, CBD',
   'yavanna': 'Yavanna (Encerrado) — Restaurante e Bar Plant-Based em Paddington',
   'you-came-again': 'You Came Again (Encerrado) — Bar de Tapas Vegano em West End',
@@ -121,7 +113,7 @@ function renderSiteHeader(activeHref) {
   return `<a href="#main-content" class="skip-link" id="skipLink">Skip to content</a>
   <nav class="nav" id="navbar" aria-label="Main">
     <a href="index.html" class="nav-logo">
-      <img class="logo-pin" src="icon-bvg.svg" width="18" height="18" alt="BVG">
+      <img class="logo-pin" src="icon-bvg.svg" width="18" height="18" alt="">
       ${logoInner}
     </a>
     <div class="nav-center">
@@ -163,6 +155,8 @@ function renderSiteFooter() {
     <div class="footer-tagline" data-i18n="footer.tagline">A better world for the animals.</div>
     <div class="footer-credit">
       <span>© 2026 Brisbane Vegan Guide</span>
+      <span class="sep">|</span>
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
       <span class="sep">|</span>
       <span id="footerVisits" style="display:none;">🐾 <span id="siteVisitCount">···</span> <span id="footerVisitsLabel">visits</span></span>
       <span class="sep" id="footerVisitsSep" style="display:none;">|</span>
@@ -228,6 +222,64 @@ function initBackToTop() {
 }
 document.addEventListener('DOMContentLoaded', initBackToTop);
 
+// ── SHARE BUTTON ──
+// Uses the native share sheet where available (mobile browsers, some desktop ones);
+// otherwise copies the page link to the clipboard and shows a small confirmation toast.
+function initShareButton() {
+  if (document.getElementById('shareBtn')) return;
+  const btn = document.createElement('button');
+  btn.id = 'shareBtn';
+  btn.className = 'share-fab';
+  btn.setAttribute('aria-label', 'Share this page');
+  btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"/><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"/></svg>';
+  btn.addEventListener('click', shareCurrentPage);
+  document.body.appendChild(btn);
+}
+
+function shareCurrentPage() {
+  const pt = document.documentElement.lang === 'pt';
+  const url = location.href;
+  if (navigator.share) {
+    navigator.share({ title: document.title, url }).catch(() => { /* user cancelled the share sheet — nothing to do */ });
+    return;
+  }
+  const onCopied = () => showShareToast(pt ? 'Link copiado!' : 'Link copied!');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(onCopied).catch(() => fallbackCopyLink(url, onCopied));
+  } else {
+    fallbackCopyLink(url, onCopied);
+  }
+}
+
+function fallbackCopyLink(url, onDone) {
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = url;
+    ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    onDone();
+  } catch (e) { /* clipboard unavailable — fail silently rather than throw */ }
+}
+
+function showShareToast(message) {
+  let toast = document.getElementById('shareToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'shareToast';
+    toast.className = 'share-toast';
+    toast.setAttribute('role', 'status');
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('visible');
+  clearTimeout(toast._hideTimer);
+  toast._hideTimer = setTimeout(() => toast.classList.remove('visible'), 2200);
+}
+document.addEventListener('DOMContentLoaded', initShareButton);
+
 // Translate the shared header and footer (each page only translates its own content).
 function applySiteChromeLang(lang) {
   const pt = lang === 'pt';
@@ -259,10 +311,15 @@ function applySiteChromeLang(lang) {
   if (skip) skip.textContent = pt ? 'Pular para o conteúdo' : 'Skip to content';
   const langBtn = document.getElementById('langBtn');
   if (langBtn) langBtn.setAttribute('aria-label', pt ? 'Mudar idioma (EN/PT)' : 'Switch language (EN/PT)');
+  const backToTop = document.getElementById('backToTop');
+  if (backToTop) backToTop.setAttribute('aria-label', pt ? 'Voltar ao topo' : 'Back to top');
+  const shareBtn = document.getElementById('shareBtn');
+  if (shareBtn) shareBtn.setAttribute('aria-label', pt ? 'Compartilhar esta página' : 'Share this page');
 }
 
-// Keep <html lang> in sync with the EN/PT toggle (screen readers, translation tools, language signal)
-// and translate the shared header/footer at the same time.
+// Keep <html lang> in sync with the EN/PT toggle (screen readers, translation tools, language signal),
+// translate the shared header/footer at the same time, and remember the choice across pages.
+const SITE_LANG_STORAGE_KEY = 'bvgLang';
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('langBtn');
   if (!btn) return;
@@ -271,5 +328,54 @@ document.addEventListener('DOMContentLoaded', () => {
     const lang = btn.textContent.trim() === 'EN' ? 'pt' : 'en';
     document.documentElement.lang = lang;
     applySiteChromeLang(lang);
+    try { localStorage.setItem(SITE_LANG_STORAGE_KEY, lang); } catch (e) { /* private mode / storage disabled — just don't persist */ }
   }).observe(btn, { childList: true, characterData: true, subtree: true });
+  // Restore the visitor's last language choice (each page defaults to English otherwise)
+  try {
+    if (localStorage.getItem(SITE_LANG_STORAGE_KEY) === 'pt' && typeof window.toggleLang === 'function') {
+      window.toggleLang();
+    }
+  } catch (e) { /* private mode / storage disabled — page just stays in English */ }
 });
+
+// ── RATING CONFIDENCE TOOLTIP ──
+// Any element with data-conf-votes="<total reviews>" shows the rating's Review Confidence on hover/focus/tap.
+// Same curve as the Final Rating formula: 0.99 * (1 - ((5000 - n) / 5000)^4), capped at 99% from 5,000 reviews.
+function bvgConfidence(n) {
+  n = Number(n) || 0;
+  if (n <= 0) return 0;
+  if (n >= 5000) return 99;
+  return 99 * (1 - Math.pow((5000 - n) / 5000, 4));
+}
+(function () {
+  let tip = null, current = null;
+  function build(el) {
+    const pt = document.documentElement.lang === 'pt';
+    const n = Number(el.getAttribute('data-conf-votes')) || 0;
+    const pct = bvgConfidence(n).toFixed(2);
+    const num = n.toLocaleString(pt ? 'pt-BR' : 'en-AU');
+    if (pt) return '<strong>Confiança da nota: ' + pct.replace('.', ',') + '%</strong><span>Com base em ' + num + (n === 1 ? ' avaliação' : ' avaliações') + '. Quanto mais avaliações, mais confiável a nota.</span>';
+    return '<strong>Rating confidence: ' + pct + '%</strong><span>Based on ' + num + (n === 1 ? ' review' : ' reviews') + '. The more reviews, the more reliable the score.</span>';
+  }
+  function show(el) {
+    if (!tip) { tip = document.createElement('div'); tip.className = 'conf-tip-bubble'; tip.setAttribute('role', 'tooltip'); document.body.appendChild(tip); }
+    current = el;
+    tip.innerHTML = build(el);
+    tip.classList.add('visible');
+    const r = el.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+    let left = r.left + r.width / 2 - w / 2;
+    left = Math.max(8, Math.min(left, document.documentElement.clientWidth - w - 8));
+    let top = r.top - h - 10;
+    if (top < 8) top = r.bottom + 10;
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  }
+  function hide() { if (tip) tip.classList.remove('visible'); current = null; }
+  function target(e) { return e.target && e.target.closest ? e.target.closest('[data-conf-votes]') : null; }
+  document.addEventListener('mouseover', e => { const el = target(e); if (el && el !== current) show(el); });
+  document.addEventListener('mouseout', e => { const el = target(e); if (el && !(e.relatedTarget && el.contains(e.relatedTarget))) hide(); });
+  document.addEventListener('focusin', e => { const el = target(e); if (el) show(el); });
+  document.addEventListener('focusout', e => { if (target(e)) hide(); });
+  document.addEventListener('click', e => { const el = target(e); if (el) { if (current === el && tip && tip.classList.contains('visible') && e.detail === 0) hide(); else show(el); } else hide(); });
+  window.addEventListener('scroll', hide, { passive: true });
+})();

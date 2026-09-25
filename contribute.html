@@ -111,7 +111,7 @@
     display: flex; align-items: center; gap: 10px;
     margin-bottom: 8px;
   }
-  .way-emoji { font-size: 20px; flex-shrink: 0; }
+  .way-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--forest); flex-shrink: 0; }
   .way-title {
     font-family: 'Fraunces', serif;
     font-size: 19px; font-weight: 700;
@@ -269,7 +269,7 @@
       <!-- Partnerships -->
       <div class="way-block">
         <div class="way-heading">
-          <span class="way-emoji">🌿</span>
+          <span class="way-dot" aria-hidden="true"></span>
           <div class="way-title" data-i18n="way1.title">Partnerships</div>
         </div>
         <div class="about-text">
@@ -280,7 +280,7 @@
       <!-- Share the project -->
       <div class="way-block">
         <div class="way-heading">
-          <span class="way-emoji">📣</span>
+          <span class="way-dot" aria-hidden="true"></span>
           <div class="way-title" data-i18n="way2.title">Share the project</div>
         </div>
         <div class="about-text">
@@ -291,7 +291,7 @@
       <!-- Suggest / report -->
       <div class="way-block">
         <div class="way-heading">
-          <span class="way-emoji">✏️</span>
+          <span class="way-dot" aria-hidden="true"></span>
           <div class="way-title" data-i18n="way3.title">Suggest content or flag an error</div>
         </div>
         <div class="about-text">
@@ -302,7 +302,7 @@
       <!-- Financial support -->
       <div class="way-block">
         <div class="way-heading">
-          <span class="way-emoji">💚</span>
+          <span class="way-dot" aria-hidden="true"></span>
           <div class="way-title" data-i18n="way4.title">Help keep the site running</div>
         </div>
         <div class="about-text">
@@ -314,7 +314,7 @@
             <div class="cost-stat-label" data-i18n="way4.stat1">per year, just for the domain</div>
           </div>
           <div class="cost-stat">
-            <div class="cost-stat-num">150+</div>
+            <div class="cost-stat-num">200+</div>
             <div class="cost-stat-label" data-i18n="way4.stat2">hours of research and organisation before launch</div>
           </div>
           <div class="cost-stat">
@@ -340,7 +340,7 @@
       <!-- Digital / graphic projects -->
       <div class="way-block">
         <div class="way-heading">
-          <span class="way-emoji">🎨</span>
+          <span class="way-dot" aria-hidden="true"></span>
           <div class="way-title" data-i18n="way5.title">Got a digital or graphic project in mind?</div>
         </div>
         <div class="about-text">
@@ -351,7 +351,7 @@
       <!-- Other ways -->
       <div class="way-block">
         <div class="way-heading">
-          <span class="way-emoji">🐾</span>
+          <span class="way-dot" aria-hidden="true"></span>
           <div class="way-title" data-i18n="way6.title">Other ways to help</div>
         </div>
         <div class="about-text">
@@ -412,6 +412,7 @@ const i18n = {
     "way6.cta": "Visit Hire a Vegan",
     "contact.title": "Let's talk",
     "contact.desc": "Have a partnership idea, a correction, or a project you'd like to build? Reach out via Instagram — we'd love to hear from you.",
+    "footer.privacy": "Política de Privacidade",
     "footer.tagline": "A better world for the animals.",
     "footer.created": "Created by"
   },
@@ -442,6 +443,7 @@ const i18n = {
     "way6.cta": "Visitar Hire a Vegan",
     "contact.title": "Vamos conversar",
     "contact.desc": "Tem uma ideia de parceria, uma correção ou um projeto que quer tirar do papel? Fale com a gente pelo Instagram — vamos adorar ouvir você.",
+    "footer.privacy": "Política de Privacidade",
     "footer.tagline": "Um mundo melhor para os animais.",
     "footer.created": "Criado por"
   }

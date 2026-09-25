@@ -258,11 +258,11 @@
   <script>document.getElementById('site-header').outerHTML = renderSiteHeader('community.html');</script>
 <main id="main-content">
   <div class="page-header">
-    <div class="page-num">02</div>
+    <div class="page-num" aria-hidden="true">02</div>
     <h1 class="page-title" data-i18n="page.title">Community</h1>
     <p class="page-tagline" data-i18n="page.tagline">Groups and organisations creating change</p>
     <p class="page-desc" data-i18n="page.desc">Groups, sanctuaries, communities, and organisations in Brisbane working towards a kinder, more compassionate world for animals and people.</p>
-    <div class="page-count"><span id="groupCount">19</span> <span data-i18n="page.groups">groups</span></div>
+    <div class="page-count"><span id="groupCount">21</span> <span data-i18n="page.groups">groups</span></div>
   </div>
 
   <!-- FILTERS -->
@@ -376,6 +376,19 @@ const groups = [
     },
     tags: ["Guide", "Directory", "Bilingual", "Resource"],
     social: { site: "https://brisbaneveganguide.com", instagram: "https://instagram.com/brisbaneveg" }
+  },
+  {
+    name: "HappyCow Brisbane",
+    category: "Guide",
+    type: { en: "Guide · Directory", pt: "Guia · Diretório" },
+    initials: "HC",
+    location: "Brisbane, QLD",
+    desc: {
+      en: "The Brisbane page of HappyCow, the global directory of vegan, vegetarian and veg-friendly restaurants — with an interactive map, filters by type and dietary focus, star ratings and community reviews.",
+      pt: "A página de Brisbane do HappyCow, o diretório global de restaurantes veganos, vegetarianos e veg-friendly — com mapa interativo, filtros por tipo e foco alimentar, notas em estrelas e avaliações da comunidade."
+    },
+    tags: ["Guide", "Directory", "Reviews", "Global"],
+    social: { site: "https://www.happycow.net/oceania/australia/queensland/brisbane/" }
   },
   {
     name: "Bris Vegan",
@@ -514,6 +527,19 @@ const groups = [
     },
     tags: ["Meeting", "University", "Students", "Outreach"],
     social: { site: "https://uqvegsociety.wixsite.com/uqvegsociety", instagram: "https://www.instagram.com/uqvegansociety", facebook: "https://www.facebook.com/uqvegansociety" }
+  },
+  {
+    name: "The Vegan Tribe",
+    category: "Meeting",
+    type: { en: "Community · Facebook Group", pt: "Comunidade · Grupo no Facebook" },
+    initials: "VT",
+    location: "Brisbane, Gold Coast & Northern NSW",
+    desc: {
+      en: "A public Facebook community of vegans from Brisbane, the Gold Coast and Northern NSW, dedicated to working on projects that spread the vegan message of living cruelty-free.",
+      pt: "Uma comunidade pública no Facebook de veganos de Brisbane, da Gold Coast e do norte de NSW, dedicada a projetos que espalham a mensagem vegana de viver sem crueldade."
+    },
+    tags: ["Community", "Facebook Group", "Outreach"],
+    social: { facebook: "https://www.facebook.com/groups/975386939199610/" }
   },
   {
     name: "Vegan Action Brisbane",
@@ -683,6 +709,7 @@ const i18n = {
     "filter.all": "A → Z",
     "no.title": "No groups found",
     "no.sub": "Try adjusting your filters",
+    "footer.privacy": "Política de Privacidade",
     "footer.tagline": "A better world for the animals.",
     "footer.created": "Created by"
   },
@@ -695,6 +722,7 @@ const i18n = {
     "filter.all": "A → Z",
     "no.title": "Nenhum grupo encontrado",
     "no.sub": "Tente ajustar os filtros",
+    "footer.privacy": "Política de Privacidade",
     "footer.tagline": "Um mundo melhor para os animais.",
     "footer.created": "Criado por"
   }

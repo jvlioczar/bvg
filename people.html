@@ -279,11 +279,11 @@
 
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <div class="page-num">03</div>
+  <div class="page-num" aria-hidden="true">03</div>
   <h1 class="page-title" data-i18n="page.title">People</h1>
   <p class="page-tagline" data-i18n="page.tagline">Voices shaping the vegan movement</p>
   <p class="page-desc" data-i18n="page.desc">The activists, creators, chefs, athletes, entrepreneurs, and everyday heroes building a kinder Brisbane — Meanjin. Follow them, support them, learn from them.</p>
-  <div class="page-count"><span id="personCount">42</span> <span data-i18n="page.people">people</span></div>
+  <div class="page-count"><span id="personCount">46</span> <span data-i18n="page.people">people</span></div>
 </div>
 
 <!-- FILTERS -->
@@ -665,6 +665,38 @@ const people = [
     tags: ["Artist", "Tattoo", "Cruelty-Free"],
     content: "Art",
     avatar: ""
+  },
+  {
+    name: "Susan Gottlieb", initials: "SG", slug: "susan-gottlieb",
+    desc: { en: "Brisbane blogger behind Kittens Gone Lentil, a long-running vegan food and travel blog — recipes from her cookbook collection, cookbook reviews and eating-out reports. Vegan since 2000 and a veterinarian at The Cat Clinic.", pt: "Blogueira de Brisbane por trás do Kittens Gone Lentil, um blog de comida e viagem veganas que existe há muitos anos — receitas da sua coleção de livros de culinária, resenhas de livros e relatos de restaurantes. Vegana desde 2000 e veterinária na The Cat Clinic." },
+    social: { site: "https://kittensgonelentil.blogspot.com", facebook: "https://www.facebook.com/susan.gottlieb.98" },
+    tags: ["Blogger", "Recipes", "Reviews"],
+    content: "Content",
+    avatar: ""
+  },
+  {
+    name: "Susan Frisby-Smith", initials: "SF", slug: "susan-frisby-smith",
+    desc: { en: "Gold Coast plant-based chef, yoga teacher and menopause expert behind Susan's Plant Based Kitchen, with nutrient-focused cooking classes on the Gold Coast and online.", pt: "Chef plant-based, professora de yoga e especialista em menopausa na Gold Coast, por trás do Susan's Plant Based Kitchen, com aulas de culinária focadas em nutrientes na Gold Coast e online." },
+    social: { instagram: "https://www.instagram.com/susans_plant_based_kitchen" },
+    tags: ["Chef", "Yoga", "Wellness"],
+    content: "Food",
+    avatar: ""
+  },
+  {
+    name: "Jessica Origliasso", initials: "JO", slug: "jessica-origliasso",
+    desc: { en: "Singer-songwriter and one half of The Veronicas with her twin sister Lisa. Raised in Albany Creek, in the City of Moreton Bay, she follows a vegan diet — a regular at Brisbane's vegan cafés and restaurants — and has said the sisters were writing a vegan cookbook.", pt: "Cantora e compositora, metade do The Veronicas ao lado da irmã gêmea Lisa. Criada em Albany Creek, na City of Moreton Bay, segue uma dieta vegana — frequentadora dos cafés e restaurantes veganos de Brisbane — e já disse que as irmãs estavam escrevendo um livro de receitas veganas." },
+    social: {},
+    tags: ["Artist", "Musician", "Vegan"],
+    content: "Art",
+    avatar: ""
+  },
+  {
+    name: "Lisa Origliasso", initials: "LO", slug: "lisa-origliasso",
+    desc: { en: "Singer-songwriter and one half of The Veronicas with her twin sister Jessica. Raised in Albany Creek, in the City of Moreton Bay, she eats a largely plant-based diet and used to frequent Brisbane's vegan cafés and restaurants.", pt: "Cantora e compositora, metade do The Veronicas ao lado da irmã gêmea Jessica. Criada em Albany Creek, na City of Moreton Bay, tem uma alimentação majoritariamente plant-based e frequentava os cafés e restaurantes veganos de Brisbane." },
+    social: {},
+    tags: ["Artist", "Musician", "Plant-Based"],
+    content: "Art",
+    avatar: ""
   }
 ];
 
@@ -681,7 +713,8 @@ const tagMap = {
   "Fitness":"Fitness","Coach":"Coach","Strength":"Força","Yoga":"Yoga","Wellness":"Bem-estar",
   "Mindset":"Mentalidade","Design":"Design","Sports Nutrition":"Nutrição Esportiva","Bakery":"Padaria",
   "Education":"Educação","Hospitality":"Hospitalidade","Media":"Mídia","Outreach":"Divulgação","Pizza":"Pizza","Author":"Autor(a)","Podcast":"Podcast",
-  "Pets":"Pets","Painting":"Pintura","Drag":"Drag","Celebrant":"Celebrante"
+  "Pets":"Pets","Painting":"Pintura","Drag":"Drag","Celebrant":"Celebrante",
+  "Blogger":"Blogueiro(a)","Musician":"Músico(a)","Vegan":"Vegano(a)"
 };
 
 const contentLabels = {
@@ -825,6 +858,7 @@ const i18n = { pt: {
   "update.next": "Próxima atualização em:",
   "no.title": "Nenhuma pessoa encontrada",
   "no.sub": "Tente ajustar os filtros",
+  "footer.privacy": "Política de Privacidade",
   "footer.tagline": "Um mundo melhor para os animais.",
   "footer.created": "Criado por"
 }};

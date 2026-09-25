@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vegan Finder: Eat Vegan in Brisbane | Brisbane Vegan Guide</title>
-<meta name="description" content="Over 50 filterable questions and answers to help you find exactly what you are craving in Brisbane - by cuisine, price, diet, or who you are eating with.">
+<meta name="description" content="Brisbane Vegan Facts and 70+ searchable questions: the oldest, most popular and best-rated vegan places, best delivery, how many vegans live here, and more.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Brisbane Vegan Guide">
 <meta property="og:title" content="Vegan Finder: Eat Vegan in Brisbane | Brisbane Vegan Guide">
-<meta property="og:description" content="Over 50 filterable questions and answers to help you find exactly what you are craving in Brisbane - by cuisine, price, diet, or who you are eating with.">
+<meta property="og:description" content="Brisbane Vegan Facts and 70+ searchable questions: the oldest, most popular and best-rated vegan places, best delivery, how many vegans live here, and more.">
 <meta property="og:url" content="https://brisbaneveganguide.com/vegan-finder.html">
 <meta property="og:image" content="https://brisbaneveganguide.com/images/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Vegan Finder: Eat Vegan in Brisbane | Brisbane Vegan Guide">
-<meta name="twitter:description" content="Over 50 filterable questions and answers to help you find exactly what you are craving in Brisbane - by cuisine, price, diet, or who you are eating with.">
+<meta name="twitter:description" content="Brisbane Vegan Facts and 70+ searchable questions: the oldest, most popular and best-rated vegan places, best delivery, how many vegans live here, and more.">
 <meta name="twitter:image" content="https://brisbaneveganguide.com/images/og-image.png">
 <link rel="canonical" href="https://brisbaneveganguide.com/vegan-finder.html">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -45,6 +45,11 @@ body{overflow-x:hidden}
 
 /* FILTER BAR */
 .finder-filters{background:white;border-radius:14px;padding:24px 28px;border:1px solid rgba(42,42,40,0.06);margin-bottom:36px}
+.search-box{position:relative;margin-bottom:22px}
+.search-input{width:100%;padding:11px 16px 11px 40px;border:1px solid rgba(42,42,40,0.1);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;background:white;color:var(--text);transition:border-color 0.25s,box-shadow 0.25s;outline:none}
+.search-input:focus{border-color:var(--leaf);box-shadow:0 0 0 3px rgba(74,140,92,0.1)}
+.search-input::placeholder{color:var(--sage)}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--sage);pointer-events:none}
 .finder-filters-label{font-family:'Boldonse',system-ui;font-size:12px;color:var(--forest);letter-spacing:1px;margin-bottom:16px}
 .filter-group{margin-bottom:14px}
 .filter-group:last-child{margin-bottom:0}
@@ -81,6 +86,8 @@ body{overflow-x:hidden}
 .accordion-text{font-size:14px;line-height:1.75;color:var(--text-light);padding-top:18px}
 .accordion-text p{margin-bottom:12px}
 .accordion-text p:last-child{margin-bottom:0}
+.accordion-text h2{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:var(--forest);margin:20px 0 8px}
+#q75.open .accordion-body{max-height:6000px}
 .accordion-text a{color:var(--leaf);font-weight:600;text-decoration:none}
 .accordion-text a:hover{text-decoration:underline}
 .no-results{display:none;text-align:center;padding:40px 20px;color:var(--sage);font-size:14px}
@@ -110,10 +117,10 @@ body{overflow-x:hidden}
 
   <!-- PAGE HEADER -->
   <div class="page-header">
-    <div class="page-num">06</div>
+    <div class="page-num" aria-hidden="true">06</div>
     <h1 class="page-title" data-i18n="page.title">Vegan Finder</h1>
     <p class="page-tagline" data-i18n="page.tagline">Your shortcut to eating vegan and socializing in Brisbane</p>
-    <p class="page-desc" data-i18n="page.desc">Craving something specific, planning a date, or feeding a whole group? Pick a filter below to jump straight to the answer — or scroll through more than 60 questions covering everything we know about finding great vegan food and community around Brisbane.</p>
+    <p class="page-desc" data-i18n="page.desc">Brisbane Vegan Facts and more than 70 questions in one place: which vegan place is the oldest, the most popular, the best rated, who has the best delivery, and how many vegans live here. Craving something specific or feeding a group? Search or pick a filter below to jump straight to the answer.</p>
   </div>
 
   <!-- CONTENT -->
@@ -121,6 +128,7 @@ body{overflow-x:hidden}
 
   <!-- FILTER BAR -->
   <div class="finder-filters anim">
+    <div class="search-box"><svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M14 14l4 4"/></svg><input type="text" class="search-input" id="searchInput" placeholder="Search questions..." aria-label="Search questions" oninput="applyFilters()" data-i18n-placeholder="search.placeholder"></div>
     <div class="finder-filters-label" data-i18n="filters.label">I'm looking for...</div>
 
     <div class="filter-group">
@@ -207,7 +215,7 @@ body{overflow-x:hidden}
     </div>
 
     <div class="filter-status">
-      <div class="filter-count" id="filterCount"><span id="filterCountNum">66</span> <span data-i18n="filters.questions">questions</span></div>
+      <div class="filter-count" id="filterCount"><span id="filterCountNum">76</span> <span data-i18n="filters.questions">questions</span></div>
       <button class="filter-clear" id="filterClear" onclick="clearFilter()" data-i18n="filters.clear">Show all questions</button>
     </div>
   </div>
@@ -242,7 +250,7 @@ body{overflow-x:hidden}
       <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
-      <p data-i18n="q2.p1"><strong>100% Vegan</strong> means the entire menu is plant-based — order anything, no questions needed. Think <a href="vegan-restaurant.html">Vegan Restaurant</a>, <a href="dickis.html">Dicki's</a>, <a href="the-green-edge.html">The Green Edge</a>, <a href="u-tong.html">U-Tong</a>, <a href="el-planta.html">El Planta</a>, <a href="veganyumm.html">Veganyumm</a>, <a href="vegerama.html">Vege Rama</a>, <a href="archie-am-pm.html">Archie AM:PM</a>, <a href="doko-demo-v.html">Doko Demo V</a>, <a href="izakaya-midori.html">Izakaya Midori</a>, <a href="nurcha.html">Nurcha</a>, <a href="jr-vegan-thai.html">JR Vegan Thai</a>, <a href="kindest_cakery.html">Kindest Cakery</a>, or <a href="charlies-raw-squeeze.html">Charlie's Raw Squeeze</a>.</p>
+      <p data-i18n="q2.p1"><strong>100% Vegan</strong> means the entire menu is plant-based — order anything, no questions needed. Think <a href="vegan-restaurant.html">Vegan Restaurant</a>, <a href="dickis.html">Dicki's</a>, <a href="the-green-edge.html">The Green Edge</a>, <a href="u-tong.html">U-Tong</a>, <a href="el-planta.html">El Planta</a>, <a href="veganyumm.html">Veganyumm</a>, <a href="vegerama.html">Vege Rama</a>, <a href="archie-am-pm.html">Archie AM:PM</a>, <a href="doko-demo-v.html">Doko Demo V</a>, <a href="izakaya-midori.html">Izakaya Midori</a>, <a href="nurcha.html">Nurcha</a>, <a href="rosebed-and-finch.html">Rosebed &amp; Finch</a>, <a href="tian-ran.html">Tian Ran</a>, <a href="jing-si-books-and-cafe.html">Jing Si Books &amp; Cafe</a>, <a href="jr-vegan-thai.html">JR Vegan Thai</a>, <a href="kindest-cakery.html">Kindest Cakery</a>, <a href="kindest-kitchen.html">Kindest Kitchen</a>, or <a href="charlies-raw-squeeze.html">Charlie's Raw Squeeze</a>.</p>
       <p data-i18n="q2.p3"><strong>99% Vegan</strong> (a lighter green label) means the whole kitchen is plant-based and the only non-vegan item is an optional add-on: dairy milk for coffee. That's <a href="vega-cafe.html">Vega Cafe</a> and <a href="cardamom-pod.html">Cardamom Pod Brickworks</a> — order anything from the food menu, and just skip the dairy milk.</p>
       <p data-i18n="q2.p2"><strong>Vegan-Friendly</strong> means the venue serves non-vegan food too, but has clearly marked vegan dishes on the menu — like <a href="https://instagram.com/tea_master_vegetarian_cafe" target="_blank" rel="noopener">Tea Master</a>, <a href="https://www.instagram.com/sweetandgreenpatisserie" target="_blank" rel="noopener">Sweet &amp; Green</a>, <a href="https://netherworldarcade.com" target="_blank" rel="noopener">Netherworld</a>, <a href="https://www.anticapizzeria.net.au" target="_blank" rel="noopener">Antica Pizzeria</a>, or <a href="https://www.king-tea.co/" target="_blank" rel="noopener">King Tea</a>.</p>
     </div></div></div>
@@ -592,7 +600,7 @@ body{overflow-x:hidden}
       <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
-      <p data-i18n="q19.p1">More than 20 of the venues in our directory run a fully plant-based menu — among them <a href="nurcha.html">Nurcha</a>, <a href="jr-vegan-thai.html">JR Vegan Thai</a>, <a href="kindest_cakery.html">Kindest Cakery</a>, <a href="vegan-restaurant.html">Vegan Restaurant</a>, <a href="dickis.html">Dicki's</a>, <a href="the-green-edge.html">The Green Edge</a>, <a href="u-tong.html">U-Tong</a>, <a href="el-planta.html">El Planta</a>, <a href="veganyumm.html">Veganyumm</a>, <a href="grassfed.html">GrassFed</a>, <a href="loving-hut.html">Loving Hut</a>, <a href="vegerama.html">Vege Rama</a>, <a href="archie-am-pm.html">Archie AM:PM</a>, <a href="doko-demo-v.html">Doko Demo V</a>, <a href="izakaya-midori.html">Izakaya Midori</a>, <a href="charlies-raw-squeeze.html">Charlie's Raw Squeeze</a>, <a href="vega-cafe.html">Vega Cafe</a>, and <a href="cardamom-pod.html">Cardamom Pod Brickworks</a>.</p>
+      <p data-i18n="q19.p1">More than 20 of the venues in our directory run a fully plant-based menu — among them <a href="nurcha.html">Nurcha</a>, <a href="rosebed-and-finch.html">Rosebed &amp; Finch</a>, <a href="tian-ran.html">Tian Ran</a>, <a href="jing-si-books-and-cafe.html">Jing Si Books &amp; Cafe</a>, <a href="jr-vegan-thai.html">JR Vegan Thai</a>, <a href="kindest-cakery.html">Kindest Cakery</a>, <a href="kindest-kitchen.html">Kindest Kitchen</a>, <a href="vegan-restaurant.html">Vegan Restaurant</a>, <a href="dickis.html">Dicki's</a>, <a href="the-green-edge.html">The Green Edge</a>, <a href="u-tong.html">U-Tong</a>, <a href="el-planta.html">El Planta</a>, <a href="veganyumm.html">Veganyumm</a>, <a href="grassfed.html">GrassFed</a>, <a href="loving-hut.html">Loving Hut</a>, <a href="vegerama.html">Vege Rama</a>, <a href="archie-am-pm.html">Archie AM:PM</a>, <a href="doko-demo-v.html">Doko Demo V</a>, <a href="izakaya-midori.html">Izakaya Midori</a>, <a href="charlies-raw-squeeze.html">Charlie's Raw Squeeze</a>, <a href="vega-cafe.html">Vega Cafe</a>, and <a href="cardamom-pod.html">Cardamom Pod Brickworks</a>.</p>
       <p data-i18n="q19.p2">For the complete, up-to-date list, filter by "100% Vegan" on the <a href="food.html">Eat &amp; Drink page</a>.</p>
     </div></div></div>
   </div>
@@ -625,7 +633,7 @@ body{overflow-x:hidden}
       <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
-      <p data-i18n="q21.p1">Yes — <a href="el-planta.html">El Planta</a>, <a href="veganyumm.html">Veganyumm</a>, <a href="the-plant-bakery.html">The Plant Bakery</a>, <a href="vega-cafe.html">Vega Cafe</a>, <a href="vegerama.html">Vege Rama</a>, <a href="made-with-love-bakery.html">Made With Love Bakery</a>, <a href="greenhouse-canteen.html">Greenhouse Canteen</a>, <a href="izakaya-midori.html">Izakaya Midori</a>, <a href="https://instagram.com/tea_master_vegetarian_cafe" target="_blank" rel="noopener">Tea Master</a>, and <a href="cardamom-pod.html">Cardamom Pod</a> all list gluten-free options, and <a href="piante-pizza.html">Piante Pizza</a> is also nut-free. On mixed menus, <a href="https://www.anticapizzeria.net.au" target="_blank" rel="noopener">Antica Pizzeria</a> (with gluten-free pizza bases), <a href="https://www.arrivedercipizza.com.au" target="_blank" rel="noopener">Arrivederci Pizzeria</a>, <a href="https://www.mapame.com.au" target="_blank" rel="noopener">Ma Pa Me</a>, <a href="https://www.phatboybrisbane.com.au" target="_blank" rel="noopener">Phat Boy</a>, <a href="https://www.instagram.com/vege_me" target="_blank" rel="noopener">Vegeme</a>, and <a href="https://all-day.com.au" target="_blank" rel="noopener">All Day</a> also list gluten-free options.</p>
+      <p data-i18n="q21.p1">Yes — <a href="el-planta.html">El Planta</a>, <a href="veganyumm.html">Veganyumm</a>, <a href="plant-baked.html">Plant Baked</a>, <a href="sweet-nectar.html">Sweet Nectar</a>, <a href="vega-cafe.html">Vega Cafe</a>, <a href="vegerama.html">Vege Rama</a>, <a href="made-with-love-bakery.html">Made With Love Bakery</a>, <a href="greenhouse-canteen.html">Greenhouse Canteen</a>, <a href="izakaya-midori.html">Izakaya Midori</a>, <a href="https://instagram.com/tea_master_vegetarian_cafe" target="_blank" rel="noopener">Tea Master</a>, and <a href="cardamom-pod.html">Cardamom Pod</a> all list gluten-free options, and <a href="piante-pizza.html">Piante Pizza</a> is also nut-free. On mixed menus, <a href="https://www.anticapizzeria.net.au" target="_blank" rel="noopener">Antica Pizzeria</a> (with gluten-free pizza bases), <a href="https://www.arrivedercipizza.com.au" target="_blank" rel="noopener">Arrivederci Pizzeria</a>, <a href="https://www.mapame.com.au" target="_blank" rel="noopener">Ma Pa Me</a>, <a href="https://www.phatboybrisbane.com.au" target="_blank" rel="noopener">Phat Boy</a>, <a href="https://www.instagram.com/vege_me" target="_blank" rel="noopener">Vegeme</a>, and <a href="https://all-day.com.au" target="_blank" rel="noopener">All Day</a> also list gluten-free options.</p>
       <p data-i18n="q21.p2">If you're coeliac rather than just avoiding gluten, always double-check cross-contamination directly with the venue.</p>
     </div></div></div>
   </div>
@@ -1115,7 +1123,7 @@ body{overflow-x:hidden}
     <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
       <p data-i18n="q65.p1">Not every place is vegan-friendly, but some have a small, clearly identified vegan selection — handy when the group has already picked a spot and you need a plan B. The "Few vegan options" section on the <a href="food.html#few-vegan-options">Eat &amp; Drink page</a> lists them separately from the vegan-friendly venues.</p>
       <p data-i18n="q65.p2">In Brisbane: Adda @ Oxford, Alchemy, Anna's Banh Mi Co, Bisou Bisou, Cheeky Poke, Chu The Phat, Fattoush Bayside, Felix For Goodness, Himalayan Cafe, Mons Thai, Naga Thai, Olive Thyme, Pepe's Mexican, PepperJack Sandwiches, Pho Queue, Porkees Vietnamese Deli, Putia Pure Food Kitchen, Ruby My Dear, Snag &amp; Brown, Southside, Spaghetti House, Tarbouche Mezza Bar, Taro's Ramen, Thai Pan Kitchen, Unbearable Bagels, and Zero Fox.</p>
-      <p data-i18n="q65.p3">Chains: Betty's Burgers, Crust Pizza, Domino's, Fish Bowl, Grill'd, Guzman y Gomez, Mad Mex, Motto Motto, Nando's, Oakberry, Oporto, P'Nut Street Noodles, Pizza Hut, San Churro, Schnitz, Soul Origin, Subway, Sumo Salad, Vapiano, Zambrero, and Zeus Street Greek.</p>
+      <p data-i18n="q65.p3">Chains: Betty's Burgers, Cold Rock Ice Creamery, Crust Pizza, Domino's, Fish Bowl, Grill'd, Guzman y Gomez, Mad Mex, Motto Motto, Nando's, Oakberry, Oporto, P'Nut Street Noodles, Pizza Hut, San Churro, Schnitz, Soul Origin, Subway, Sumo Salad, Vapiano, Zambrero, and Zeus Street Greek.</p>
       <p data-i18n="q65.p4">Menus change often, especially at chains, so confirm with the staff before ordering. Hungry Jack's isn't on the list: its Plant Based Whopper is not suitable for vegans.</p>
     </div></div></div>
   </div>
@@ -1249,6 +1257,193 @@ body{overflow-x:hidden}
     </div></div></div>
   </div>
 
+  <!-- Q67 -->
+  <div class="accordion anim" id="q67" data-tags="general,vegan,learn">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🥇</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q67.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q67.title">What was the first vegan business in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q67.p1">The earliest fully vegan business we have been able to document in Brisbane is <a href="the-green-edge.html">The Green Edge</a>, founded by Amanda Jane Benham in 2008 and still going strong in Windsor. It started the all-vegan model that most of the city's vegan places follow today.</p>
+      <p data-i18n="q67.p2">A word of caution: nobody keeps an official register of vegan firsts, and vegetarian venues (including Buddhist and Hare Krishna kitchens) existed long before. So this is "the earliest we can prove", and if you know of an earlier one, please <a href="contribute.html">tell us</a>.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q68 -->
+  <div class="accordion anim" id="q68" data-tags="general,vegan,learn">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🏛️</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q68.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q68.title">What is the oldest vegan place in Brisbane that is still open?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q68.p1"><a href="the-green-edge.html">The Green Edge</a> (2008) is the oldest 100% vegan place in Brisbane itself that is still operating. Right behind it come <a href="loving-hut.html">Loving Hut</a> in Mount Gravatt and <a href="vegerama.html">Vege Rama</a> in the CBD, both from 2009.</p>
+      <p data-i18n="q68.p2">If you count the wider region, <a href="tian-ran.html">Tian Ran</a> in Mermaid Beach, on the Gold Coast, has been serving an all-vegan Buddhist-style menu since 2000.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q69 -->
+  <div class="accordion anim" id="q69" data-tags="general,vegan,cafe,makefriends">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">⭐</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q69.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q69.title">What is the most popular vegan café or restaurant in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q69.p1"><a href="the-green-edge.html">The Green Edge</a> in Windsor. It is a bistro, café, deli, juice bar, ice cream shop and grocery store in one, it is 100% vegan, and it is the place most connected to Brisbane's vegan community, which is why it carries our "most popular" badge.</p>
+      <p data-i18n="q69.p2">Popularity is not only a review count. <a href="charlies-raw-squeeze.html">Charlie's Raw Squeeze</a> has more reviews (about 5,100 against about 4,350), but most of them come from delivery apps and are pooled across four stores. The Green Edge has the community, the breadth and the history.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q70 -->
+  <div class="accordion anim" id="q70" data-tags="general,vegan,delivery">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">💬</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q70.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q70.title">Which vegan restaurant has the most reviews in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q70.p1"><a href="charlies-raw-squeeze.html">Charlie's Raw Squeeze</a>, with about 5,100 reviews added up across Google, Uber Eats, DoorDash, HappyCow, Tripadvisor and Yelp. Roughly 4,000 of them are on Uber Eats, and the count covers its four stores.</p>
+      <p data-i18n="q70.p2">Second is <a href="the-green-edge.html">The Green Edge</a> with about 4,350 reviews, and its mix is much more balanced between Google, Facebook and the delivery apps. Numbers are the ones shown on each venue page and are updated regularly.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q71 -->
+  <div class="accordion anim" id="q71" data-tags="general,vegan">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🏆</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q71.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q71.title">Which is the best-rated vegan restaurant in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q71.p1">By average score, <a href="dickis.html">Dicki's</a> comes out on top, with a weighted average of about 4.86 out of 5 across seven platforms and nearly 2,800 reviews. That is also the highest final rating in our guide (9.2 out of 10).</p>
+      <p data-i18n="q71.p2"><a href="vegan-restaurant.html">Vegan Restaurant</a> is only a hair behind. We use our own final rating, which weighs the average against the number of reviews so that a place with ten perfect reviews does not beat one with thousands of very good ones. See <a href="#q75">how ratings are calculated</a>.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q72 -->
+  <div class="accordion anim" id="q72" data-tags="people,activism,learn">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">📸</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q72.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q72.title">Who is the most famous vegan influencer from Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q72.p1"><strong>By Instagram followers:</strong> Freelee the Bananagirl, the Queensland-based raw-vegan YouTuber and author, with roughly 290,000 followers, followed by The Veronicas at around 230,000.</p>
+      <p data-i18n="q72.p2"><strong>By worldwide fame:</strong> The Veronicas. The Brisbane-born twin sisters Jessica and Lisa Origliasso have had global chart hits, and Jessica is a vegan, so they are the best-known Brisbane names in the plant-based world.</p>
+      <p data-i18n="q72.p3">Follower counts are approximate, taken from public profiles and they change every day. Meet these and other local names on our <a href="people.html">People page</a>.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q73 -->
+  <div class="accordion anim" id="q73" data-tags="general,vegan,delivery,takeaway">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🛵</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q73.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q73.title">Which vegan place has the best delivery in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q73.p1"><a href="vegan-restaurant.html">Vegan Restaurant</a> has the best delivery average, 4.90 out of 5 on Uber Eats and DoorDash combined, backed by around 1,700 delivery reviews.</p>
+      <p data-i18n="q73.p2">It is a very tight race: <a href="veganyumm.html">Veganyumm</a> (4.895) and <a href="dickis.html">Dicki's</a> (4.887) are practically level. All three are great choices when you want vegan food at home.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q74 -->
+  <div class="accordion anim" id="q74" data-tags="general,learn">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🧮</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q74.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q74.title">How many vegans live in Brisbane?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q74.p1">Based on current figures, there are an estimated 110,000 to 150,000 vegetarians or vegans living in Greater Brisbane, of whom roughly 28,000 are fully vegan. There is no official head count, so this is an approximation.</p>
+      <p data-i18n="q74.p2">How we got there: Greater Brisbane has about 2.8 million people. <a href="https://www.abc.net.au/news/2019-10-26/vegans-comprise-just-1-per-cent-of-the-population-survey-finds/11635306">An ABC report on the survey data</a> found that only around 1 per cent of Australians are vegan and about 4 per cent are vegetarian or vegan, which gives roughly 28,000 vegans and 113,000 vegetarians or vegans. The Australian Bureau of Statistics' <a href="https://www.abs.gov.au/statistics/health/food-and-nutrition/national-nutrition-and-physical-activity-survey/latest-release">National Nutrition and Physical Activity Survey</a> and its <a href="https://www.abs.gov.au/statistics/health/food-and-nutrition/consumption-food-groups-australian-dietary-guidelines/latest-release">food group consumption data</a> point to a somewhat higher share, up to about 5 per cent, which gives the top of our range (about 150,000).</p>
+      <p data-i18n="q74.p3">Two other sources help with context. <a href="https://www.roymorgan.com/findings/the-slow-but-steady-rise-of-vegetarianism-in-australia">Roy Morgan's research on vegetarianism</a> uses a wider definition (people who eat all or almost all vegetarian food) and shows a steady rise, which on that definition would put the number in Queensland well above our range, so treat ours as a conservative estimate. And in <a href="https://awol.com.au/australias-most-vegan-friendly-cities/90483">AWOL's ranking of Australia's most vegan-friendly cities</a>, the Sunshine Coast and the Gold Coast do especially well per person, so South East Queensland is a great place to be vegan.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q75 -->
+  <div class="accordion anim" id="q75" data-tags="general,learn">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">📊</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q75.type">Behind the numbers</div>
+        <div class="accordion-title" data-i18n="q75.title">How are the ratings on this guide calculated?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q75.p1">For each vegan place we collect public reviews from Google, Facebook, HappyCow, Uber Eats, DoorDash, Tripadvisor, Yelp and OpenTable. The stars and review counts you see are combined from all of them.</p>
+      <p data-i18n="q75.p2">The final rating (shown on a scale of 0 to 10) is not a simple average. It blends two statistical methods, a Bayesian Prior and the Wilson Lower Bound, and it gives more weight to platforms with more reviews, so places with only a few reviews are not ranked above places with thousands. Each venue page links to every source so you can check for yourself.</p>
+      <p data-i18n="q75.p3"><strong>In one sentence:</strong> a strong rating needs both a high score and enough reviews standing behind it. Want the details? Here is how it works, step by step.</p>
+
+      <h2 data-i18n="q75.h1">1. Bayesian Prior: the safety belt</h2>
+      <p data-i18n="q75.a1">A venue with only a few reviews can easily land an unusually high or low average, because a handful of experiences weigh a lot. To reduce that, the observed rating is gently pulled towards <strong>3.5/5</strong>, our "we're not sure yet" point. The fewer the reviews, the stronger the pull; as reviews accumulate, the pull fades and the real rating takes over.</p>
+      <p data-i18n="q75.a2">The Prior is calculated separately for each platform, and it is combined with Wilson only once, so the same uncertainty is never applied twice.</p>
+
+      <h2 data-i18n="q75.h2">2. Wilson Lower Bound: the confidence floor</h2>
+      <p data-i18n="q75.b1">Wilson gives a more conservative estimate when the sample is small. We adapted it to a 1 to 5 scale and calculate it directly from the observed rating, not from the rating after the Prior, which is what keeps the Prior from being counted twice.</p>
+      <p data-i18n="q75.b2">Each platform's score is <strong>30% Bayesian Prior + 70% Wilson Lower Bound</strong>. Wilson gets the larger share so that a strong rating with plenty of reviews keeps most of its value, while small samples stay protected.</p>
+
+      <h2 data-i18n="q75.h3">3. Review Confidence: how much a platform counts</h2>
+      <p data-i18n="q75.c1">Next we decide how much influence each platform should have, using <strong>Review Confidence</strong>. It has diminishing returns: going from 1,000 to 2,000 reviews matters a lot, going from 4,000 to 5,000 barely matters, because the evidence is already huge. Our confidence curve reaches approximately:</p>
+      <p data-i18n="q75.c2">7.7% at 100 reviews · 34.0% at 500 · 58.4% at 1,000 · 86.2% at 2,000 · 96.5% at 3,000 · 98.8% at 4,000 · 99% at 5,000 (the maximum, more reviews do not raise it further).</p>
+      <p data-i18n="q75.c3">This is not a claim that a rating is 99% likely to be right. It is a transparency and weighting mechanism showing how strongly the review volume supports a platform's result. Hover over (or tap) any rating on the site to see its confidence percentage.</p>
+
+      <h2 data-i18n="q75.h4">4. Combining the platforms</h2>
+      <p data-i18n="q75.d1">Google, Facebook, HappyCow, Uber Eats, DoorDash, Tripadvisor, Yelp and OpenTable have very different audiences, volumes and habits, so each is processed independently first. Then the platform scores are averaged using their Review Confidence as weights. A platform with a handful of reviews has little influence, one with thousands has a lot, and the biggest platform can never drown out all the others just because of its raw count.</p>
+
+      <h2 data-i18n="q75.h5">5. The published rating</h2>
+      <p data-i18n="q75.e1">The combined result is converted from the internal 0 to 5 scale to the published <strong>0 to 10</strong> scale, and that is the number you see on the site (the stars are just this number shown out of 5). The published rating has a minimum of <strong>8.0/10</strong>. That is a floor on the published scale, not the statistical Prior: inside the model, results can still go below 4.0/5, and 3.5/5 remains the uncertainty point.</p>
+      <p data-i18n="q75.e2">Behind the scenes, venues are ranked (for example under "Best rated") using the same result before it is rounded to one decimal, so two places that both show 9.0 are still put in the right order.</p>
+
+      <h2 data-i18n="q75.h6">6. Why this is fair</h2>
+      <p data-i18n="q75.f1">A 4.8/5 backed by 4,000 reviews keeps most of its value, while a 4.8/5 from a few early reviewers is treated cautiously: the Prior pulls it down, Wilson trims it, and its platform gets little weight. These protections work together, and as reviews grow the venue gradually escapes them.</p>
+      <p data-i18n="q75.f2">No single number tells the whole story. The model combines the quality of the rating, the quantity of evidence, statistical uncertainty and consistency across platforms, so that a strong rating is supported not only by how high the score is, but also by how much evidence stands behind it.</p>
+    </div></div></div>
+  </div>
+
+  <!-- Q76 -->
+  <div class="accordion anim" id="q76" data-tags="general,vegan,learn">
+    <button class="accordion-toggle" onclick="toggleAccordion(this)">
+      <span class="accordion-emoji">🕊️</span>
+      <div class="accordion-header">
+        <div class="accordion-type" data-i18n="q76.type">Brisbane Vegan Facts</div>
+        <div class="accordion-title" data-i18n="q76.title">Which vegan places in Brisbane have closed recently?</div>
+      </div>
+      <svg class="accordion-arrow" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="accordion-body"><div class="accordion-inner"><div class="accordion-text">
+      <p data-i18n="q76.p1">Two places we have listed have closed: <a href="yavanna.html">Yavanna</a> (2026) and <a href="you-came-again.html">You Came Again</a> (2025). We keep their pages as a record and mark them as closed.</p>
+      <p data-i18n="q76.p2">Places change quickly, so before a long trip check the venue's own page or social media. If you spot a closure or a new opening, let us know on the <a href="contribute.html">Contribute page</a>.</p>
+    </div></div></div>
+  </div>
+
   <!-- NO RESULTS -->
   <div class="no-results" id="noResults" data-i18n="noresults">No questions match that filter yet — try another one, or clear the filter to see everything.</div>
 
@@ -1275,36 +1470,45 @@ document.querySelectorAll('.filter-chip[data-tag]').forEach(c=>{
 });
 function applyFilter(tag){
   activeFilter = (activeFilter === tag) ? null : tag;
+  applyFilters();
+}
+// Ignore case and accents so "cafe" finds "Café" and "nao" finds "não"
+function normText(s){ return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+// Combines the chip filter with the search box (a question must match both)
+function applyFilters(){
+  const q = normText(document.getElementById('searchInput').value.trim());
+  const terms = q ? q.split(/\s+/) : [];
   document.querySelectorAll('.filter-chip').forEach(c=>{c.classList.toggle('active', c.dataset.tag===activeFilter); c.setAttribute('aria-pressed', c.dataset.tag===activeFilter ? 'true' : 'false');});
   let visibleCount = 0;
   document.querySelectorAll('.accordion[data-tags]').forEach(acc=>{
     const tags = acc.dataset.tags.split(',');
-    const show = !activeFilter || tags.includes(activeFilter);
+    let show = !activeFilter || tags.includes(activeFilter);
+    if(show && terms.length){
+      const text = normText(acc.textContent);
+      show = terms.every(t=>text.includes(t));
+    }
     acc.style.display = show ? '' : 'none';
     if(show) visibleCount++;
   });
   document.getElementById('filterCountNum').textContent = visibleCount;
-  document.getElementById('filterClear').classList.toggle('visible', !!activeFilter);
+  document.getElementById('filterClear').classList.toggle('visible', !!activeFilter || terms.length>0);
   document.getElementById('noResults').classList.toggle('visible', visibleCount === 0);
 }
 function clearFilter(){
   activeFilter = null;
-  document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
-  document.querySelectorAll('.accordion[data-tags]').forEach(acc=>{ acc.style.display=''; });
-  document.getElementById('filterCountNum').textContent = document.querySelectorAll('.accordion[data-tags]').length;
-  document.getElementById('filterClear').classList.remove('visible');
-  document.getElementById('noResults').classList.remove('visible');
+  document.getElementById('searchInput').value = '';
+  applyFilters();
 }
 
 // I18N (PT only — EN is default in HTML)
 const i18n={pt:{
   "page.title":"Buscador Vegano","page.tagline":"Seu atalho para comer vegano e socializar em Brisbane",
-  "page.desc":"Com vontade de algo específico, planejando um encontro ou alimentando um grupo? Escolha um filtro abaixo para ir direto à resposta — ou role por mais de 60 perguntas com tudo o que sabemos sobre onde comer bem vegano e viver a comunidade vegana em Brisbane.",
+  "page.desc":"Brisbane Vegan Facts e mais de 70 perguntas em um só lugar: qual local vegano é o mais antigo, o mais popular, o mais bem avaliado, quem tem o melhor delivery e quantos veganos vivem aqui. Com vontade de algo específico ou alimentando um grupo? Busque ou escolha um filtro abaixo para ir direto à resposta.",
   "filters.label":"Estou procurando...","filters.questions":"perguntas","filters.clear":"Mostrar todas as perguntas",
   "fg.mealtime":"Horário da refeição","fg.cuisine":"Culinária & tipo de local","fg.dietary":"Dieta","fg.price":"Preço","fg.service":"Serviço","fg.who":"Para quem é","fg.purpose":"Propósito",
   "chip.breakfast":"Café da manhã","chip.brunch":"Brunch","chip.lunch":"Almoço","chip.afternoontea":"Chá da tarde","chip.dinner":"Jantar","chip.supper":"Ceia",
   "chip.cafe":"Café","chip.beverage":"Bebida","chip.bakery":"Padaria","chip.burgers":"Hambúrgueres","chip.pizza":"Pizza","chip.asian":"Asiática","chip.mexican":"Mexicana","chip.middleeastern":"Do Oriente Médio",
-  "chip.vegan":"Vegano","chip.veganfriendly":"Vegano-amigável","chip.fewoptions":"Poucas opções veganas","chip.italian":"Italiana","chip.glutenfree":"Sem glúten",
+  "chip.vegan":"Vegano","chip.veganfriendly":"Amigável para veganos","chip.fewoptions":"Poucas opções veganas","chip.italian":"Italiana","chip.glutenfree":"Sem glúten",
   "chip.cheap":"Barato","chip.affordable":"Acessível","chip.fancy":"Sofisticado",
   "chip.local":"No local","chip.takeaway":"Para levar","chip.delivery":"Delivery",
   "chip.onlyvegans":"Só veganos","chip.mixed":"Veganos + não-veganos","chip.allfamily":"Toda a família","chip.biggroups":"Grupos grandes","chip.children":"Crianças","chip.pets":"Pets",
@@ -1314,21 +1518,21 @@ const i18n={pt:{
   "q1.type":"Comece aqui","q1.title":"Onde encontro os melhores restaurantes veganos de Brisbane?",
   "q1.p1":"Vá até o <a href=\"food.html\">diretório Eat &amp; Drink</a> — é a lista completa e crescente que pesquisamos pessoalmente em Brisbane e região, em três grupos: locais veganos (cardápios seguros, cada um com página própria, avaliações e destaques do cardápio), locais vegan-friendly (cardápios mistos com cardápio vegano dedicado ou vários pratos veganos marcados) e restaurantes e redes com poucas opções veganas.",
   "q1.p2":"Não sabe por onde começar? Use os filtros abaixo — eles reduzem todo esse FAQ ao que você está realmente com vontade de comer.",
-  "q2.type":"Conheça os selos","q2.title":"Qual a diferença entre \"100% Vegano\", \"99% Vegano\" e \"Vegano-amigável\"?",
-  "q2.p1":"<strong>100% Vegano</strong> significa que o cardápio inteiro é plant-based — peça qualquer coisa, sem perguntas necessárias. É o caso do <a href=\"vegan-restaurant.html\">Vegan Restaurant</a>, <a href=\"dickis.html\">Dicki's</a>, <a href=\"the-green-edge.html\">The Green Edge</a>, <a href=\"u-tong.html\">U-Tong</a>, <a href=\"el-planta.html\">El Planta</a>, <a href=\"veganyumm.html\">Veganyumm</a>, <a href=\"vegerama.html\">Vege Rama</a>, <a href=\"archie-am-pm.html\">Archie AM:PM</a>, <a href=\"doko-demo-v.html\">Doko Demo V</a>, <a href=\"izakaya-midori.html\">Izakaya Midori</a>, <a href=\"nurcha.html\">Nurcha</a>, <a href=\"jr-vegan-thai.html\">JR Vegan Thai</a>, <a href=\"kindest_cakery.html\">Kindest Cakery</a> e <a href=\"charlies-raw-squeeze.html\">Charlie's Raw Squeeze</a>.",
+  "q2.type":"Conheça os selos","q2.title":"Qual a diferença entre \"100% Vegano\", \"99% Vegano\" e \"Amigável para veganos\"?",
+  "q2.p1":"<strong>100% Vegano</strong> significa que o cardápio inteiro é plant-based — peça qualquer coisa, sem perguntas necessárias. É o caso do <a href=\"vegan-restaurant.html\">Vegan Restaurant</a>, <a href=\"dickis.html\">Dicki's</a>, <a href=\"the-green-edge.html\">The Green Edge</a>, <a href=\"u-tong.html\">U-Tong</a>, <a href=\"el-planta.html\">El Planta</a>, <a href=\"veganyumm.html\">Veganyumm</a>, <a href=\"vegerama.html\">Vege Rama</a>, <a href=\"archie-am-pm.html\">Archie AM:PM</a>, <a href=\"doko-demo-v.html\">Doko Demo V</a>, <a href=\"izakaya-midori.html\">Izakaya Midori</a>, <a href=\"nurcha.html\">Nurcha</a>, <a href=\"rosebed-and-finch.html\">Rosebed &amp; Finch</a>, <a href=\"tian-ran.html\">Tian Ran</a>, <a href=\"jing-si-books-and-cafe.html\">Jing Si Books &amp; Cafe</a>, <a href=\"jr-vegan-thai.html\">JR Vegan Thai</a>, <a href=\"kindest-cakery.html\">Kindest Cakery</a>, <a href=\"kindest-kitchen.html\">Kindest Kitchen</a> e <a href=\"charlies-raw-squeeze.html\">Charlie's Raw Squeeze</a>.",
   "q2.p3":"<strong>99% Vegano</strong> (selo em um verde mais claro) significa que toda a cozinha é plant-based e o único item não vegano é um adicional opcional: leite de vaca para o café. É o caso do <a href=\"vega-cafe.html\">Vega Cafe</a> e do <a href=\"cardamom-pod.html\">Cardamom Pod Brickworks</a> — peça qualquer prato do cardápio de comida e só não escolha o leite de vaca.",
-  "q2.p2":"<strong>Vegano-amigável</strong> significa que o local também serve comida não vegana, mas tem pratos veganos claramente marcados no cardápio — como <a href=\"https://instagram.com/tea_master_vegetarian_cafe\" target=\"_blank\" rel=\"noopener\">Tea Master</a>, <a href=\"https://www.instagram.com/sweetandgreenpatisserie\" target=\"_blank\" rel=\"noopener\">Sweet &amp; Green</a>, <a href=\"https://netherworldarcade.com\" target=\"_blank\" rel=\"noopener\">Netherworld</a>, <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a> ou <a href=\"https://www.king-tea.co/\" target=\"_blank\" rel=\"noopener\">King Tea</a>.",
+  "q2.p2":"<strong>Amigável para veganos</strong> significa que o local também serve comida não vegana, mas tem pratos veganos claramente marcados no cardápio — como <a href=\"https://instagram.com/tea_master_vegetarian_cafe\" target=\"_blank\" rel=\"noopener\">Tea Master</a>, <a href=\"https://www.instagram.com/sweetandgreenpatisserie\" target=\"_blank\" rel=\"noopener\">Sweet &amp; Green</a>, <a href=\"https://netherworldarcade.com\" target=\"_blank\" rel=\"noopener\">Netherworld</a>, <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a> ou <a href=\"https://www.king-tea.co/\" target=\"_blank\" rel=\"noopener\">King Tea</a>.",
   "q3.type":"O panorama geral","q3.title":"Brisbane é uma boa cidade para veganos?",
   "q3.p1":"Sim, e continua crescendo. Brisbane tem restaurantes, cafés, padarias, food trucks e barracas de feira veganos espalhados por bairros como West End, New Farm, Fortitude Valley e Everton Park, com um polo igualmente forte na Gold Coast.",
   "q3.p2":"Ainda não é do tamanho de Melbourne, mas é fácil comer bem sendo vegano aqui todos os dias da semana.",
   "q4.type":"Pedindo com segurança","q4.title":"Como garanto que um prato é realmente vegano em um restaurante não vegano?",
   "q4.p1":"Pergunte diretamente à equipe e mencione ingredientes escondidos que costumam passar despercebidos — molho de peixe, mel, ghee, manteiga e ovo em massas ou pães. A maioria das cozinhas de Brisbane já está acostumada com a pergunta.",
-  "q4.p2":"Opção mais fácil: fique com locais marcados como \"Vegano-amigável\" neste guia. Eles já indicam claramente seus pratos veganos, sem adivinhação.",
+  "q4.p2":"Opção mais fácil: fique com locais marcados como \"Amigável para veganos\" neste guia. Eles já indicam claramente seus pratos veganos, sem adivinhação.",
   "q5.type":"Abasteça a despensa","q5.title":"Onde fazer compras veganas em Brisbane?",
   "q5.p1":"O <a href=\"the-green-edge.html\">The Green Edge</a>, em Windsor, é o destaque — uma mercearia vegana completa ao lado do seu bistrô, café e deli, tudo sob o mesmo teto.",
   "q5.p2":"Além disso, os grandes supermercados de Brisbane já têm boas linhas plant-based — basta checar o selo vegano ou \"suitable for vegans\" no rótulo.",
   "q6.type":"Além de Brisbane","q6.title":"Onde encontro comida vegana fora de Brisbane?",
-  "q6.p1":"Este guia é focado em Brisbane e região, mas se você for viajar mais longe, o <a href=\"https://www.itravelforveganfood.com/destinations/brisbane\" target=\"_blank\" rel=\"noopener\">I Travel For Vegan Food</a> é um recurso sólido cobrindo lugares vegano-amigáveis pela Austrália e pelo mundo.",
+  "q6.p1":"Este guia é focado em Brisbane e região, mas se você for viajar mais longe, o <a href=\"https://www.itravelforveganfood.com/destinations/brisbane\" target=\"_blank\" rel=\"noopener\">I Travel For Vegan Food</a> é um recurso sólido cobrindo lugares amigáveis para veganos pela Austrália e pelo mundo.",
   "q7.type":"Na estrada","q7.title":"Existem food trucks ou barracas de feira veganas em Brisbane?",
   "q7.p1":"Sim — <a href=\"grassfed.html\">GrassFed</a> (hambúrgueres e fritas recheadas) e <a href=\"piante-pizza.html\">Piante Pizza</a> (pizza napolitana) são trailers móveis que passam por feiras e eventos em Brisbane, Gold Coast e Sunshine Coast. O <a href=\"https://www.instagram.com/sweetandgreenpatisserie\" target=\"_blank\" rel=\"noopener\">Sweet &amp; Green</a> é uma confeitaria francesa vegana que faz o mesmo circuito de feiras e pop-ups.",
   "q7.p2":"Como eles se movem bastante, confira a página de cada um para redes sociais e agenda atualizada antes de sair de casa.",
@@ -1358,19 +1562,19 @@ const i18n={pt:{
   "q16.type":"Doce favorito","q16.title":"Onde encontro sobremesas, bolos e padarias veganas em Brisbane?",
   "q16.p1":"Para bolos de aniversário personalizados: <a href=\"veganyumm.html\">Veganyumm</a> (a primeira padaria totalmente vegana de Brisbane) e <a href=\"pippas-pantry.html\">Pippa's Pantry</a> (Camp Hill, horário limitado de sexta a sábado). Na Gold Coast, a <a href=\"made-with-love-bakery.html\">Made With Love Bakery</a> faz tudo do zero, de rolinhos de canela a quiches, e o <a href=\"https://www.instagram.com/sweetandgreenpatisserie\" target=\"_blank\" rel=\"noopener\">Sweet &amp; Green</a> leva confeitaria francesa ao circuito de feiras. Para algo gelado, prove os \"nice cream\" bowls do <a href=\"charlies-raw-squeeze.html\">Charlie's Raw Squeeze</a> ou a sorveteria dentro do <a href=\"the-green-edge.html\">The Green Edge</a>. Para uma sobremesa à mesa, a <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a> tem sobremesas veganas e gelato, e a <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a> serve um bolo de chocolate vegano e o \"Vagamisu\", um tiramisù vegano desconstruído.",
   "q17.type":"Café & um prato","q17.title":"Quais os melhores cafés totalmente veganos de Brisbane?",
-  "q17.p1":"<a href=\"dickis.html\">Dicki's</a>, <a href=\"the-green-edge.html\">The Green Edge</a>, <a href=\"archie-am-pm.html\">Archie AM:PM</a>, <a href=\"vega-cafe.html\">Vega Cafe</a> e <a href=\"cardamom-pod.html\">Cardamom Pod Brickworks</a> (no Vega Cafe e no Cardamom Pod, o único item não vegano é o leite de vaca como adicional opcional no café) são todos cafés veganos, e o <a href=\"charlies-raw-squeeze.html\">Charlie's Raw Squeeze</a> é um bar de sucos vegano com comida de café. Se um cardápio misto não é problema, o <a href=\"https://all-day.com.au\" target=\"_blank\" rel=\"noopener\">All Day</a>, em West End, também tem ótimas opções de café e comida vegano-amigáveis.",
+  "q17.p1":"<a href=\"dickis.html\">Dicki's</a>, <a href=\"the-green-edge.html\">The Green Edge</a>, <a href=\"archie-am-pm.html\">Archie AM:PM</a>, <a href=\"vega-cafe.html\">Vega Cafe</a> e <a href=\"cardamom-pod.html\">Cardamom Pod Brickworks</a> (no Vega Cafe e no Cardamom Pod, o único item não vegano é o leite de vaca como adicional opcional no café) são todos cafés veganos, e o <a href=\"charlies-raw-squeeze.html\">Charlie's Raw Squeeze</a> é um bar de sucos vegano com comida de café. Se um cardápio misto não é problema, o <a href=\"https://all-day.com.au\" target=\"_blank\" rel=\"noopener\">All Day</a>, em West End, também tem ótimas opções de café e comida amigáveis para veganos.",
   "q18.type":"Jantar sentado","q18.title":"Onde ir para um jantar vegano de verdade em Brisbane?",
   "q18.p1":"<a href=\"u-tong.html\">U-Tong</a> (tailandês), <a href=\"el-planta.html\">El Planta</a> (mexicano), <a href=\"neon-ramen.html\">Neon Ramen</a> (japonês) e <a href=\"vegerama.html\">Vege Rama</a> (buffet) são ótimas opções em Brisbane. Na Gold Coast, <a href=\"doko-demo-v.html\">Doko Demo V</a>, <a href=\"izakaya-midori.html\">Izakaya Midori</a> e <a href=\"greenhouse-canteen.html\">Greenhouse Canteen</a> valem a viagem por um jantar plant-based à mesa.",
   "q18.p2":"Para um jantar em cardápio misto com boas opções veganas, experimente a <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a> ou a <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a> para comida italiana, o <a href=\"https://www.mapame.com.au\" target=\"_blank\" rel=\"noopener\">Ma Pa Me</a> para sudeste asiático, o <a href=\"https://www.phatboybrisbane.com.au\" target=\"_blank\" rel=\"noopener\">Phat Boy</a> para tailandês ou o <a href=\"https://www.king-tea.co/\" target=\"_blank\" rel=\"noopener\">King Tea</a> para pratos chineses de compartilhar.",
   "q19.type":"Totalmente plant-based","q19.title":"Quais restaurantes de Brisbane são 100% veganos?",
-  "q19.p1":"Mais de 20 locais do nosso diretório têm cardápio totalmente plant-based — entre eles <a href=\"nurcha.html\">Nurcha</a>, <a href=\"jr-vegan-thai.html\">JR Vegan Thai</a>, <a href=\"kindest_cakery.html\">Kindest Cakery</a>, <a href=\"vegan-restaurant.html\">Vegan Restaurant</a>, <a href=\"dickis.html\">Dicki's</a>, <a href=\"the-green-edge.html\">The Green Edge</a>, <a href=\"u-tong.html\">U-Tong</a>, <a href=\"el-planta.html\">El Planta</a>, <a href=\"veganyumm.html\">Veganyumm</a>, <a href=\"grassfed.html\">GrassFed</a>, <a href=\"loving-hut.html\">Loving Hut</a>, <a href=\"vegerama.html\">Vege Rama</a>, <a href=\"archie-am-pm.html\">Archie AM:PM</a>, <a href=\"doko-demo-v.html\">Doko Demo V</a>, <a href=\"izakaya-midori.html\">Izakaya Midori</a>, <a href=\"charlies-raw-squeeze.html\">Charlie's Raw Squeeze</a>, <a href=\"vega-cafe.html\">Vega Cafe</a> e <a href=\"cardamom-pod.html\">Cardamom Pod Brickworks</a>.",
+  "q19.p1":"Mais de 20 locais do nosso diretório têm cardápio totalmente plant-based — entre eles <a href=\"nurcha.html\">Nurcha</a>, <a href=\"rosebed-and-finch.html\">Rosebed &amp; Finch</a>, <a href=\"tian-ran.html\">Tian Ran</a>, <a href=\"jing-si-books-and-cafe.html\">Jing Si Books &amp; Cafe</a>, <a href=\"jr-vegan-thai.html\">JR Vegan Thai</a>, <a href=\"kindest-cakery.html\">Kindest Cakery</a>, <a href=\"kindest-kitchen.html\">Kindest Kitchen</a>, <a href=\"vegan-restaurant.html\">Vegan Restaurant</a>, <a href=\"dickis.html\">Dicki's</a>, <a href=\"the-green-edge.html\">The Green Edge</a>, <a href=\"u-tong.html\">U-Tong</a>, <a href=\"el-planta.html\">El Planta</a>, <a href=\"veganyumm.html\">Veganyumm</a>, <a href=\"grassfed.html\">GrassFed</a>, <a href=\"loving-hut.html\">Loving Hut</a>, <a href=\"vegerama.html\">Vege Rama</a>, <a href=\"archie-am-pm.html\">Archie AM:PM</a>, <a href=\"doko-demo-v.html\">Doko Demo V</a>, <a href=\"izakaya-midori.html\">Izakaya Midori</a>, <a href=\"charlies-raw-squeeze.html\">Charlie's Raw Squeeze</a>, <a href=\"vega-cafe.html\">Vega Cafe</a> e <a href=\"cardamom-pod.html\">Cardamom Pod Brickworks</a>.",
   "q19.p2":"Para a lista completa e atualizada, filtre por \"100% Vegan\" na <a href=\"food.html\">página Eat &amp; Drink</a>.",
   "q20.type":"Cardápios mistos","q20.title":"Quais locais não são veganos mas são amigáveis para veganos em Brisbane?",
   "q20.p1":"<a href=\"https://instagram.com/tea_master_vegetarian_cafe\" target=\"_blank\" rel=\"noopener\">Tea Master</a>, <a href=\"https://www.instagram.com/sweetandgreenpatisserie\" target=\"_blank\" rel=\"noopener\">Sweet &amp; Green</a>, <a href=\"https://netherworldarcade.com\" target=\"_blank\" rel=\"noopener\">Netherworld</a>, <a href=\"https://www.naimrestaurant.com.au\" target=\"_blank\" rel=\"noopener\">NAÏM</a>, <a href=\"https://all-day.com.au\" target=\"_blank\" rel=\"noopener\">All Day</a>, <a href=\"https://www.instagram.com/vege_me\" target=\"_blank\" rel=\"noopener\">Vegeme</a>, <a href=\"https://www.veganthairiffic.com.au\" target=\"_blank\" rel=\"noopener\">Vegan Thai-riffic</a>, <a href=\"https://www.phatboybrisbane.com.au\" target=\"_blank\" rel=\"noopener\">Phat Boy</a>, <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a>, <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a>, <a href=\"https://www.mapame.com.au\" target=\"_blank\" rel=\"noopener\">Ma Pa Me</a>, <a href=\"https://www.king-tea.co/\" target=\"_blank\" rel=\"noopener\">King Tea</a> e <a href=\"https://www.haihai.com.au\" target=\"_blank\" rel=\"noopener\">Hai Hai</a> servem comida não vegana ao lado de uma seleção vegana bem marcada — ótimo quando nem todo o grupo é vegano. É só uma amostra: a seção Vegan-friendly da <a href=\"food.html#vegan-friendly\">página Eat &amp; Drink</a> lista todos os 34 locais.",
   "q20.p2":"O tamanho da seleção vegana varia: <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a>, <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a>, <a href=\"https://www.mapame.com.au\" target=\"_blank\" rel=\"noopener\">Ma Pa Me</a> e <a href=\"https://www.phatboybrisbane.com.au\" target=\"_blank\" rel=\"noopener\">Phat Boy</a> têm cardápio vegano dedicado, enquanto o <a href=\"https://www.haihai.com.au\" target=\"_blank\" rel=\"noopener\">Hai Hai</a> tem um conjunto menor de pratos veganos — confira a página de cada local para ver o que está disponível.",
   "q20.p3":"Locais com ainda menos opções veganas, incluindo restaurantes e grandes redes, estão na seção \"Poucas opções veganas\" da <a href=\"food.html#few-vegan-options\">página Eat &amp; Drink</a>.",
   "q21.type":"Sem glúten também","q21.title":"Existem restaurantes veganos em Brisbane com opções sem glúten?",
-  "q21.p1":"Sim — <a href=\"el-planta.html\">El Planta</a>, <a href=\"veganyumm.html\">Veganyumm</a>, <a href=\"the-plant-bakery.html\">The Plant Bakery</a>, <a href=\"vega-cafe.html\">Vega Cafe</a>, <a href=\"vegerama.html\">Vege Rama</a>, <a href=\"made-with-love-bakery.html\">Made With Love Bakery</a>, <a href=\"greenhouse-canteen.html\">Greenhouse Canteen</a>, <a href=\"izakaya-midori.html\">Izakaya Midori</a>, <a href=\"https://instagram.com/tea_master_vegetarian_cafe\" target=\"_blank\" rel=\"noopener\">Tea Master</a> e <a href=\"cardamom-pod.html\">Cardamom Pod</a> listam opções sem glúten, e a <a href=\"piante-pizza.html\">Piante Pizza</a> também é livre de nozes. Em cardápios mistos, a <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a> (com bases de pizza sem glúten), a <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a>, o <a href=\"https://www.mapame.com.au\" target=\"_blank\" rel=\"noopener\">Ma Pa Me</a>, o <a href=\"https://www.phatboybrisbane.com.au\" target=\"_blank\" rel=\"noopener\">Phat Boy</a>, o <a href=\"https://www.instagram.com/vege_me\" target=\"_blank\" rel=\"noopener\">Vegeme</a> e o <a href=\"https://all-day.com.au\" target=\"_blank\" rel=\"noopener\">All Day</a> também listam opções sem glúten.",
+  "q21.p1":"Sim — <a href=\"el-planta.html\">El Planta</a>, <a href=\"veganyumm.html\">Veganyumm</a>, <a href=\"plant-baked.html\">Plant Baked</a>, <a href=\"sweet-nectar.html\">Sweet Nectar</a>, <a href=\"vega-cafe.html\">Vega Cafe</a>, <a href=\"vegerama.html\">Vege Rama</a>, <a href=\"made-with-love-bakery.html\">Made With Love Bakery</a>, <a href=\"greenhouse-canteen.html\">Greenhouse Canteen</a>, <a href=\"izakaya-midori.html\">Izakaya Midori</a>, <a href=\"https://instagram.com/tea_master_vegetarian_cafe\" target=\"_blank\" rel=\"noopener\">Tea Master</a> e <a href=\"cardamom-pod.html\">Cardamom Pod</a> listam opções sem glúten, e a <a href=\"piante-pizza.html\">Piante Pizza</a> também é livre de nozes. Em cardápios mistos, a <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a> (com bases de pizza sem glúten), a <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a>, o <a href=\"https://www.mapame.com.au\" target=\"_blank\" rel=\"noopener\">Ma Pa Me</a>, o <a href=\"https://www.phatboybrisbane.com.au\" target=\"_blank\" rel=\"noopener\">Phat Boy</a>, o <a href=\"https://www.instagram.com/vege_me\" target=\"_blank\" rel=\"noopener\">Vegeme</a> e o <a href=\"https://all-day.com.au\" target=\"_blank\" rel=\"noopener\">All Day</a> também listam opções sem glúten.",
   "q21.p2":"Se você é celíaco e não só evita glúten, sempre confirme contaminação cruzada diretamente com o local.",
   "q22.type":"No orçamento","q22.title":"Onde encontro comida vegana barata em Brisbane?",
   "q22.p1":"O <a href=\"loving-hut.html\">Loving Hut</a>, em Mount Gravatt, é explicitamente econômico. O buffet do <a href=\"vegerama.html\">Vege Rama</a> tem ótimo custo-benefício, já que você paga pelo que realmente pega. Trailers de feira como <a href=\"grassfed.html\">GrassFed</a> e <a href=\"piante-pizza.html\">Piante Pizza</a> também mantêm preços razoáveis pelo que oferecem. Em um cardápio misto, a <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a> faz uma Vegan Night mensal com pratos veganos a $15.",
@@ -1384,7 +1588,7 @@ const i18n={pt:{
   "q26.p1":"Qualquer local 100% Vegano elimina aquela negociação de \"quem consegue pedir o quê\". O buffet do <a href=\"vegerama.html\">Vege Rama</a> deixa cada um montar seu prato, e os tacos e nachos para compartilhar do <a href=\"el-planta.html\">El Planta</a> são ótimos para um grupo que quer pedir de tudo um pouco.",
   "q27.type":"Companhia mista","q27.title":"Onde veganos e não-veganos podem comer juntos sem ninguém abrir mão de nada em Brisbane?",
   "q27.p1":"Duas abordagens funcionam bem. Ir totalmente vegano em um lugar onde a comida já é boa por si só — os hambúrgueres do <a href=\"grassfed.html\">GrassFed</a>, os tacos do <a href=\"el-planta.html\">El Planta</a> ou a pizza do <a href=\"doko-demo-v.html\">Doko Demo V</a> raramente parecem um sacrifício para não-veganos. Ou escolher um local de cardápio misto como <a href=\"https://netherworldarcade.com\" target=\"_blank\" rel=\"noopener\">Netherworld</a>, <a href=\"https://instagram.com/tea_master_vegetarian_cafe\" target=\"_blank\" rel=\"noopener\">Tea Master</a>, <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a>, <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a> ou <a href=\"https://www.king-tea.co/\" target=\"_blank\" rel=\"noopener\">King Tea</a>, onde cada um pede o que quiser no mesmo cardápio.",
-  "q28.type":"Saída em família","q28.title":"Quais bons restaurantes vegano-amigáveis para famílias com crianças em Brisbane?",
+  "q28.type":"Saída em família","q28.title":"Quais bons restaurantes amigáveis para veganos e para famílias com crianças em Brisbane?",
   "q28.p1":"O buffet do <a href=\"vegerama.html\">Vege Rama</a> é ideal para os mais seletivos, já que as crianças escolhem exatamente o que querem. <a href=\"loving-hut.html\">Loving Hut</a> e <a href=\"vegan-restaurant.html\">Vegan Restaurant</a> servem sabores de comfort food familiares (arroz frito, \"frango\", macarrão) que agradam fácil às crianças. O café descontraído e pet-friendly do <a href=\"dickis.html\">Dicki's</a> é outra opção tranquila e casual. A <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a>, uma pizzaria familiar em Milton, também tem pizzas e massas veganas que agradam às crianças.",
   "q29.type":"Noite de encontro","q29.title":"Qual um bom restaurante vegano para um primeiro encontro romântico em Brisbane?",
   "q29.p1":"O clima animado, os pratos para compartilhar e as margaritas do <a href=\"el-planta.html\">El Planta</a> fazem dele um primeiro encontro fácil e sem pressão. O ambiente moderno de bar-restaurante do <a href=\"neon-ramen.html\">Neon Ramen</a> também funciona bem, e na Gold Coast, <a href=\"izakaya-midori.html\">Izakaya Midori</a> e <a href=\"greenhouse-canteen.html\">Greenhouse Canteen</a> têm um clima mais aconchegante e à mesa. Para um jantar a dois em cardápio misto, o ambiente italiano com forno a lenha da <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a>, em Wilston, é outra escolha fácil.",
@@ -1409,7 +1613,7 @@ const i18n={pt:{
   "q37.p2":"Se o primeiro encontro foi tacos e margaritas no <a href=\"el-planta.html\">El Planta</a>, troque completamente de estilo na segunda vez — uma culinária diferente mantém as coisas interessantes.",
   "q38.type":"Saúde!","q38.title":"Bebida alcoólica é vegana? Onde encontro vinho, cerveja e coquetéis veganos em Brisbane?",
   "q38.p1":"A maioria das cervejas e destilados é naturalmente vegana, mas alguns vinhos são clarificados (\"fined\") usando produtos animais como gelatina ou clara de ovo, então nem todo vinho é automaticamente vegano — procure pelo rótulo \"vegan\" ou \"unfiltered\", ou pergunte.",
-  "q38.p2":"Para beber fora, as margaritas do <a href=\"el-planta.html\">El Planta</a>, os cardápios de coquetéis do <a href=\"greenhouse-canteen.html\">Greenhouse Canteen</a> e do <a href=\"izakaya-midori.html\">Izakaya Midori</a> na Gold Coast, e a seleção de cervejas artesanais do <a href=\"https://netherworldarcade.com\" target=\"_blank\" rel=\"noopener\">Netherworld</a> são todas ótimas opções vegano-amigáveis.",
+  "q38.p2":"Para beber fora, as margaritas do <a href=\"el-planta.html\">El Planta</a>, os cardápios de coquetéis do <a href=\"greenhouse-canteen.html\">Greenhouse Canteen</a> e do <a href=\"izakaya-midori.html\">Izakaya Midori</a> na Gold Coast, e a seleção de cervejas artesanais do <a href=\"https://netherworldarcade.com\" target=\"_blank\" rel=\"noopener\">Netherworld</a> são todas ótimas opções amigáveis para veganos.",
   "q38.p3":"Bares de cardápio misto como <a href=\"https://www.haihai.com.au\" target=\"_blank\" rel=\"noopener\">Hai Hai</a>, <a href=\"https://www.mapame.com.au\" target=\"_blank\" rel=\"noopener\">Ma Pa Me</a> e <a href=\"https://www.king-tea.co/\" target=\"_blank\" rel=\"noopener\">King Tea</a> também têm carta de coquetéis — pergunte à equipe quais bebidas são veganas.",
   "q39.type":"Navegando espaços não-veganos","q39.title":"Como lidar com reuniões de família ou potlucks não-veganos em Brisbane?",
   "q39.p1":"Se oferecer para levar um prato é a forma mais fácil de garantir que tenha algo que você realmente possa comer — e muitas vezes a melhor forma de apresentar comida vegana para as pessoas sem sermão. Uma caixinha de doces do <a href=\"veganyumm.html\">Veganyumm</a> ou do <a href=\"pippas-pantry.html\">Pippa's Pantry</a>, ou um prato para levar do <a href=\"vegan-restaurant.html\">Vegan Restaurant</a> ou do <a href=\"loving-hut.html\">Loving Hut</a> reaquecido em casa, ambos viajam bem e costumam conquistar as pessoas.",
@@ -1442,9 +1646,9 @@ const i18n={pt:{
   "q52.type":"Cantinho tranquilo","q52.title":"Existe um bom café vegano para relaxar e ler um livro em Brisbane?",
   "q52.p1":"O formato bistrô-café-deli do <a href=\"the-green-edge.html\">The Green Edge</a> e a varanda relaxada do <a href=\"dickis.html\">Dicki's</a> são ótimos lugares para desacelerar com um café e um livro. O cantinho tranquilo do <a href=\"vega-cafe.html\">Vega Cafe</a>, em Spring Hill, é outra boa opção.",
   "q65.type":"Plano B","q65.title":"Quais redes e restaurantes têm poucas opções veganas?",
-  "q65.p1":"Nem todo lugar é vegano-amigável, mas alguns têm uma seleção vegana pequena e bem identificada — útil quando o grupo já escolheu o lugar e você precisa de um plano B. A seção \"Poucas opções veganas\" da <a href=\"food.html#few-vegan-options\">página Eat &amp; Drink</a> lista esses lugares separadamente dos locais vegano-amigáveis.",
+  "q65.p1":"Nem todo lugar é amigável para veganos, mas alguns têm uma seleção vegana pequena e bem identificada — útil quando o grupo já escolheu o lugar e você precisa de um plano B. A seção \"Poucas opções veganas\" da <a href=\"food.html#few-vegan-options\">página Eat &amp; Drink</a> lista esses lugares separadamente dos locais amigáveis para veganos.",
   "q65.p2":"Em Brisbane: Adda @ Oxford, Alchemy, Anna's Banh Mi Co, Bisou Bisou, Cheeky Poke, Chu The Phat, Fattoush Bayside, Felix For Goodness, Himalayan Cafe, Mons Thai, Naga Thai, Olive Thyme, Pepe's Mexican, PepperJack Sandwiches, Pho Queue, Porkees Vietnamese Deli, Putia Pure Food Kitchen, Ruby My Dear, Snag &amp; Brown, Southside, Spaghetti House, Tarbouche Mezza Bar, Taro's Ramen, Thai Pan Kitchen, Unbearable Bagels e Zero Fox.",
-  "q65.p3":"Redes: Betty's Burgers, Crust Pizza, Domino's, Fish Bowl, Grill'd, Guzman y Gomez, Mad Mex, Motto Motto, Nando's, Oakberry, Oporto, P'Nut Street Noodles, Pizza Hut, San Churro, Schnitz, Soul Origin, Subway, Sumo Salad, Vapiano, Zambrero e Zeus Street Greek.",
+  "q65.p3":"Redes: Betty's Burgers, Cold Rock Ice Creamery, Crust Pizza, Domino's, Fish Bowl, Grill'd, Guzman y Gomez, Mad Mex, Motto Motto, Nando's, Oakberry, Oporto, P'Nut Street Noodles, Pizza Hut, San Churro, Schnitz, Soul Origin, Subway, Sumo Salad, Vapiano, Zambrero e Zeus Street Greek.",
   "q65.p4":"Os cardápios mudam com frequência, principalmente nas redes, então confirme com a equipe antes de pedir. O Hungry Jack's não está na lista: o Plant Based Whopper deles não é adequado para veganos.",
   "q66.type":"Mamma mia","q66.title":"Onde encontro comida italiana vegana — massas, nhoque e mais?",
   "q66.p1":"Três restaurantes de Brisbane vão além da pizza. A <a href=\"https://www.arrivedercipizza.com.au\" target=\"_blank\" rel=\"noopener\">Arrivederci Pizzeria</a>, em Milton, tem seis massas veganas (incluindo uma carbonara vegana), além de sobremesas veganas e gelato. A <a href=\"https://www.anticapizzeria.net.au\" target=\"_blank\" rel=\"noopener\">Antica Pizzeria</a>, em Wilston, tem um cardápio vegano dedicado com antipasti como focaccia vegana e flores de abobrinha com tapenade de azeitona, massas e sobremesas, incluindo o \"Vagamisu\", um tiramisù vegano desconstruído.",
@@ -1487,6 +1691,59 @@ const i18n={pt:{
   "q64.type":"Além da comida","q64.title":"Existem tatuadores veganos, professores de yoga ou outros serviços vegan-friendly em Brisbane?",
   "q64.p1":"Sim. Kelly James tatua no Fox & Moon Tattoo, o primeiro estúdio de tatuagem 100% vegano de Queensland, e Christina Meyers dá aulas de yoga na Gold Coast. As duas estão na nossa <a href='people.html'>página People</a>.",
   "q64.p2":"Para uma variedade maior de profissionais e serviços veganos, explore nosso diretório <a href='hire-a-vegan.html'>Hire a Vegan</a>.",
+  "q67.type":"Brisbane Vegan Facts","q67.title":"Qual foi o primeiro negócio vegano de Brisbane?",
+  "q67.p1":"O primeiro negócio 100% vegano que conseguimos documentar em Brisbane é o <a href='the-green-edge.html'>The Green Edge</a>, fundado por Amanda Jane Benham em 2008 e ainda firme em Windsor. Ele iniciou o modelo totalmente vegano que a maioria dos locais veganos da cidade segue hoje.",
+  "q67.p2":"Um aviso: ninguém mantém um registro oficial de \"primeiros veganos\", e havia locais vegetarianos (incluindo cozinhas budistas e Hare Krishna) muito antes. Então este é o \"mais antigo que conseguimos comprovar\" e, se você souber de um anterior, <a href='contribute.html'>conte para a gente</a>.",
+  "q68.type":"Brisbane Vegan Facts","q68.title":"Qual é o local vegano mais antigo de Brisbane que continua aberto?",
+  "q68.p1":"O <a href='the-green-edge.html'>The Green Edge</a> (2008) é o local 100% vegano mais antigo da própria Brisbane que ainda funciona. Logo atrás vêm o <a href='loving-hut.html'>Loving Hut</a>, em Mount Gravatt, e o <a href='vegerama.html'>Vege Rama</a>, no centro, ambos de 2009.",
+  "q68.p2":"Se contarmos a região mais ampla, o <a href='tian-ran.html'>Tian Ran</a>, em Mermaid Beach, na Gold Coast, serve um cardápio totalmente vegano de estilo budista desde 2000.",
+  "q69.type":"Brisbane Vegan Facts","q69.title":"Qual é o café ou restaurante vegano mais popular de Brisbane?",
+  "q69.p1":"O <a href='the-green-edge.html'>The Green Edge</a>, em Windsor. Ele reúne bistrô, café, deli, bar de sucos, sorveteria e mercado num só lugar, é 100% vegano e é o local mais conectado à comunidade vegana de Brisbane, por isso leva o nosso selo de \"mais popular\".",
+  "q69.p2":"Popularidade não é só número de avaliações. O <a href='charlies-raw-squeeze.html'>Charlie's Raw Squeeze</a> tem mais avaliações (cerca de 5.100 contra cerca de 4.350), mas a maioria vem de aplicativos de delivery e é somada entre quatro lojas. O The Green Edge tem a comunidade, a variedade e a história.",
+  "q70.type":"Brisbane Vegan Facts","q70.title":"Qual restaurante vegano tem mais avaliações em Brisbane?",
+  "q70.p1":"O <a href='charlies-raw-squeeze.html'>Charlie's Raw Squeeze</a>, com cerca de 5.100 avaliações somadas entre Google, Uber Eats, DoorDash, HappyCow, Tripadvisor e Yelp. Cerca de 4.000 delas estão no Uber Eats, e a contagem cobre as quatro lojas.",
+  "q70.p2":"Em segundo vem o <a href='the-green-edge.html'>The Green Edge</a>, com cerca de 4.350 avaliações, e com uma distribuição bem mais equilibrada entre Google, Facebook e os apps de delivery. Os números são os mostrados em cada página de local e são atualizados regularmente.",
+  "q71.type":"Brisbane Vegan Facts","q71.title":"Qual é o restaurante vegano mais bem avaliado de Brisbane?",
+  "q71.p1":"Pela nota média, o <a href='dickis.html'>Dicki's</a> fica em primeiro, com média ponderada de cerca de 4,86 de 5 em sete plataformas e quase 2.800 avaliações. Também é a maior nota final do nosso guia (9,2 de 10).",
+  "q71.p2":"O<a href='vegan-restaurant.html'>Vegan Restaurant</a> vem logo atrás. Usamos a nossa nota final, que pondera a média pelo número de avaliações, para que um local com dez avaliações perfeitas não passe à frente de um com milhares de avaliações muito boas. Veja <a href='#q75'>como as notas são calculadas</a>.",
+  "q72.type":"Brisbane Vegan Facts","q72.title":"Quem é o influenciador vegano mais famoso de Brisbane?",
+  "q72.p1":"<strong>Por seguidores no Instagram:</strong> Freelee the Bananagirl, youtuber e autora de raw vegan baseada em Queensland, com cerca de 290 mil seguidores, seguida pelas The Veronicas, com cerca de 230 mil.",
+  "q72.p2":"<strong>Por fama mundial:</strong> The Veronicas. As gêmeas nascidas em Brisbane, Jessica e Lisa Origliasso, tiveram sucessos nas paradas do mundo todo, e Jessica é vegana, então são os nomes de Brisbane mais conhecidos no mundo plant-based.",
+  "q72.p3":"Os números de seguidores são aproximados, tirados de perfis públicos, e mudam todo dia. Conheça esses e outros nomes locais na nossa <a href='people.html'>página People</a>.",
+  "q73.type":"Brisbane Vegan Facts","q73.title":"Qual local vegano tem o melhor delivery de Brisbane?",
+  "q73.p1":"O <a href='vegan-restaurant.html'>Vegan Restaurant</a> tem a melhor média de delivery, 4,90 de 5 entre Uber Eats e DoorDash combinados, com cerca de 1.700 avaliações de delivery.",
+  "q73.p2":"A disputa é acirrada: <a href='veganyumm.html'>Veganyumm</a> (4,895) e <a href='dickis.html'>Dicki's</a> (4,887) estão praticamente empatados. Os três são ótimas opções para comer vegano em casa.",
+  "q74.type":"Brisbane Vegan Facts","q74.title":"Quantos veganos vivem em Brisbane?",
+  "q74.p1":"Com base nos números atuais, estima-se que entre 110.000 e 150.000 vegetarianos ou veganos vivam na Grande Brisbane, dos quais cerca de 28.000 são totalmente veganos. Não existe contagem oficial, então isso é uma aproximação.",
+  "q74.p2":"Como chegamos lá: a Grande Brisbane tem cerca de 2,8 milhões de pessoas. <a href='https://www.abc.net.au/news/2019-10-26/vegans-comprise-just-1-per-cent-of-the-population-survey-finds/11635306'>Uma reportagem da ABC sobre os dados da pesquisa</a> apontou que só cerca de 1% dos australianos são veganos e cerca de 4% são vegetarianos ou veganos, o que dá aproximadamente 28.000 veganos e 113.000 vegetarianos ou veganos. A <a href='https://www.abs.gov.au/statistics/health/food-and-nutrition/national-nutrition-and-physical-activity-survey/latest-release'>Pesquisa Nacional de Nutrição e Atividade Física</a> do Australian Bureau of Statistics e seus <a href='https://www.abs.gov.au/statistics/health/food-and-nutrition/consumption-food-groups-australian-dietary-guidelines/latest-release'>dados de consumo por grupos alimentares</a> indicam uma fatia um pouco maior, de até cerca de 5%, o que dá o topo da nossa faixa (cerca de 150.000).",
+  "q74.p3":"Duas outras fontes ajudam no contexto. A <a href='https://www.roymorgan.com/findings/the-slow-but-steady-rise-of-vegetarianism-in-australia'>pesquisa da Roy Morgan sobre vegetarianismo</a> usa uma definição mais ampla (pessoas que comem toda ou quase toda a comida vegetariana) e mostra um crescimento constante, o que nessa definição colocaria o número em Queensland bem acima da nossa faixa, então trate a nossa como uma estimativa conservadora. E no <a href='https://awol.com.au/australias-most-vegan-friendly-cities/90483'>ranking da AWOL das cidades mais vegan-friendly da Austrália</a>, Sunshine Coast e Gold Coast se saem especialmente bem por habitante, então o sudeste de Queensland é ótimo para ser vegano.",
+  "q75.type":"Por trás dos números","q75.title":"Como as notas deste guia são calculadas?",
+  "q75.p1":"Para cada local vegano coletamos avaliações públicas do Google, Facebook, HappyCow, Uber Eats, DoorDash, Tripadvisor, Yelp e OpenTable. As estrelas e o número de avaliações que você vê são a combinação de todas elas.",
+  "q75.p2":"A nota final (mostrada numa escala de 0 a 10) não é uma média simples. Ela mistura dois métodos estatísticos, o Prior Bayesiano e o Limite Inferior de Wilson, e dá mais peso às plataformas com mais avaliações, para que locais com poucas avaliações não fiquem à frente de locais com milhares. Cada página de local traz o link para todas as fontes para você conferir por conta própria.",
+  "q75.p3":"<strong>Em uma frase:</strong> uma nota forte precisa de uma pontuação alta e de avaliações suficientes por trás dela. Quer os detalhes? Veja como funciona, passo a passo.",
+  "q75.h1":"1. Prior Bayesiano: o cinto de segurança",
+  "q75.a1":"Um local com poucas avaliações pode facilmente ter uma média anormalmente alta ou baixa, porque poucas experiências pesam muito. Para reduzir isso, a nota observada é levemente puxada para <strong>3,5/5</strong>, o nosso ponto de \"ainda não temos certeza\". Quanto menos avaliações, mais forte a puxada; conforme as avaliações se acumulam, ela enfraquece e a nota real assume.",
+  "q75.a2":"O Prior é calculado separadamente para cada plataforma e combinado com o Wilson uma única vez, então a mesma incerteza nunca é aplicada duas vezes.",
+  "q75.h2":"2. Limite Inferior de Wilson: o piso de confiança",
+  "q75.b1":"O Wilson dá uma estimativa mais conservadora quando a amostra é pequena. Adaptamos para a escala de 1 a 5 e calculamos direto da nota observada, não da nota depois do Prior, o que impede que o Prior seja contado duas vezes.",
+  "q75.b2":"A pontuação de cada plataforma é <strong>30% Prior Bayesiano + 70% Limite Inferior de Wilson</strong>. O Wilson fica com a maior parte para que uma nota forte com muitas avaliações mantenha a maior parte do seu valor, enquanto amostras pequenas continuam protegidas.",
+  "q75.h3":"3. Confiança das avaliações: quanto uma plataforma pesa",
+  "q75.c1":"Depois decidimos quanta influência cada plataforma deve ter, usando a <strong>Confiança das avaliações</strong> (Review Confidence). Ela tem retornos decrescentes: ir de 1.000 para 2.000 avaliações faz muita diferença, ir de 4.000 para 5.000 quase nenhuma, porque a evidência já é enorme. Nossa curva de confiança chega a aproximadamente:",
+  "q75.c2":"7,7% com 100 avaliações · 34,0% com 500 · 58,4% com 1.000 · 86,2% com 2.000 · 96,5% com 3.000 · 98,8% com 4.000 · 99% com 5.000 (o máximo; mais avaliações não aumentam mais).",
+  "q75.c3":"Isso não quer dizer que a nota tem 99% de chance de estar certa. É um mecanismo de transparência e ponderação que mostra o quanto o volume de avaliações sustenta o resultado da plataforma. Passe o mouse (ou toque) sobre qualquer nota no site para ver a porcentagem de confiança.",
+  "q75.h4":"4. Combinando as plataformas",
+  "q75.d1":"Google, Facebook, HappyCow, Uber Eats, DoorDash, Tripadvisor, Yelp e OpenTable têm públicos, volumes e hábitos muito diferentes, então cada uma é processada de forma independente primeiro. Depois as pontuações são combinadas usando a Confiança das avaliações como peso. Uma plataforma com poucas avaliações influencia pouco, uma com milhares influencia muito, e a maior plataforma nunca engole todas as outras só pela contagem bruta.",
+  "q75.h5":"5. A nota publicada",
+  "q75.e1":"O resultado combinado é convertido da escala interna de 0 a 5 para a escala publicada de <strong>0 a 10</strong>, e esse é o número que você vê no site (as estrelas são só esse número mostrado em 5). A nota publicada tem mínimo de <strong>8,0/10</strong>. Esse é um piso da escala publicada, não o Prior estatístico: dentro do modelo, resultados ainda podem ficar abaixo de 4,0/5, e 3,5/5 continua sendo o ponto de incerteza.",
+  "q75.e2":"Nos bastidores, os locais são ordenados (por exemplo em \"Melhor nota\") usando esse mesmo resultado antes de ser arredondado para uma casa decimal, então dois locais que mostram 9,0 continuam na ordem certa.",
+  "q75.h6":"6. Por que isso é justo",
+  "q75.f1":"Uma nota 4,8/5 com 4.000 avaliações mantém a maior parte do seu valor, enquanto uma 4,8/5 de poucos primeiros avaliadores é tratada com cautela: o Prior puxa para baixo, o Wilson reduz e a plataforma recebe pouco peso. Essas proteções trabalham juntas, e conforme as avaliações crescem o local escapa delas aos poucos.",
+  "q75.f2":"Nenhum número sozinho conta a história toda. O modelo combina a qualidade da nota, a quantidade de evidência, a incerteza estatística e a consistência entre plataformas, para que uma nota forte seja sustentada não só pelo quão alta é a pontuação, mas também pela quantidade de evidência por trás dela.",
+  "q76.type":"Brisbane Vegan Facts","q76.title":"Quais locais veganos de Brisbane fecharam recentemente?",
+  "q76.p1":"Dois locais que listamos fecharam: <a href='yavanna.html'>Yavanna</a> (2026) e <a href='you-came-again.html'>You Came Again</a> (2025). Mantemos as páginas deles como registro e marcamos como fechados.",
+  "q76.p2":"Os locais mudam rápido, então antes de uma viagem longa confira a página do local ou as redes sociais. Se notar um fechamento ou uma nova abertura, avise na <a href='contribute.html'>página Contribute</a>.",
+  "search.placeholder":"Buscar perguntas...",
+  "footer.privacy":"Política de Privacidade",
   "footer.tagline":"Um mundo melhor para os animais.","footer.created":"Criado por"
 }};
 
@@ -1502,6 +1759,9 @@ function toggleLang(){
       if(en)el.innerHTML=en;
     }
   });
+  document.getElementById('searchInput').placeholder = currentLang==='pt' ? i18n.pt['search.placeholder'] : 'Search questions...';
+  document.getElementById('searchInput').setAttribute('aria-label', currentLang==='pt' ? 'Buscar perguntas' : 'Search questions');
+  if(document.getElementById('searchInput').value) applyFilters();
   if(!window._enStored){
     window._enStored=true;
     document.querySelectorAll('[data-i18n]').forEach(el=>{
@@ -1530,6 +1790,38 @@ const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
 },{threshold:0.05});
 document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+
+// Deep links such as vegan-finder.html#q75 open that question
+function openFromHash(){
+  const acc = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+  if(acc && acc.classList.contains('accordion')){
+    acc.classList.add('open','visible');
+    setTimeout(()=>acc.scrollIntoView({block:'start'}),150);
+  }
+}
+window.addEventListener('load',openFromHash);
+window.addEventListener('hashchange',openFromHash);
+
+// FAQPAGE STRUCTURED DATA — built from the visible questions themselves (English, the default
+// rendered state) so it can never drift out of sync with the page content. See vegan-finder.html
+// in the site's SEO notes: this is safe/compliant because it mirrors real on-page content,
+// unlike a self-reported rating, which Google explicitly warns against marking up.
+(function(){
+  var faq = { '@context':'https://schema.org', '@type':'FAQPage', mainEntity: [] };
+  document.querySelectorAll('.accordion[data-tags]').forEach(function(acc){
+    var titleEl = acc.querySelector('.accordion-title');
+    var textEl = acc.querySelector('.accordion-text');
+    if(!titleEl || !textEl) return;
+    var question = titleEl.textContent.replace(/\s+/g,' ').trim();
+    var answer = textEl.textContent.replace(/\s+/g,' ').trim();
+    if(!question || !answer) return;
+    faq.mainEntity.push({ '@type':'Question', name: question, acceptedAnswer: { '@type':'Answer', text: answer } });
+  });
+  var s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify(faq);
+  document.head.appendChild(s);
+})();
 </script>
 </body>
 </html>

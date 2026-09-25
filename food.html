@@ -327,7 +327,7 @@
     background: rgba(42, 42, 40, 0.06); color: var(--text-light);
   }
   .badge.veg { background: rgba(74, 140, 92, 0.12); color: var(--moss); }
-  .badge.warn { background: rgba(192, 104, 74, 0.13); color: var(--terracotta); }
+  .badge.warn { background: rgba(192, 104, 74, 0.13); color: #9c4a27; }
   .limited-note {
     margin-top: 22px;
     font-size: 12px; line-height: 1.6;
@@ -391,7 +391,7 @@
 
   <!-- PAGE HEADER -->
   <div class="page-header">
-    <div class="page-num">01</div>
+    <div class="page-num" aria-hidden="true">01</div>
     <h1 class="page-title" data-i18n="page.title">Eat & Drink</h1>
     <p class="page-tagline" data-i18n="page.tagline">Where flavour meets compassion</p>
     <p class="page-desc" data-i18n="page.desc">Where to eat and drink plant-based in Brisbane, sorted from the safest to the most limited: vegan places, vegan-friendly places, and places with few vegan options.</p>
@@ -694,19 +694,34 @@ const venues = [
     url: "piante-pizza.html"
   },
   {
-    slug: "the-plant-bakery",
+    slug: "plant-baked",
     regions: ["greater"],
-    name: "The Plant Bakery",
+    name: "Plant Baked",
     type: { en: "Wholesale Vegan Bakery", pt: "Padaria Vegana Atacado" },
-    logo: "images/logo_the_plant_bakery.jpg",
-    location: "Wholesale · QLD",
+    logo: "images/logo_plant_baked.jpg",
+    location: "Wholesale · Brisbane",
     desc: {
-      en: "A wholesale vegan and gluten-free dessert producer supplying cafés, restaurants, and grocers across Queensland — no public storefront.",
-      pt: "Produtora vegana e sem glúten de sobremesas por atacado, que abastece cafés, restaurantes e mercados em Queensland — sem loja física ao público."
+      en: "A vegan and gluten-free dessert bakery — biscuit-base slices, creamy layered treats and caramel sweets, made to order for cafés and stockists. No public storefront.",
+      pt: "Uma confeitaria de sobremesas veganas e sem glúten — fatias com base de biscoito, doces cremosos em camadas e doces de caramelo, feitos sob encomenda para cafés e revendedores. Sem loja física."
     },
-    tags: ["100% Vegan", "Wholesale", "Gluten-Free", "Desserts", "Bakery", "Pastries"],
-    rating: 4.38, votes: 0, vegan: true,
-    url: "the-plant-bakery.html"
+    tags: ["100% Vegan", "Wholesale", "Gluten-Free", "Desserts", "Bakery", "Cakes"],
+    rating: 4, votes: 0, vegan: true,
+    url: "plant-baked.html"
+  },
+  {
+    slug: "sweet-nectar",
+    regions: ["greater"],
+    name: "Sweet Nectar",
+    type: { en: "Wholesale Vegan Desserts", pt: "Sobremesas Veganas Atacado" },
+    logo: "images/logo_sweet_nectar.jpg",
+    location: "Wholesale · Brisbane",
+    desc: {
+      en: "Whole-food, naturally sweetened vegan and gluten-free slices and treats, made to order for cafés and health-food stores. No public storefront.",
+      pt: "Fatias e doces veganos e sem glúten de comida integral, adoçados naturalmente, feitos sob encomenda para cafés e lojas de alimentos saudáveis. Sem loja física."
+    },
+    tags: ["100% Vegan", "Wholesale", "Gluten-Free", "Desserts", "Bakery"],
+    rating: 4, votes: 0, vegan: true,
+    url: "sweet-nectar.html"
   },
   {
     slug: "pippas-pantry",
@@ -844,24 +859,105 @@ const venues = [
     url: "jr-vegan-thai.html"
   },
   {
-    slug: "kindest_cakery",
+    slug: "kindest-cakery",
     regions: ["sunshine"],
     name: "Kindest Cakery",
     type: { en: "Vegan & Gluten-Free Bakery", pt: "Padaria Vegana & Sem Glúten" },
     logo: "images/logo_kindest_cakery.jpg",
     location: "Kunda Park · Sunshine Coast",
     desc: {
-      en: "A fully vegan, gluten-free and coeliac-safe bakery — custom cakes, a daily treat cabinet and frozen meals from its sister brand, Kindest Kitchen.",
-      pt: "Uma padaria totalmente vegana, sem glúten e segura para celíacos — bolos personalizados, uma vitrine de doces diária e refeições congeladas da marca irmã, Kindest Kitchen."
+      en: "A fully vegan, gluten-free and coeliac-safe bakery — custom cakes, cupcakes and a daily treat cabinet.",
+      pt: "Uma padaria totalmente vegana, sem glúten e segura para celíacos — bolos personalizados, cupcakes e uma vitrine de doces diária."
     },
     tags: ["100% Vegan", "Bakery", "Cakes", "Desserts", "Gluten-Free", "Takeaway"],
     rating: 5, votes: 0, vegan: true,
-    url: "kindest_cakery.html"
+    url: "kindest-cakery.html"
+  },
+  {
+    slug: "kindest-kitchen",
+    regions: ["sunshine"],
+    name: "Kindest Kitchen",
+    type: { en: "Vegan Frozen Meals", pt: "Refeições Congeladas Veganas" },
+    logo: "images/logo_kindest_kitchen.jpg",
+    location: "Kunda Park · Sunshine Coast",
+    desc: {
+      en: "Plant-based, gluten-free and coeliac-safe frozen meals — a new small-batch menu every week, for pickup or delivery.",
+      pt: "Refeições congeladas plant-based, sem glúten e seguras para celíacos — um novo cardápio em pequenos lotes toda semana, para retirar ou receber em casa."
+    },
+    tags: ["100% Vegan", "Frozen Meals", "Gluten-Free", "Takeaway", "Delivery"],
+    rating: 4, votes: 0, vegan: true,
+    url: "kindest-kitchen.html"
+  },
+  {
+    slug: "rosebed-and-finch",
+    regions: ["sunshine"],
+    name: "Rosebed & Finch",
+    type: { en: "Vegan Garden Café & Bakery", pt: "Café-Jardim e Padaria Veganos" },
+    logo: "images/logo_rosebed_and_finch.jpg",
+    location: "Eudlo · Sunshine Coast",
+    desc: {
+      en: "A raw, vegan, gluten-free garden café and bakery — plant-based meals, coffees, grab-and-go desserts and custom cakes, all made from scratch.",
+      pt: "Um café-jardim e padaria crus, veganos e sem glúten — refeições plant-based, cafés, sobremesas para levar e bolos personalizados, tudo feito do zero."
+    },
+    tags: ["100% Vegan", "Café", "Bakery", "Desserts", "Gluten-Free", "Raw"],
+    rating: 4, votes: 0, vegan: true,
+    url: "rosebed-and-finch.html"
+  },
+  {
+    slug: "tian-ran",
+    regions: ["gold"],
+    name: "Tian Ran",
+    type: { en: "Vegan Chinese & Asian Restaurant", pt: "Restaurante Vegano Chinês e Asiático" },
+    logo: "images/logo_tian_ran.jpg",
+    location: "Mermaid Beach · Gold Coast",
+    desc: {
+      en: "An all-vegan Chinese and Asian restaurant with a Buddhist-style kitchen — no garlic, onion or MSG — for dine-in, takeaway and delivery.",
+      pt: "Um restaurante chinês e asiático totalmente vegano com cozinha de estilo budista — sem alho, cebola nem glutamato — para comer no local, levar ou pedir por delivery."
+    },
+    tags: ["100% Vegan", "Chinese", "Asian", "Dinner", "Gluten-Free", "Takeaway"],
+    rating: 4.39, votes: 0, vegan: true,
+    url: "tian-ran.html"
+  },
+  {
+    slug: "jing-si-books-and-cafe",
+    regions: ["greater"],
+    name: "Jing Si Books & Cafe",
+    type: { en: "Vegan Café & Bookstore", pt: "Café Vegano e Livraria" },
+    logo: "images/logo_jing_si_books_and_cafe.jpg",
+    location: "Salisbury",
+    desc: {
+      en: "A fully vegan café, bookstore and community space run by Tzu Chi — rice bowls, dumplings, pastries and specialty lattes.",
+      pt: "Um café, livraria e espaço comunitário totalmente vegano, mantido pelo Tzu Chi — rice bowls, dumplings, doces e lattes especiais."
+    },
+    tags: ["100% Vegan", "Café", "Books", "Lunch", "Desserts", "Coffee"],
+    rating: 4.16, votes: 0, vegan: true,
+    url: "jing-si-books-and-cafe.html"
   }
 ];
 
 // -- VEGAN-FRIENDLY (cards without a venue page: name, description and links) --
 const friendlyVenues = [
+  {
+    name: "Pancha Cafe",
+    tags: ["Café", "Marked Vegan Dishes", "Breakfast"],
+    location: "Hamilton",
+    desc: {
+      en: "Family-run café serving modern Australian breakfast and lunch with produce from its own Southern Downs farm — vegan dishes are clearly marked, from avocado toast, flaxseed pancakes and the Veggie Delight to truffle miso pasta and buddha bowls, plus vegan sweet treats and plant milks. It added meat to the menu in 2023, having been vegetarian before.",
+      pt: "Café familiar com café da manhã e almoço australianos modernos, com produtos da própria fazenda em Southern Downs — os pratos veganos são bem marcados, de avocado toast, panquecas de linhaça e Veggie Delight a massa de trufa e missô e buddha bowls, além de doces veganos e leites vegetais. Incluiu carne no cardápio em 2023, depois de ser vegetariano."
+    },
+    links: { site: "https://panchahamilton.square.site", instagram: "https://www.instagram.com/panchacafe", maps: "https://www.google.com/maps/search/?api=1&query=Pancha%20Cafe%206%2F33%20Racecourse%20Road%2C%20Hamilton%20QLD%204007" }
+  },
+  {
+    name: "The Lodge",
+    closed: true,
+    tags: ["Café", "Breakfast", "Vegan Options"],
+    location: "The Gap",
+    desc: {
+      en: "Dog-friendly neighbourhood café on Waterworks Road in The Gap, with an eclectic breakfast and lunch menu made from locally sourced ingredients and a range of vegan, gluten-free and vegetarian dishes — including vegan French toast. It has closed permanently.",
+      pt: "Café de bairro pet-friendly na Waterworks Road, em The Gap, com um cardápio eclético de café da manhã e almoço feito com ingredientes de origem local e vários pratos veganos, sem glúten e vegetarianos — incluindo rabanada vegana. Fechou definitivamente."
+    },
+    links: { instagram: "https://www.instagram.com/thelodgecafe", facebook: "https://www.facebook.com/p/The-Lodge-100058739604862/" }
+  },
   {
     name: "Baba Ganouj",
     tags: ["Lebanese", "Vegan Plate", "Family-Run"],
@@ -911,6 +1007,16 @@ const friendlyVenues = [
       pt: "Elegante restaurante chinês moderno em um prédio de banco histórico, com cardápio vegano separado e banquete vegano, além de pratos veganos marcados no cardápio principal."
     },
     links: { site: "https://www.donnachang.com.au/", facebook: "https://www.facebook.com/donnachangbrisbane/", maps: "https://www.google.com/maps/search/?api=1&query=Donna%20Chang%20171%20George%20Street%2C%20Brisbane%20City%20QLD%204000" }
+  },
+  {
+    name: "Govinda's",
+    tags: ["Indian", "Buffet", "Vegan Options"],
+    location: "Brisbane CBD",
+    desc: {
+      en: "Hare Krishna-run pure vegetarian restaurant on George Street, serving Indian-inspired feasts (rice, curries, kofta, chutney and salad) buffet-style, almost 40 years running. Staff can point out which dishes are vegan, and it hosts a free Thursday night kirtan with food and music.",
+      pt: "Restaurante puramente vegetariano administrado por Hare Krishna na George Street, com banquetes de inspiração indiana (arroz, curries, kofta, chutney e salada) no estilo bufê, há quase 40 anos. A equipe indica quais pratos são veganos, e o local promove um kirtan gratuito às quintas à noite, com comida e música."
+    },
+    links: { site: "https://brisbanegovindas.au/", instagram: "https://www.instagram.com/brisbanegovindas/", facebook: "https://www.facebook.com/BrisbaneGovindas/", maps: "https://www.google.com/maps/search/?api=1&query=Govinda%27s%20358%20George%20Street%2C%20Brisbane%20City%20QLD%204000" }
   },
   {
     name: "La Bodega Taqueria",
@@ -1188,7 +1294,7 @@ const friendlyVenues = [
     location: "Paddington & West End",
     desc: {
       en: "Ramen and izakaya bar with vegan ramen — the miso is vegan by default — plus a tofu bao and vegan-friendly sides.",
-      pt: "Bar de ramen e izakaya com ramen vegano — o de miso é vegano por padrão — além de bao de tofu e acompanhamentos amigáveis a veganos."
+      pt: "Bar de ramen e izakaya com ramen vegano — o de miso é vegano por padrão — além de bao de tofu e acompanhamentos amigáveis para veganos."
     },
     links: { site: "https://www.haihai.com.au", instagram: "https://www.instagram.com/haihairamen", facebook: "https://www.facebook.com/haihairamen", maps: "https://www.google.com/maps/search/102+Latrobe+Terrace+Paddington+QLD+4064" }
   },
@@ -1278,7 +1384,7 @@ const tagMap = {
   "Vegan Plate": "Prato Vegano", "Vegan Degustation": "Degustação Vegana", "Vegan Dessert": "Sobremesa Vegana",
   "Vegan Cheese": "Queijo Vegano", "Vegan Ramen": "Ramen Vegano", "Vegan Versions": "Versões Veganas",
   "Mostly Vegan": "Majoritariamente Vegano", "Mock Meat": "Carne Vegetal", "Seasonal Menu": "Cardápio Sazonal",
-  "Pay by Weight": "Pagamento por Peso", "Family-Run": "Familiar", "Woodfired": "Forno a Lenha", "Contemporary": "Contemporâneo"
+  "Raw": "Cru", "Books": "Livros", "Vegan Options": "Opções Veganas", "Frozen Meals": "Refeições Congeladas", "Delivery": "Delivery", "Pay by Weight": "Pagamento por Peso", "Family-Run": "Familiar", "Woodfired": "Forno a Lenha", "Contemporary": "Contemporâneo"
 };
 
 function translateTag(tag, lang) {
@@ -1288,6 +1394,8 @@ function translateTag(tag, lang) {
 
 // ── RENDER ──
 function renderCards() {
+  // Fallback until bvg_data.json loads: convert the built-in 0-5 rating to the 0-10 scale
+  venues.forEach(v => { if (typeof v.result !== 'number') { v.result = Math.round(v.rating * 20) / 10; v.score = v.result; } });
   let list = [...venues];
 
   // Location filter (vegan places only)
@@ -1295,7 +1403,7 @@ function renderCards() {
 
   // Sort
   if (currentSort === 'alpha') list.sort((a, b) => a.name.localeCompare(b.name));
-  else if (currentSort === 'rating') list.sort((a, b) => b.rating - a.rating || b.votes - a.votes);
+  else if (currentSort === 'rating') list.sort((a, b) => b.score - a.score || b.votes - a.votes); // hidden ranking score (Prior + Wilson)
   else if (currentSort === 'popular') list.sort((a, b) => b.votes - a.votes);
 
   const grid = document.getElementById('cardsGrid');
@@ -1316,9 +1424,9 @@ function renderCards() {
         ${v.logo
           ? `<div class="card-logo"><img src="${v.logo}" alt="${v.name} logo" width="64" height="64" loading="lazy" onerror="this.parentNode.style.display='none'"></div>`
           : v.initials ? `<div class="card-logo avatar-initials" aria-hidden="true">${v.initials}</div>` : ''}
-        <div class="card-rating">
-          <div class="card-stars">${starsHTML(v.rating)}</div>
-          <span class="card-rating-num">${v.rating}</span>
+        <div class="card-rating" data-conf-votes="${v.votes}" tabindex="0">
+          <div class="card-stars">${starsHTML(v.result / 2)}</div>
+          <span class="card-rating-num">${Number(v.result).toFixed(1)}</span>
         </div>
       </div>
       ${v.closed ? `<div class="card-closed-badge">${currentLang === 'pt' ? 'Encerrado' : 'Closed'}</div>` : ''}
@@ -1356,6 +1464,7 @@ function renderFriendly() {
     }).join('');
     return `
     <div class="card" style="animation-delay:${i * 0.04}s">
+      ${v.closed ? `<div class="card-closed-badge">${currentLang === 'pt' ? 'Encerrado' : 'Closed'}</div>` : ''}
       <div class="card-name">${v.name}</div>
       <div class="card-location">📍 ${v.location}</div>
       <div class="card-desc">${v.desc[currentLang]}</div>
@@ -1393,7 +1502,7 @@ const limitedBadges = {
   acai: { en: "Açaí", pt: "Açaí" }, italian: { en: "Italian", pt: "Italiano" },
   cafe: { en: "Café", pt: "Café" }, bagels: { en: "Bagels", pt: "Bagels" }, french: { en: "French", pt: "Francês" },
   lebanese: { en: "Lebanese", pt: "Libanês" }, indian: { en: "Indian", pt: "Indiano" }, vietnamese: { en: "Vietnamese", pt: "Vietnamita" },
-  middleEastern: { en: "Middle Eastern", pt: "Oriente Médio" },
+  middleEastern: { en: "Middle Eastern", pt: "Oriente Médio" }, iceCream: { en: "Ice cream", pt: "Sorvete" },
   // vegan highlights
   vegMenu: { en: "Vegan menu", pt: "Menu vegano", type: "veg" }, vegDishes: { en: "Vegan dishes marked", pt: "Pratos veganos marcados", type: "veg" },
   vegCheese: { en: "Vegan cheese", pt: "Queijo vegano", type: "veg" }, vegBurgers: { en: "Vegan burgers", pt: "Burgers veganos", type: "veg" },
@@ -1402,6 +1511,7 @@ const limitedBadges = {
   plantMeat: { en: "Plant-based meat", pt: "Proteína vegetal", type: "veg" }, vegSchnitzel: { en: "Vegan schnitzel", pt: "Schnitzel vegano", type: "veg" },
   vegDesserts: { en: "Vegan desserts", pt: "Sobremesas veganas", type: "veg" }, vegMayo: { en: "Vegan mayo", pt: "Maionese vegana", type: "veg" },
   vegPatty: { en: "Vegan patty", pt: "Patty vegano", type: "veg" }, vegFillings: { en: "Vegan fillings", pt: "Recheios veganos", type: "veg" },
+  vegFlavours: { en: "Some vegan flavours", pt: "Alguns sabores veganos", type: "veg" },
   someVeg: { en: "Some vegan options", pt: "Algumas opções veganas", type: "veg" }, vegBowls: { en: "Some vegan bowls", pt: "Alguns bowls veganos", type: "veg" },
   vegPlate: { en: "Vegan plate", pt: "Prato vegano", type: "veg" }, vegOnRequest: { en: "Vegan on request", pt: "Vegano sob pedido", type: "veg" },
   tofuSwap: { en: "Tofu swap", pt: "Troca por tofu", type: "veg" }, vegBroth: { en: "Vegan broth", pt: "Caldo vegano", type: "veg" },
@@ -1440,6 +1550,7 @@ const limitedVenues = [
   { name: "Zero Fox", kind: "local", url: "https://www.zerofoxbne.com", b: ["koreanJapanese", "vegDishes"] },
   // Chains
   { name: "Betty's Burgers", kind: "chain", url: "https://www.bettysburgers.com.au", b: ["burgers", "vegBurgers", "vegCheese"] },
+  { name: "Cold Rock Ice Creamery", kind: "chain", url: "https://coldrock.com.au", b: ["iceCream", "vegFlavours"] },
   { name: "Crust Pizza", kind: "chain", url: "https://www.crust.com.au/", b: ["pizza", "vegPizzas", "vegCheese"] },
   { name: "Domino's", kind: "chain", url: "https://www.dominos.com.au", b: ["pizza", "vegPizzas", "vegCheese"] },
   { name: "Fish Bowl", kind: "chain", url: "https://www.fishbowl.com.au", b: ["poke", "vegBowls"] },
@@ -1532,6 +1643,7 @@ const i18n = {
     "limited.local": "Restaurants in Brisbane",
     "limited.chains": "Chains",
     "limited.note": "Menus change often, especially at chains and between stores. Options were last checked in September 2026 — always confirm with the staff before ordering.",
+    "footer.privacy": "Política de Privacidade",
     "footer.tagline": "A better world for the animals.",
     "footer.created": "Created by"
   },
@@ -1567,6 +1679,7 @@ const i18n = {
     "limited.local": "Restaurantes em Brisbane",
     "limited.chains": "Redes",
     "limited.note": "Os cardápios mudam com frequência, principalmente nas redes e entre lojas. As opções foram verificadas pela última vez em setembro de 2026 — sempre confirme com a equipe antes de pedir.",
+    "footer.privacy": "Política de Privacidade",
     "footer.tagline": "Um mundo melhor para os animais.",
     "footer.created": "Criado por"
   }
@@ -1594,8 +1707,18 @@ function applyRatingsFromJSON() {
       data.forEach(v => { bySlug[v.slug] = v; });
       venues.forEach(v => {
         const match = v.slug && bySlug[v.slug];
-        if (match && typeof match.final_rating === 'number' && match.final_rating > 0) {
-          v.rating = match.final_rating;
+        // v.result = published 0-10 rating (Resultado column, shown on the card);
+        // v.score = precise Prior + Wilson score, used only to rank "Best rated" (never shown)
+        if (match && typeof match.final_result === 'number') {
+          v.result = match.final_result;
+          v.score = typeof match.final_score === 'number' ? match.final_score : match.final_result;
+        }
+        // total votes = sum of every platform that has vote data (same total the venue page shows)
+        if (match && match.reviews) {
+          v.votes = Object.keys(match.reviews).reduce((sum, k) => {
+            const r = match.reviews[k];
+            return sum + (k !== 'bvg' && r && typeof r.votes === 'number' ? r.votes : 0);
+          }, 0);
         }
       });
     })

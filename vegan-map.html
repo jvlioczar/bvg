@@ -77,13 +77,30 @@
     overflow: hidden;
     border: 1px solid rgba(42, 42, 40, 0.08);
     box-shadow: 0 4px 24px rgba(26, 58, 42, 0.06);
-    margin-bottom: 28px;
+    margin-bottom: 14px;
   }
   .map-wrap iframe {
     width: 100%;
     height: 540px;
     border: 0;
     display: block;
+  }
+
+  /* ── MAP LEGEND ── */
+  .map-legend {
+    display: flex; flex-wrap: wrap;
+    align-items: center; gap: 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(42, 42, 40, 0.06);
+    padding: 14px 20px;
+    margin-bottom: 28px;
+  }
+  .map-legend-item { display: flex; align-items: center; gap: 8px; }
+  .map-legend-pin { width: 18px; height: 18px; flex-shrink: 0; }
+  .map-legend-label {
+    font-size: 13px; font-weight: 500;
+    color: var(--text-light);
   }
 
   /* ── INFO BOX ── */
@@ -114,8 +131,8 @@
     color: var(--text-light);
   }
   .info-text a {
-    color: var(--leaf); font-weight: 600;
-    text-decoration: none; transition: color 0.2s;
+    color: #3d7a4e; font-weight: 600;
+    text-decoration: underline; text-underline-offset: 3px; transition: color 0.2s;
   }
   .info-text a:hover { color: var(--forest); }
   .contact-btn {
@@ -147,7 +164,7 @@
 <main id="main-content">
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <div class="page-num">05</div>
+  <div class="page-num" aria-hidden="true">05</div>
   <h1 class="page-title" data-i18n="page.title">Vegan Map</h1>
   <p class="page-tagline" data-i18n="page.tagline">The most complete vegan map of Brisbane</p>
   <p class="page-desc" data-i18n="page.desc">Vegan venues — or places with a wide range of cruelty-free products — in Brisbane and surrounds, on the most complete map available.</p>
@@ -165,6 +182,18 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="map-legend">
+    <div class="map-legend-item">
+      <svg class="map-legend-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.7 7-13A7 7 0 0 0 5 9c0 5.3 7 13 7 13z" fill="#2f9e44" stroke="#1a3a2a" stroke-width="0.75"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>
+      <span class="map-legend-label" data-i18n="legend.vegan">Green pin — 100% Vegan places</span>
+    </div>
+    <div class="map-legend-item">
+      <svg class="map-legend-pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.7 7-13A7 7 0 0 0 5 9c0 5.3 7 13 7 13z" fill="#c0392b" stroke="#1a3a2a" stroke-width="0.75"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>
+      <span class="map-legend-label" data-i18n="legend.friendly">Red pin — Vegan-friendly places</span>
+    </div>
   </div>
 
   <!-- INFO CARDS -->
@@ -200,11 +229,14 @@ const i18n = { pt: {
   "page.title": "Mapa Vegano",
   "page.tagline": "O mapa vegano mais completo de Brisbane",
   "page.desc": "Lugares veganos — ou com grande variedade de produtos livres de crueldade animal — em Brisbane e região, no mapa mais completo disponível.",
+  "legend.vegan": "Pin verde — locais 100% veganos",
+  "legend.friendly": "Pin vermelho — locais amigáveis para veganos",
   "info.details.title": "Quer saber mais sobre um local?",
   "info.details.text": "Acesse a página <a href='food.html'>Comida</a> para avaliações completas, notas e recomendações de todos os lugares veganos em Brisbane.",
   "info.suggest.title": "Sabe de um lugar que deveria estar aqui?",
   "info.suggest.text": "Mande uma mensagem para a gente no Instagram e adicionamos ao mapa!",
   "info.suggest.btn": "@brisbaneveg",
+  "footer.privacy": "Política de Privacidade",
   "footer.tagline": "Um mundo melhor para os animais.",
   "footer.created": "Criado por"
 }};
