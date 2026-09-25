@@ -658,8 +658,8 @@
             <a href="https://facebook.com/thegreenedgevegancafe" target="_blank" rel="noopener" class="web-link" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="https://instagram.com/thegreenedge" target="_blank" rel="noopener" class="web-link" title="Instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://www.tiktok.com/@the.green.edge" target="_blank" rel="noopener" class="web-link" title="TikTok" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V3c.4 2.6 2.4 4.4 5 4.6"/></svg></a>
-            <a href="https://ubereats.com/au/store/the-green-edge/49AbTURFQxagpEZS5ICoJg" target="_blank" rel="noopener" class="web-link" title="Uber Eats" aria-label="Uber Eats"><svg class="glyph" viewBox="0 0 24 24"><text x="12" y="16.5" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="currentColor">UE</text></svg></a>
-            <a href="https://doordash.com/store/the-green-edge-100%25-vegan!-windsor-31283133/44947978/" target="_blank" rel="noopener" class="web-link" title="DoorDash" aria-label="DoorDash"><svg class="glyph" viewBox="0 0 24 24"><text x="12" y="16.5" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" font-weight="700" fill="currentColor">DD</text></svg></a>
+            <a href="https://ubereats.com/au/store/the-green-edge/49AbTURFQxagpEZS5ICoJg" target="_blank" rel="noopener" class="web-link" title="Uber Eats" aria-label="Uber Eats"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+            <a href="https://doordash.com/store/the-green-edge-100%25-vegan!-windsor-31283133/44947978/" target="_blank" rel="noopener" class="web-link" title="DoorDash" aria-label="DoorDash"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M32.4813,35.0374l-6.9545.0158-7.8326-8.3746,15.0819-.0769a2.659,2.659,0,0,0,2.6456-2.659h0a2.6591,2.6591,0,0,0-2.671-2.659l-19.51.0874L4.5,12.9468l27.9576.0033A11.0436,11.0436,0,0,1,43.5,23.9938h0A11.0436,11.0436,0,0,1,32.4813,35.0374Z"/></svg></a>
             <a href="mailto:admin@thegreenedge.com.au" target="_blank" rel="noopener" class="web-link" title="Email" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
           </div>
         </div>
@@ -894,12 +894,12 @@ function loadVenueData() {
       var platformCount = withVotes.length;
       var totalVotesCalc = 0;
       withVotes.forEach(function(r) { totalVotesCalc += r.votes; });
+      totalVotes = totalVotesCalc; // keep the module-level var in sync so toggleLang() re-renders the real count, not 0
 
       // ── Render platforms with votes ──
       withVotes.forEach(function(r) {
         var meta = platformMeta[r.key] || { name: r.key, icon: "📊" };
         var normalized = toFiveStars(r.rating, r.scale);
-        var starRating = Math.round(normalized);
         var row = document.createElement('div');
         row.className = 'opinion-row';
 
@@ -918,7 +918,7 @@ function loadVenueData() {
           '<div class="opinion-stars"></div>' +
           '<div class="opinion-votes"><span>' + r.votes.toLocaleString() + '</span> <em class="votes-label">votes</em></div>';
         ol.appendChild(row);
-        renderStars(row.querySelector('.opinion-stars'), starRating);
+        renderStars(row.querySelector('.opinion-stars'), normalized);
       });
 
       // ── Render link-only (Wanderlog etc.) ──
@@ -942,7 +942,7 @@ function loadVenueData() {
       var finalRating = venue.final_result; // published 0-10 rating (Resultado column); ranking uses the hidden final_score
 
       // ── Update total votes display ──
-      document.getElementById('totalVotes').textContent = totalVotesCalc.toLocaleString() + ' votes';
+      document.getElementById('totalVotes').textContent = totalVotesCalc.toLocaleString() + (currentLang === 'pt' ? ' votos' : ' votes');
 
       // ── Update final rating number (bottom block) ──
       var finalNum = document.querySelector('.final-number');
@@ -950,13 +950,13 @@ function loadVenueData() {
 
       // ── Update final rating stars (bottom block) ──
       var finalStars = document.getElementById('finalStars');
-      if (finalStars) { finalStars.innerHTML = ''; renderStars(finalStars, Math.round(finalRating / 2)); }
+      if (finalStars) { finalStars.innerHTML = ''; renderStars(finalStars, finalRating / 2); }
 
       // ── Update rating in header (top of page) ──
       var ratingNum = document.querySelector('.venue-rating-number');
       if (ratingNum) ratingNum.textContent = finalRating.toFixed(1);
       var mainStars = document.getElementById('mainStars');
-      if (mainStars) { mainStars.innerHTML = ''; renderStars(mainStars, Math.round(finalRating / 2)); }
+      if (mainStars) { mainStars.innerHTML = ''; renderStars(mainStars, finalRating / 2); }
 
       // -- Rating confidence tooltip (hover): total reviews drive the percentage --
       ['.venue-stars-row', '.final-rating-left'].forEach(function(sel) { var el = document.querySelector(sel); if (el) { el.setAttribute('data-conf-votes', totalVotesCalc); el.setAttribute('tabindex', '0'); } });
@@ -964,8 +964,8 @@ function loadVenueData() {
       // ── Update "Based on X platforms · Y votes" ──
       var basedEl = document.querySelector('[data-i18n="final.based"]');
       if (basedEl) {
-        i18n.en["final.based"] = "Based on " + platformCount + (platformCount === 1 ? " platform" : " platforms") + " · " + totalVotesCalc.toLocaleString() + " votes";
-        i18n.pt["final.based"] = "Baseado em " + platformCount + (platformCount === 1 ? " plataforma" : " plataformas") + " · " + totalVotesCalc.toLocaleString() + " votos";
+        i18n.en["final.based"] = "Based on " + platformCount + (platformCount === 1 ? " platform" : " platforms");
+        i18n.pt["final.based"] = "Baseado em " + platformCount + (platformCount === 1 ? " plataforma" : " plataformas");
         basedEl.textContent = currentLang === "pt" ? i18n.pt["final.based"] : i18n.en["final.based"];
         basedEl.setAttribute('data-en', i18n.en["final.based"]);
       }

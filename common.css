@@ -194,8 +194,11 @@ body { background: var(--cream); font-family: 'DM Sans', sans-serif; color: var(
   border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 6px 20px rgba(26, 58, 42, 0.25);
+  opacity: 0; visibility: hidden;
+  transform: translateY(10px);
   transition: all 0.3s ease;
 }
+.share-fab.visible { opacity: 1; visibility: visible; transform: translateY(0); }
 .share-fab:hover { background: var(--moss); transform: translateY(-3px); }
 .share-toast {
   position: fixed; left: 24px; bottom: 78px; z-index: 90;

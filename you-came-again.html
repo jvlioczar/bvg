@@ -890,12 +890,12 @@ function loadVenueData() {
       var platformCount = withVotes.length;
       var totalVotesCalc = 0;
       withVotes.forEach(function(r) { totalVotesCalc += r.votes; });
+      totalVotes = totalVotesCalc; // keep the module-level var in sync so toggleLang() re-renders the real count, not 0
 
       // ── Render platforms with votes ──
       withVotes.forEach(function(r) {
         var meta = platformMeta[r.key] || { name: r.key, icon: "📊" };
         var normalized = toFiveStars(r.rating, r.scale);
-        var starRating = Math.round(normalized);
         var row = document.createElement('div');
         row.className = 'opinion-row';
 
@@ -914,7 +914,7 @@ function loadVenueData() {
           '<div class="opinion-stars"></div>' +
           '<div class="opinion-votes"><span>' + r.votes.toLocaleString() + '</span> <em class="votes-label">votes</em></div>';
         ol.appendChild(row);
-        renderStars(row.querySelector('.opinion-stars'), starRating);
+        renderStars(row.querySelector('.opinion-stars'), normalized);
       });
 
       // ── Render link-only (Wanderlog etc.) ──
@@ -938,7 +938,7 @@ function loadVenueData() {
       var finalRating = venue.final_result; // published 0-10 rating (Resultado column); ranking uses the hidden final_score
 
       // ── Update total votes display ──
-      document.getElementById('totalVotes').textContent = totalVotesCalc.toLocaleString() + ' votes';
+      document.getElementById('totalVotes').textContent = totalVotesCalc.toLocaleString() + (currentLang === 'pt' ? ' votos' : ' votes');
 
       // ── Update final rating number (bottom block) ──
       var finalNum = document.querySelector('.final-number');
@@ -946,13 +946,13 @@ function loadVenueData() {
 
       // ── Update final rating stars (bottom block) ──
       var finalStars = document.getElementById('finalStars');
-      if (finalStars) { finalStars.innerHTML = ''; renderStars(finalStars, Math.round(finalRating / 2)); }
+      if (finalStars) { finalStars.innerHTML = ''; renderStars(finalStars, finalRating / 2); }
 
       // ── Update rating in header (top of page) ──
       var ratingNum = document.querySelector('.venue-rating-number');
       if (ratingNum) ratingNum.textContent = finalRating.toFixed(1);
       var mainStars = document.getElementById('mainStars');
-      if (mainStars) { mainStars.innerHTML = ''; renderStars(mainStars, Math.round(finalRating / 2)); }
+      if (mainStars) { mainStars.innerHTML = ''; renderStars(mainStars, finalRating / 2); }
 
       // -- Rating confidence tooltip (hover): total reviews drive the percentage --
       ['.venue-stars-row', '.final-rating-left'].forEach(function(sel) { var el = document.querySelector(sel); if (el) { el.setAttribute('data-conf-votes', totalVotesCalc); el.setAttribute('tabindex', '0'); } });
@@ -960,8 +960,8 @@ function loadVenueData() {
       // ── Update "Based on X platforms · Y votes" ──
       var basedEl = document.querySelector('[data-i18n="final.based"]');
       if (basedEl) {
-        i18n.en["final.based"] = "Based on " + platformCount + (platformCount === 1 ? " platform" : " platforms") + " · " + totalVotesCalc.toLocaleString() + " votes";
-        i18n.pt["final.based"] = "Baseado em " + platformCount + (platformCount === 1 ? " plataforma" : " plataformas") + " · " + totalVotesCalc.toLocaleString() + " votos";
+        i18n.en["final.based"] = "Based on " + platformCount + (platformCount === 1 ? " platform" : " platforms");
+        i18n.pt["final.based"] = "Baseado em " + platformCount + (platformCount === 1 ? " plataforma" : " plataformas");
         basedEl.textContent = currentLang === "pt" ? i18n.pt["final.based"] : i18n.en["final.based"];
         basedEl.setAttribute('data-en', i18n.en["final.based"]);
       }
