@@ -112,7 +112,7 @@ function renderSiteHeader(activeHref) {
 
   return `<a href="#main-content" class="skip-link" id="skipLink">Skip to content</a>
   <nav class="nav" id="navbar" aria-label="Main">
-    <a href="index.html" class="nav-logo">
+    <a href="/" class="nav-logo">
       <img class="logo-pin" src="icon-bvg.svg" width="18" height="18" alt="">
       ${logoInner}
     </a>
