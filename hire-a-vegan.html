@@ -30,7 +30,7 @@
 <link rel="icon" type="image/svg+xml" href="icon-bvg.svg">
 <script src="partials.js"></script>
 <style>
-a,.contact-btn,.table-link{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847'/></g></svg>") 6 26,pointer}
+a,.contact-btn,.table-link,.sort-btn{cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><g transform='translate(4,2) rotate(45 12 14)'><path d='M12 0C6.5 0 2 4.5 2 10c0 7.5 10 18 10 18s10-10.5 10-18C22 4.5 17.5 0 12 0z' fill='%23d4a847'/></g></svg>") 6 26,pointer}
 body{overflow-x:hidden}
 
 /* PAGE HEADER */
@@ -83,6 +83,11 @@ body{overflow-x:hidden}
 .data-table{width:100%;border-collapse:collapse}
 .data-table thead{background:var(--forest)}
 .data-table th{padding:14px 18px;text-align:left;font-size:11px;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;color:var(--cream)}
+.sort-btn{background:none;border:0;padding:0;margin:0;font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;text-align:left;display:inline-flex;align-items:center;gap:6px;cursor:pointer;border-radius:4px}
+.sort-btn:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.sort-ind{display:inline-block;min-width:1em;opacity:0.45;font-size:12px;line-height:1}
+th[aria-sort="ascending"] .sort-ind,th[aria-sort="descending"] .sort-ind{opacity:1}
+.sort-btn:hover .sort-ind{opacity:1}
 .data-table tbody tr{border-bottom:1px solid rgba(42,42,40,0.04);transition:background 0.2s}
 .data-table tbody tr:last-child{border-bottom:none}
 .data-table tbody tr:hover{background:rgba(74,140,92,0.03)}
@@ -175,9 +180,9 @@ body{overflow-x:hidden}
     <table class="data-table" id="dataTable">
       <thead>
         <tr>
-          <th data-i18n="th.name">Name</th>
-          <th data-i18n="th.service">Service</th>
-          <th data-i18n="th.social">Social</th>
+          <th data-sort="name" aria-sort="ascending"><button type="button" class="sort-btn" onclick="setSort('name')"><span data-i18n="th.name">Name</span><span class="sort-ind" aria-hidden="true"></span></button></th>
+          <th data-sort="service" aria-sort="none"><button type="button" class="sort-btn" onclick="setSort('service')"><span data-i18n="th.service">Service</span><span class="sort-ind" aria-hidden="true"></span></button></th>
+          <th data-sort="social" aria-sort="none"><button type="button" class="sort-btn" onclick="setSort('social')"><span data-i18n="th.social">Social</span><span class="sort-ind" aria-hidden="true"></span></button></th>
           <th data-i18n="th.contact">Contact</th>
         </tr>
       </thead>
@@ -221,6 +226,23 @@ function renderFilter() {
     categories.map(c => `<option value="${c}">${c}</option>`).join('');
 }
 
+let sortKey = 'name';
+let sortDir = 1;
+
+function updateSortUI() {
+  document.querySelectorAll('th[data-sort]').forEach(th => {
+    const active = th.dataset.sort === sortKey;
+    th.setAttribute('aria-sort', active ? (sortDir === 1 ? 'ascending' : 'descending') : 'none');
+    th.querySelector('.sort-ind').textContent = active ? (sortDir === 1 ? '↑' : '↓') : '↕';
+  });
+}
+
+function setSort(key) {
+  if (sortKey === key) sortDir = -sortDir; else { sortKey = key; sortDir = 1; }
+  updateSortUI();
+  filterTable();
+}
+
 function filterTable() {
   const q = document.getElementById('searchInput').value.toLowerCase();
   const cat = document.getElementById('categoryFilter').value;
@@ -235,6 +257,10 @@ function filterTable() {
     const matchCat = cat === 'all' || p.category === cat;
     return matchQ && matchCat;
   });
+
+  const keyOf = p => sortKey === 'name' ? p.name : sortKey === 'service' ? p.service : p.socialLabel.replace(/^@/, '');
+  filtered.sort((a, b) => ((a.social === '#') - (b.social === '#')) ||
+    sortDir * keyOf(a).localeCompare(keyOf(b), undefined, { sensitivity: 'base', numeric: true }));
 
   const tbody = document.getElementById('tableBody');
 
@@ -317,6 +343,7 @@ document.querySelectorAll('.anim').forEach(el => obs.observe(el));
 
 // ── MOBILE MENU ──
 // ── INIT ──
+updateSortUI();
 renderFilter();
 filterTable();
 </script>

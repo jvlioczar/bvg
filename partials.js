@@ -36,6 +36,7 @@ const SITE_TITLE_PT = {
   'hire-a-vegan': 'Contrate Um Vegano em Brisbane | Brisbane Vegan Guide',
   'contribute': 'Contribua e Apoie | Brisbane Vegan Guide',
   'about': 'Sobre o Projeto | Brisbane Vegan Guide',
+  'privacy': 'Política de Privacidade | Brisbane Vegan Guide',
   '404': 'Página não encontrada | Brisbane Vegan Guide',
   'archie-am-pm': 'Archie AM:PM — Bistrô-Café Plant-Based em Carseldine',
   'cardamom-pod': 'Cardamom Pod Brickworks — Café Vegano na Gold Coast',

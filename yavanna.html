@@ -260,6 +260,7 @@
 
   /* ── PUBLIC OPINION ── */
   .opinion-section { margin-top: 40px; }
+  .opinion-empty { padding: 22px 20px; text-align: center; color: var(--sage); font-size: 14px; }
   .opinion-list {
     background: white; border-radius: 14px;
     border: 1px solid rgba(42, 42, 40, 0.06);
@@ -934,6 +935,11 @@ function loadVenueData() {
         ol.appendChild(row);
       });
 
+      if (!ol.children.length) {
+        ol.innerHTML = '<div class="opinion-empty" data-i18n="opinion.empty">' + i18n[currentLang]["opinion.empty"] + '</div>';
+        var fm = document.querySelector('.final-meta'); if (fm) fm.style.display = 'none';
+      }
+
       // ── Final rating from JSON ──
       var finalRating = venue.final_result; // published 0-10 rating (Resultado column); ranking uses the hidden final_score
 
@@ -1083,6 +1089,7 @@ const i18n = {
     "wwww.words": "Words from the owner",
     "wwww.words.value": "\"The owner of this venue will leave a personal message here soon — stay tuned!\"",
     "opinion.title": "Public Opinion",
+    "opinion.empty": "No public reviews yet",
     "update.last": "Last update:",
     "update.next": "Next update:",
     "final.label": "Final Rating",
@@ -1126,6 +1133,7 @@ const i18n = {
     "wwww.words": "Palavras do(a) dono(a)",
     "wwww.words.value": "\"O(a) dono(a) deste local irá deixar um recado pessoal aqui em breve — fique ligado!\"",
     "opinion.title": "Opinião Pública",
+    "opinion.empty": "Ainda sem avaliações públicas",
     "update.last": "Última atualização:",
     "update.next": "Próxima atualização:",
     "final.label": "Nota Final",
