@@ -128,7 +128,7 @@
   }
   .hero-index-num {
     font-family: 'Boldonse', system-ui;
-    font-size: 10px;
+    font-size: 8px;
     opacity: 0.5;
   }
   .scroll-hint {
@@ -157,13 +157,6 @@
     display: flex; align-items: flex-end; justify-content: space-between;
     margin-bottom: 28px;
     flex-wrap: wrap; gap: 12px;
-  }
-  .section-num {
-    font-family: 'Fraunces', serif;
-    font-size: 60px; font-weight: 700;
-    color: rgba(45, 90, 61, 0.06);
-    line-height: 1;
-    position: absolute; top: 44px; left: 40px;
   }
   .section-label {
     font-family: 'Fraunces', serif;
@@ -413,7 +406,6 @@
     .hero-index a { font-size: 11px; padding: 6px 12px; }
     .section { padding: 40px 20px; }
     .section-header { flex-direction: column; align-items: flex-start; }
-    .section-num { font-size: 44px; top: 30px; left: 20px; }
     .cards-grid { grid-template-columns: 1fr; }
     .card { padding: 18px; }
     .explore { padding: 40px 20px; }
@@ -440,13 +432,13 @@
     <p class="hero-sub" data-i18n="hero.subtitle">Your compass to vegan living in Brisbane&nbsp;and&nbsp;surrounds</p>
     <p class="hero-desc" data-i18n="hero.description">Discover the best vegan-friendly cafés, restaurants, sanctuaries, organisations, and inspiring people shaping the compassionate community of Brisbane — Meanjin.</p>
     <div class="hero-index">
-      <a href="food.html" data-i18n-href="food"><span data-i18n="food.label">Eat & Drink</span></a>
-      <a href="community.html" data-i18n-href="community"><span data-i18n="groups.label">Community</span></a>
-      <a href="people.html" data-i18n-href="people"><span data-i18n="people.label">People</span></a>
-      <a href="vegan-kit.html" data-i18n-href="kit"><span data-i18n="kit.label">Vegan Kit</span></a>
-      <a href="vegan-map.html" data-i18n-href="map"><span data-i18n="map.label">Vegan Map</span></a>
-      <a href="vegan-finder.html" data-i18n-href="finder"><span data-i18n="finder.label">Vegan Finder</span></a>
-      <a href="hire-a-vegan.html" data-i18n-href="hire"><span data-i18n="hire.label">Hire a Vegan</span></a>
+      <a href="food.html" data-i18n-href="food"><span class="hero-index-num" aria-hidden="true">01</span> <span data-i18n="food.label">Eat & Drink</span></a>
+      <a href="community.html" data-i18n-href="community"><span class="hero-index-num" aria-hidden="true">02</span> <span data-i18n="groups.label">Community</span></a>
+      <a href="people.html" data-i18n-href="people"><span class="hero-index-num" aria-hidden="true">03</span> <span data-i18n="people.label">People</span></a>
+      <a href="vegan-kit.html" data-i18n-href="kit"><span class="hero-index-num" aria-hidden="true">04</span> <span data-i18n="kit.label">Vegan Kit</span></a>
+      <a href="vegan-map.html" data-i18n-href="map"><span class="hero-index-num" aria-hidden="true">05</span> <span data-i18n="map.label">Vegan Map</span></a>
+      <a href="vegan-finder.html" data-i18n-href="finder"><span class="hero-index-num" aria-hidden="true">06</span> <span data-i18n="finder.label">Vegan Finder</span></a>
+      <a href="hire-a-vegan.html" data-i18n-href="hire"><span class="hero-index-num" aria-hidden="true">07</span> <span data-i18n="hire.label">Hire a Vegan</span></a>
     </div>
     <div class="scroll-hint">
       <span data-i18n="hero.scroll">Explore</span>
@@ -456,7 +448,6 @@
 
   <!-- FOOD -->
   <section class="section" id="sec-food">
-    <div class="section-num">01</div>
     <div class="section-header">
       <div>
         <div class="section-label" data-i18n="food.label">Eat & Drink</div>
@@ -516,7 +507,6 @@
 
   <!-- GROUPS -->
   <section class="section" id="sec-groups">
-    <div class="section-num">02</div>
     <div class="section-header">
       <div>
         <div class="section-label" data-i18n="groups.label">Community</div>
@@ -564,7 +554,6 @@
 
   <!-- PEOPLE -->
   <section class="section" id="sec-people">
-    <div class="section-num">03</div>
     <div class="section-header">
       <div>
         <div class="section-label" data-i18n="people.label">People</div>
